@@ -1,0 +1,43 @@
+{
+  "name": "mass-fragmentation",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "eslint": "eslint src",
+    "eslint-fix": "npm run eslint -- --fix",
+    "prepack": "rollup -c",
+    "prettier": "prettier --check src",
+    "prettier-write": "prettier --write src",
+    "test": "npm run test-only && npm run eslint && npm run prettier",
+    "test-only": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo/mass-fragmentation.git"
+  },
+  "keywords": [],
+  "author": "Luc Patiny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo/mass-fragmentation/issues"
+  },
+  "homepage": "https://github.com/cheminfo/mass-fragmentation#readme",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
+    "@types/jest": "^27.0.2",
+    "eslint": "^8.2.0",
+    "eslint-config-cheminfo": "^7.2.1",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "rollup": "^2.59.0"
+  }
+}
