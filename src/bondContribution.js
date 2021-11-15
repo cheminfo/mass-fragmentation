@@ -1,3 +1,11 @@
+/**
+ * @function bondContribution
+ * @param {Result of in-silico fragmentation} fragmentationResult
+ * @param {experimental spectra in form {x:[],y:[]}} spectra
+ * @param {intensity of molecular ion M+} intensityRefMolecularIon
+ * @returns {variable containing bondHose code and contribution for each fragment}
+ */
+
 export function bondContribution(
   fragmentationResult,
   spectra,

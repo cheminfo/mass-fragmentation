@@ -1,4 +1,9 @@
 /** organisation of experimental data*/
+/**
+ * @function spectraPreparation
+ * @param {experimental ms spectrum data} experimentalSpectrum
+ * @returns {data organised {x:[],y:[]} form}
+ */
 
 export function spectraPreparation(experimentalSpectrum) {
   let spectra = [];
