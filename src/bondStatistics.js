@@ -2,6 +2,11 @@
 
 import { quantile } from 'simple-statistics';
 
+/**
+ *
+ * @param {*} bondContributionResults
+ * @returns
+ */
 export function bondStatistics(bondContributionResults) {
   let quantilesIndex = [
     '25th percentile',
