@@ -1,24 +1,15 @@
 /** Statistics*/
 
-import { quantile } from 'simple-statistics';
-
+import { xBoxPlot } from 'ml-spectra-processing';
 /**
- *
- * @param {*} bondContributionResults
- * @returns
+ * @function bondStatistics
+ * @param {contribution of each bond calculated in bondContribution.js} bondContributionResults
+ * @returns {q1,q2,q3,min,max}
  */
 export function bondStatistics(bondContributionResults) {
-  let quantilesIndex = [
-    '25th percentile',
-    '50th percentile',
-    '75th percentile',
-  ];
-  let quantiles = quantile(
+  let bondStatistics = xBoxPlot(
     bondContributionResults.bondContribution.contribution,
-    [0.25, 0.5, 0.75],
   );
-
-  let bondStatistics = { quantilesIndex, quantiles };
 
   return bondStatistics;
 }
