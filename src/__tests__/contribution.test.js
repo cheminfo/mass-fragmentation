@@ -1,9 +1,6 @@
 import { contribution } from '../contribution.js';
 
 describe('contribution', () => {
-  it('basic', () => {
-    const result = {};
-  });
   it('real', () => {
     const fragmentationResult = [
       { mf: 'C8H10(+)', em: 133.4, bondHose: 'LPQR' },
@@ -31,12 +28,16 @@ describe('contribution', () => {
       intensityRefMolecularIon,
     );
 
-    expect(bondContribution).toStrictEqual({});
-    expect(bondContribution.abc).toBe(123);
+    expect(
+      bondContribution.bondContributionResults.bondContribution.bondHose,
+    ).toStrictEqual(['LPQR', 'ABCD', 'CDAG', 'LRKF', 'PSZU']);
 
-    // eslint-disable-next-line no-console
-    console.log(bondContribution.bondContributionResults);
-    // eslint-disable-next-line no-console
-    console.log(bondContribution.bondStatisticsResults);
+    expect(bondContribution.bondStatisticsResults).toStrictEqual({
+      Q1: 0.04271047062832332,
+      Q2: 0.07894233986041684,
+      Q3: 0.5539240424882504,
+      max: 1,
+      min: 0.02061626238276383,
+    });
   });
 });
