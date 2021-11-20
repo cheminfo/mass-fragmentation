@@ -3,10 +3,10 @@ import { bondStatistics } from './bondStatistics.js';
 import { spectraPreparation } from './spectraPreparation.js';
 
 /**
- * Blabla
+ * This function call bondContribution and bondStatistics functions to return Results from both.
  * @param {object} [fragmentationResult] Result of in-silico fragmentation
  * @param {object} [spectra] Experimental spectra in form {x:[],y:[]}}
- * @param {intensity of molecular ion M+} intensityRefMolecularIon
+ * @param {object} [intensityRefMolecularIon] intensity of molecular ion M+
  * @returns {object} bond Contribution results and bond Statistics results based on bond contribution
  */
 

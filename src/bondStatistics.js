@@ -2,9 +2,9 @@
 
 import { xBoxPlot } from 'ml-spectra-processing';
 /**
- * @function bondStatistics
- * @param {contribution of each bond calculated in bondContribution.js} bondContributionResults
- * @returns {q1,q2,q3,min,max}
+ * This function calculate the boxplot parameters of bond contribution data
+ * @param {object} [bondContributionResults] contribution of each bond calculated in bondContribution.js
+ * @returns {object} Bond Statistics results: q1,q2,q3,min,max
  */
 export function bondStatistics(bondContributionResults) {
   let bondStatistics = xBoxPlot(

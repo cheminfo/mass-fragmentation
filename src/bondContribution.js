@@ -1,9 +1,9 @@
 /**
- * @function bondContribution
- * @param {Result of in-silico fragmentation} fragmentationResult
- * @param {experimental spectra in form {x:[],y:[]}} spectra
- * @param {intensity of molecular ion M+} intensityRefMolecularIon
- * @returns {variable containing bondHose code and contribution for each fragment}
+ * This function calculate the contribution of each fragment on spectra and relate it to bondHose code
+ * @param {object} [fragmentationResult] Result of in-silico fragmentation
+ * @param {object} [spectra] experimental spectra in form {x:[],y:[]}
+ * @param {object} [intensityRefMolecularIon] intensity of molecular ion M+
+ * @returns {object} variable containing bondHose code and contribution for each fragment
  */
 
 export function bondContribution(
