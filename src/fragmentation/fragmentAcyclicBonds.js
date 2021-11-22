@@ -1,43 +1,13 @@
-import { readFileSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+// https://cheminfo.github.io/openchemlib-js/index.html
 
-import MF from 'mass-tools';
-import OCL from 'openchemlib';
+import MassTools from 'mass-tools';
 import { getMF } from 'openchemlib-utils';
+import OCL from 'openchemlib/dist/openchemlib-full.pretty.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const { MF } = MassTools;
+const { Molecule } = OCL;
 
-export function cidType(level) {
-  // cidType: 0 for low, 1 for medium and 2 for high
-  const database = [
-    JSON.parse(
-      readFileSync(
-        join(__dirname, 'hmdb/molecules/cidLowStructures.json'),
-        'utf8',
-      ),
-    ),
-    JSON.parse(
-      readFileSync(
-        join(__dirname, 'hmdb/molecules/cidMedStructures.json'),
-        'utf8',
-      ),
-    ),
-    JSON.parse(
-      readFileSync(
-        join(__dirname, 'hmdb/molecules/cidHighStructures.json'),
-        'utf8',
-      ),
-    ),
-  ];
-  const molecule = [];
-  for (const entry of database[level]) {
-    molecule.push(OCL.Molecule.fromIDCode(entry.oclID));
-  }
-  return molecule;
-}
-
-export function fragmentMoleculeAcyclic(molecule) {
+export function fragmentAcyclicBonds(molecule) {
   // Get atom mapping (numbers)
   let atoms = [];
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
@@ -90,9 +60,11 @@ export function fragmentMoleculeAcyclic(molecule) {
       // assign fragment id to index of for loop
       return id === i;
     });
-    let fragment = new OCL.Molecule(0, 0);
+    let fragment = new Molecule(100, 100);
     let atomMap = [];
+    console.log({ fragment, includeAtom, atomMap, brokenMolecule });
     brokenMolecule.copyMoleculeByAtoms(fragment, includeAtom, false, atomMap); // copies a part of molecule, false is for reconize delocalize bonds because it was made before
+    console.log('DONE');
     // we will add some R groups at the level of the broken bonds
     for (let j = 0; j < atomMap.length; j++) {
       if (atomMap[j] > -1) {
@@ -121,4 +93,3 @@ export function fragmentMoleculeAcyclic(molecule) {
   }
   return results;
 }
-console.log(fragmentMoleculeAcyclic(cidType(1)));
