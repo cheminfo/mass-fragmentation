@@ -16,7 +16,8 @@
     "prettier": "prettier --check src",
     "prettier-write": "prettier --write src",
     "test": "npm run test-only && npm run eslint && npm run prettier",
-    "test-only": "jest --coverage"
+    "test-only": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch -- "
   },
   "repository": {
     "type": "git",
@@ -30,16 +31,17 @@
   },
   "homepage": "https://github.com/cheminfo/mass-fragmentation#readme",
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "transform": {}
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.16.0",
-    "@types/jest": "^27.0.2",
-    "eslint": "^8.2.0",
+    "@types/jest": "^27.0.3",
+    "eslint": "^8.3.0",
     "eslint-config-cheminfo": "^7.2.1",
     "jest": "^27.3.1",
     "prettier": "^2.4.1",
-    "rollup": "^2.59.0"
+    "rollup": "^2.60.1"
   },
   "dependencies": {
     "arraybuffer-xml-parser": "^0.5.0",
