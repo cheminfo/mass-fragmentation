@@ -72,7 +72,6 @@ export function fragmentCyclicBonds(molecule) {
     //// fino a qui funziona ma non riesco a estrarre i dati
     bonds.push(bond);
   }
-  console.log(bonds);
   let brokenMolecule = {};
   let fragmentMap = [];
   let nbFragments = [];
