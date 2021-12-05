@@ -8,7 +8,6 @@ describe('fragmentAcyclicBonds', () => {
   it('CCC13CCCC2CCCC(CCC1)C23', () => {
     const molecule = Molecule.fromSmiles('CCC13CCCC2CCCC(CCC1)C23');
     const result = fragmentCyclicBonds(molecule);
-    // eslint-disable-next-line no-console
     console.log(result);
   });
 });
