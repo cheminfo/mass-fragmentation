@@ -2,10 +2,8 @@
 
 import MassTools from 'mass-tools';
 import { getMF } from 'openchemlib-utils';
-import OCL from 'openchemlib/dist/openchemlib-full.pretty.js';
 
 const { MF } = MassTools;
-const { Molecule } = OCL;
 
 /**
  * The function performs fragmentation of all bonds not belonging to cyclic or aromatic groups and returns the fragments along with the idCode and monoisotopic mass
@@ -72,7 +70,10 @@ export function fragmentAcyclicBonds(molecule) {
         let includeAtom = fragmentMap.map((id) => {
           return id === i;
         });
-        let fragment = new Molecule(100, 100);
+        let fragment = new (molecule.getOCL().Molecule)(
+          molecule.getAllAtoms(),
+          molecule.getAllBonds(),
+        );
         let atomMap = [];
 
         brokenMolecule[bond.i].copyMoleculeByAtoms(

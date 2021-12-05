@@ -39,9 +39,9 @@
     "@types/jest": "^27.0.3",
     "eslint": "^8.3.0",
     "eslint-config-cheminfo": "^7.2.1",
-    "jest": "^27.3.1",
-    "prettier": "^2.4.1",
-    "rollup": "^2.60.1"
+    "jest": "^27.4.2",
+    "prettier": "^2.5.0",
+    "rollup": "^2.60.2"
   },
   "dependencies": {
     "arraybuffer-xml-parser": "^0.5.0",
