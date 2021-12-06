@@ -2,43 +2,27 @@ export function getFragmentableCyclicBonds(molecule) {
   const ringSet = molecule.getRingSet();
   let ringBonds = [];
 
-  let ringBondsIndex = [];
-  let index = 0;
-  for (let bond = 0; bond < molecule.getAllBonds(); bond++) {
-    if (molecule.isRingBond(bond)) {
-      ringBondsIndex[index] = bond;
-      index += 1;
-    }
-  }
-
-  for (let ring = 0; ring < ringSet.getSize(); ring++) {
-    ringBonds[ring] = ringSet.getRingBonds(ring);
-  }
-
-  const ringNumber = ringSet.getSize();
-  let bondsExtracted = [];
-
-  for (let r = 0; r < ringNumber; r++) {
-    let indexOfEachRingBond = [];
-    bondsExtracted[r] = indexOfEachRingBond;
-
-    for (let i = 0; i < ringBondsIndex.length; i++) {
-      if (ringBonds[r].find((ringBonds) => ringBonds === ringBondsIndex[i])) {
-        indexOfEachRingBond.push(
-          ringBonds[r].find((ringBonds) => ringBonds === ringBondsIndex[i]),
-        );
+  for (let i = 0; i < ringSet.getSize(); i++) {
+    let set = { i: [], bond: [] };
+    set.i = i;
+    let ring = ringSet.coll.mRingBondSet.array[i];
+    for (let s = 0; s < ringSet.coll.mRingBondSet.array[i].length; s++) {
+      if (Number.isInteger(ring[s])) {
+        set.bond[s] = ring[s];
       }
     }
+
+    ringBonds.push(set);
   }
 
   let commonBondsRingSet = [];
   let count = 0;
-  for (let i = 0; i < ringNumber - 1; i++) {
-    let ringOne = bondsExtracted[i];
+  for (let i = 0; i < ringSet.getSize() - 1; i++) {
+    let ringOne = ringBonds[i].bond;
 
-    for (let s = 1; s < ringNumber; s++) {
+    for (let s = 1; s < ringSet.getSize(); s++) {
       if (i !== s) {
-        let ringTwo = bondsExtracted[s];
+        let ringTwo = ringBonds[s].bond;
         let ringSystem = [ringOne, ringTwo];
 
         let common = ringSystem.reduce((p, c) =>
@@ -60,17 +44,21 @@ export function getFragmentableCyclicBonds(molecule) {
   }
 
   let result = [];
-  for (let i = 0; i < molecule.getAllBonds(); i++) {
-    let index = {};
-    if (!molecule.isRingBond(i)) {
-      continue;
+  for (let i = 0; i < ringSet.getSize(); i++) {
+    let index = { i: [], bond: [] };
+    index.i = i;
+    for (let s = 0; s < ringBonds[i].bond.length; s++) {
+      if (
+        notFragment.find((notFragment) => notFragment === ringBonds[i].bond[s])
+      ) {
+        continue;
+      } else {
+        index.bond[s] = ringBonds[i].bond[s];
+      }
     }
-    if (notFragment.find((notFragment) => notFragment === i)) {
-      continue;
-    } else {
-      index.i = i;
-    }
-    result.push(index);
+    let indexFilter = index.bond.filter((a) => a);
+    let results = { i: index.i, bond: indexFilter };
+    result.push(results);
   }
 
   return result;
