@@ -930,4 +930,9 @@ describe('overAllFragmentation', () => {
       ],
     ]);
   });
+  it('noMolecule', () => {
+    const molecule = Molecule.fromSmiles('');
+    const result = overAllFragmentation(molecule);
+    expect(result).toStrictEqual([[]]);
+  });
 });

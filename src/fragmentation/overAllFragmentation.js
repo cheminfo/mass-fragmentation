@@ -11,12 +11,6 @@ export function overAllFragmentation(molecule) {
   let acyclicBonds = fragmentAcyclicBonds(molecule);
   let cyclicBonds = fragmentCyclicBonds(molecule);
 
-  if (acyclicBonds === undefined) {
-    acyclicBonds = [];
-  }
-  if (cyclicBonds === undefined) {
-    cyclicBonds = [];
-  }
   results.push(acyclicBonds.concat(cyclicBonds));
 
   for (let i = 0; i < results[0].length; i++) {

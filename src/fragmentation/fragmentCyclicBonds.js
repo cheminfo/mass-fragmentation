@@ -56,47 +56,43 @@ export function fragmentCyclicBonds(molecule) {
   let results = [];
 
   for (let bonds of ringsToBeFragmented) {
-    if (bonds.selected) {
-      brokenMolecule[bonds.i] = molecule.getCompactCopy();
-      brokenMolecule[bonds.i].markBondForDeletion(bonds.bond1);
-      brokenMolecule[bonds.i].markBondForDeletion(bonds.bond2);
-      brokenMolecule[bonds.i].deleteMarkedAtomsAndBonds();
-    }
+    brokenMolecule[bonds.i] = molecule.getCompactCopy();
+    brokenMolecule[bonds.i].markBondForDeletion(bonds.bond1);
+    brokenMolecule[bonds.i].markBondForDeletion(bonds.bond2);
+    brokenMolecule[bonds.i].deleteMarkedAtomsAndBonds();
 
     nbFragments = brokenMolecule[bonds.i].getFragmentNumbers(fragmentMap);
 
-    if (nbFragments === 2) {
-      for (let i = 0; i < nbFragments; i++) {
-        const result = {};
-        result.atomMap = [];
-        let includeAtom = fragmentMap.map((id) => {
-          return id === i;
-        });
-        let fragment = new Molecule(100, 100);
-        let atomMap = [];
+    for (let i = 0; i < nbFragments; i++) {
+      const result = {};
+      result.atomMap = [];
+      let includeAtom = fragmentMap.map((id) => {
+        return id === i;
+      });
+      let fragment = new Molecule(100, 100);
+      let atomMap = [];
 
-        brokenMolecule[bonds.i].copyMoleculeByAtoms(
-          fragment,
-          includeAtom,
-          false,
-          atomMap,
-        );
-        for (let j = 0; j < atomMap.length; j++) {
-          if (atomMap[j] === 0) {
-            result.atomMap.push(j);
+      brokenMolecule[bonds.i].copyMoleculeByAtoms(
+        fragment,
+        includeAtom,
+        false,
+        atomMap,
+      );
+      for (let j = 0; j < atomMap.length; j++) {
+        if (atomMap[j] === 0) {
+          result.atomMap.push(j);
 
-            if (atoms[j].links.length > 0) {
-              fragment.addBond(atomMap[j], fragment.addAtom(154), 1);
-            }
+          if (atoms[j].links.length > 0) {
+            fragment.addBond(atomMap[j], fragment.addAtom(154), 1);
           }
         }
-        fragment.setFragment(false);
-        result.mf = getMF(fragment).mf.replace(/R[1-9]?/, '');
-        result.idCode = fragment.getIDCode();
-        result.mfInfo = new MF(result.mf).getInfo();
-        result.fragmentType = 'cyclic';
-        results.push(result);
       }
+      fragment.setFragment(false);
+      result.mf = getMF(fragment).mf.replace(/R[1-9]?/, '');
+      result.idCode = fragment.getIDCode();
+      result.mfInfo = new MF(result.mf).getInfo();
+      result.fragmentType = 'cyclic';
+      results.push(result);
     }
   }
 
