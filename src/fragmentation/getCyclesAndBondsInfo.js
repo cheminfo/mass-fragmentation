@@ -1,7 +1,7 @@
 /**
- *
+ * This function returns ringBond, and object who contains informations about the bonds of each cycle
  * @param {OCL.Molecule} molecule
- * @returns
+ * @returns ringBonds
  */
 
 export function getCyclesAndBondsInfo(molecule) {
