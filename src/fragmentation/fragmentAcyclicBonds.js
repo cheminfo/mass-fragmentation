@@ -7,7 +7,7 @@ const { MF } = MassTools;
 
 /**
  * The function performs fragmentation of all bonds not belonging to cyclic or aromatic groups and returns the fragments along with the idCode and monoisotopic mass
- * @param {object} [molecule] Molecule to be fragmented
+ * @param {OCL.Molecule} [molecule] Molecule to be fragmented
  * @returns {object} result from fragmentation of acyclic bonds
  */
 
@@ -39,7 +39,7 @@ export function fragmentAcyclicBonds(molecule) {
       bond.isRingBond ||
       bond.order !== 1
     ) {
-      return;
+      continue;
     } else {
       bond.selected = true;
       atoms[bond.atom1].links.push(bond.atom2);
@@ -47,6 +47,7 @@ export function fragmentAcyclicBonds(molecule) {
     }
     bonds.push(bond);
   }
+
   let brokenMolecule = {};
   let fragmentMap = [];
   let nbFragments = [];
@@ -96,6 +97,7 @@ export function fragmentAcyclicBonds(molecule) {
         result.mf = getMF(fragment).mf.replace(/R[1-9]?/, ''); // get mf without R group
         result.idCode = fragment.getIDCode();
         result.mfInfo = new MF(result.mf).getInfo();
+        result.fragmentType = 'acyclic';
         results.push(result);
       }
     }

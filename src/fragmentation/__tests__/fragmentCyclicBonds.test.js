@@ -14,7 +14,6 @@ describe('fragmentCyclicBonds', () => {
   it('C1CC1', () => {
     const molecule = Molecule.fromSmiles('C1CC1'); // butane
     const result = fragmentCyclicBonds(molecule);
-
     expect(result).toStrictEqual([]);
   });
 
@@ -42,6 +41,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'A',
       },
       {
@@ -56,6 +56,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 11, H: 19 },
           unsaturation: 2.5,
         },
+        fragmentType: 'cyclic',
         code: 'B',
       },
       {
@@ -70,6 +71,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'C',
       },
       {
@@ -84,6 +86,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 10, H: 17 },
           unsaturation: 2.5,
         },
+        fragmentType: 'cyclic',
         code: 'D',
       },
       {
@@ -98,6 +101,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'E',
       },
       {
@@ -112,6 +116,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 11, H: 19 },
           unsaturation: 2.5,
         },
+        fragmentType: 'cyclic',
         code: 'F',
       },
       {
@@ -126,6 +131,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 11, H: 19 },
           unsaturation: 2.5,
         },
+        fragmentType: 'cyclic',
         code: 'G',
       },
       {
@@ -140,6 +146,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'H',
       },
       {
@@ -154,6 +161,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 10, H: 17 },
           unsaturation: 2.5,
         },
+        fragmentType: 'cyclic',
         code: 'I',
       },
       {
@@ -168,6 +176,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'J',
       },
       {
@@ -182,6 +191,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 11, H: 19 },
           unsaturation: 2.5,
         },
+        fragmentType: 'cyclic',
         code: 'K',
       },
       {
@@ -196,6 +206,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'L',
       },
       {
@@ -210,6 +221,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 11, H: 19 },
           unsaturation: 2.5,
         },
+        fragmentType: 'cyclic',
         code: 'M',
       },
       {
@@ -224,6 +236,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'N',
       },
       {
@@ -238,6 +251,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 10, H: 17 },
           unsaturation: 2.5,
         },
+        fragmentType: 'cyclic',
         code: 'O',
       },
       {
@@ -252,6 +266,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'P',
       },
       {
@@ -266,6 +281,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 11, H: 19 },
           unsaturation: 2.5,
         },
+        fragmentType: 'cyclic',
         code: 'Q',
       },
       {
@@ -280,6 +296,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'R',
       },
     ]);
@@ -302,6 +319,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 8, H: 15 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'A',
       },
       {
@@ -316,6 +334,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'B',
       },
       {
@@ -330,6 +349,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 7, H: 13 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'C',
       },
       {
@@ -344,6 +364,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'D',
       },
       {
@@ -358,6 +379,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 6, H: 11 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'E',
       },
       {
@@ -372,6 +394,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 4, H: 9 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'F',
       },
       {
@@ -386,6 +409,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 8, H: 15 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'G',
       },
       {
@@ -400,6 +424,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'H',
       },
       {
@@ -414,6 +439,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 7, H: 13 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'I',
       },
       {
@@ -428,6 +454,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'J',
       },
       {
@@ -442,6 +469,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 8, H: 15 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'K',
       },
       {
@@ -456,6 +484,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'L',
       },
       {
@@ -470,6 +499,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 8, H: 15 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'M',
       },
       {
@@ -484,6 +514,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'N',
       },
       {
@@ -498,6 +529,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'O',
       },
       {
@@ -512,6 +544,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 8, H: 15 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'P',
       },
       {
@@ -526,6 +559,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'Q',
       },
       {
@@ -540,6 +574,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 7, H: 13 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'R',
       },
       {
@@ -554,6 +589,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'S',
       },
       {
@@ -568,6 +604,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 8, H: 15 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'T',
       },
       {
@@ -582,6 +619,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 4, H: 9 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'U',
       },
       {
@@ -596,6 +634,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 6, H: 11 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'V',
       },
       {
@@ -610,6 +649,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'W',
       },
       {
@@ -624,6 +664,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 7, H: 13 },
           unsaturation: 1.5,
         },
+        fragmentType: 'cyclic',
         code: 'X',
       },
     ];
@@ -647,6 +688,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 17, H: 29 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'A',
       },
       {
@@ -661,6 +703,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'B',
       },
       {
@@ -675,6 +718,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'C',
       },
       {
@@ -689,6 +733,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 16, H: 27 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'D',
       },
       {
@@ -703,6 +748,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'E',
       },
       {
@@ -717,6 +763,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 17, H: 29 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'F',
       },
       {
@@ -731,6 +778,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 4, H: 9 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'G',
       },
       {
@@ -745,6 +793,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 15, H: 25 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'H',
       },
       {
@@ -759,6 +808,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'I',
       },
       {
@@ -773,6 +823,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 16, H: 27 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'J',
       },
       {
@@ -787,6 +838,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'K',
       },
       {
@@ -801,6 +853,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 17, H: 29 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'L',
       },
       {
@@ -815,6 +868,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 5, H: 11 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'M',
       },
       {
@@ -829,6 +883,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 14, H: 23 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'N',
       },
       {
@@ -843,6 +898,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 4, H: 9 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'O',
       },
       {
@@ -857,6 +913,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 15, H: 25 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'P',
       },
       {
@@ -871,6 +928,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'Q',
       },
       {
@@ -885,6 +943,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 16, H: 27 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'R',
       },
       {
@@ -899,6 +958,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 17, H: 29 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'S',
       },
       {
@@ -913,6 +973,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'T',
       },
       {
@@ -927,6 +988,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 17, H: 29 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'U',
       },
       {
@@ -941,6 +1003,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'V',
       },
       {
@@ -955,6 +1018,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 16, H: 27 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'W',
       },
       {
@@ -969,6 +1033,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'X',
       },
       {
@@ -983,6 +1048,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 17, H: 29 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'Y',
       },
       {
@@ -997,6 +1063,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'Z',
       },
       {
@@ -1011,6 +1078,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 17, H: 29 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: '[',
       },
       {
@@ -1025,6 +1093,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: '\\',
       },
       {
@@ -1039,6 +1108,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 16, H: 27 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: ']',
       },
       {
@@ -1053,6 +1123,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: '^',
       },
       {
@@ -1067,6 +1138,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 17, H: 29 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: '_',
       },
       {
@@ -1081,6 +1153,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: '`',
       },
       {
@@ -1095,6 +1168,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 17, H: 29 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'a',
       },
       {
@@ -1109,6 +1183,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'b',
       },
       {
@@ -1123,6 +1198,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 16, H: 27 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'c',
       },
       {
@@ -1137,6 +1213,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 3, H: 7 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'd',
       },
       {
@@ -1151,6 +1228,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 17, H: 29 },
           unsaturation: 3.5,
         },
+        fragmentType: 'cyclic',
         code: 'e',
       },
       {
@@ -1165,6 +1243,7 @@ describe('fragmentCyclicBonds', () => {
           atoms: { C: 2, H: 5 },
           unsaturation: 0.5,
         },
+        fragmentType: 'cyclic',
         code: 'f',
       },
     ];

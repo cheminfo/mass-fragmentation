@@ -94,6 +94,7 @@ export function fragmentCyclicBonds(molecule) {
         result.mf = getMF(fragment).mf.replace(/R[1-9]?/, '');
         result.idCode = fragment.getIDCode();
         result.mfInfo = new MF(result.mf).getInfo();
+        result.fragmentType = 'cyclic';
         results.push(result);
       }
     }
