@@ -38,7 +38,7 @@ export function bondContribution(spectra, massPrecursorIon) {
   // reaction rate for each fragment less the molecular ion
   let rateReactionFragments = [];
   let rateArray = [];
-  const delta = intensityPrecursorIon - molecularIon[0].intensity;
+  const delta = (intensityPrecursorIon - 1) * molecularIon[0].intensity;
   for (let i = 0; i < spectra.length; i++) {
     if (spectra[i].y !== molecularIon[0].intensity) {
       let rateFragment = (-1 * rateReactionMolecularIon * spectra[i].y) / delta;
@@ -51,6 +51,7 @@ export function bondContribution(spectra, massPrecursorIon) {
       rateArray.push(rateFragment);
     }
   }
+
   // normalization
   let maxRateArray = Math.max(...rateArray);
   let minRateArray = Math.min(...rateArray);
@@ -69,6 +70,5 @@ export function bondContribution(spectra, massPrecursorIon) {
       contribution: rateReactionFragments[i].contribution,
     };
   }
-
   return bondContribution;
 }
