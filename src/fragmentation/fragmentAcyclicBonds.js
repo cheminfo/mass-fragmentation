@@ -1,8 +1,7 @@
 // https://cheminfo.github.io/openchemlib-js/index.html
 
 import MassTools from 'mass-tools';
-import { getMF } from 'openchemlib-utils';
-import { getHoseCodesForPath } from 'openchemlib-utils/src/hose/getHoseCodesForPath';
+import { getMF, getHoseCodesForPath } from 'openchemlib-utils';
 
 const { MF } = MassTools;
 

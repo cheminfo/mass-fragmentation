@@ -4,7 +4,6 @@
   "description": "",
   "main": "lib/index.js",
   "module": "src/index.js",
-  "type": "module",
   "files": [
     "lib",
     "src"
@@ -31,24 +30,23 @@
   },
   "homepage": "https://github.com/cheminfo/mass-fragmentation#readme",
   "jest": {
-    "testEnvironment": "node",
-    "transform": {}
+    "testEnvironment": "node"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.5",
     "@types/jest": "^27.0.3",
     "eslint": "^8.4.1",
     "eslint-config-cheminfo": "^7.2.1",
-    "jest": "^27.4.3",
+    "jest": "^27.4.5",
     "prettier": "^2.5.1",
-    "rollup": "^2.60.2"
+    "rollup": "^2.61.1"
   },
   "dependencies": {
     "arraybuffer-xml-parser": "^0.5.0",
     "mass-tools": "^0.60.16",
     "ml-spectra-processing": "^6.8.0",
     "openchemlib": "^7.4.3",
-    "openchemlib-utils": "^1.6.0",
+    "openchemlib-utils": "^1.7.0",
     "sdf-parser": "^5.0.0"
   }
 }
