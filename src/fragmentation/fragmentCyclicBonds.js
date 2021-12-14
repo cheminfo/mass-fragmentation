@@ -1,5 +1,6 @@
 import MassTools from 'mass-tools';
 import { getMF } from 'openchemlib-utils';
+import { getHoseCodesForPath } from 'openchemlib-utils/src/hose/getHoseCodesForPath.mjs';
 import OCL from 'openchemlib/dist/openchemlib-full.pretty.js';
 
 import { getCycleAndFragmentationInfo } from './getCycleAndFragmentationInfo';
@@ -78,6 +79,10 @@ export function fragmentCyclicBonds(molecule) {
         false,
         atomMap,
       );
+      result.hose = [];
+      let hose = getHoseCodesForPath(fragment, 0, 1, fragment.getAllBonds());
+      result.hose.push(hose);
+
       for (let j = 0; j < atomMap.length; j++) {
         if (atomMap[j] === 0) {
           result.atomMap.push(j);

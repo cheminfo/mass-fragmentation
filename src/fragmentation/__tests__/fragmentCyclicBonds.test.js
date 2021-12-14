@@ -31,6 +31,20 @@ describe('fragmentCyclicBonds', () => {
     expect(result).toStrictEqual([
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -46,6 +60,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [1],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@H}PGBEAJC}D`\\JjNET' },
+              { sphere: 2, oclID: 'gNp@Djyjj`hGBEAJC}D`\\JjNET' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C11H19',
         idCode: 'dcl@`@V\\bTTRbOBnuUUUP@@',
         mfInfo: {
@@ -61,6 +89,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liMT@@',
         mfInfo: {
@@ -76,6 +118,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [2],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`\x7FQHGBjcaU@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C10H17',
         idCode: 'dmL@`@V\\bbbTQ[iVjjjh@@',
         mfInfo: {
@@ -91,6 +147,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -106,6 +176,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [2],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`\x7FQHGBjcaU@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C11H19',
         idCode: 'dcl@`@V\\bbbTTK]NuUUUP@@',
         mfInfo: {
@@ -121,6 +205,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`\x7FQHGBjcaU@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C11H19',
         idCode: 'dcl@`@VTfUe^fWZjjjh@@',
         mfInfo: {
@@ -136,6 +234,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [7],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -151,6 +263,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`\x7FQHGBjcaU@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C10H17',
         idCode: 'dmL@`@VTfUmZZUjjjj@@',
         mfInfo: {
@@ -166,6 +292,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [7],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -181,6 +321,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`\x7FQHGBjcaU@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C11H19',
         idCode: 'dcl@`@VTfUmZfeZjjjh@@',
         mfInfo: {
@@ -196,6 +350,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [8],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -211,6 +379,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C11H19',
         idCode: 'dcl@`@VTfUmZfeZjjjh@@',
         mfInfo: {
@@ -226,6 +408,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [3],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -241,6 +437,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C10H17',
         idCode: 'dmL@`@VTfUmZZUjjjj@@',
         mfInfo: {
@@ -256,6 +466,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [3],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -271,6 +495,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`\x7FQHGBjcaU@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C11H19',
         idCode: 'dcl@`@VTfUe^fWZjjjh@@',
         mfInfo: {
@@ -286,6 +524,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [4],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -309,6 +561,20 @@ describe('fragmentCyclicBonds', () => {
     const moleculeTest2 = [
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C8H15',
         idCode: 'did@`@V\\bbRaijjj`@',
         mfInfo: {
@@ -324,6 +590,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [4],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -339,6 +619,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C7H13',
         idCode: 'daD@`@VTfUjZjj`@',
         mfInfo: {
@@ -354,6 +648,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [4],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -369,6 +677,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C6H11',
         idCode: 'gOpH@liLkWUU@@',
         mfInfo: {
@@ -384,6 +706,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [4],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C4H9',
         idCode: 'gJPH@liJuP@',
         mfInfo: {
@@ -399,6 +735,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C8H15',
         idCode: 'did@`@VTfUnfjjj@@',
         mfInfo: {
@@ -414,6 +764,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [5],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -429,6 +793,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C7H13',
         idCode: 'daD@`@VTfUzZjj`@',
         mfInfo: {
@@ -444,6 +822,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [5],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -459,6 +851,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C8H15',
         idCode: 'did@`@VTfUvfjjj@@',
         mfInfo: {
@@ -474,6 +880,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [6],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -489,6 +909,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 7, 6, 1],
+            from: 0,
+            to: 1,
+            torsion: -0,
+            hoses: [
+              { sphere: 0, oclID: 'gC`@Dej@xPhMP_hdCaUYpj`' },
+              { sphere: 1, oclID: 'gGP@DinjiJApaPV`\x7FQHGBjkaU@' },
+              { sphere: 2, oclID: 'daD@@DieZZjjhb`NDB`z`\x7FQDApjn\\Jh' },
+            ],
+            length: 3,
+          },
+        ],
         mf: 'C8H15',
         idCode: 'did@`@VTeYWajjj@@',
         mfInfo: {
@@ -504,6 +938,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [1],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -519,6 +967,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -534,6 +996,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [1],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'gJP@DkjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C8H15',
         idCode: 'did@`@VTeYWajjj@@',
         mfInfo: {
@@ -549,6 +1025,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liMT@@',
         mfInfo: {
@@ -564,6 +1054,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [2],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@H}PGBEAJC}D`\\JjNET' },
+              { sphere: 2, oclID: 'gGP@Djvj`NDJBTGzI@xUT\\Jh' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C7H13',
         idCode: 'daD@`@VTeeVzjj`@',
         mfInfo: {
@@ -579,6 +1083,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -594,6 +1112,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [2],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@H}PGBEAJC}D`\\JjNET' },
+              { sphere: 2, oclID: 'gNp@Djyjj`hGBEAJC}D`\\JjNET' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C8H15',
         idCode: 'did@`@VTefWajjj@@',
         mfInfo: {
@@ -609,6 +1141,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C4H9',
         idCode: 'gJPH@liLuP@',
         mfInfo: {
@@ -624,6 +1170,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [3],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C6H11',
         idCode: 'gOpH@liLkWUU@@',
         mfInfo: {
@@ -639,6 +1199,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -654,6 +1228,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [3],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`\x7FQHGBjcaU@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C7H13',
         idCode: 'daD@`@VTfYVzjj`@',
         mfInfo: {
@@ -678,6 +1266,20 @@ describe('fragmentCyclicBonds', () => {
     const moleculeTest3 = [
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 15, 14, 13, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'gJP@DeZhCaB`MA~bPNETWBj@' },
+              { sphere: 1, oclID: 'dax@@LdTfMUT@\\HEAuA~bHCaU\\xUP' },
+              { sphere: 2, oclID: 'dct@@LdTbTRmUUUQE@\\HEAmA~bHCaUZxUP' },
+            ],
+            length: 4,
+          },
+        ],
         mf: 'C17H29',
         idCode: 'fde@B@@KNQIJQQIQQGScA}Fjjjjjj`@@',
         mfInfo: {
@@ -693,6 +1295,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [1],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -708,6 +1324,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 2, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eM@Df`xR`ZC}EApjepj`' },
+              { sphere: 1, oclID: 'eM@Df`xR`ZC}EApjepj`' },
+              { sphere: 2, oclID: 'eM@Df`xR`ZC}EApjepj`' },
+            ],
+            length: 2,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -723,6 +1353,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [1],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'gJP@DkjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C16H27',
         idCode: 'fhy@B@@KNQIQQJIIPrMiw`uUUUUUP@@',
         mfInfo: {
@@ -738,6 +1382,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -753,6 +1411,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [1],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'gJP@DkjhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C17H29',
         idCode: 'fde@B@@KNQIQRIQYJEUc^CFjjjjjj`@@',
         mfInfo: {
@@ -768,6 +1440,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C4H9',
         idCode: 'gJPH@liLuP@',
         mfInfo: {
@@ -783,6 +1469,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [2],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@H}PGBEAJC}D`\\JjNET' },
+              { sphere: 2, oclID: 'gNp@Djyjj`hGBEAJC}D`\\JjNET' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C15H25',
         idCode: 'f`i@B@@KNQJJIQIJDVeV]zjjjjjh@@',
         mfInfo: {
@@ -798,6 +1498,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liMT@@',
         mfInfo: {
@@ -813,6 +1527,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [2],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@H}PGBEAJC}D`\\JjNET' },
+              { sphere: 2, oclID: 'dax@@DjzZjj@hCa@hHhOtQ@\\JjGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C16H27',
         idCode: 'fhy@B@@KNQJJQJKIPrMiw`uUUUUUP@@',
         mfInfo: {
@@ -828,6 +1556,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -843,6 +1585,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [2],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@H}PGBEAJC}D`\\JjNET' },
+              { sphere: 2, oclID: 'dax@@DjzZjj@hCa@hHhOtQ@\\JjGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C17H29',
         idCode: 'fde@B@@KNQJJQJIIJVUm^CFjjjjjj`@@',
         mfInfo: {
@@ -858,6 +1614,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gJP@DiZhCaB`eA~bPNEUGBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C5H11',
         idCode: 'gGPH@liLmU@@',
         mfInfo: {
@@ -873,6 +1643,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [3],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gNp@DiYjj@xPhIP_hdCaUQpj`' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C14H23',
         idCode: 'foQ@B@@KNQQQJIIP|UHugUUUUUT@@',
         mfInfo: {
@@ -888,6 +1672,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C4H9',
         idCode: 'gJPH@liLuP@',
         mfInfo: {
@@ -903,6 +1701,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [3],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'dax@@DiZZjh@xPJBJC}DPGBjapj`' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C15H25',
         idCode: 'f`i@B@@KNQQRIQYJDVeV]zjjjjjh@@',
         mfInfo: {
@@ -918,6 +1730,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -933,6 +1759,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [3],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'dax@@DiZZjh@xPJBJC}DPGBjapj`' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C16H27',
         idCode: 'fhy@B@@KNQQRIQIIRbLiw`uUUUUUP@@',
         mfInfo: {
@@ -948,6 +1788,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C17H29',
         idCode: 'fde@B@@KNQIJJIQIJEUc^CFjjjjjj`@@',
         mfInfo: {
@@ -963,6 +1817,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [16],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -978,6 +1846,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGzI@xUT\\Jh' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C17H29',
         idCode: 'fde@B@@KNQQIISQJJEgCV}Fjjjjjj`@@',
         mfInfo: {
@@ -993,6 +1875,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [4],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1008,6 +1904,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGzI@xUT\\Jh' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C16H27',
         idCode: 'fhy@B@@KNQQIISQJHlxZw`uUUUUUP@@',
         mfInfo: {
@@ -1023,6 +1933,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [4],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -1038,6 +1962,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGzI@xUT\\Jh' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C17H29',
         idCode: 'fde@B@@KNQQIIQJKQEgKNCFjjjjjj`@@',
         mfInfo: {
@@ -1053,6 +1991,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [5],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1068,6 +2020,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGzI@xUT\\Jh' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C17H29',
         idCode: 'fde@B@@KNQQIIQJYQEgKNCFjjjjjj`@@',
         mfInfo: {
@@ -1083,6 +2049,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [12],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1098,6 +2078,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGzI@xUT\\Jh' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C16H27',
         idCode: 'fhy@B@@KNQQIIIQJHlxZw`uUUUUUP@@',
         mfInfo: {
@@ -1113,6 +2107,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [12],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -1128,6 +2136,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGzI@xUT\\Jh' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C17H29',
         idCode: 'fde@B@@KNQQIIIQJJEgCV}Fjjjjjj`@@',
         mfInfo: {
@@ -1143,6 +2165,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [13],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1158,6 +2194,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGzI@xUT\\Jh' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C17H29',
         idCode: 'fde@B@@KJSJkKJrseoNcUUUUUUP@@',
         mfInfo: {
@@ -1173,6 +2223,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [8],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1188,6 +2252,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGzI@xUT\\Jh' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C16H27',
         idCode: 'fhy@B@@KJSJkKJkNVB{uUUUUUT@@',
         mfInfo: {
@@ -1203,6 +2281,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [8],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -1218,6 +2310,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [0],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGzI@xUT\\Jh' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C17H29',
         idCode: 'fde@B@@KJSJkKJrsehn}UUUUUUP@@',
         mfInfo: {
@@ -1233,6 +2339,20 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         atomMap: [9],
+        hose: [
+          {
+            atoms: [0, 1],
+            from: 0,
+            to: 1,
+            torsion: undefined,
+            hoses: [
+              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+            ],
+            length: 1,
+          },
+        ],
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1250,5 +2370,3 @@ describe('fragmentCyclicBonds', () => {
     expect(result3).toStrictEqual(moleculeTest3);
   });
 });
-
-// final molecule for tests: 'CCC13CCCC2CCCC(CCC1)C23'

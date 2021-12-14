@@ -2,12 +2,13 @@
 
 import MassTools from 'mass-tools';
 import { getMF } from 'openchemlib-utils';
+import { getHoseCodesForPath } from 'openchemlib-utils/src/hose/getHoseCodesForPath.mjs';
 
 const { MF } = MassTools;
 
 /**
  * The function performs fragmentation of all bonds not belonging to cyclic or aromatic groups and returns the fragments along with the idCode and monoisotopic mass
- * @param {OCL.Molecule} [molecule] Molecule to be fragmented
+ * @param {OCL.molecule} [molecule] Molecule to be fragmented
  * @returns {object} result from fragmentation of acyclic bonds
  */
 
@@ -75,6 +76,7 @@ export function fragmentAcyclicBonds(molecule) {
           molecule.getAllAtoms(),
           molecule.getAllBonds(),
         );
+
         let atomMap = [];
 
         brokenMolecule[bond.i].copyMoleculeByAtoms(
@@ -83,6 +85,10 @@ export function fragmentAcyclicBonds(molecule) {
           false,
           atomMap,
         );
+        result.hose = [];
+        let hose = getHoseCodesForPath(fragment, 0, 1, fragment.getAllBonds());
+        result.hose.push(hose);
+
         // where atomMap[j] is equal to 0 there is a bond who was fragmented
         for (let j = 0; j < atomMap.length; j++) {
           if (atomMap[j] === 0) {
@@ -93,11 +99,13 @@ export function fragmentAcyclicBonds(molecule) {
             }
           }
         }
+
         fragment.setFragment(false);
         result.mf = getMF(fragment).mf.replace(/R[1-9]?/, ''); // get mf without R group
         result.idCode = fragment.getIDCode();
         result.mfInfo = new MF(result.mf).getInfo();
         result.fragmentType = 'acyclic';
+
         results.push(result);
       }
     }
@@ -112,5 +120,6 @@ export function fragmentAcyclicBonds(molecule) {
     let result = results[i];
     result.code = String.fromCharCode(65 + i);
   }
+
   return results;
 }

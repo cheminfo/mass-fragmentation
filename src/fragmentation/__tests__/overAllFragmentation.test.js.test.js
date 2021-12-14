@@ -8,10 +8,25 @@ describe('overAllFragmentation', () => {
   it('CCCCC2CCC1C(CC)CC(=O)CC1C2', () => {
     const molecule = Molecule.fromSmiles('CCCCC2CCC1C(CC)CC(=O)CC1C2'); //3 cyclohexane connected
     const result = overAllFragmentation(molecule);
+
     expect(result).toStrictEqual([
       [
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'dH' },
+                { sphere: 1, oclID: 'dH' },
+                { sphere: 2, oclID: 'dH' },
+              ],
+              length: -1,
+            },
+          ],
           mf: 'CH3',
           idCode: 'eFBAYc@@',
           mfInfo: {
@@ -27,6 +42,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [1],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C15H25O',
           idCode: 'fhiAB@O@VTeVUmYqRMZjjjjfh@@',
           mfInfo: {
@@ -42,6 +71,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H5',
           idCode: 'eMBAYRZ@',
           mfInfo: {
@@ -57,6 +100,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [2],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gJP@DkjhCaB`eA~bPNEUGBj@' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C14H23O',
           idCode: 'f`qAB@G@VTeYVugxKQjjjjij@@',
           mfInfo: {
@@ -72,6 +129,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C3H7',
           idCode: 'gC`H@liKT@@',
           mfInfo: {
@@ -87,6 +158,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [3],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gC`@H}PGBEAJC}D`\\JjNET' },
+                { sphere: 2, oclID: 'gGP@Djvj`NDJBTGzI@xUT\\Jh' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C13H21O',
           idCode: 'foAAB@K@VTee[V]gEZjjjjZ`@@',
           mfInfo: {
@@ -102,6 +187,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C4H9',
           idCode: 'gJPH@liJuP@',
           mfInfo: {
@@ -117,6 +216,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [4],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+                { sphere: 2, oclID: 'gFp@DiTvjhCaB`eA~bPNEUGBj@' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C12H19O',
           idCode: 'dg|H`CAYRYVugiiVjjjfh@@',
           mfInfo: {
@@ -132,6 +245,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C14H23O',
           idCode: 'f`qAB@O@VTeUe[UdjsjjjjjZ@@',
           mfInfo: {
@@ -147,6 +274,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [9],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H5',
           idCode: 'eMBAYRZ@',
           mfInfo: {
@@ -162,6 +303,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C15H25O',
           idCode: 'fhiAB@@`VTeUe[VYJlzjjjjih@@',
           mfInfo: {
@@ -177,6 +332,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [10],
+          hose: [
+            {
+              atoms: [],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'dH' },
+                { sphere: 1, oclID: 'dH' },
+                { sphere: 2, oclID: 'dH' },
+              ],
+              length: -1,
+            },
+          ],
           mf: 'CH3',
           idCode: 'eFBAYc@@',
           mfInfo: {
@@ -192,6 +361,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C12H22O',
           idCode: 'dklH@@rIJIJEKaZjjj`@',
           mfInfo: {
@@ -207,6 +390,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [8],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+                { sphere: 2, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C4H9',
           idCode: 'gJPH@liLuP@',
           mfInfo: {
@@ -222,6 +419,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C11H22',
           idCode: 'dmt@@LdbRTqkjjjj@@',
           mfInfo: {
@@ -237,6 +448,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [8],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+                { sphere: 2, oclID: 'gJP@DiZhCaB`eA~bPNEUGBj@' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C5H9O',
           idCode: 'gNqHFEeIeZjP@',
           mfInfo: {
@@ -252,6 +477,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C10H20',
           idCode: 'deT@@DjU_kjjjh@@',
           mfInfo: {
@@ -267,6 +506,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [8],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+                { sphere: 2, oclID: 'gJP@DiZhCaB`eA~bPNEUGBj@' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C6H11O',
           idCode: 'daxH`FAYRYVji`@',
           mfInfo: {
@@ -282,6 +535,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C14H28',
           idCode: 'dg\\@@LdbbRJrSCUUUUP@@',
           mfInfo: {
@@ -297,6 +564,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [11],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eMHAIXNFhF`\x7FQR\\Ji\\Jh' },
+                { sphere: 2, oclID: 'eMHAIXNFhF`\x7FQR\\Ji\\Jh' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H3O',
           idCode: 'gCaHLEeIZP@',
           mfInfo: {
@@ -312,6 +593,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C13H26',
           idCode: 'dkl@@DjU]Wkjjjjh@@',
           mfInfo: {
@@ -327,6 +622,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [11],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gCa@@dsPGBe@jC}Dd\\JiNET' },
+                { sphere: 2, oclID: 'gCa@@dsPGBe@jC}Dd\\JiNET' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C3H5O',
           idCode: 'gJQHLEeIZf@@',
           mfInfo: {
@@ -342,6 +651,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C14H28',
           idCode: 'dg\\@@LdbbRqRWSUUUUP@@',
           mfInfo: {
@@ -357,6 +680,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [12],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eFHBJGBTEP_hhOeUNET' },
+                { sphere: 1, oclID: 'eMHAIXNDhJ`\x7FQP_Jj\\Jh' },
+                { sphere: 2, oclID: 'eMHAIXNDhJ`\x7FQP_Jj\\Jh' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H3O',
           idCode: 'gCaHDEeIi`@',
           mfInfo: {
@@ -372,6 +709,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C14H26O',
           idCode: 'do|H@@RYV]]ZYjjjjh@@',
           mfInfo: {
@@ -387,6 +738,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [5],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H5',
           idCode: 'eMBAYRZ@',
           mfInfo: {
@@ -402,6 +767,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C6H14',
           idCode: 'gGP@DiVj`@',
           mfInfo: {
@@ -417,6 +796,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [5],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gJP@DkjhCaB`eA~bPNEUGBj@' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C10H17O',
           idCode: 'dcLH`MAYRUfUqfjjjX@@',
           mfInfo: {
@@ -432,6 +825,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C7H16',
           idCode: 'gNp@LdbJjj@@',
           mfInfo: {
@@ -447,6 +854,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [6],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gC`@H}PGBEAJC}D`\\JjNET' },
+                { sphere: 2, oclID: 'gNp@Djyjj`hGBEAJC}D`\\JjNET' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C9H15O',
           idCode: 'dmtH`EAYRVYWxZjjf@@',
           mfInfo: {
@@ -462,6 +883,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C6H14',
           idCode: 'gGP@DiVj`@',
           mfInfo: {
@@ -477,6 +912,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [6],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gC`@H}PGBEAJC}D`\\JjNET' },
+                { sphere: 2, oclID: 'dax@@Djyjjh@xPJBJC}DPGBjapj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C10H17O',
           idCode: 'dcLH`MAYrIQQQH}MUUTp@@',
           mfInfo: {
@@ -492,6 +941,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C8H18',
           idCode: 'dax@@DjWzjh@@',
           mfInfo: {
@@ -507,6 +970,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [7],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gJP@DjZhCaB`eA~bPNEUGBj@' },
+                { sphere: 2, oclID: 'daD@@DjUZzjjhB`NDB`b`\x7FQDApjh\\Jh' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C8H13O',
           idCode: 'deTH`IAYRYe]njji`@',
           mfInfo: {
@@ -522,6 +999,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C7H16',
           idCode: 'gNp@DiUjj@@',
           mfInfo: {
@@ -537,6 +1028,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [7],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gJP@DjZhCaB`eA~bPNEUGBj@' },
+                { sphere: 2, oclID: 'did@@DjUZnjjjPJBHCa@hHhOtQ@\\JjGBj@' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C9H15O',
           idCode: 'dmtH`EAYrJJJIEajjjX@@',
           mfInfo: {
@@ -561,6 +1066,20 @@ describe('overAllFragmentation', () => {
       [
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H5',
           idCode: 'eMBAYRZ@',
           mfInfo: {
@@ -576,6 +1095,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [1],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H5',
           idCode: 'eMBAYRZ@',
           mfInfo: {
@@ -591,6 +1124,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [0],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H5',
           idCode: 'eMBAYRZ@',
           mfInfo: {
@@ -606,6 +1153,20 @@ describe('overAllFragmentation', () => {
         },
         {
           atomMap: [2],
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H5',
           idCode: 'eMBAYRZ@',
           mfInfo: {
@@ -625,307 +1186,588 @@ describe('overAllFragmentation', () => {
   it('CCCCCC(CC)CCC', () => {
     const molecule = Molecule.fromSmiles('CCCCCC(CC)CCC'); // just cycle
     const result = overAllFragmentation(molecule);
+
     expect(result).toStrictEqual([
       [
         {
           atomMap: [0],
-          code: 0,
-          fragmentType: 'acyclic',
-          idCode: 'eFBAYc@@',
+          hose: [
+            {
+              atoms: [],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'dH' },
+                { sphere: 1, oclID: 'dH' },
+                { sphere: 2, oclID: 'dH' },
+              ],
+              length: -1,
+            },
+          ],
           mf: 'CH3',
+          idCode: 'eFBAYc@@',
           mfInfo: {
-            atoms: { C: 1, H: 3 },
-            charge: 0,
             mass: 15.03455815890258,
-            mf: 'CH3',
             monoisotopicMass: 15.02347509669,
+            charge: 0,
+            mf: 'CH3',
+            atoms: { C: 1, H: 3 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 0,
         },
         {
           atomMap: [1],
-          code: 1,
-          fragmentType: 'acyclic',
-          idCode: 'dmT@`@VTeUeZjjh@@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C10H21',
+          idCode: 'dmT@`@VTeUeZjjh@@',
           mfInfo: {
-            atoms: { C: 10, H: 21 },
-            charge: 0,
             mass: 141.2741148025238,
-            mf: 'C10H21',
             monoisotopicMass: 141.16432567683,
+            charge: 0,
+            mf: 'C10H21',
+            atoms: { C: 10, H: 21 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 1,
         },
         {
           atomMap: [0],
-          code: 2,
-          fragmentType: 'acyclic',
-          idCode: 'eMBAYRZ@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H5',
+          idCode: 'eMBAYRZ@',
           mfInfo: {
-            atoms: { C: 2, H: 5 },
-            charge: 0,
             mass: 29.061175563749384,
-            mf: 'C2H5',
             monoisotopicMass: 29.03912516115,
+            charge: 0,
+            mf: 'C2H5',
+            atoms: { C: 2, H: 5 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 2,
         },
         {
           atomMap: [2],
-          code: 3,
-          fragmentType: 'acyclic',
-          idCode: 'ded@`@VTeVUjjj@@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C9H19',
+          idCode: 'ded@`@VTeVUjjj@@',
           mfInfo: {
-            atoms: { C: 9, H: 19 },
-            charge: 0,
             mass: 127.247497397677,
-            mf: 'C9H19',
             monoisotopicMass: 127.14867561237,
+            charge: 0,
+            mf: 'C9H19',
+            atoms: { C: 9, H: 19 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 3,
         },
         {
           atomMap: [0],
-          code: 4,
-          fragmentType: 'acyclic',
-          idCode: 'gC`H@liKT@@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C3H7',
+          idCode: 'gC`H@liKT@@',
           mfInfo: {
-            atoms: { C: 3, H: 7 },
-            charge: 0,
             mass: 43.08779296859618,
-            mf: 'C3H7',
             monoisotopicMass: 43.05477522561,
+            charge: 0,
+            mf: 'C3H7',
+            atoms: { C: 3, H: 7 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 4,
         },
         {
           atomMap: [3],
-          code: 5,
-          fragmentType: 'acyclic',
-          idCode: 'diD@`@VTeYVjj`@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gJP@DkjhCaB`eA~bPNEUGBj@' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C8H17',
+          idCode: 'diD@`@VTeYVjj`@',
           mfInfo: {
-            atoms: { C: 8, H: 17 },
-            charge: 0,
             mass: 113.22087999283019,
-            mf: 'C8H17',
             monoisotopicMass: 113.13302554791,
+            charge: 0,
+            mf: 'C8H17',
+            atoms: { C: 8, H: 17 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 5,
         },
         {
           atomMap: [0],
-          code: 6,
-          fragmentType: 'acyclic',
-          idCode: 'gJPH@liJuP@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C4H9',
+          idCode: 'gJPH@liJuP@',
           mfInfo: {
-            atoms: { C: 4, H: 9 },
-            charge: 0,
             mass: 57.114410373442986,
-            mf: 'C4H9',
             monoisotopicMass: 57.07042529007,
+            charge: 0,
+            mf: 'C4H9',
+            atoms: { C: 4, H: 9 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 6,
         },
         {
           atomMap: [4],
-          code: 7,
-          fragmentType: 'acyclic',
-          idCode: 'dax@`@VTeeZjh@@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gC`@H}PGBEAJC}D`\\JjNET' },
+                { sphere: 2, oclID: 'gGP@Djvj`NDJBTGzI@xUT\\Jh' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C7H15',
+          idCode: 'dax@`@VTeeZjh@@',
           mfInfo: {
-            atoms: { C: 7, H: 15 },
-            charge: 0,
             mass: 99.1942625879834,
-            mf: 'C7H15',
             monoisotopicMass: 99.11737548345,
+            charge: 0,
+            mf: 'C7H15',
+            atoms: { C: 7, H: 15 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 7,
         },
         {
           atomMap: [0],
-          code: 8,
-          fragmentType: 'acyclic',
-          idCode: 'gGPH@liJmU@@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C5H11',
+          idCode: 'gGPH@liJmU@@',
           mfInfo: {
-            atoms: { C: 5, H: 11 },
-            charge: 0,
             mass: 71.1410277782898,
-            mf: 'C5H11',
             monoisotopicMass: 71.08607535453,
+            charge: 0,
+            mf: 'C5H11',
+            atoms: { C: 5, H: 11 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 8,
         },
         {
           atomMap: [5],
-          code: 9,
-          fragmentType: 'acyclic',
-          idCode: 'gNpH@liLkUT@@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'gC`@Dij@xPhIP_hdCaUQpj`' },
+                { sphere: 2, oclID: 'gJP@DiZhCaB`eA~bPNEUGBj@' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C6H13',
+          idCode: 'gNpH@liLkUT@@',
           mfInfo: {
-            atoms: { C: 6, H: 13 },
-            charge: 0,
             mass: 85.16764518313659,
-            mf: 'C6H13',
             monoisotopicMass: 85.10172541899,
+            charge: 0,
+            mf: 'C6H13',
+            atoms: { C: 6, H: 13 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 9,
         },
         {
           atomMap: [0],
-          code: 10,
-          fragmentType: 'acyclic',
-          idCode: 'ded@`@VTeUUjjj@@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C9H19',
+          idCode: 'ded@`@VTeUUjjj@@',
           mfInfo: {
-            atoms: { C: 9, H: 19 },
-            charge: 0,
             mass: 127.247497397677,
-            mf: 'C9H19',
             monoisotopicMass: 127.14867561237,
+            charge: 0,
+            mf: 'C9H19',
+            atoms: { C: 9, H: 19 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 10,
         },
         {
           atomMap: [6],
-          code: 11,
-          fragmentType: 'acyclic',
-          idCode: 'eMBAYRZ@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H5',
+          idCode: 'eMBAYRZ@',
           mfInfo: {
-            atoms: { C: 2, H: 5 },
-            charge: 0,
             mass: 29.061175563749384,
-            mf: 'C2H5',
             monoisotopicMass: 29.03912516115,
+            charge: 0,
+            mf: 'C2H5',
+            atoms: { C: 2, H: 5 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 11,
         },
         {
           atomMap: [0],
-          code: 12,
-          fragmentType: 'acyclic',
-          idCode: 'dmT@`@VTeUYzjjh@@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C10H21',
+          idCode: 'dmT@`@VTeUYzjjh@@',
           mfInfo: {
-            atoms: { C: 10, H: 21 },
-            charge: 0,
             mass: 141.2741148025238,
-            mf: 'C10H21',
             monoisotopicMass: 141.16432567683,
+            charge: 0,
+            mf: 'C10H21',
+            atoms: { C: 10, H: 21 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 12,
         },
         {
           atomMap: [7],
-          code: 13,
-          fragmentType: 'acyclic',
-          idCode: 'eFBAYc@@',
+          hose: [
+            {
+              atoms: [],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'dH' },
+                { sphere: 1, oclID: 'dH' },
+                { sphere: 2, oclID: 'dH' },
+              ],
+              length: -1,
+            },
+          ],
           mf: 'CH3',
+          idCode: 'eFBAYc@@',
           mfInfo: {
-            atoms: { C: 1, H: 3 },
-            charge: 0,
             mass: 15.03455815890258,
-            mf: 'CH3',
             monoisotopicMass: 15.02347509669,
+            charge: 0,
+            mf: 'CH3',
+            atoms: { C: 1, H: 3 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 13,
         },
         {
           atomMap: [0],
-          code: 14,
-          fragmentType: 'acyclic',
-          idCode: 'diD@`@VTeUVjj`@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C8H17',
+          idCode: 'diD@`@VTeUVjj`@',
           mfInfo: {
-            atoms: { C: 8, H: 17 },
-            charge: 0,
             mass: 113.22087999283019,
-            mf: 'C8H17',
             monoisotopicMass: 113.13302554791,
+            charge: 0,
+            mf: 'C8H17',
+            atoms: { C: 8, H: 17 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 14,
         },
         {
           atomMap: [8],
-          code: 15,
-          fragmentType: 'acyclic',
-          idCode: 'gC`H@liKT@@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C3H7',
+          idCode: 'gC`H@liKT@@',
           mfInfo: {
-            atoms: { C: 3, H: 7 },
-            charge: 0,
             mass: 43.08779296859618,
-            mf: 'C3H7',
             monoisotopicMass: 43.05477522561,
+            charge: 0,
+            mf: 'C3H7',
+            atoms: { C: 3, H: 7 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 15,
         },
         {
           atomMap: [0],
-          code: 16,
-          fragmentType: 'acyclic',
-          idCode: 'ded@`@VTeUYjjj@@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C9H19',
+          idCode: 'ded@`@VTeUYjjj@@',
           mfInfo: {
-            atoms: { C: 9, H: 19 },
-            charge: 0,
             mass: 127.247497397677,
-            mf: 'C9H19',
             monoisotopicMass: 127.14867561237,
+            charge: 0,
+            mf: 'C9H19',
+            atoms: { C: 9, H: 19 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 16,
         },
         {
           atomMap: [9],
-          code: 17,
-          fragmentType: 'acyclic',
-          idCode: 'eMBAYRZ@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 2, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C2H5',
+          idCode: 'eMBAYRZ@',
           mfInfo: {
-            atoms: { C: 2, H: 5 },
-            charge: 0,
             mass: 29.061175563749384,
-            mf: 'C2H5',
             monoisotopicMass: 29.03912516115,
+            charge: 0,
+            mf: 'C2H5',
+            atoms: { C: 2, H: 5 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 17,
         },
         {
           atomMap: [0],
-          code: 18,
-          fragmentType: 'acyclic',
-          idCode: 'dmT@`@VTeUYZjjh@@',
+          hose: [
+            {
+              atoms: [0, 1],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
+                { sphere: 1, oclID: 'eM@HzCaJBhOtTGBjgBj@' },
+                { sphere: 2, oclID: 'gC`@Dkj@xPhIP_hdCaUQpj`' },
+              ],
+              length: 1,
+            },
+          ],
           mf: 'C10H21',
+          idCode: 'dmT@`@VTeUYZjjh@@',
           mfInfo: {
-            atoms: { C: 10, H: 21 },
-            charge: 0,
             mass: 141.2741148025238,
-            mf: 'C10H21',
             monoisotopicMass: 141.16432567683,
+            charge: 0,
+            mf: 'C10H21',
+            atoms: { C: 10, H: 21 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 18,
         },
         {
           atomMap: [10],
-          code: 19,
-          fragmentType: 'acyclic',
-          idCode: 'eFBAYc@@',
+          hose: [
+            {
+              atoms: [],
+              from: 0,
+              to: 1,
+              torsion: undefined,
+              hoses: [
+                { sphere: 0, oclID: 'dH' },
+                { sphere: 1, oclID: 'dH' },
+                { sphere: 2, oclID: 'dH' },
+              ],
+              length: -1,
+            },
+          ],
           mf: 'CH3',
+          idCode: 'eFBAYc@@',
           mfInfo: {
-            atoms: { C: 1, H: 3 },
-            charge: 0,
             mass: 15.03455815890258,
-            mf: 'CH3',
             monoisotopicMass: 15.02347509669,
+            charge: 0,
+            mf: 'CH3',
+            atoms: { C: 1, H: 3 },
             unsaturation: 0.5,
           },
+          fragmentType: 'acyclic',
+          code: 19,
         },
       ],
     ]);
@@ -933,6 +1775,7 @@ describe('overAllFragmentation', () => {
   it('noMolecule', () => {
     const molecule = Molecule.fromSmiles('');
     const result = overAllFragmentation(molecule);
+
     expect(result).toStrictEqual([[]]);
   });
 });
