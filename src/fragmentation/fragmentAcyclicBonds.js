@@ -52,7 +52,6 @@ export function fragmentAcyclicBonds(molecule) {
   let fragmentMap = [];
   let nbFragments = [];
   let results = [];
-
   for (let bond of bonds) {
     if (bond.selected) {
       // if bond.selected is true (line 46) the molecule will be fragmented
@@ -66,6 +65,9 @@ export function fragmentAcyclicBonds(molecule) {
     if (nbFragments === 2) {
       for (let i = 0; i < nbFragments; i++) {
         const result = {};
+        let hose = getHoseCodesForPath(molecule, bond.atom1, bond.atom2, 1);
+        result.hose = hose;
+
         result.atomMap = [];
         // assign fragment id to index of for loop
         let includeAtom = fragmentMap.map((id) => {
@@ -84,9 +86,6 @@ export function fragmentAcyclicBonds(molecule) {
           false,
           atomMap,
         );
-        result.hose = [];
-        let hose = getHoseCodesForPath(fragment, 0, 1, fragment.getAllBonds());
-        result.hose.push(hose);
 
         // where atomMap[j] is equal to 0 there is a bond who was fragmented
         for (let j = 0; j < atomMap.length; j++) {
