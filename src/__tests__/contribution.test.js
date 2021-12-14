@@ -60,7 +60,6 @@ describe('contribution', () => {
       min: 0,
       max: 1,
     });
-    console.log(bondContribution);
   });
   it('notReal', () => {
     const experimentalSpectrum = [
