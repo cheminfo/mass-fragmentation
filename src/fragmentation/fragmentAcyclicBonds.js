@@ -2,7 +2,7 @@
 
 import MassTools from 'mass-tools';
 import { getMF } from 'openchemlib-utils';
-import { getHoseCodesForPath } from 'openchemlib-utils/src/hose/getHoseCodesForPath.mjs';
+import { getHoseCodesForPath } from 'openchemlib-utils/src/hose/getHoseCodesForPath';
 
 const { MF } = MassTools;
 

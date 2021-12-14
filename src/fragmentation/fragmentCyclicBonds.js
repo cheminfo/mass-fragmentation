@@ -1,6 +1,6 @@
 import MassTools from 'mass-tools';
 import { getMF } from 'openchemlib-utils';
-import { getHoseCodesForPath } from 'openchemlib-utils/src/hose/getHoseCodesForPath.mjs';
+import { getHoseCodesForPath } from 'openchemlib-utils/src/hose/getHoseCodesForPath';
 import OCL from 'openchemlib/dist/openchemlib-full.pretty.js';
 
 import { getCycleAndFragmentationInfo } from './getCycleAndFragmentationInfo';
