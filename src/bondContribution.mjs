@@ -6,28 +6,28 @@
 
 export function bondContribution(spectra, massPrecursorIon) {
   let molecularIon = [];
-  const massTollerance = 0.4509; //can be retrived form database, function to do it need to be implemented
   // identify molecular ion (is intensity is conc. A), still missing case when molecular ion is absent
-  for (let i = 0; i < spectra.length; i++) {
-    if (
-      spectra[i].x ===
-      Math.round(10 * (massPrecursorIon + massTollerance)) / 10
-    ) {
-      molecularIon.push({ mass: spectra[i].x, intensity: spectra[i].y });
-    }
-    if (
-      spectra[i].x ===
-      Math.round(10 * (massPrecursorIon - massTollerance)) / 10
-    ) {
-      molecularIon.push({ mass: spectra[i].x, intensity: spectra[i].y });
+  let mass = [];
+  for (let i = 0; i < spectra.x.length; i++) {
+    mass.push(spectra.x[i]);
+  }
+
+  let closest = mass.reduce(function closestMolecularIonMass(prev, curr) {
+    return Math.abs(curr - massPrecursorIon) < Math.abs(prev - massPrecursorIon)
+      ? curr
+      : prev;
+  });
+  for (let i = 0; i < spectra.x.length; i++) {
+    if (closest === spectra.x[i]) {
+      molecularIon.push({ mass: spectra.x[i], intensity: spectra.y[i] });
     }
   }
 
   // is the equivalent of conc. A0
   let intensityPrecursorIon = 0;
-  for (let i = 0; i < spectra.length; i++) {
-    if (spectra[i].y >= 1) {
-      intensityPrecursorIon += spectra[i].y;
+  for (let i = 0; i < spectra.x.length; i++) {
+    if (spectra.y[i] >= 1) {
+      intensityPrecursorIon += spectra.y[i];
     }
   }
   // reaction rate of consumption of A0 at time t=1
@@ -39,19 +39,18 @@ export function bondContribution(spectra, massPrecursorIon) {
   let rateReactionFragments = [];
   let rateArray = [];
   const delta = intensityPrecursorIon - molecularIon[0].intensity;
-  for (let i = 0; i < spectra.length; i++) {
-    if (spectra[i].y !== molecularIon[0].intensity) {
-      let rateFragment = (-1 * rateReactionMolecularIon * spectra[i].y) / delta;
+  for (let i = 0; i < spectra.x.length; i++) {
+    if (spectra.x[i] !== molecularIon[0].mass) {
+      let rateFragment = (-1 * rateReactionMolecularIon * spectra.y[i]) / delta;
       rateReactionFragments.push({
-        mass: spectra[i].x,
-        intensity: spectra[i].y,
+        mass: spectra.x[i],
+        intensity: spectra.y[i],
         rate: rateFragment,
         contribution: [],
       });
       rateArray.push(rateFragment);
     }
   }
-
   // normalization
   let maxRateArray = Math.max(...rateArray);
   let minRateArray = Math.min(...rateArray);
