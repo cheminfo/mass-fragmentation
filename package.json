@@ -37,6 +37,7 @@
     "@types/jest": "^27.0.3",
     "eslint": "^8.4.1",
     "eslint-config-cheminfo": "^7.2.1",
+    "esm": "^3.2.25",
     "jest": "^27.4.5",
     "prettier": "^2.5.1",
     "rollup": "^2.61.1"

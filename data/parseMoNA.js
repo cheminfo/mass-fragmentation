@@ -10,7 +10,6 @@ const trainTestSplit = pkg2;
 const StreamArray = pkg;
 
 const entries = [];
-let counter = 0;
 const jsonStream = StreamArray.withParser();
 jsonStream.on('data', ({ key, value }) => {
   let meta = [];
@@ -87,13 +86,15 @@ jsonStream.on('data', ({ key, value }) => {
   if (meta.length > 0) {
     entries.push(meta);
 
-    counter += 1;
-
-    console.log(counter, key);
+    if (entries.length % 100 === 0) {
+      console.log(entries.length, key);
+    }
   } else {
-    // eslint-disable-next-line no-console
-    console.log(key);
+    //console.log(key);
   }
+});
+
+jsonStream.on('end', () => {
   const [train, test] = trainTestSplit(entries, 0.8);
   writeFileSync(
     join(__dirname, 'monadb/trainingSet.json'),
@@ -105,10 +106,6 @@ jsonStream.on('data', ({ key, value }) => {
     JSON.stringify(test),
     'utf8',
   );
-});
-
-jsonStream.on('end', () => {
-  // eslint-disable-next-line no-console
   console.log('All done');
 });
 
