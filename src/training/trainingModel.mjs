@@ -12,10 +12,10 @@ import { fragmentAcyclicBonds } from '../fragmentation/fragmentAcyclicBonds.mjs'
 
 const { Molecule } = OCL;
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const dataSet = JSON.parse(
-  fs.readFileSync(
-    '/home/ricardo/mass-fragmentation/data/monadb/trainingSet.json',
-  ),
+  fs.readFileSync(`${__dirname}/../../data/monadb/trainingSet.json`),
 );
 let model = [];
 let statistics = [];
@@ -83,7 +83,6 @@ for (let i = 0; i < dataSet.length; i++) {
   console.log('index:', i, 'counter:', counter);
 }
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
 fs.writeFileSync(join(__dirname, 'model.json'), JSON.stringify(model), 'utf8');
 
 const rapportImolecularIonStat = [];
