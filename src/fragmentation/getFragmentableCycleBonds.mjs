@@ -1,4 +1,4 @@
-import { getCyclesAndBondsInfo } from './getCyclesAndBondsInfo';
+import { getCyclesAndBondsInfo } from './getCyclesAndBondsInfo.mjs';
 /**
  * This function returns an object with all combination of 2 bonds who can be fragmented in the same cycle
  * @param {OCL.Molecule} molecule

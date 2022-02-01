@@ -1,5 +1,5 @@
-import { getCyclesAndBondsInfo } from './getCyclesAndBondsInfo';
-import { getFragmentableCycleBonds } from './getFragmentableCycleBonds';
+import { getCyclesAndBondsInfo } from './getCyclesAndBondsInfo.mjs';
+import { getFragmentableCycleBonds } from './getFragmentableCycleBonds.mjs';
 
 /**
  * This function returns an array containing bonds informations and all combinations of bonds who can be fragmented

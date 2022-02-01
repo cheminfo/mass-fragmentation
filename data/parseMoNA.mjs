@@ -16,6 +16,7 @@ jsonStream.on('data', ({ key, value }) => {
   for (let i = 0; i < value.metaData.length; i++) {
     if (value.metaData[i].value === 'CID') {
       let fragmentationMode = value.metaData[i].value;
+
       const lines = value.spectrum.split(' ');
 
       const points = lines.map((line) => line.split(':').map(Number));
@@ -26,6 +27,25 @@ jsonStream.on('data', ({ key, value }) => {
       };
       let molFile = value.compound[0].molFile;
       let smiles = [];
+
+      let collisionEnergy = [];
+      for (let j = 0; j < value.metaData.length; j++) {
+        if (value.metaData[j].name === 'collision energy') {
+          let energy = value.metaData[j].value.toString().split(' ');
+
+          if (energy[1] !== '%') {
+            let energyResult = energy.map(Number);
+
+            if (
+              isNaN(energyResult[0]) === false &&
+              Array.isArray(energyResult) &&
+              energyResult.length > 0
+            ) {
+              collisionEnergy.push(energyResult[0]);
+            }
+          }
+        }
+      }
       for (let j = 0; j < value.compound[0].metaData.length; j++) {
         if (value.compound[0].metaData[j].name === 'SMILES') {
           smiles.push(value.compound[0].metaData[j].value);
@@ -67,25 +87,27 @@ jsonStream.on('data', ({ key, value }) => {
           instrumentType.push(value.metaData[j].value);
         }
       }
-
-      meta.push({
-        fragmentationMode: fragmentationMode,
-        spectrum: spectra,
-        molFile: molFile,
-        smiles: smiles[0],
-        pubchemCID: pubchemCID[0],
-        precursorIon: precursorIon[0],
-        precursorType: precursorType[0],
-        exactMass: exactMass[0],
-        resolution: resolution[0],
-        instrumentType: instrumentType[0],
-      });
+      if (collisionEnergy.length > 0 && collisionEnergy[0] >= 0) {
+        console.log(collisionEnergy);
+        meta.push({
+          fragmentationMode: fragmentationMode,
+          spectrum: spectra,
+          molFile: molFile,
+          smiles: smiles[0],
+          pubchemCID: pubchemCID[0],
+          precursorIon: precursorIon[0],
+          precursorType: precursorType[0],
+          exactMass: exactMass[0],
+          resolution: resolution[0],
+          instrumentType: instrumentType[0],
+          energyRamp: collisionEnergy[0],
+        });
+      }
     }
   }
 
   if (meta.length > 0) {
     entries.push(meta);
-
     if (entries.length % 100 === 0) {
       console.log(entries.length, key);
     }
@@ -95,7 +117,7 @@ jsonStream.on('data', ({ key, value }) => {
 });
 
 jsonStream.on('end', () => {
-  const [train, test] = trainTestSplit(entries, 0.8);
+  const [train, test] = trainTestSplit(entries, 0.99);
   writeFileSync(
     join(__dirname, 'monadb/trainingSet.json'),
     JSON.stringify(train),
