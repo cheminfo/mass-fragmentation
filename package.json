@@ -9,6 +9,7 @@
     "src"
   ],
   "scripts": {
+    "build": "cheminfo-build --entry src/index.js --root MassFragmentation",
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepack": "rollup -c",
@@ -35,10 +36,12 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "@types/jest": "^27.4.0",
+    "cheminfo-build": "^1.1.11",
     "eslint": "^8.8.0",
     "eslint-config-cheminfo": "^7.2.2",
     "esm": "^3.2.25",
     "jest": "^27.4.7",
+    "openchemlib": "^7.4.3",
     "prettier": "^2.5.1",
     "rollup": "^2.66.1"
   },
@@ -47,7 +50,6 @@
     "mass-tools": "^0.60.27",
     "ml-array-sum": "^1.1.6",
     "ml-spectra-processing": "^8.3.1",
-    "openchemlib": "^7.4.3",
     "openchemlib-utils": "^1.8.0",
     "sdf-parser": "^5.0.0",
     "stream-json": "^1.7.3",

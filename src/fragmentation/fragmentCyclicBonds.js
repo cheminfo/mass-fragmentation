@@ -1,5 +1,4 @@
 import MassTools from 'mass-tools';
-import OCL from 'openchemlib';
 import { getMF, getHoseCodesForPath } from 'openchemlib-utils';
 
 import { getCycleAndFragmentationInfo } from './getCycleAndFragmentationInfo.js';
@@ -11,9 +10,10 @@ import { getCycleAndFragmentationInfo } from './getCycleAndFragmentationInfo.js'
  */
 
 const { MF } = MassTools;
-const { Molecule } = OCL;
 
 export function fragmentCyclicBonds(molecule) {
+  const { Molecule } = molecule.getOCL();
+
   let atoms = [];
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
     let atom = {};
