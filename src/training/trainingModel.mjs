@@ -8,8 +8,8 @@ import OCL from 'openchemlib';
 
 import { fragmentationStatistics } from '../Statistics/fragmentationStatistics.mjs';
 import { neutralLoss } from '../Statistics/neutralLoss.mjs';
-import { bondContribution } from '../bondContribution.mjs';
-import { overAllFragmentation } from '../fragmentation/overAllFragmentation.mjs';
+import { bondContribution } from '../bondContribution.js';
+import { overAllFragmentation } from '../fragmentation/overAllFragmentation.js';
 
 const { Molecule } = OCL;
 

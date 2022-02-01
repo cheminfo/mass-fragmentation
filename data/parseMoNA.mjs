@@ -108,11 +108,6 @@ jsonStream.on('data', ({ key, value }) => {
 
   if (meta.length > 0) {
     entries.push(meta);
-    if (entries.length % 100 === 0) {
-      console.log(entries.length, key);
-    }
-  } else {
-    //console.log(key);
   }
 });
 

@@ -6,13 +6,11 @@
  */
 
 export function spectraPreparation(experimentalSpectrum) {
-  let spectra = [];
+  let spectra = { x: [], y: [] };
 
   for (let i = 0; i < experimentalSpectrum.length / 2; i++) {
-    spectra[i] = {
-      x: experimentalSpectrum[i * 2],
-      y: experimentalSpectrum[i * 2 + 1],
-    };
+    spectra.x.push(experimentalSpectrum[i * 2]);
+    spectra.y.push(experimentalSpectrum[i * 2 + 1]);
   }
   return spectra;
 }

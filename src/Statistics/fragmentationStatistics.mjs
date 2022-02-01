@@ -1,13 +1,10 @@
 import sum from 'ml-array-sum';
 
-let index = 0;
-let count = 0;
 export function fragmentationStatistics(
   spectra,
   resultMatching,
   massPrecursorIon,
 ) {
-  index += 1;
   let molecularIon = [];
   // identify molecular ion (is intensity is conc. A), still missing case when molecular ion is absent
   let mass = spectra.x;
@@ -21,7 +18,6 @@ export function fragmentationStatistics(
     }
   }
   if (closest[0] > 0) {
-    count += 1;
     for (let i = 0; i < spectra.x.length; i++) {
       if (closest[0] === spectra.x[i]) {
         molecularIon.push({ mass: spectra.x[i], intensity: spectra.y[i] });

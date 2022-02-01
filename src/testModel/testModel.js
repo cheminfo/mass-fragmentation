@@ -6,8 +6,8 @@ import { fileURLToPath } from 'url';
 import OCL from 'openchemlib';
 import pkg from 'stream-json/streamers/StreamArray.js';
 
-import { bondContribution } from '../bondContribution.mjs';
-import { fragmentAcyclicBonds } from '../fragmentation/fragmentAcyclicBonds.mjs';
+import { bondContribution } from '../bondContribution.js';
+import { fragmentAcyclicBonds } from '../fragmentation/fragmentAcyclicBonds.js';
 
 // Import CID Spectra
 

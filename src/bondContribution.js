@@ -12,17 +12,21 @@ export function bondContribution(spectra, massPrecursorIon) {
     mass.push(spectra.x[i]);
   }
 
-  let closest = mass.reduce(function closestMolecularIonMass(prev, curr) {
-    return Math.abs(curr - massPrecursorIon) < Math.abs(prev - massPrecursorIon)
-      ? curr
-      : prev;
-  });
-  for (let i = 0; i < spectra.x.length; i++) {
-    if (closest === spectra.x[i]) {
-      molecularIon.push({ mass: spectra.x[i], intensity: spectra.y[i] });
+  let closest = [];
+  for (let i = 0; i < mass.length; i++) {
+    if (
+      mass[i] <= massPrecursorIon + 0.01 &&
+      mass[i] >= massPrecursorIon - 0.01
+    ) {
+      closest.push(mass[i]);
     }
   }
 
+  for (let i = 0; i < spectra.x.length; i++) {
+    if (closest[0] === spectra.x[i]) {
+      molecularIon.push({ mass: spectra.x[i], intensity: spectra.y[i] });
+    }
+  }
   // is the equivalent of conc. A0
   let intensityPrecursorIon = 0;
   for (let i = 0; i < spectra.x.length; i++) {
@@ -30,6 +34,7 @@ export function bondContribution(spectra, massPrecursorIon) {
       intensityPrecursorIon += spectra.y[i];
     }
   }
+
   // reaction rate of consumption of A0 at time t=1
   let rateReactionMolecularIon = Math.log(
     molecularIon[0].intensity / intensityPrecursorIon,
