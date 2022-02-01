@@ -36,7 +36,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'acyclic',
-        code: 'A',
       },
       {
         atomMap: [1],
@@ -64,7 +63,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'acyclic',
-        code: 'B',
       },
       {
         atomMap: [0],
@@ -92,7 +90,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'acyclic',
-        code: 'C',
       },
       {
         atomMap: [2],
@@ -120,7 +117,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'acyclic',
-        code: 'D',
       },
       {
         atomMap: [0],
@@ -148,7 +144,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'acyclic',
-        code: 'E',
       },
       {
         atomMap: [3],
@@ -176,7 +171,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'acyclic',
-        code: 'F',
       },
     ]);
   });
@@ -211,7 +205,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 4,
         },
         fragmentType: 'acyclic',
-        code: 'A',
       },
       {
         atomMap: [4],
@@ -239,7 +232,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'acyclic',
-        code: 'B',
       },
       {
         atomMap: [0],
@@ -267,7 +259,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 4,
         },
         fragmentType: 'acyclic',
-        code: 'C',
       },
       {
         atomMap: [5],
@@ -295,7 +286,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'acyclic',
-        code: 'D',
       },
       {
         atomMap: [0],
@@ -323,7 +313,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 4,
         },
         fragmentType: 'acyclic',
-        code: 'E',
       },
       {
         atomMap: [6],
@@ -351,7 +340,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'acyclic',
-        code: 'F',
       },
       {
         atomMap: [0],
@@ -379,7 +367,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 4,
         },
         fragmentType: 'acyclic',
-        code: 'G',
       },
       {
         atomMap: [7],
@@ -407,7 +394,6 @@ describe('fragmentAcyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'acyclic',
-        code: 'H',
       },
     ]);
   });

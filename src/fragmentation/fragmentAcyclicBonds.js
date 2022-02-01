@@ -113,11 +113,5 @@ export function fragmentAcyclicBonds(molecule) {
     return a.mfInfo.mw - b.mfInfo.mw;
   });
 
-  // Label of each fragment
-  for (let i = 0; i < results.length; i++) {
-    let result = results[i];
-    result.code = String.fromCharCode(65 + i);
-  }
-
   return results;
 }

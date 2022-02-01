@@ -9,7 +9,7 @@ import OCL from 'openchemlib';
 import { fragmentationStatistics } from '../Statistics/fragmentationStatistics.mjs';
 import { neutralLoss } from '../Statistics/neutralLoss.mjs';
 import { bondContribution } from '../bondContribution.js';
-import { overAllFragmentation } from '../fragmentation/overAllFragmentation.js';
+import { fragment } from '../fragmentation/fragment.js';
 
 const { Molecule } = OCL;
 
@@ -30,7 +30,7 @@ for (let i = 0; i < dataSet.length; i++) {
   if (experimentalSpectrum.x.length > 0) {
     const smilesMoleculeTest = dataSet[i][0].smiles;
     const molecule = Molecule.fromSmiles(smilesMoleculeTest);
-    const resultFragmentation = overAllFragmentation(molecule);
+    const resultFragmentation = fragment(molecule);
     for (let j = 0; j < resultFragmentation[0].length; j++) {
       fragmentsResult.push(resultFragmentation[0][j].mfInfo);
 

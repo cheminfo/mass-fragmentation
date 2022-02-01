@@ -66,9 +66,9 @@ export function fragmentCyclicBonds(molecule) {
     for (let i = 0; i < nbFragments; i++) {
       const result = {};
       let hose = {};
-       hose.bond1 = getHoseCodesForPath(molecule, bonds.atom1, bonds.atom2, 1);
-       hose.bond2 = getHoseCodesForPath(molecule, bonds.atom3, bonds.atom4, 1);
-       result.hose = hose;
+      hose.bond1 = getHoseCodesForPath(molecule, bonds.atom1, bonds.atom2, 1);
+      hose.bond2 = getHoseCodesForPath(molecule, bonds.atom3, bonds.atom4, 1);
+      result.hose = hose;
       result.atomMap = [];
       let includeAtom = fragmentMap.map((id) => {
         return id === i;
@@ -104,11 +104,6 @@ export function fragmentCyclicBonds(molecule) {
   results = results.sort((a, b) => {
     return a.mfInfo.mw - b.mfInfo.mw;
   });
-
-  for (let i = 0; i < results.length; i++) {
-    let result = results[i];
-    result.code = String.fromCharCode(65 + i);
-  }
 
   return results;
 }

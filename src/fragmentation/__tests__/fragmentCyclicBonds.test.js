@@ -70,7 +70,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'A',
       },
       {
         hose: {
@@ -114,7 +113,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'cyclic',
-        code: 'B',
       },
       {
         hose: {
@@ -161,7 +159,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'C',
       },
       {
         hose: {
@@ -208,7 +205,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'cyclic',
-        code: 'D',
       },
       {
         hose: {
@@ -252,7 +248,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'E',
       },
       {
         hose: {
@@ -296,7 +291,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'cyclic',
-        code: 'F',
       },
       {
         hose: {
@@ -340,7 +334,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'cyclic',
-        code: 'G',
       },
       {
         hose: {
@@ -384,7 +377,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'H',
       },
       {
         hose: {
@@ -431,7 +423,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'cyclic',
-        code: 'I',
       },
       {
         hose: {
@@ -478,7 +469,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'J',
       },
       {
         hose: {
@@ -522,7 +512,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'cyclic',
-        code: 'K',
       },
       {
         hose: {
@@ -566,7 +555,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'L',
       },
       {
         hose: {
@@ -610,7 +598,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'cyclic',
-        code: 'M',
       },
       {
         hose: {
@@ -654,7 +641,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'N',
       },
       {
         hose: {
@@ -701,7 +687,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'cyclic',
-        code: 'O',
       },
       {
         hose: {
@@ -748,7 +733,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'P',
       },
       {
         hose: {
@@ -792,7 +776,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 2.5,
         },
         fragmentType: 'cyclic',
-        code: 'Q',
       },
       {
         hose: {
@@ -836,7 +819,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'R',
       },
     ]);
   });
@@ -887,7 +869,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'A',
       },
       {
         hose: {
@@ -931,7 +912,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'B',
       },
       {
         hose: {
@@ -975,7 +955,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'C',
       },
       {
         hose: {
@@ -1019,7 +998,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'D',
       },
       {
         hose: {
@@ -1066,7 +1044,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'E',
       },
       {
         hose: {
@@ -1113,7 +1090,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'F',
       },
       {
         hose: {
@@ -1154,7 +1130,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'G',
       },
       {
         hose: {
@@ -1195,7 +1170,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'H',
       },
       {
         hose: {
@@ -1239,7 +1213,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'I',
       },
       {
         hose: {
@@ -1283,7 +1256,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'J',
       },
       {
         hose: {
@@ -1327,7 +1299,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'K',
       },
       {
         hose: {
@@ -1371,7 +1342,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'L',
       },
       {
         hose: {
@@ -1415,7 +1385,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'M',
       },
       {
         hose: {
@@ -1459,7 +1428,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'N',
       },
       {
         hose: {
@@ -1503,7 +1471,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'O',
       },
       {
         hose: {
@@ -1547,7 +1514,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'P',
       },
       {
         hose: {
@@ -1591,7 +1557,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'Q',
       },
       {
         hose: {
@@ -1635,7 +1600,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'R',
       },
       {
         hose: {
@@ -1676,7 +1640,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'S',
       },
       {
         hose: {
@@ -1717,7 +1680,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'T',
       },
       {
         hose: {
@@ -1764,7 +1726,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'U',
       },
       {
         hose: {
@@ -1811,7 +1772,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'V',
       },
       {
         hose: {
@@ -1855,7 +1815,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'W',
       },
       {
         hose: {
@@ -1899,7 +1858,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 1.5,
         },
         fragmentType: 'cyclic',
-        code: 'X',
       },
     ]);
 
@@ -1948,7 +1906,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'A',
       },
       {
         hose: {
@@ -1989,7 +1946,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'B',
       },
       {
         hose: {
@@ -2030,7 +1986,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'C',
       },
       {
         hose: {
@@ -2071,7 +2026,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'D',
       },
       {
         hose: {
@@ -2112,7 +2066,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'E',
       },
       {
         hose: {
@@ -2153,7 +2106,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'F',
       },
       {
         hose: {
@@ -2194,7 +2146,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'G',
       },
       {
         hose: {
@@ -2235,7 +2186,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'H',
       },
       {
         hose: {
@@ -2276,7 +2226,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'I',
       },
       {
         hose: {
@@ -2317,7 +2266,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'J',
       },
       {
         hose: {
@@ -2358,7 +2306,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'K',
       },
       {
         hose: {
@@ -2399,7 +2346,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'L',
       },
       {
         hose: {
@@ -2440,7 +2386,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'M',
       },
       {
         hose: {
@@ -2481,7 +2426,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'N',
       },
       {
         hose: {
@@ -2522,7 +2466,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'O',
       },
       {
         hose: {
@@ -2563,7 +2506,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'P',
       },
       {
         hose: {
@@ -2604,7 +2546,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'Q',
       },
       {
         hose: {
@@ -2645,7 +2586,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'R',
       },
       {
         hose: {
@@ -2686,7 +2626,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'S',
       },
       {
         hose: {
@@ -2727,7 +2666,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'T',
       },
       {
         hose: {
@@ -2768,7 +2706,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'U',
       },
       {
         hose: {
@@ -2809,7 +2746,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'V',
       },
       {
         hose: {
@@ -2850,7 +2786,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'W',
       },
       {
         hose: {
@@ -2891,7 +2826,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'X',
       },
       {
         hose: {
@@ -2932,7 +2866,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'Y',
       },
       {
         hose: {
@@ -2973,7 +2906,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'Z',
       },
       {
         hose: {
@@ -3017,7 +2949,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: '[',
       },
       {
         hose: {
@@ -3061,7 +2992,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: '\\',
       },
       {
         hose: {
@@ -3108,7 +3038,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: ']',
       },
       {
         hose: {
@@ -3155,7 +3084,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: '^',
       },
       {
         hose: {
@@ -3199,7 +3127,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: '_',
       },
       {
         hose: {
@@ -3243,7 +3170,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: '`',
       },
       {
         hose: {
@@ -3287,7 +3213,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'a',
       },
       {
         hose: {
@@ -3331,7 +3256,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'b',
       },
       {
         hose: {
@@ -3378,7 +3302,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'c',
       },
       {
         hose: {
@@ -3425,7 +3348,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'd',
       },
       {
         hose: {
@@ -3469,7 +3391,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 3.5,
         },
         fragmentType: 'cyclic',
-        code: 'e',
       },
       {
         hose: {
@@ -3513,7 +3434,6 @@ describe('fragmentCyclicBonds', () => {
           unsaturation: 0.5,
         },
         fragmentType: 'cyclic',
-        code: 'f',
       },
     ]);
   });
