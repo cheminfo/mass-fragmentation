@@ -33,22 +33,22 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.16.5",
-    "@types/jest": "^27.0.3",
-    "eslint": "^8.4.1",
-    "eslint-config-cheminfo": "^7.2.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
+    "@types/jest": "^27.4.0",
+    "eslint": "^8.8.0",
+    "eslint-config-cheminfo": "^7.2.2",
     "esm": "^3.2.25",
-    "jest": "^27.4.5",
+    "jest": "^27.4.7",
     "prettier": "^2.5.1",
-    "rollup": "^2.61.1"
+    "rollup": "^2.66.1"
   },
   "dependencies": {
     "arraybuffer-xml-parser": "^0.5.0",
-    "mass-tools": "^0.60.16",
-    "ml-array-sum": "^1.1.5",
-    "ml-spectra-processing": "^6.8.0",
+    "mass-tools": "^0.60.27",
+    "ml-array-sum": "^1.1.6",
+    "ml-spectra-processing": "^8.3.1",
     "openchemlib": "^7.4.3",
-    "openchemlib-utils": "^1.7.0",
+    "openchemlib-utils": "^1.8.0",
     "sdf-parser": "^5.0.0",
     "stream-json": "^1.7.3",
     "train-test-split": "^1.0.0"
