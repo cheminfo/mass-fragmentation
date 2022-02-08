@@ -87,21 +87,32 @@ jsonStream.on('data', ({ key, value }) => {
           instrumentType.push(value.metaData[j].value);
         }
       }
-      if (collisionEnergy.length > 0 && collisionEnergy[0] >= 0) {
-        console.log(collisionEnergy);
-        meta.push({
-          fragmentationMode: fragmentationMode,
-          spectrum: spectra,
-          molFile: molFile,
-          smiles: smiles[0],
-          pubchemCID: pubchemCID[0],
-          precursorIon: precursorIon[0],
-          precursorType: precursorType[0],
-          exactMass: exactMass[0],
-          resolution: resolution[0],
-          instrumentType: instrumentType[0],
-          energyRamp: collisionEnergy[0],
-        });
+
+      let spectr = [{ x: spectra.x, y: spectra.y }];
+
+      const error = 0.01;
+
+      const filtered = spectr.filter((spectrum) =>
+        spectrum.x.some((x) => Math.abs(x - precursorIon) < error),
+      );
+
+      //console.log(precursorIon, closest);
+      if (filtered.length > 0) {
+        if (collisionEnergy.length > 0 && collisionEnergy[0] >= 0) {
+          meta.push({
+            fragmentationMode: fragmentationMode,
+            spectrum: spectra,
+            molFile: molFile,
+            smiles: smiles[0],
+            pubchemCID: pubchemCID[0],
+            precursorIon: precursorIon[0],
+            precursorType: precursorType[0],
+            exactMass: exactMass[0],
+            resolution: resolution[0],
+            instrumentType: instrumentType[0],
+            energyRamp: collisionEnergy[0],
+          });
+        }
       }
     }
   }
@@ -123,7 +134,7 @@ jsonStream.on('end', () => {
     JSON.stringify(test),
     'utf8',
   );
-  console.log('All done');
+  // console.log('All done');
 });
 
 const __dirname = dirname(fileURLToPath(import.meta.url));

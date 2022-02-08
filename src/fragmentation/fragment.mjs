@@ -1,5 +1,5 @@
-import { fragmentAcyclicBonds } from './fragmentAcyclicBonds.js';
-import { fragmentCyclicBonds } from './fragmentCyclicBonds.js';
+import { fragmentAcyclicBonds } from './fragmentAcyclicBonds.mjs';
+import { fragmentCyclicBonds } from './fragmentCyclicBonds.mjs';
 /**
  * This function fragment both acyclic and cyclic bonds of the molecule
  * @param {OCL.Molecule} molecule

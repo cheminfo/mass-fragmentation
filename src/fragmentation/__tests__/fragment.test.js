@@ -1,6 +1,6 @@
 import OCL from 'openchemlib';
 
-import { fragment } from '../fragment.js';
+import { fragment } from '../fragment.mjs';
 
 const { Molecule } = OCL;
 

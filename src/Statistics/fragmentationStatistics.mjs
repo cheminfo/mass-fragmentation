@@ -10,13 +10,23 @@ export function fragmentationStatistics(
   let mass = spectra.x;
   let closest = [];
   for (let i = 0; i < mass.length; i++) {
+    let near = [];
     if (
       mass[i] <= massPrecursorIon + 0.01 &&
       mass[i] >= massPrecursorIon - 0.01
     ) {
-      closest.push(mass[i]);
+      near.push(mass[i]);
+    }
+    if (near.length > 0) {
+      closest.push(
+        near.sort(
+          (a, b) =>
+            Math.abs(massPrecursorIon - a) - Math.abs(massPrecursorIon - b),
+        )[0],
+      );
     }
   }
+
   if (closest[0] > 0) {
     for (let i = 0; i < spectra.x.length; i++) {
       if (closest[0] === spectra.x[i]) {

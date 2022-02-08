@@ -1,7 +1,7 @@
 import MassTools from 'mass-tools';
-import { getMF, getHoseCodesForPath } from 'openchemlib-utils';
+import { getMF, /*getHoseCodesForPath */} from 'openchemlib-utils';
 
-import { getCycleAndFragmentationInfo } from './getCycleAndFragmentationInfo.js';
+import { getCycleAndFragmentationInfo } from './getCycleAndFragmentationInfo.mjs';
 
 /**
  * This function returns fragmentation results of cyclic bonds
@@ -65,10 +65,10 @@ export function fragmentCyclicBonds(molecule) {
 
     for (let i = 0; i < nbFragments; i++) {
       const result = {};
-      let hose = {};
-      hose.bond1 = getHoseCodesForPath(molecule, bonds.atom1, bonds.atom2, 1);
-      hose.bond2 = getHoseCodesForPath(molecule, bonds.atom3, bonds.atom4, 1);
-      result.hose = hose;
+    //  let hose = {};
+      //hose.bond1 = getHoseCodesForPath(molecule, bonds.atom1, bonds.atom2, 1);
+      //hose.bond2 = getHoseCodesForPath(molecule, bonds.atom3, bonds.atom4, 1);
+      //result.hose = hose;
       result.atomMap = [];
       let includeAtom = fragmentMap.map((id) => {
         return id === i;

@@ -1,7 +1,7 @@
 // https://cheminfo.github.io/openchemlib-js/index.html
 
 import MassTools from 'mass-tools';
-import { getMF, getHoseCodesForPath } from 'openchemlib-utils';
+import { getMF /*getHoseCodesForPath*/ } from 'openchemlib-utils';
 
 const { MF } = MassTools;
 
@@ -51,7 +51,15 @@ export function fragmentAcyclicBonds(molecule) {
   let brokenMolecule = {};
   let fragmentMap = [];
   let nbFragments = [];
-  let results = [];
+  let results = [
+    {
+      mf: getMF(molecule).mf,
+      idCode: molecule.getIDCode(),
+      mfInfo: new MF(getMF(molecule).mf).getInfo(),
+      fragmentType: 'Molecular Ion',
+    },
+  ];
+
   for (let bond of bonds) {
     if (bond.selected) {
       // if bond.selected is true (line 46) the molecule will be fragmented
@@ -65,8 +73,8 @@ export function fragmentAcyclicBonds(molecule) {
     if (nbFragments === 2) {
       for (let i = 0; i < nbFragments; i++) {
         const result = {};
-        let hose = getHoseCodesForPath(molecule, bond.atom1, bond.atom2, 1);
-        result.hose = hose;
+        //let hose = getHoseCodesForPath(molecule, bond.atom1, bond.atom2, 1);
+        //result.hose = hose;
 
         result.atomMap = [];
         // assign fragment id to index of for loop

@@ -1,6 +1,6 @@
-import { bondContribution } from './bondContribution.js';
-import { bondStatistics } from './bondStatistics.js';
-import { spectraPreparation } from './spectraPreparation.js';
+import { bondContribution } from './bondContribution.mjs';
+import { bondStatistics } from './bondStatistics.mjs';
+import { spectraPreparation } from '../spectraPreparation.js';
 
 /**
  * This function call bondContribution and bondStatistics functions to return Results from both.
