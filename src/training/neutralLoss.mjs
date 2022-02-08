@@ -49,25 +49,9 @@ export function neutralLoss(fragmentIDCode) {
     { idCode: 'gCh@@doPGtT@' },
     { idCode: 'gCh@@doPGrTZ@' },
   ];
-  /*const groupOH = [{ idCode: 'eFHBLGrQP' }];
-  const groupNH = [{ idCode: 'eF`BLGtX' }];
-  const groupCOOH = [{ idCode: 'gC``@dfZ@~b`' }];
-  const groupCN = [{ idCode: 'eF`BN@' }];
-  const groupCHO = [{ idCode: 'eMHAIXOj`' }];*/
 
   const neutralLossesFragment = [];
   const ssSearcher = new OCL.SSSearcher();
-
-  let combW = [];
-  let combNH = [];
-  let combCOOH = [];
-  let combCHO = [];
-  let combCN = [];
-  let countW = 0;
-  let countNH = 0;
-  let countCOOH = 0;
-  let countCHO = 0;
-  let countCN = 0;
 
   const molecule = OCL.Molecule.fromIDCode(fragmentIDCode);
   ssSearcher.setMolecule(molecule);
