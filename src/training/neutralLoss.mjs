@@ -1,10 +1,5 @@
 import OCL from 'openchemlib';
-
-import { nbOH } from '/home/ricardo/Desktop/openchemUti/openchemlib-utils/src/util/nbOH';
-import { nbCOOH } from '/home/ricardo/Desktop/openchemUti/openchemlib-utils/src/util/nbCOOH';
-import { nbCHO } from '/home/ricardo/Desktop/openchemUti/openchemlib-utils/src/util/nbCHO';
-import { nbCN } from '/home/ricardo/Desktop/openchemUti/openchemlib-utils/src/util/nbCN';
-import { nbNH2 } from '/home/ricardo/Desktop/openchemUti/openchemlib-utils/src/util/nbNH2';
+import { nbOH, nbCOOH, nbCHO, nbCN, nbNH2 } from 'openchemlib-utils';
 
 export function neutralLoss(fragmentIDCode) {
   const neutralLossWater = [
@@ -50,82 +45,113 @@ export function neutralLoss(fragmentIDCode) {
     { idCode: 'gCh@@doPGrTZ@' },
   ];
 
-  const neutralLossesFragment = [];
   const ssSearcher = new OCL.SSSearcher();
 
   const molecule = OCL.Molecule.fromIDCode(fragmentIDCode);
   ssSearcher.setMolecule(molecule);
 
-  for (const neutral of neutralLossWater) {
-    neutral.fragment = OCL.Molecule.fromIDCode(neutral.idCode);
-    ssSearcher.setFragment(neutral.fragment);
+  let lossH2O = false;
+  let lossH2COOH = false;
+  let lossNH3 = false;
+  let lossH2CO = false;
+  let lossHCN = false;
 
-    if (ssSearcher.isFragmentInMolecule() === true) {
-      countW += 1;
+  const numbOH = nbOH(molecule);
+  const numbCOOH = nbCOOH(molecule);
+  const numbCHO = nbCHO(molecule);
+  const numbNH2 = nbNH2(molecule);
+  const numbCN = nbCN(molecule);
+
+  if (numbOH > 0) {
+    for (const neutral of neutralLossWater) {
+      neutral.fragment = OCL.Molecule.fromIDCode(neutral.idCode);
+      ssSearcher.setFragment(neutral.fragment);
+
+      if (ssSearcher.isFragmentInMolecule() === true) {
+        lossH2O = true;
+      }
     }
   }
-  for (const neutral of neutralLossNH3) {
-    neutral.fragment = OCL.Molecule.fromIDCode(neutral.idCode);
-    ssSearcher.setFragment(neutral.fragment);
+  if (numbNH2 > 0) {
+    for (const neutral of neutralLossNH3) {
+      neutral.fragment = OCL.Molecule.fromIDCode(neutral.idCode);
+      ssSearcher.setFragment(neutral.fragment);
 
-    if (ssSearcher.isFragmentInMolecule() === true) {
-      countNH += 1;
+      if (ssSearcher.isFragmentInMolecule() === true) {
+        lossNH3 = true;
+      }
     }
   }
-  for (const neutral of neutralLossCOOH) {
-    neutral.fragment = OCL.Molecule.fromIDCode(neutral.idCode);
-    ssSearcher.setFragment(neutral.fragment);
+  if (numbCOOH > 0) {
+    for (const neutral of neutralLossCOOH) {
+      neutral.fragment = OCL.Molecule.fromIDCode(neutral.idCode);
+      ssSearcher.setFragment(neutral.fragment);
 
-    if (ssSearcher.isFragmentInMolecule() === true) {
-      countCOOH += 1;
+      if (ssSearcher.isFragmentInMolecule() === true) {
+        lossH2COOH = true;
+      }
     }
   }
-  for (const neutral of neutralLossCHO) {
-    neutral.fragment = OCL.Molecule.fromIDCode(neutral.idCode);
-    ssSearcher.setFragment(neutral.fragment);
+  if (numbCHO > 0) {
+    for (const neutral of neutralLossCHO) {
+      neutral.fragment = OCL.Molecule.fromIDCode(neutral.idCode);
+      ssSearcher.setFragment(neutral.fragment);
 
-    if (ssSearcher.isFragmentInMolecule() === true) {
-      countCHO += 1;
+      if (ssSearcher.isFragmentInMolecule() === true) {
+        lossH2CO = true;
+      }
     }
   }
-  for (const neutral of neutralLossCN) {
-    neutral.fragment = OCL.Molecule.fromIDCode(neutral.idCode);
-    ssSearcher.setFragment(neutral.fragment);
-
-    if (ssSearcher.isFragmentInMolecule() === true) {
-      countCN += 1;
+  if (numbCN > 0) {
+    for (const neutral of neutralLossCN) {
+      neutral.fragment = OCL.Molecule.fromIDCode(neutral.idCode);
+      ssSearcher.setFragment(neutral.fragment);
+      if (ssSearcher.isFragmentInMolecule() === true) {
+        lossHCN = true;
+      }
     }
   }
+  const neutralLossesFragment = `H0--2`;
+  let resultH2O = [];
+  let resultH2COO = [];
+  let resultH2CO = [];
+  let resultNH3 = [];
+  let resultHCN = [];
 
-  for (let i = 1; i < countW + 1; i++) {
-    combW.push(`(H2O)-${i}`);
+  if (lossH2O) {
+    resultH2O.push(`(H2O)0--${numbOH}`);
+  } else {
+    resultH2O.push(`(H2O)0--0`);
   }
-  for (let i = 1; i < countNH + 1; i++) {
-    combNH.push(`(NH3)-${i}`);
-  }
-  for (let i = 1; i < countCOOH + 1; i++) {
-    combCOOH.push(`(COOH2)-${i}`);
-  }
-  for (let i = 1; i < countCHO + 1; i++) {
-    combCHO.push(`(CH2O)-${i}`);
-  }
-  for (let i = 1; i < countCN + 1; i++) {
-    combCN.push(`(HCN)-${i}`);
+  if (lossH2COOH) {
+    resultH2COO.push(`(H2COO)0--${numbCOOH}`);
+  } else {
+    resultH2COO.push(`(H2COO)0--0`);
   }
 
-  let combinationNLs = combW.concat(combNH, combCHO, combCN, combCOOH);
-  //console.log(combinationNLs);
-  let combAll = [];
-  for (let i = 0; i < combinationNLs.length; i++) {
-    for (let j = i + 1; j < combinationNLs.length + 1; j++) {
-      combAll.push('H-1, , '.concat(combinationNLs.slice(i, j)));
-    }
+  if (lossNH3) {
+    resultNH3.push(`(NH3)0--${numbNH2}`);
+  } else {
+    resultNH3.push(`(NH3)0--0`);
   }
-  // for(let i=0; i < combAll.length)
+  if (lossH2CO) {
+    resultH2CO.push(`(H2CO)0--${numbCHO}`);
+  } else {
+    resultH2CO.push(`(H2CO)0--0`);
+  }
+  if (lossHCN) {
+    resultHCN.push(`(HCN)0--${numbCN}`);
+  } else {
+    resultHCN.push(`(HCN)0--0`);
+  }
 
-  neutralLossesFragment.push(
-    `H-1,(H2O)-${countW},(NH3)-${countNH},(COOH2)-${countCOOH},(CH2O)-${countCHO},(HCN)-${countCN},`,
+  const result = neutralLossesFragment.concat(
+    resultH2O[0],
+    resultH2COO[0],
+    resultH2CO[0],
+    resultNH3[0],
+    resultHCN[0],
   );
 
-  return neutralLossesFragment;
+  return result;
 }

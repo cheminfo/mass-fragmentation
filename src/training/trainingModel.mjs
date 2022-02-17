@@ -3,216 +3,210 @@ import * as fs from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+import MassTools from 'mass-tools';
 import generateMFs from 'mf-generator';
 import { xBoxPlot } from 'ml-spectra-processing';
 import OCL from 'openchemlib';
+import { getMF /*getHoseCodesForPath*/ } from 'openchemlib-utils';
 
 import { fragmentationStatistics } from '../Statistics/fragmentationStatistics.mjs';
-import { neutralLoss } from '../Statistics/neutralLoss.mjs';
 import { bondContribution } from '../contribution/bondContribution.mjs';
 import { fragment } from '../fragmentation/fragment.mjs';
 
-const mod = [
-  'H-1,H-2',
-  'H-1,,H-2',
-  'H-1,,H-2(H2O)-1,',
-  'H-1,,H-2(H2O)-1,(H2O)-2, ',
-  'H-1,,H-2(H2O)-1,(H2O)-2,(NH3)-1,(NH3)-2, ',
-  'H-1,,H-2(H2O)-1,(H2O)-2,(NH3)-1,(NH3)-2,(CH2O2)-1,(CH2O2)-2,',
-  'H-1,,H-2(H2O)-1,(H2O)-2,(NH3)-1,(NH3)-2,(CH2O2)-1,(CH2O2)-2,(HCN)-1,(HCN)-2,',
-  'H-1,,H-2(H2O)-1,(H2O)-2,(NH3)-1,(NH3)-2,(CH2O2)-1,(CH2O2)-2,(HCN)-1,(HCN)-2,(CH2O)-1,(CH2O)-2,',
-];
-const ionisationParameter = [['H+'], ['+'], ['H+,+']];
+import { neutralLoss } from './neutralLoss.mjs';
+
+const { Spectrum } = MassTools;
 
 let boxplotResultsHplus = [];
 
-let boxplotResultsPlus = [];
-
-let boxplotResultsCombined = [];
 const __dirname = dirname(fileURLToPath(import.meta.url));
-for (let ion = 2; ion < ionisationParameter.length; ion++) {
-  for (let p = 0; p < mod.length; p++) {
-    const { Molecule } = OCL;
 
-    const dataSet = JSON.parse(
-      fs.readFileSync(`${__dirname}/../../data/monadb/trainingSet.json`),
+const { Molecule } = OCL;
+
+const dataSet = JSON.parse(
+  fs.readFileSync(`${__dirname}/../../data/CASMI/trainingSet/spectra.json`),
+);
+
+let statistics = [];
+let statSpectra = [];
+let count = 0;
+let model = [];
+for (let i = 0; i < dataSet.length; i++) {
+  const experimentalSpectrum = {
+    x: dataSet[i].x,
+    y: dataSet[i].y,
+  };
+
+  let fragmentsResult = [];
+
+  const smilesMoleculeTest = dataSet[i].smiles;
+
+  const molecule = Molecule.fromSmiles(smilesMoleculeTest);
+
+  let mf = getMF(molecule).mf;
+  let mfPrecursorIon = await generateMFs([mf], { ionizations: 'H+' });
+  let massPrecursorIon = mfPrecursorIon[0].ms.em;
+  let spectrum = new Spectrum(experimentalSpectrum);
+  let filtredSpectrum = await spectrum.getFragmentPeaks(mf, {
+    ionizations: 'H+',
+    precision: 5,
+  });
+
+  let experimentalSpectrumMasses = [];
+  let filtredSpectrumStat = { x: [], y: [] };
+  for (let p = 0; p < filtredSpectrum.length; p++) {
+    let mass = filtredSpectrum[p].x;
+    experimentalSpectrumMasses.push(mass);
+    filtredSpectrumStat.x.push(filtredSpectrum[p].x);
+    filtredSpectrumStat.y.push(filtredSpectrum[p].y);
+  }
+
+  let result = [];
+  if (experimentalSpectrumMasses.length > 0) {
+    statSpectra.push(
+      (experimentalSpectrumMasses.length / experimentalSpectrum.x.length - 1) *
+        -100,
     );
-    let model = [];
-    let statistics = [];
-    let counter = 0;
+    const resultFragmentation = fragment(molecule);
 
-    for (let i = 0; i < dataSet.length; i++) {
-      //Fragmentation Part
-      const massPrecursorIon = dataSet[i][0].precursorIon;
-      const experimentalSpectrum = dataSet[i][0].spectrum;
+    let mfsArray = [];
+    const precision = 5;
+    const ionization = 'H+';
+    const options = {
+      ionizations: ionization,
+      limit: 1e7,
+      uniqueMFs: false,
+      filter: {
+        targetMasses: experimentalSpectrumMasses,
+        precision: precision,
+      },
+    };
+    for (let j = 0; j < resultFragmentation.length; j++) {
+      if (resultFragmentation[j].hose !== undefined) {
+        let neutralLosses = neutralLoss(resultFragmentation[j].idCode);
+        mfsArray[j] = [resultFragmentation[j].mf, neutralLosses];
 
-      let fragmentsResult = [];
-      // let bondHoseResults = [];
+        let results = await generateMFs(mfsArray[j], options);
+        let groups = {};
+        for (const result of results) {
+          const em = Math.round(result.ms.em * 1e6);
 
-      const smilesMoleculeTest = dataSet[i][0].smiles;
-      const molecule = Molecule.fromSmiles(smilesMoleculeTest);
-      const resultFragmentation = fragment(molecule);
-      let mfsArray = [];
-      for (let j = 0; j < resultFragmentation.length; j++) {
-        //  let neutralLosses = neutralLoss(resultFragmentation[j].idCode);
+          if (!groups[em]) {
+            groups[em] = {
+              em: result.em,
+              ms: result.ms.em,
+              mf: result.mf,
+              ppm: result.ms.ppm,
+              mfs: [],
+              hose: resultFragmentation[j].hose,
+            };
+          }
+          groups[em].mfs.push(result);
+        }
 
-        mfsArray[j] = [resultFragmentation[j].mf, mod[p] /*neutralLosses[0]*/];
-        let fragmentMFwithNLs = {};
-        await generateMFs(mfsArray[j], {
-          ionizations: ionisationParameter[ion][0],
-        }).then((entries) => {
-          fragmentMFwithNLs.mf = entries;
-        });
+        groups = Object.values(groups);
 
-        fragmentMFwithNLs.mfInfo = resultFragmentation[j].mfInfo;
-        fragmentMFwithNLs.idCode = resultFragmentation[j].idCode;
-        fragmentsResult[j] = fragmentMFwithNLs;
+        if (groups.length > 0) {
+          fragmentsResult.push(groups);
+        }
       }
+    }
 
-      //Contribution Part
+    for (let j = 0; j < fragmentsResult.length; j++) {
+      for (let s = 0; s < fragmentsResult[j].length; s++) {
+        let matchedFragmentMass = fragmentsResult[j][s].ms;
+        for (let f = 0; f < experimentalSpectrumMasses.length; f++) {
+          let experimentalMass = experimentalSpectrumMasses[f];
 
-      let resultContribution = [];
-
-      resultContribution.push(
-        bondContribution(experimentalSpectrum, massPrecursorIon),
-      );
-
-      // mass comparaison part
-
-      let result = [];
-      if (resultContribution[0].length > 0) {
-        const tollerance = 0.01;
-
-        for (let l = 0; l < resultContribution[0].length; l++) {
-          for (let s = 0; s < fragmentsResult.length; s++) {
-            for (let v = 0; v < fragmentsResult[s].mf.length; v++) {
-              if (
-                resultContribution[0][l].mass <=
-                  fragmentsResult[s].mf[v].ms.em + tollerance &&
-                resultContribution[0][l].mass >=
-                  fragmentsResult[s].mf[v].ms.em - tollerance
-              ) {
-                result.push({
-                  monoisotopicMass: fragmentsResult[s].mf[v].em,
-                  //   hoseCode: bondHoseResults[j],
-                  contribution: resultContribution[0][l].contribution,
-                  experimentalMass: resultContribution[0][l].mass,
-                  mf: fragmentsResult[s].mf[v].parts,
-                  idCode: fragmentsResult[s].idCode,
-                });
-              }
-            }
+          if (
+            matchedFragmentMass - 0.01 <= experimentalMass &&
+            matchedFragmentMass + 0.01 >= experimentalMass
+          ) {
+            fragmentsResult[j][s].experimentalMass = experimentalMass;
+            result.push(fragmentsResult[j][s]);
           }
         }
       }
-
-      if (result.length > 0) {
-        model.push(result);
-        counter += 1;
-        // Statistic Part
-
-        const statisticsResults = fragmentationStatistics(
-          experimentalSpectrum,
-          result,
-          massPrecursorIon,
-        );
-        if (statisticsResults !== undefined) {
-          statistics.push(statisticsResults);
-        }
-      }
-
-      console.log('index:', i, 'counter:', counter);
-    }
-
-    //fs.writeFileSync(join(__dirname, 'model.json'), JSON.stringify(model), 'utf8');
-
-    const rapportImolecularIonStat = [];
-    const numberOfFragmentsMatchedStat = [];
-    const percantageMatchedFragmentsStat = [];
-    const numberOfFragmentsWithSameMass = [];
-    const numberOfPicks = [];
-    const fivePrincipalPicks = [];
-    const tenPrincipalPicks = [];
-    for (let i = 0; i < statistics.length; i++) {
-      rapportImolecularIonStat.push(statistics[i].rapportImolecularIon);
-      numberOfFragmentsMatchedStat.push(statistics[i].numberOfFragmentsMatched);
-      percantageMatchedFragmentsStat.push(
-        statistics[i].percantageMatchedFragments,
-      );
-      numberOfFragmentsWithSameMass.push(
-        statistics[i].numberOfFragmentsWithSameMass,
-      );
-      numberOfPicks.push(statistics[i].numberOfPicks);
-      fivePrincipalPicks.push(statistics[i].fivePrincipalPicks);
-      tenPrincipalPicks.push(statistics[i].tenPrincipalPicks);
-    }
-
-    let boxplotMolecularIon = xBoxPlot(rapportImolecularIonStat);
-    let boxplotParcantageMatchedFragments = xBoxPlot(
-      percantageMatchedFragmentsStat,
-    );
-    let boxplotNumberOfMatchedFragments = xBoxPlot(
-      numberOfFragmentsMatchedStat,
-    );
-    let boxplotNumberOfFragmentsWithSameMass = xBoxPlot(
-      numberOfFragmentsWithSameMass,
-    );
-    let boxplotnumberOfPicks = xBoxPlot(numberOfPicks);
-    let boxplotfivePrincipalPicks = xBoxPlot(fivePrincipalPicks);
-    let boxplottenPrincipalPicks = xBoxPlot(tenPrincipalPicks);
-    if (ion === 0) {
-      boxplotResultsHplus.push({
-        testparameter: mod[p],
-        boxplotMolecularIon: boxplotMolecularIon,
-        boxplotParcantageMatchedFragments: boxplotParcantageMatchedFragments,
-        boxplotNumberOfMatchedFragments: boxplotNumberOfMatchedFragments,
-        // boxplotNumberOfFragmentsWithSameMass: boxplotNumberOfFragmentsWithSameMass,
-        // boxplotnumberOfPicks: boxplotnumberOfPicks,
-        boxplotfivePrincipalPicks: boxplotfivePrincipalPicks,
-        boxplottenPrincipalPicks: boxplottenPrincipalPicks,
-      });
-    }
-    if (ion === 1) {
-      boxplotResultsPlus.push({
-        testparameter: mod[p],
-        boxplotMolecularIon: boxplotMolecularIon,
-        boxplotParcantageMatchedFragments: boxplotParcantageMatchedFragments,
-        boxplotNumberOfMatchedFragments: boxplotNumberOfMatchedFragments,
-        // boxplotNumberOfFragmentsWithSameMass: boxplotNumberOfFragmentsWithSameMass,
-        // boxplotnumberOfPicks: boxplotnumberOfPicks,
-        boxplotfivePrincipalPicks: boxplotfivePrincipalPicks,
-        boxplottenPrincipalPicks: boxplottenPrincipalPicks,
-      });
-    }
-    if (ion === 2) {
-      boxplotResultsCombined.push({
-        testparameter: mod[p],
-        boxplotMolecularIon: boxplotMolecularIon,
-        boxplotParcantageMatchedFragments: boxplotParcantageMatchedFragments,
-        boxplotNumberOfMatchedFragments: boxplotNumberOfMatchedFragments,
-        // boxplotNumberOfFragmentsWithSameMass: boxplotNumberOfFragmentsWithSameMass,
-        // boxplotnumberOfPicks: boxplotnumberOfPicks,
-        boxplotfivePrincipalPicks: boxplotfivePrincipalPicks,
-        boxplottenPrincipalPicks: boxplottenPrincipalPicks,
-      });
     }
   }
-  //index: 7392 counter: 4240
-  console.log(ion);
-}
-fs.writeFileSync(
-  join(__dirname, 'statisticsHplus.json'),
-  JSON.stringify(boxplotResultsHplus),
-  'utf8',
-);
 
+  //Contribution Part
+
+  let resultContribution = [];
+
+  resultContribution.push(
+    bondContribution(filtredSpectrumStat, massPrecursorIon),
+  );
+
+  if (resultContribution[0].length > 0) {
+    if (result.length > 0) {
+      for (let l = 0; l < result.length; l++) {
+        for (let m = 0; m < resultContribution[0].length; m++) {
+          if (resultContribution[0][m].mass === result[l].experimentalMass) {
+            result[l].contribution = resultContribution[0][m].contribution;
+          }
+        }
+      }
+      model.push(result);
+      count += 1;
+      // Statistic Part
+
+      let statisticsResults = fragmentationStatistics(
+        filtredSpectrumStat,
+        result,
+      );
+      if (statisticsResults !== undefined) {
+        statistics.push(statisticsResults);
+      }
+
+      // eslint-disable-next-line no-console
+      console.log(
+        'count:',
+        count,
+        'index:',
+        i,
+        'stat:',
+        statisticsResults.fivePrincipalPicks,
+      );
+    }
+  }
+}
+
+const numberOfPicks = [];
+const fivePrincipalPicks = [];
+
+let distribution = [];
+for (let i = 0; i < statistics.length; i++) {
+  numberOfPicks.push(statistics[i].numberOfPicks);
+  fivePrincipalPicks.push(statistics[i].fivePrincipalPicks);
+  distribution.push(statistics[i].distribution);
+  //tenPrincipalPicks.push(statistics[i].tenPrincipalPicks);
+}
+
+let boxplotfivePrincipalPicks = xBoxPlot(fivePrincipalPicks);
+let boxplotDistribution = xBoxPlot(distribution);
+
+let boxplotSpectra = xBoxPlot(statSpectra);
+const average = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
+
+const meanFive = average(fivePrincipalPicks);
+
+boxplotResultsHplus.push({
+  boxplotfivePrincipalPicks: boxplotfivePrincipalPicks,
+  boxplotDistribution: boxplotDistribution,
+  distributionMean: average(distribution),
+  // boxplottenPrincipalPicks: boxplottenPrincipalPicks,
+  mean: meanFive,
+  boxplotSpectra: boxplotSpectra,
+  boxplotSpectraMean: average(statSpectra),
+});
 fs.writeFileSync(
-  join(__dirname, 'statisticsPlus.json'),
-  JSON.stringify(boxplotResultsPlus),
+  join(__dirname, '/model/model.json'),
+  JSON.stringify(model),
   'utf8',
 );
 fs.writeFileSync(
-  join(__dirname, 'statisticsCombined.json'),
-  JSON.stringify(boxplotResultsCombined),
+  join(__dirname, '/model/statistics.json'),
+  JSON.stringify(boxplotResultsHplus),
   'utf8',
 );

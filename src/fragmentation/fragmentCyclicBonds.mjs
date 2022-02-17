@@ -1,5 +1,5 @@
 import MassTools from 'mass-tools';
-import { getMF, /*getHoseCodesForPath */} from 'openchemlib-utils';
+import { getMF, getHoseCodesForAtoms } from 'openchemlib-utils';
 
 import { getCycleAndFragmentationInfo } from './getCycleAndFragmentationInfo.mjs';
 
@@ -65,10 +65,18 @@ export function fragmentCyclicBonds(molecule) {
 
     for (let i = 0; i < nbFragments; i++) {
       const result = {};
-    //  let hose = {};
-      //hose.bond1 = getHoseCodesForPath(molecule, bonds.atom1, bonds.atom2, 1);
-      //hose.bond2 = getHoseCodesForPath(molecule, bonds.atom3, bonds.atom4, 1);
-      //result.hose = hose;
+      let hose = {};
+      hose.bond1 = getHoseCodesForAtoms(
+        molecule,
+        [bonds.atom1, bonds.atom2],
+        1,
+      );
+      hose.bond2 = getHoseCodesForAtoms(
+        molecule,
+        [bonds.atom3, bonds.atom4],
+        1,
+      );
+      result.hose = hose;
       result.atomMap = [];
       let includeAtom = fragmentMap.map((id) => {
         return id === i;
@@ -82,7 +90,7 @@ export function fragmentCyclicBonds(molecule) {
         false,
         atomMap,
       );
-
+      result.smiles = fragment.toSmiles();
       for (let j = 0; j < atomMap.length; j++) {
         if (atomMap[j] === 0) {
           result.atomMap.push(j);
@@ -95,6 +103,7 @@ export function fragmentCyclicBonds(molecule) {
       fragment.setFragment(false);
       result.mf = getMF(fragment).mf.replace(/R[1-9]?/, '');
       result.idCode = fragment.getIDCode();
+
       result.mfInfo = new MF(result.mf).getInfo();
       result.fragmentType = 'cyclic';
       results.push(result);

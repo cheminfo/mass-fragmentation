@@ -1,116 +1,98 @@
-import sum from 'ml-array-sum';
+export function fragmentationStatistics(spectra, resultMatching) {
+  const mass = [];
 
-export function fragmentationStatistics(
-  spectra,
-  resultMatching,
-  massPrecursorIon,
-) {
-  let molecularIon = [];
-  // identify molecular ion (is intensity is conc. A), still missing case when molecular ion is absent
-  let mass = spectra.x;
-  let closest = [];
-  for (let i = 0; i < mass.length; i++) {
-    let near = [];
-    if (
-      mass[i] <= massPrecursorIon + 0.01 &&
-      mass[i] >= massPrecursorIon - 0.01
-    ) {
-      near.push(mass[i]);
-    }
-    if (near.length > 0) {
-      closest.push(
-        near.sort(
-          (a, b) =>
-            Math.abs(massPrecursorIon - a) - Math.abs(massPrecursorIon - b),
-        )[0],
-      );
-    }
-  }
-
-  if (closest[0] > 0) {
-    for (let i = 0; i < spectra.x.length; i++) {
-      if (closest[0] === spectra.x[i]) {
-        molecularIon.push({ mass: spectra.x[i], intensity: spectra.y[i] });
-      }
-    }
-    const rapportImolecularIon =
-      (molecularIon[0].intensity / sum(spectra.y)) * 100;
-
-    // Duplicates
-
-    const counts = [];
-    const duplicates = [];
-
-    for (let i = 0; i < resultMatching.length; i++) {
-      duplicates.push(resultMatching[i].experimentalMass);
-    }
-    duplicates.forEach((x) => {
-      counts.push((counts[x] || 0) + 1);
+  function diff(A) {
+    return A.slice(1).map((n, i) => {
+      return n - A[i];
     });
-
-    let numberOfFragmentsWithSameMass = counts.length;
-
-    // Percentage matched fragments
-    let intensityMatched = [];
-    //let ParsedMasses = [];
-    //for (let i = 0; i < resultMatching.length; i++) {
-    //  ParsedMasses.push(resultMatching[i].experimentalMass);
-    //}
-
-    let masses = [...new Set(duplicates)];
-    for (let i = 0; i < masses.length; i++) {
-      for (let j = 0; j < spectra.x.length; j++) {
-        if (masses[i] === spectra.x[j]) {
-          intensityMatched.push(spectra.y[i]);
-        }
-      }
-    }
-
-    const percantageMatchedFragments =
-      (sum(intensityMatched) / sum(spectra.y)) * 100;
-
-    //Numbers of fragments matched
-    const numberOfFragmentsMatched =
-      (intensityMatched.length / spectra.x.length) * 100;
-    // Number of picks in spectrum
-    const numberOfPicks = mass.length;
-    // 5 principal fragments
-    let intensity = spectra.y;
-    let fivePrincipalFragmentsIntensity = intensity
-      .sort((a, b) => b - a)
-      .slice(0, 5);
-    let fivePrincipalFragmentsMatched = [];
-    for (let i = 0; i < intensityMatched.length; i++) {
-      for (let j = 0; j < fivePrincipalFragmentsIntensity.length; j++) {
-        if (fivePrincipalFragmentsIntensity[j] === intensityMatched[i]) {
-          fivePrincipalFragmentsMatched.push(
-            fivePrincipalFragmentsIntensity[j],
-          );
-        }
-      }
-    }
-    const fivePrincipalPicks = (fivePrincipalFragmentsMatched.length / 5) * 100;
-    // 10 principal fragments
-    let tenPrincipalFragmentsIntensity = intensity
-      .sort((a, b) => b - a)
-      .slice(0, 10);
-    let tenPrincipalFragmentsMatched = [];
-    for (let i = 0; i < intensityMatched.length; i++) {
-      for (let j = 0; j < tenPrincipalFragmentsIntensity.length; j++) {
-        if (tenPrincipalFragmentsIntensity[j] === intensityMatched[i]) {
-          tenPrincipalFragmentsMatched.push(tenPrincipalFragmentsIntensity[j]);
-        }
-      }
-    }
-    const tenPrincipalPicks = (tenPrincipalFragmentsMatched.length / 10) * 100;
-    return {
-      rapportImolecularIon,
-      percantageMatchedFragments,
-      numberOfFragmentsMatched,
-      numberOfFragmentsWithSameMass,
-      numberOfPicks,
-      fivePrincipalPicks,
-      tenPrincipalPicks,
-    };
   }
+
+  let diffe = diff(spectra.x);
+  let counter = 0;
+  for (let p = 0; p < diffe.length; p++) {
+    if (Math.abs(diffe[p]) < 1.1) {
+      counter += 1;
+    }
+  }
+
+  let distribution = (counter / diffe.length) * 100;
+
+  let intensityMatched = [];
+  let intensity = [];
+  intensity.push(spectra.y);
+
+  for (let i = 0; i < resultMatching.length; i++) {
+    mass.push(resultMatching[i].experimentalMass);
+  }
+  let masses = [...new Set(mass.sort())];
+  let matchedMass = [];
+  for (let i = 0; i < masses.length; i++) {
+    for (let j = 0; j < spectra.x.length; j++) {
+      if (masses[i] === spectra.x[j]) {
+        intensityMatched.push(spectra.y[j]);
+        matchedMass.push(spectra.x[j]);
+      }
+    }
+  }
+
+  // 5 principal fragments
+  let fivePrincipalFragmentsIntensity = intensity[0]
+    .sort((a, b) => b - a)
+    .slice(0, 5);
+
+  //console.log(fivePrincipalFragmentsIntensity.length);
+  let fivePrincipalFragmentsMatched = [];
+  let matMass = [];
+  for (let i = 0; i < intensityMatched.length; i++) {
+    for (let j = 0; j < fivePrincipalFragmentsIntensity.length; j++) {
+      if (fivePrincipalFragmentsIntensity[j] === intensityMatched[i]) {
+        fivePrincipalFragmentsMatched.push(fivePrincipalFragmentsIntensity[j]);
+        matMass.push(matchedMass[i]);
+      }
+    }
+  }
+
+  let five = [...new Set(fivePrincipalFragmentsMatched.sort())];
+
+  //console.log(fivePrincipalFragmentsMatched);
+
+  const fivePrincipalPicks =
+    (five.length / fivePrincipalFragmentsIntensity.length) * 100;
+
+  // 10 principal fragments
+  /*let tenPrincipalFragmentsIntensity = intensity[0]
+    .sort((a, b) => b - a)
+    .slice(0, 10);
+
+  console.log(
+    'Five:',
+    fivePrincipalFragmentsIntensity,
+    'Ten:',
+    tenPrincipalFragmentsIntensity,
+
+    'Int Matched:',
+    intensityMatched,
+    'Mass matched:',
+    matchedMass,
+  );*/
+
+  /*
+  let tenPrincipalFragmentsMatched = [];
+  for (let i = 0; i < intensityMatched.length; i++) {
+    for (let j = 0; j < tenPrincipalFragmentsIntensity.length; j++) {
+      if (tenPrincipalFragmentsIntensity[j] === intensityMatched[i]) {
+        tenPrincipalFragmentsMatched.push(tenPrincipalFragmentsIntensity[j]);
+      }
+    }
+  }
+  let tenPrincipalPicks = (tenPrincipalFragmentsMatched.length / 10) * 100;*/
+
+  let numberOfPicks = spectra.x.length;
+
+  return {
+    fivePrincipalPicks,
+    // tenPrincipalPicks,
+    distribution,
+    numberOfPicks,
+  };
 }

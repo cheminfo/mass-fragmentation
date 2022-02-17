@@ -1,7 +1,7 @@
 // https://cheminfo.github.io/openchemlib-js/index.html
 
 import MassTools from 'mass-tools';
-import { getMF /*getHoseCodesForPath*/ } from 'openchemlib-utils';
+import { getMF, getHoseCodesForAtoms } from 'openchemlib-utils';
 
 const { MF } = MassTools;
 
@@ -73,8 +73,8 @@ export function fragmentAcyclicBonds(molecule) {
     if (nbFragments === 2) {
       for (let i = 0; i < nbFragments; i++) {
         const result = {};
-        //let hose = getHoseCodesForPath(molecule, bond.atom1, bond.atom2, 1);
-        //result.hose = hose;
+        let hose = getHoseCodesForAtoms(molecule, [bond.atom1, bond.atom2], 1);
+        result.hose = hose;
 
         result.atomMap = [];
         // assign fragment id to index of for loop
@@ -94,6 +94,7 @@ export function fragmentAcyclicBonds(molecule) {
           false,
           atomMap,
         );
+        result.smiles = fragment.toSmiles();
 
         // where atomMap[j] is equal to 0 there is a bond who was fragmented
         for (let j = 0; j < atomMap.length; j++) {
@@ -109,6 +110,7 @@ export function fragmentAcyclicBonds(molecule) {
         fragment.setFragment(false);
         result.mf = getMF(fragment).mf.replace(/R[1-9]?/, ''); // get mf without R group
         result.idCode = fragment.getIDCode();
+
         result.mfInfo = new MF(result.mf).getInfo();
         result.fragmentType = 'acyclic';
 
