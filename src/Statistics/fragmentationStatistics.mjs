@@ -1,3 +1,5 @@
+import sum from 'ml-array-sum';
+
 export function fragmentationStatistics(spectra, resultMatching) {
   const mass = [];
 
@@ -34,7 +36,8 @@ export function fragmentationStatistics(spectra, resultMatching) {
       }
     }
   }
-
+  const percantageMatchedFragments =
+    (sum(intensityMatched) / sum(spectra.y)) * 100;
   // 5 principal fragments
   let fivePrincipalFragmentsIntensity = intensity[0]
     .sort((a, b) => b - a)
@@ -56,8 +59,7 @@ export function fragmentationStatistics(spectra, resultMatching) {
 
   //console.log(fivePrincipalFragmentsMatched);
 
-  const fivePrincipalPicks =
-    (five.length / fivePrincipalFragmentsIntensity.length) * 100;
+  const fivePrincipalPicks = (five.length / 5) * 100;
 
   // 10 principal fragments
   /*let tenPrincipalFragmentsIntensity = intensity[0]
@@ -94,5 +96,6 @@ export function fragmentationStatistics(spectra, resultMatching) {
     // tenPrincipalPicks,
     distribution,
     numberOfPicks,
+    percantageMatchedFragments,
   };
 }
