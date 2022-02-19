@@ -11,7 +11,7 @@ const StreamArray = pkg;
 
 const entries = [];
 const jsonStream = StreamArray.withParser();
-jsonStream.on('data', ({ key, value }) => {
+jsonStream.on('data', ({ value }) => {
   let meta = [];
   for (let i = 0; i < value.metaData.length; i++) {
     if (value.metaData[i].value === 'CID') {
@@ -27,6 +27,7 @@ jsonStream.on('data', ({ key, value }) => {
       };
       let molFile = value.compound[0].molFile;
       let smiles = [];
+      let mf = [];
 
       let collisionEnergy = [];
       for (let j = 0; j < value.metaData.length; j++) {
@@ -49,6 +50,11 @@ jsonStream.on('data', ({ key, value }) => {
       for (let j = 0; j < value.compound[0].metaData.length; j++) {
         if (value.compound[0].metaData[j].name === 'SMILES') {
           smiles.push(value.compound[0].metaData[j].value);
+        }
+      }
+      for (let j = 0; j < value.compound[0].metaData.length; j++) {
+        if (value.compound[0].metaData[j].name === 'molecular formula') {
+          mf.push(value.compound[0].metaData[j].value);
         }
       }
       let pubchemCID = [];
@@ -104,6 +110,7 @@ jsonStream.on('data', ({ key, value }) => {
             spectrum: spectra,
             molFile: molFile,
             smiles: smiles[0],
+            mf: mf[0],
             pubchemCID: pubchemCID[0],
             precursorIon: precursorIon[0],
             precursorType: precursorType[0],
@@ -123,7 +130,7 @@ jsonStream.on('data', ({ key, value }) => {
 });
 
 jsonStream.on('end', () => {
-  const [train, test] = trainTestSplit(entries, 0.99);
+  const [train, test] = trainTestSplit(entries, 0.9);
   writeFileSync(
     join(__dirname, 'monadb/trainingSet.json'),
     JSON.stringify(train),

@@ -45,13 +45,12 @@ for (let filename of dir2) {
   for (let i = 0; i < data3.length; i++) {
     smiles.push(data3[i].SMILES);
   }
+
   structureSmilesChallenge.push(smiles);
 }
 
 for (let p = 0; p < parsed.length; p++) {
-  for (let s = 0; s < structureSmilesChallenge.length; s++) {
-    parsed[p].smiles = structureSmilesChallenge[s];
-  }
+  parsed[p].smiles = structureSmilesChallenge[p];
 }
 
 writeFileSync(
