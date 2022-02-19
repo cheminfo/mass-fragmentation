@@ -180,7 +180,6 @@ for (let i = 0; i < statistics.length; i++) {
   numberOfPicks.push(statistics[i].numberOfPicks);
   fivePrincipalPicks.push(statistics[i].fivePrincipalPicks);
   distribution.push(statistics[i].distribution);
-  //tenPrincipalPicks.push(statistics[i].tenPrincipalPicks);
 }
 
 let boxplotfivePrincipalPicks = xBoxPlot(fivePrincipalPicks);
@@ -195,7 +194,6 @@ boxplotResultsHplus.push({
   boxplotfivePrincipalPicks: boxplotfivePrincipalPicks,
   boxplotDistribution: boxplotDistribution,
   distributionMean: average(distribution),
-  // boxplottenPrincipalPicks: boxplottenPrincipalPicks,
   mean: meanFive,
   boxplotSpectra: boxplotSpectra,
   boxplotSpectraMean: average(statSpectra),
