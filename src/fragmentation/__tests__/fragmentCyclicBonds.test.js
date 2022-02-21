@@ -27,38 +27,27 @@ describe('fragmentCyclicBonds', () => {
   it('CCC13CCCC2CCCC(CCC1)C23', () => {
     const molecule = Molecule.fromSmiles('C1CC2CCCC3CCCC(C1)C23'); //3 cyclohexane connected
     const result = fragmentCyclicBonds(molecule);
+
     expect(result).toStrictEqual([
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [10, 11],
-            from: 10,
-            to: 11,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -73,35 +62,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [10, 11],
-            from: 10,
-            to: 11,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [1],
+        smiles: 'CC1(CCCC2(CCCCC12))',
         mf: 'C11H19',
         idCode: 'dcl@`@V\\bTTRbOBnuUUUP@@',
         mfInfo: {
@@ -116,38 +93,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [10, 11],
-            from: 10,
-            to: 11,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'C(C)C',
         mf: 'C3H7',
         idCode: 'gC`H@liMT@@',
         mfInfo: {
@@ -162,38 +124,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [10, 11],
-            from: 10,
-            to: 11,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [2],
+        smiles: 'C1(CCCC2(CCCCC12))',
         mf: 'C10H17',
         idCode: 'dmL@`@V\\bbbTQ[iVjjjh@@',
         mfInfo: {
@@ -208,35 +155,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 11],
-            from: 0,
-            to: 11,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
         },
         atomMap: [0],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -251,35 +186,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 11],
-            from: 0,
-            to: 11,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
         },
         atomMap: [2],
+        smiles: 'C1(CCCC2(CCCC(C)C12))',
         mf: 'C11H19',
         idCode: 'dcl@`@V\\bbbTTK]NuUUUP@@',
         mfInfo: {
@@ -294,35 +217,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [8, 9],
-            from: 8,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
         },
         atomMap: [0],
+        smiles: 'C1(CC2(CCCCC2(C(C)C1)))',
         mf: 'C11H19',
         idCode: 'dcl@`@VTfUe^fWZjjjh@@',
         mfInfo: {
@@ -337,35 +248,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [8, 9],
-            from: 8,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
         },
         atomMap: [7],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -380,38 +279,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [9, 10],
-            from: 9,
-            to: 10,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'C1(CC2(CCCCC2(CC1)))',
         mf: 'C10H17',
         idCode: 'dmL@`@VTfUmZZUjjjj@@',
         mfInfo: {
@@ -426,38 +310,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [9, 10],
-            from: 9,
-            to: 10,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [7],
+        smiles: 'CCC',
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -472,35 +341,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [9, 10],
-            from: 9,
-            to: 10,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'C1(CC2(CCCC(C)C2(CC1)))',
         mf: 'C11H19',
         idCode: 'dcl@`@VTfUmZfeZjjjh@@',
         mfInfo: {
@@ -515,35 +372,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [9, 10],
-            from: 9,
-            to: 10,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [8],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -558,35 +403,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [4, 5],
-            from: 4,
-            to: 5,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
         },
         atomMap: [0],
+        smiles: 'C2(CCC1(C(CCCC1(C))C2))',
         mf: 'C11H19',
         idCode: 'dcl@`@VTfUmZfeZjjjh@@',
         mfInfo: {
@@ -601,35 +434,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [4, 5],
-            from: 4,
-            to: 5,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
         },
         atomMap: [3],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -644,38 +465,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [5, 6],
-            from: 5,
-            to: 6,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'C2(CCC1(C(CCCC1)C2))',
         mf: 'C10H17',
         idCode: 'dmL@`@VTfUmZZUjjjj@@',
         mfInfo: {
@@ -690,38 +496,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [5, 6],
-            from: 5,
-            to: 6,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [3],
+        smiles: 'CCC',
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -736,35 +527,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [5, 6],
-            from: 5,
-            to: 6,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'C2(CC(C)C1(C(CCCC1)C2))',
         mf: 'C11H19',
         idCode: 'dcl@`@VTfUe^fWZjjjh@@',
         mfInfo: {
@@ -779,35 +558,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [5, 6],
-            from: 5,
-            to: 6,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dk|@@DiYU[IaWSjjjjjIJBhXcb@xPJBJCradXdYaQVMGPNSgzH`NEUCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dcl@@DjVUZayZjjjh`hRbjFHCa@hHhORDQbQfEePt]`y~bHCaUPxUP',
+            'dk|@@LdbTRRah^WSjjjjjHJDhjab@xPJBJCqaDXdYaYTMGXNSbyn_hb@xUTNET',
+          ],
         },
         atomMap: [4],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -829,35 +596,23 @@ describe('fragmentCyclicBonds', () => {
     expect(result).toStrictEqual([
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [5, 6],
-            from: 5,
-            to: 6,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@',
+            'daD@@DiURjjjdJT`xPJBJCsAdXfYaQT_hb@xUTNET',
+            'det@@DiUUJafjjjdJT`xPJBJCpadXfYaQTMgY~bHCaUPxUP',
+          ],
         },
         atomMap: [0],
+        smiles: 'C1(CCCC(CC)C1)',
         mf: 'C8H15',
         idCode: 'did@`@V\\bbRaijjj`@',
         mfInfo: {
@@ -872,35 +627,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [5, 6],
-            from: 5,
-            to: 6,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@',
+            'daD@@DiURjjjdJT`xPJBJCsAdXfYaQT_hb@xUTNET',
+            'det@@DiUUJafjjjdJT`xPJBJCpadXfYaQTMgY~bHCaUPxUP',
+          ],
         },
         atomMap: [4],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -915,35 +658,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'C1(CCCC(C)C1)',
         mf: 'C7H13',
         idCode: 'daD@`@VTfUjZjj`@',
         mfInfo: {
@@ -958,35 +689,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
         },
         atomMap: [4],
+        smiles: 'CCC',
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -1001,38 +720,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'C1(CCCCC1)',
         mf: 'C6H11',
         idCode: 'gOpH@liLkWUU@@',
         mfInfo: {
@@ -1047,38 +751,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [4],
+        smiles: 'CCCC',
         mf: 'C4H9',
         idCode: 'gJPH@liJuP@',
         mfInfo: {
@@ -1093,32 +782,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [4, 5],
-            from: 4,
-            to: 5,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'C1(CCC(C)C(C)C1)',
         mf: 'C8H15',
         idCode: 'did@`@VTfUnfjjj@@',
         mfInfo: {
@@ -1133,32 +813,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [4, 5],
-            from: 4,
-            to: 5,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
         },
         atomMap: [5],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1173,35 +844,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [4, 5],
-            from: 4,
-            to: 5,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'C1(CCC(C)CC1)',
         mf: 'C7H13',
         idCode: 'daD@`@VTfUzZjj`@',
         mfInfo: {
@@ -1216,35 +875,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [4, 5],
-            from: 4,
-            to: 5,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [5],
+        smiles: 'CCC',
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -1259,35 +906,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [5, 6],
-            from: 5,
-            to: 6,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@',
+            'daD@@DiURjjjdJT`xPJBJCsAdXfYaQT_hb@xUTNET',
+            'det@@DiUUJafjjjdJT`xPJBJCpadXfYaQTMgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'C1(CCC(CC)CC1)',
         mf: 'C8H15',
         idCode: 'did@`@VTfUvfjjj@@',
         mfInfo: {
@@ -1302,35 +937,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [5, 6],
-            from: 5,
-            to: 6,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@',
+            'daD@@DiURjjjdJT`xPJBJCsAdXfYaQT_hb@xUTNET',
+            'det@@DiUUJafjjjdJT`xPJBJCpadXfYaQTMgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [6],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1345,35 +968,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@',
+            'daD@@DiURjjjdJT`xPJBJCsAdXfYaQT_hb@xUTNET',
+            'det@@DiUUJafjjjdJT`xPJBJCpadXfYaQTMgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'CCC1(CCCCC1)',
         mf: 'C8H15',
         idCode: 'did@`@VTeYWajjj@@',
         mfInfo: {
@@ -1388,35 +999,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@',
+            'daD@@DiURjjjdJT`xPJBJCsAdXfYaQT_hb@xUTNET',
+            'det@@DiUUJafjjjdJT`xPJBJCpadXfYaQTMgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [1],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1431,35 +1030,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [8, 9],
-            from: 8,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@',
+            'daD@@DiURjjjdJT`xPJBJCsAdXfYaQT_hb@xUTNET',
+            'det@@DiUUJafjjjdJT`xPJBJCpadXfYaQTMgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1474,35 +1061,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [8, 9],
-            from: 8,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gFp@DiTvjhCaB`eAxcIbsY~bPNEUGBj@',
+            'daD@@DiURjjjdJT`xPJBJCsAdXfYaQT_hb@xUTNET',
+            'det@@DiUUJafjjjdJT`xPJBJCpadXfYaQTMgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [1],
+        smiles: 'CCC1(CCCCC1)',
         mf: 'C8H15',
         idCode: 'did@`@VTeYWajjj@@',
         mfInfo: {
@@ -1517,35 +1092,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [8, 9],
-            from: 8,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'C(C)C',
         mf: 'C3H7',
         idCode: 'gC`H@liMT@@',
         mfInfo: {
@@ -1560,35 +1123,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [8, 9],
-            from: 8,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [2],
+        smiles: 'CC1(CCCCC1)',
         mf: 'C7H13',
         idCode: 'daD@`@VTeeVzjj`@',
         mfInfo: {
@@ -1603,32 +1154,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 9],
-            from: 0,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1643,32 +1185,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 9],
-            from: 0,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
         },
         atomMap: [2],
+        smiles: 'CC1(CCCCC1C)',
         mf: 'C8H15',
         idCode: 'did@`@VTefWajjj@@',
         mfInfo: {
@@ -1683,38 +1216,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [8, 9],
-            from: 8,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'C(CC)C',
         mf: 'C4H9',
         idCode: 'gJPH@liLuP@',
         mfInfo: {
@@ -1729,38 +1247,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [8, 9],
-            from: 8,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
         },
         atomMap: [3],
+        smiles: 'C1(CCCCC1)',
         mf: 'C6H11',
         idCode: 'gOpH@liLkWUU@@',
         mfInfo: {
@@ -1775,35 +1278,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 9],
-            from: 0,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'CCC',
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -1818,35 +1309,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 9],
-            from: 0,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'det@@DjVWh^fjjjdBaJ@xPJBJCtaDXdYaYVMgXN_hb@xUTNET',
+            'det@@DjVWh^fjjjdBaJ@XPJBJC}DPGBjapj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'did@@DiYTfjjjQJBhCa@hHhO\\FQbQfEEXv_hb@xUTNET',
+            'det@@DiYWIafjjjdR`j@xPJBJCtadXdYaQVMgXN_hb@xUTNET',
+          ],
         },
         atomMap: [3],
+        smiles: 'C1(CCCCC1C)',
         mf: 'C7H13',
         idCode: 'daD@`@VTfYVzjj`@',
         mfInfo: {
@@ -1866,35 +1345,27 @@ describe('fragmentCyclicBonds', () => {
   it('C2CCC1CCCC3CCCC4CCCC1', () => {
     const molecule = Molecule.fromSmiles('C2CCC1CCCC3CCCC4CCCC1(CC2)C34'); //4 cycles (2 hexane & 2 heptane)
     const result = fragmentCyclicBonds(molecule);
+
     expect(result).toStrictEqual([
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'daD@@DiUjZjjhJ`NDB`b`|pYFIfXTUgzH`NEUCaU@',
+            'dmt@@DiUnZZjjjhH`NDB`b`}pYFIfXTUgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVQeNjjjjjl@hPQP`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZQeNlFjjjjjjj@hPQPaQFj@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
         },
         atomMap: [0],
+        smiles: 'CCCC12(CCCC3(CCCC(CCCC1)C23))',
         mf: 'C17H29',
         idCode: 'fde@B@@KNQIJQQIQQGScA}Fjjjjjj`@@',
         mfInfo: {
@@ -1909,32 +1380,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'daD@@DiUjZjjhJ`NDB`b`|pYFIfXTUgzH`NEUCaU@',
+            'dmt@@DiUnZZjjjhH`NDB`b`}pYFIfXTUgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVQeNjjjjjl@hPQP`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZQeNlFjjjjjjj@hPQPaQFj@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
         },
         atomMap: [1],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -1949,32 +1411,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [15, 16],
-            from: 15,
-            to: 16,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              { sphere: 2, oclID: 'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'daD@@DiUjZjjhJ`NDB`b`|pYFIfXTUgzH`NEUCaU@',
+            'dmt@@DiUnZZjjjhH`NDB`b`}pYFIfXTUgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVYP]Flzjjjjjjj@hQQb`UDb@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbgTGUcNbfjjjjjjjhBaAFJATRHAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'CCC',
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -1989,32 +1442,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [15, 16],
-            from: 15,
-            to: 16,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              { sphere: 2, oclID: 'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'daD@@DiUjZjjhJ`NDB`b`|pYFIfXTUgzH`NEUCaU@',
+            'dmt@@DiUnZZjjjhH`NDB`b`}pYFIfXTUgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVYP]Flzjjjjjjj@hQQb`UDb@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbgTGUcNbfjjjjjjjhBaAFJATRHAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
         },
         atomMap: [1],
+        smiles: 'CCC1(CCCC2(CCCC3(CCCC1C23)))',
         mf: 'C16H27',
         idCode: 'fhy@B@@KNQIQQJIIPrMiw`uUUUUUP@@',
         mfInfo: {
@@ -2029,32 +1473,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [16, 17],
-            from: 16,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'daD@@DiUjZjjhJ`NDB`b`|pYFIfXTUgzH`NEUCaU@',
+            'dmt@@DiUnZZjjjhH`NDB`b`}pYFIfXTUgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET',
+            'dkl@@DiZVYxZjjjiDhJ`NDB`b`}pYFYaQTMgY~bHCaUPxUP',
+            'fde@@@LdRdRbbJbgAFCYuUUUUUUTQPRbeBjMD@xPB`aP^LCHYcBQRFYsAYKEQjCY~bD@xUTGBj@',
+          ],
         },
         atomMap: [0],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -2069,32 +1504,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [0, 1],
-            from: 0,
-            to: 1,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [16, 17],
-            from: 16,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'daD@@DiUjZjjhJ`NDB`b`|pYFIfXTUgzH`NEUCaU@',
+            'dmt@@DiUnZZjjjhH`NDB`b`}pYFIfXTUgY~bHCaUPxUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET',
+            'dkl@@DiZVYxZjjjiDhJ`NDB`b`}pYFYaQTMgY~bHCaUPxUP',
+            'fde@@@LdRdRbbJbgAFCYuUUUUUUTQPRbeBjMD@xPB`aP^LCHYcBQRFYsAYKEQjCY~bD@xUTGBj@',
+          ],
         },
         atomMap: [1],
+        smiles: 'CCC1(CCCC2(CCCC3(CCCC1(C)C23)))',
         mf: 'C17H29',
         idCode: 'fde@B@@KNQIQRIQYJEUc^CFjjjjjj`@@',
         mfInfo: {
@@ -2109,32 +1535,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [15, 16],
-            from: 15,
-            to: 16,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              { sphere: 2, oclID: 'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dmt@@DiYZVzjjjhR`NDB`b`|pYFIFYVMgzH`NEUCaU@',
+            'foA@@@DiYZ^u`mNjjjjjlHHIQr`GB@TDJCr`YCDQcJXsNPKIXkOtP`GBj`xUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVYP]Flzjjjjjjj@hQQb`UDb@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbgTGUcNbfjjjjjjjhBaAFJATRHAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'C(C)CC',
         mf: 'C4H9',
         idCode: 'gJPH@liLuP@',
         mfInfo: {
@@ -2149,32 +1566,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [15, 16],
-            from: 15,
-            to: 16,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              { sphere: 2, oclID: 'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dmt@@DiYZVzjjjhR`NDB`b`|pYFIFYVMgzH`NEUCaU@',
+            'foA@@@DiYZ^u`mNjjjjjlHHIQr`GB@TDJCr`YCDQcJXsNPKIXkOtP`GBj`xUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVYP]Flzjjjjjjj@hQQb`UDb@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbgTGUcNbfjjjjjjjhBaAFJATRHAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
         },
         atomMap: [2],
+        smiles: 'CC1(CCCC2(CCCC3(CCCC1C23)))',
         mf: 'C15H25',
         idCode: 'f`i@B@@KNQJJIQIJDVeV]zjjjjjh@@',
         mfInfo: {
@@ -2189,32 +1597,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [16, 17],
-            from: 16,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dmt@@DiYZVzjjjhR`NDB`b`|pYFIFYVMgzH`NEUCaU@',
+            'foA@@@DiYZ^u`mNjjjjjlHHIQr`GB@TDJCr`YCDQcJXsNPKIXkOtP`GBj`xUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET',
+            'dkl@@DiZVYxZjjjiDhJ`NDB`b`}pYFYaQTMgY~bHCaUPxUP',
+            'fde@@@LdRdRbbJbgAFCYuUUUUUUTQPRbeBjMD@xPB`aP^LCHYcBQRFYsAYKEQjCY~bD@xUTGBj@',
+          ],
         },
         atomMap: [0],
+        smiles: 'C(C)C',
         mf: 'C3H7',
         idCode: 'gC`H@liMT@@',
         mfInfo: {
@@ -2229,32 +1628,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [16, 17],
-            from: 16,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dmt@@DiYZVzjjjhR`NDB`b`|pYFIFYVMgzH`NEUCaU@',
+            'foA@@@DiYZ^u`mNjjjjjlHHIQr`GB@TDJCr`YCDQcJXsNPKIXkOtP`GBj`xUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET',
+            'dkl@@DiZVYxZjjjiDhJ`NDB`b`}pYFYaQTMgY~bHCaUPxUP',
+            'fde@@@LdRdRbbJbgAFCYuUUUUUUTQPRbeBjMD@xPB`aP^LCHYcBQRFYsAYKEQjCY~bD@xUTGBj@',
+          ],
         },
         atomMap: [2],
+        smiles: 'CC1(CCCC2(CCCC3(CCCC1(C)C23)))',
         mf: 'C16H27',
         idCode: 'fhy@B@@KNQJJQJKIPrMiw`uUUUUUP@@',
         mfInfo: {
@@ -2269,32 +1659,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 17],
-            from: 0,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dmt@@DiYZVzjjjhR`NDB`b`|pYFIFYVMgzH`NEUCaU@',
+            'foA@@@DiYZ^u`mNjjjjjlHHIQr`GB@TDJCr`YCDQcJXsNPKIXkOtP`GBj`xUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'did@@DiUjfjjj@NDB`b`}PYFIfYV_hb@xUTNET',
+            'dkl@@DiUkYijjjjiBhZ`NDB`b`|HYFIfYVMGPN_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -2309,32 +1690,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [1, 2],
-            from: 1,
-            to: 2,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 17],
-            from: 0,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dmt@@DiYZVzjjjhR`NDB`b`|pYFIFYVMgzH`NEUCaU@',
+            'foA@@@DiYZ^u`mNjjjjjlHHIQr`GB@TDJCr`YCDQcJXsNPKIXkOtP`GBj`xUP',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'did@@DiUjfjjj@NDB`b`}PYFIfYV_hb@xUTNET',
+            'dkl@@DiUkYijjjjiBhZ`NDB`b`|HYFIfYVMGPN_hb@xUTNET',
+          ],
         },
         atomMap: [2],
+        smiles: 'CC1(CCCC2(CCCC3(CCCC1(CC)C23)))',
         mf: 'C17H29',
         idCode: 'fde@B@@KNQJJQJIIJVUm^CFjjjjjj`@@',
         mfInfo: {
@@ -2349,32 +1721,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [15, 16],
-            from: 15,
-            to: 16,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              { sphere: 2, oclID: 'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVQeNjjjjjl@hPQP`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZQeNlFjjjjjjj@hPQPaQFj@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVYP]Flzjjjjjjj@hQQb`UDb@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbgTGUcNbfjjjjjjjhBaAFJATRHAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'C(CC)CC',
         mf: 'C5H11',
         idCode: 'gGPH@liLmU@@',
         mfInfo: {
@@ -2389,32 +1752,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [15, 16],
-            from: 15,
-            to: 16,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              { sphere: 2, oclID: 'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVQeNjjjjjl@hPQP`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZQeNlFjjjjjjj@hPQPaQFj@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVYP]Flzjjjjjjj@hQQb`UDb@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbgTGUcNbfjjjjjjjhBaAFJATRHAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
         },
         atomMap: [3],
+        smiles: 'C1(CCCC2(CCCC3(CCCC1C23)))',
         mf: 'C14H23',
         idCode: 'foQ@B@@KNQQQJIIP|UHugUUUUUT@@',
         mfInfo: {
@@ -2429,32 +1783,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [16, 17],
-            from: 16,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVQeNjjjjjl@hPQP`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZQeNlFjjjjjjj@hPQPaQFj@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET',
+            'dkl@@DiZVYxZjjjiDhJ`NDB`b`}pYFYaQTMgY~bHCaUPxUP',
+            'fde@@@LdRdRbbJbgAFCYuUUUUUUTQPRbeBjMD@xPB`aP^LCHYcBQRFYsAYKEQjCY~bD@xUTGBj@',
+          ],
         },
         atomMap: [0],
+        smiles: 'C(CC)C',
         mf: 'C4H9',
         idCode: 'gJPH@liLuP@',
         mfInfo: {
@@ -2469,32 +1814,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [16, 17],
-            from: 16,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVQeNjjjjjl@hPQP`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZQeNlFjjjjjjj@hPQPaQFj@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'dax@@DiZZjh@xPJBJCvAdYf_hb@xUTNET',
+            'dkl@@DiZVYxZjjjiDhJ`NDB`b`}pYFYaQTMgY~bHCaUPxUP',
+            'fde@@@LdRdRbbJbgAFCYuUUUUUUTQPRbeBjMD@xPB`aP^LCHYcBQRFYsAYKEQjCY~bD@xUTGBj@',
+          ],
         },
         atomMap: [3],
+        smiles: 'C1(CCCC2(CCCC3(CCCC1(C)C23)))',
         mf: 'C15H25',
         idCode: 'f`i@B@@KNQQRIQYJDVeV]zjjjjjh@@',
         mfInfo: {
@@ -2509,32 +1845,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 17],
-            from: 0,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVQeNjjjjjl@hPQP`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZQeNlFjjjjjjj@hPQPaQFj@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'did@@DiUjfjjj@NDB`b`}PYFIfYV_hb@xUTNET',
+            'dkl@@DiUkYijjjjiBhZ`NDB`b`|HYFIfYVMGPN_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'CCC',
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -2549,32 +1876,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [2, 3],
-            from: 2,
-            to: 3,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 17],
-            from: 0,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVQeNjjjjjl@hPQP`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZQeNlFjjjjjjj@hPQPaQFj@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'did@@DiUjfjjj@NDB`b`}PYFIfYV_hb@xUTNET',
+            'dkl@@DiUkYijjjjiBhZ`NDB`b`|HYFIfYVMGPN_hb@xUTNET',
+          ],
         },
         atomMap: [3],
+        smiles: 'C1(CCCC2(CCCC3(CCCC1(CC)C23)))',
         mf: 'C16H27',
         idCode: 'fhy@B@@KNQQRIQIIRbLiw`uUUUUUP@@',
         mfInfo: {
@@ -2589,32 +1907,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [15, 16],
-            from: 15,
-            to: 16,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              { sphere: 2, oclID: 'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 17],
-            from: 0,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVYP]Flzjjjjjjj@hQQb`UDb@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbgTGUcNbfjjjjjjjhBaAFJATRHAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'did@@DiUjfjjj@NDB`b`}PYFIfYV_hb@xUTNET',
+            'dkl@@DiUkYijjjjiBhZ`NDB`b`|HYFIfYVMGPN_hb@xUTNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'CCCC1(CCCC2(CCCC3(CCCC1C23)))',
         mf: 'C17H29',
         idCode: 'fde@B@@KNQIJJIQIJEUc^CFjjjjjj`@@',
         mfInfo: {
@@ -2629,32 +1938,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [15, 16],
-            from: 15,
-            to: 16,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              { sphere: 2, oclID: 'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [0, 17],
-            from: 0,
-            to: 17,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dct@@DjefVjjj`Ca@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVYP]Flzjjjjjjj@hQQb`UDb@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbgTGUcNbfjjjjjjjhBaAFJATRHAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gGP@DiVj`NDJBTGbLfKMgzI@xUT\\Jh',
+            'did@@DiUjfjjj@NDB`b`}PYFIfYV_hb@xUTNET',
+            'dkl@@DiUkYijjjjiBhZ`NDB`b`|HYFIfYVMGPN_hb@xUTNET',
+          ],
         },
         atomMap: [16],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -2669,32 +1969,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [5, 6],
-            from: 5,
-            to: 6,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVRcNjjjjjl@hQQR`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZRcNlFjjjjjjj@hQQRaUFb@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dmt@@DiYYVzjjjlR`jFHCa@hHhO\\FQbQfEEXt_hb@xUTNET',
+            'f`q@@@DiYYV[YrUjjjjjjHb`eCBAD@xPB`aP^TCHXbLXRJXrAQKEY~bD@xUTGBj@',
+          ],
         },
         atomMap: [0],
+        smiles: 'C3(CCCC1(CCCC2(CCCC(C)C12))(CC3))',
         mf: 'C17H29',
         idCode: 'fde@B@@KNQQIISQJJEgCV}Fjjjjjj`@@',
         mfInfo: {
@@ -2709,32 +2000,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [5, 6],
-            from: 5,
-            to: 6,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVRcNjjjjjl@hQQR`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZRcNlFjjjjjjj@hQQRaUFb@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dmt@@DiYYVzjjjlR`jFHCa@hHhO\\FQbQfEEXt_hb@xUTNET',
+            'f`q@@@DiYYV[YrUjjjjjjHb`eCBAD@xPB`aP^TCHXbLXRJXrAQKEY~bD@xUTGBj@',
+          ],
         },
         atomMap: [4],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -2749,32 +2031,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'diD@@DjVVjjhB`NDB`b`}PQFIFXV_hb@xUTNET' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVRcNjjjjjl@hQQR`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZRcNlFjjjjjjj@hQQRaUFb@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'diD@@DjVVjjhB`NDB`b`}PQFIFXV_hb@xUTNET',
+            'dg|@@DjVUinLYjjjjjpJDhX`NDB`b`|HQFIFXVMGXN_hb@xUTNET',
+            'fhy@@@LdbTRTbaRxXTk^jjjjjjj@hQQPaaDj@\\HAPPhOVADLQFLIcHy`leBlualmgzHPCaUP\\Jh',
+          ],
         },
         atomMap: [0],
+        smiles: 'C3(CCCC1(CCCC2(CCCCC12))(CC3))',
         mf: 'C16H27',
         idCode: 'fhy@B@@KNQQIISQJHlxZw`uUUUUUP@@',
         mfInfo: {
@@ -2789,32 +2062,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [3, 4],
-            from: 3,
-            to: 4,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'diD@@DjVVjjhB`NDB`b`}PQFIFXV_hb@xUTNET' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'ded@@DjVejjj`J@xPJBJCqADYfEgzH`NEUCaU@',
+            'foA@@@DjVeYVRcNjjjjjl@hQQR`GB@TDJCt`QCLXSJPsNXKIY~bD@xUTGBj@',
+            'fde@@@DjVeYWZRcNlFjjjjjjj@hQQRaUFb@\\HAPPhONADLqaLiCLy`lebhuAlmcl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'diD@@DjVVjjhB`NDB`b`}PQFIFXV_hb@xUTNET',
+            'dg|@@DjVUinLYjjjjjpJDhX`NDB`b`|HQFIFXVMGXN_hb@xUTNET',
+            'fhy@@@LdbTRTbaRxXTk^jjjjjjj@hQQPaaDj@\\HAPPhOVADLQFLIcHy`leBlualmgzHPCaUP\\Jh',
+          ],
         },
         atomMap: [4],
+        smiles: 'CCC',
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -2829,32 +2093,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [4, 5],
-            from: 4,
-            to: 5,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'diD@@DjVVjjhB`NDB`b`}PQFIFXV_hb@xUTNET' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dcL@@DiYZUnjjjjQJFHCa@hHhOLFQbQfUcQ~bHCaUPxUP',
+            'fhi@@@DiYZUUV\\mzjjjjjhbJBTLHyPCa@JBEA{PLabHqeLYGHEdlUfl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'diD@@DjVVjjhB`NDB`b`}PQFIFXV_hb@xUTNET',
+            'dg|@@DjVUinLYjjjjjpJDhX`NDB`b`|HQFIFXVMGXN_hb@xUTNET',
+            'fhy@@@LdbTRTbaRxXTk^jjjjjjj@hQQPaaDj@\\HAPPhOVADLQFLIcHy`leBlualmgzHPCaUP\\Jh',
+          ],
         },
         atomMap: [0],
+        smiles: 'C3(CCC(C)C1(CCCC2(CCCCC12))(CC3))',
         mf: 'C17H29',
         idCode: 'fde@B@@KNQQIIQJKQEgKNCFjjjjjj`@@',
         mfInfo: {
@@ -2869,32 +2124,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [4, 5],
-            from: 4,
-            to: 5,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [6, 7],
-            from: 6,
-            to: 7,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              { sphere: 2, oclID: 'diD@@DjVVjjhB`NDB`b`}PQFIFXV_hb@xUTNET' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dcL@@DiYZUnjjjjQJFHCa@hHhOLFQbQfUcQ~bHCaUPxUP',
+            'fhi@@@DiYZUUV\\mzjjjjjhbJBTLHyPCa@JBEA{PLabHqeLYGHEdlUfl\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'diD@@DjVVjjhB`NDB`b`}PQFIFXV_hb@xUTNET',
+            'dg|@@DjVUinLYjjjjjpJDhX`NDB`b`|HQFIFXVMGXN_hb@xUTNET',
+            'fhy@@@LdbTRTbaRxXTk^jjjjjjj@hQQPaaDj@\\HAPPhOVADLQFLIcHy`leBlualmgzHPCaUP\\Jh',
+          ],
         },
         atomMap: [5],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -2909,35 +2155,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [11, 12],
-            from: 11,
-            to: 12,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [13, 14],
-            from: 13,
-            to: 14,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'daD@@DiZRzjj`Ca@hHhOXFQfY~bHCaUPxUP' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dk\\@@DjVUfh^vjjjjlBaJFHCa@hHhOBDQbQfEcQvCgzH`NEUCaU@',
+            'fhy@@@LdbTRTTLRhKakAjjjjjjj@hQQPaeDb@\\HAPPhOFADLQFLIcHy`leBlual\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'daD@@DiZRzjj`Ca@hHhOXFQfY~bHCaUPxUP',
+            'dkl@@DiZUeKjjjjkDhHcj@xPJBJCwAdYfEEPv]GzH`NEUCaU@',
+            'flm@@@DiZVUUeirwgQBfjjjjjjjhb`eEJNDJHAp`EAB`|XFPsFDbdLsdBrVJcVFs}DHApjhNET',
+          ],
         },
         atomMap: [0],
+        smiles: 'C2(CCC1(CCCC3(CCCCC3(C1(C)CC2))))',
         mf: 'C17H29',
         idCode: 'fde@B@@KNQQIIQJYQEgKNCFjjjjjj`@@',
         mfInfo: {
@@ -2952,35 +2186,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [11, 12],
-            from: 11,
-            to: 12,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [13, 14],
-            from: 13,
-            to: 14,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'daD@@DiZRzjj`Ca@hHhOXFQfY~bHCaUPxUP' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dk\\@@DjVUfh^vjjjjlBaJFHCa@hHhOBDQbQfEcQvCgzH`NEUCaU@',
+            'fhy@@@LdbTRTTLRhKakAjjjjjjj@hQQPaeDb@\\HAPPhOFADLQFLIcHy`leBlual\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'daD@@DiZRzjj`Ca@hHhOXFQfY~bHCaUPxUP',
+            'dkl@@DiZUeKjjjjkDhHcj@xPJBJCwAdYfEEPv]GzH`NEUCaU@',
+            'flm@@@DiZVUUeirwgQBfjjjjjjjhb`eEJNDJHAp`EAB`|XFPsFDbdLsdBrVJcVFs}DHApjhNET',
+          ],
         },
         atomMap: [12],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -2995,38 +2217,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [11, 12],
-            from: 11,
-            to: 12,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [14, 15],
-            from: 14,
-            to: 15,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              {
-                sphere: 2,
-                oclID: 'dcL@@DjefUmjjjjPJDHCa@hHhOUFIFPVUgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dk\\@@DjVUfh^vjjjjlBaJFHCa@hHhOBDQbQfEcQvCgzH`NEUCaU@',
+            'fhy@@@LdbTRTTLRhKakAjjjjjjj@hQQPaeDb@\\HAPPhOFADLQFLIcHy`leBlual\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dcL@@DjefUmjjjjPJDHCa@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVVVcNmFjjjjjjj@hQQ``QDj@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbSehskQBfjjjjjjjhBaEFBADRhAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'C2(CCC1(CCCC3(CCCCC3(C1CC2))))',
         mf: 'C16H27',
         idCode: 'fhy@B@@KNQQIIIQJHlxZw`uUUUUUP@@',
         mfInfo: {
@@ -3041,38 +2248,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [11, 12],
-            from: 11,
-            to: 12,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [14, 15],
-            from: 14,
-            to: 15,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              {
-                sphere: 2,
-                oclID: 'dcL@@DjefUmjjjjPJDHCa@hHhOUFIFPVUgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dk\\@@DjVUfh^vjjjjlBaJFHCa@hHhOBDQbQfEcQvCgzH`NEUCaU@',
+            'fhy@@@LdbTRTTLRhKakAjjjjjjj@hQQPaeDb@\\HAPPhOFADLQFLIcHy`leBlual\x7FQB@\\JjCaU@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dcL@@DjefUmjjjjPJDHCa@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVVVcNmFjjjjjjj@hQQ``QDj@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbSehskQBfjjjjjjjhBaEFBADRhAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
         },
         atomMap: [12],
+        smiles: 'CCC',
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -3087,35 +2279,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [12, 13],
-            from: 12,
-            to: 13,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [14, 15],
-            from: 14,
-            to: 15,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              {
-                sphere: 2,
-                oclID: 'dcL@@DjefUmjjjjPJDHCa@hHhOUFIFPVUgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'dmt@@DiYUbZjjjdR`j@xPJBJCsAdXdYaQV_hb@xUTNET',
+            'f`q@@@DiYUfyHpVjjjjjjHb`eCJND@xPB`aP^TCHXbLXRJYrAYJEY~bD@xUTGBj@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dcL@@DjefUmjjjjPJDHCa@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVVVcNmFjjjjjjj@hQQ``QDj@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbSehskQBfjjjjjjjhBaEFBADRhAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
         },
         atomMap: [0],
+        smiles: 'C2(CCC1(CCCC3(CCCC(C)C3(C1CC2))))',
         mf: 'C17H29',
         idCode: 'fde@B@@KNQQIIIQJJEgCV}Fjjjjjj`@@',
         mfInfo: {
@@ -3130,35 +2310,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [12, 13],
-            from: 12,
-            to: 13,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [14, 15],
-            from: 14,
-            to: 15,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@' },
-              {
-                sphere: 2,
-                oclID: 'dcL@@DjefUmjjjjPJDHCa@hHhOUFIFPVUgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'dmt@@DiYUbZjjjdR`j@xPJBJCsAdXdYaQV_hb@xUTNET',
+            'f`q@@@DiYUfyHpVjjjjjjHb`eCJND@xPB`aP^TCHXbLXRJYrAYJEY~bD@xUTGBj@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gGP@Djfj`NDJBTGiL\x7FQHGBjcaU@',
+            'dcL@@DjefUmjjjjPJDHCa@hHhOUFIFPVUgzH`NEUCaU@',
+            'fde@@@DjefUVVVcNmFjjjjjjj@hQQ``QDj@\\HAPPhOZabHqALicLy`heBlugzHPCaUP\\Jh',
+            'flm@@@LddRbbRRbSehskQBfjjjjjjjhBaEFBADRhAp`EAB`}FFHcDDrfLsfBbTJsVFrvNsvArN_ha@NEUApj`',
+          ],
         },
         atomMap: [13],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -3173,35 +2341,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [9, 10],
-            from: 9,
-            to: 10,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dg|@@DjVUiVF[jjjjjpJDHZ`NDB`b`|HQFIFXVMGXN_hb@xUTNET',
+            'fhy@@@DjVUi]VBeXwjjjjjjj`JDDThYQH`GB@TDJCu`QCDQcBXrNXKIPkMX[KY~bD@xUTGBj@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dg|@@DiYUZrXUjjjjjqJBhX`NDB`b`}HYFIFXTUcPNSgzH`NEUCaU@',
+          ],
         },
         atomMap: [0],
+        smiles: 'C3(CCC2(CCCCC1(C2(CCCC1(C))CC3)))',
         mf: 'C17H29',
         idCode: 'fde@B@@KJSJkKJrseoNcUUUUUUP@@',
         mfInfo: {
@@ -3216,35 +2372,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [9, 10],
-            from: 9,
-            to: 10,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dg|@@DjVUiVF[jjjjjpJDHZ`NDB`b`|HQFIFXVMGXN_hb@xUTNET',
+            'fhy@@@DjVUi]VBeXwjjjjjjj`JDDThYQH`GB@TDJCu`QCDQcBXrNXKIPkMX[KY~bD@xUTGBj@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'dg|@@DiYUZrXUjjjjjqJBhX`NDB`b`}HYFIFXTUcPNSgzH`NEUCaU@',
+          ],
         },
         atomMap: [8],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {
@@ -3259,38 +2403,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [10, 11],
-            from: 10,
-            to: 11,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dg|@@DjVUiVF[jjjjjpJDHZ`NDB`b`|HQFIFXVMGXN_hb@xUTNET',
+            'fhy@@@DjVUi]VBeXwjjjjjjj`JDDThYQH`GB@TDJCu`QCDQcBXrNXKIPkMX[KY~bD@xUTGBj@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dk\\@@DjVUiX^fjjjjlBaBFhCa@hHhOBDQbQfEcQvCgzH`NEUCaU@',
+            'fhy@@@LdbTRTbLrXKbkAjjjjjjj@hPQPaeDj@\\HAPPhOFADLQFLIcHy`leBlual\x7FQB@\\JjCaU@',
+          ],
         },
         atomMap: [0],
+        smiles: 'C3(CCC2(CCCCC1(C2(CCCC1)CC3)))',
         mf: 'C16H27',
         idCode: 'fhy@B@@KJSJkKJkNVB{uUUUUUT@@',
         mfInfo: {
@@ -3305,38 +2434,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [7, 8],
-            from: 7,
-            to: 8,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [10, 11],
-            from: 10,
-            to: 11,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dg|@@DjVUiVF[jjjjjpJDHZ`NDB`b`|HQFIFXVMGXN_hb@xUTNET',
+            'fhy@@@DjVUi]VBeXwjjjjjjj`JDDThYQH`GB@TDJCu`QCDQcBXrNXKIPkMX[KY~bD@xUTGBj@',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dk\\@@DjVUiX^fjjjjlBaBFhCa@hHhOBDQbQfEcQvCgzH`NEUCaU@',
+            'fhy@@@LdbTRTbLrXKbkAjjjjjjj@hPQPaeDj@\\HAPPhOFADLQFLIcHy`leBlual\x7FQB@\\JjCaU@',
+          ],
         },
         atomMap: [8],
+        smiles: 'CCC',
         mf: 'C3H7',
         idCode: 'gC`H@liKT@@',
         mfInfo: {
@@ -3351,35 +2465,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [8, 9],
-            from: 8,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [10, 11],
-            from: 10,
-            to: 11,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'foQ@@@DiYUZTcEVtzjjjjjbHhIPpce@ND@hHTGi@rFHcFDbfL`VRs}DHApjhNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dk\\@@DjVUiX^fjjjjlBaBFhCa@hHhOBDQbQfEcQvCgzH`NEUCaU@',
+            'fhy@@@LdbTRTbLrXKbkAjjjjjjj@hPQPaeDj@\\HAPPhOFADLQFLIcHy`leBlual\x7FQB@\\JjCaU@',
+          ],
         },
         atomMap: [0],
+        smiles: 'C3(CCC2(CCCC(C)C1(C2(CCCC1)CC3)))',
         mf: 'C17H29',
         idCode: 'fde@B@@KJSJkKJrsehn}UUUUUUP@@',
         mfInfo: {
@@ -3394,35 +2496,23 @@ describe('fragmentCyclicBonds', () => {
       },
       {
         hose: {
-          bond1: {
-            atoms: [8, 9],
-            from: 8,
-            to: 9,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gC`@Dij@xPhIP^PrY~bPNEUGBj@' },
-              { sphere: 2, oclID: 'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@' },
-            ],
-            length: 1,
-          },
-          bond2: {
-            atoms: [10, 11],
-            from: 10,
-            to: 11,
-            torsion: undefined,
-            hoses: [
-              { sphere: 0, oclID: 'eF@Hp\\IPUA~b`xUTxUP' },
-              { sphere: 1, oclID: 'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh' },
-              {
-                sphere: 2,
-                oclID: 'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
-              },
-            ],
-            length: 1,
-          },
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gOp@DiYKjjhjApaPR`|QdqQl\x7FQHGBjcaU@',
+            'deT@@DiYUIjjjkDhJab@xPJBJCwAdXdYaQVMGzH`NEUCaU@',
+            'foQ@@@DiYUZTcEVtzjjjjjbHhIPpce@ND@hHTGi@rFHcFDbfL`VRs}DHApjhNET',
+          ],
+          bond2: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH`NEUCaU@',
+            'dk\\@@DjVUiX^fjjjjlBaBFhCa@hHhOBDQbQfEcQvCgzH`NEUCaU@',
+            'fhy@@@LdbTRTbLrXKbkAjjjjjjj@hPQPaeDj@\\HAPPhOFADLQFLIcHy`leBlual\x7FQB@\\JjCaU@',
+          ],
         },
         atomMap: [9],
+        smiles: 'CC',
         mf: 'C2H5',
         idCode: 'eMBAYRZ@',
         mfInfo: {

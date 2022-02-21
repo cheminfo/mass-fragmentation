@@ -1,6 +1,5 @@
 // Imports
 import * as fs from 'fs';
-import { connect } from 'http2';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -10,15 +9,13 @@ import { xBoxPlot } from 'ml-spectra-processing';
 import OCL from 'openchemlib';
 import { getMF } from 'openchemlib-utils';
 
-import { fragmentationStatistics } from '../Statistics/fragmentationStatistics.mjs';
-import { fragment } from '../fragmentation/fragment.mjs';
-import { neutralLoss } from '../training/neutralLoss.mjs';
+import { fragmentationStatistics } from '../Statistics/fragmentationStatistics.js';
+import { fragment } from '../fragmentation/fragment.js';
+import { neutralLoss } from '../neutralLoss/neutralLoss';
 
 const { Spectrum } = MassTools;
 
 const average = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
-
-let boxplotResultsHplus = [];
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -38,16 +35,13 @@ const solutions = JSON.parse(
 const model = JSON.parse(fs.readFileSync('../training/model/model.json'));
 
 let statistics = [];
-let statSpectra = [];
-let count = 0;
+let statisticsSpectrum = [];
 
-let counterSpectra = 0;
-let top1Score = 0;
-let top5Score = 0;
-let top10Score = 0;
+let top1Score = [];
+let top5Score = [];
+let top10Score = [];
 
-for (let i = 0; i < 20 /*dataSet.length*/; i++) {
-  counterSpectra += 1;
+for (let i = 0; i < dataSet.length; i++) {
   let rankCandidatesScore = [];
   let rankCandidatesSmiles = [];
   const experimentalSpectrum = {
@@ -61,26 +55,26 @@ for (let i = 0; i < 20 /*dataSet.length*/; i++) {
 
       const molecule = Molecule.fromSmiles(smilesMoleculeTest);
 
-      let mf = getMF(molecule).mf;
+      let molecularFormula = getMF(molecule).mf;
 
       let spectrum = new Spectrum(experimentalSpectrum);
-      let filtredSpectrum = await spectrum.getFragmentPeaks(mf, {
+      let filtredSpectrum = await spectrum.getFragmentPeaks(molecularFormula, {
         ionizations: 'H+',
         precision: 5,
       });
 
       let experimentalSpectrumMasses = [];
-      let filtredSpectrumStat = { x: [], y: [] };
+      let filtredSpectrumForStatistics = { x: [], y: [] };
       for (let p = 0; p < filtredSpectrum.length; p++) {
         let mass = filtredSpectrum[p].x;
         experimentalSpectrumMasses.push(mass);
-        filtredSpectrumStat.x.push(filtredSpectrum[p].x);
-        filtredSpectrumStat.y.push(filtredSpectrum[p].y);
+        filtredSpectrumForStatistics.x.push(filtredSpectrum[p].x);
+        filtredSpectrumForStatistics.y.push(filtredSpectrum[p].y);
       }
 
       let result = [];
 
-      statSpectra.push(
+      statisticsSpectrum.push(
         (experimentalSpectrumMasses.length / experimentalSpectrum.x.length -
           1) *
           -100,
@@ -139,7 +133,8 @@ for (let i = 0; i < 20 /*dataSet.length*/; i++) {
               matchedFragmentMass + 0.01 >= experimentalMass
             ) {
               fragmentsResult[j][s].experimentalMass = experimentalMass;
-              fragmentsResult[j][s].intensity = filtredSpectrumStat.y[f];
+              fragmentsResult[j][s].intensity =
+                filtredSpectrumForStatistics.y[f];
               result.push(fragmentsResult[j][s]);
             }
           }
@@ -147,14 +142,11 @@ for (let i = 0; i < 20 /*dataSet.length*/; i++) {
       }
 
       if (result.length > 0) {
-        count += 1;
-        // Statistic Part
         let resultModelContribution = [];
         for (let h = 0; h < result.length; h++) {
           if (result[h].hose !== undefined) {
-            // problems with undefinded
-            let hoses = result[h].hose;
-            if (!Array.isArray(hoses)) {
+            let hosesFromFragmentation = result[h].hose;
+            if (!Array.isArray(hosesFromFragmentation)) {
               for (let g = 0; g < model.length; g++) {
                 for (let k = 0; k < model[g].length; k++) {
                   if (!Array.isArray(model[g][k].hose)) {
@@ -162,10 +154,14 @@ for (let i = 0; i < 20 /*dataSet.length*/; i++) {
                     let modelHoseBond2 = model[g][k].hose.bond2.slice(0, 2);
 
                     if (
-                      (hoses.bond1.slice(0, 1)[0] === modelHoseBond1[0] &&
-                        hoses.bond1.slice(1, 2)[0] === modelHoseBond1[1]) ||
-                      (hoses.bond2.slice(0, 1)[0] === modelHoseBond2[0] &&
-                        hoses.bond1.slice(1, 2)[0] === modelHoseBond2[1])
+                      (hosesFromFragmentation.bond1.slice(0, 1)[0] ===
+                        modelHoseBond1[0] &&
+                        hosesFromFragmentation.bond1.slice(1, 2)[0] ===
+                          modelHoseBond1[1]) ||
+                      (hosesFromFragmentation.bond2.slice(0, 1)[0] ===
+                        modelHoseBond2[0] &&
+                        hosesFromFragmentation.bond1.slice(1, 2)[0] ===
+                          modelHoseBond2[1])
                     ) {
                       resultModelContribution.push(model[g][k].contribution);
                     }
@@ -174,12 +170,12 @@ for (let i = 0; i < 20 /*dataSet.length*/; i++) {
               }
             }
 
-            if (Array.isArray(hoses)) {
+            if (Array.isArray(hosesFromFragmentation)) {
               for (let g = 0; g < model.length; g++) {
                 for (let k = 0; k < model[g].length; k++) {
                   if (Array.isArray(model[g][k].hose)) {
                     let modelHose = model[g][k].hose.slice(0, 2);
-                    let hosesResult = hoses.slice(0, 2);
+                    let hosesResult = hosesFromFragmentation.slice(0, 2);
                     if (
                       hosesResult[0] === modelHose[0] &&
                       hosesResult[1] === modelHose[1]
@@ -194,23 +190,24 @@ for (let i = 0; i < 20 /*dataSet.length*/; i++) {
         }
 
         let averageContribution = average(resultModelContribution);
-        let weigthed = [];
-        let intI = [];
+        let massOfMatchedFragments = [];
+        let intensityOfMatchedFragments = [];
         for (let o = 0; o < result.length; o++) {
-          weigthed.push(result[o].experimentalMass);
-          intI.push(result[o].intensity);
+          massOfMatchedFragments.push(result[o].experimentalMass);
+          intensityOfMatchedFragments.push(result[o].intensity);
         }
 
-        let maxW = Math.max(...weigthed);
-        let wI = 0;
-        for (let w = 0; w < weigthed.length; w++) {
-          wI += intI[w] ** 0.6 / weigthed[w] ** 0.3 / maxW;
+        let weigthFactors = 0;
+        for (let w = 0; w < massOfMatchedFragments.length; w++) {
+          weigthFactors +=
+            intensityOfMatchedFragments[w] ** 0.6 *
+            massOfMatchedFragments[w] ** 0.3;
         }
 
-        let finalScore = wI + averageContribution;
+        let finalScore = weigthFactors + averageContribution;
 
         let statisticsResults = fragmentationStatistics(
-          filtredSpectrumStat,
+          filtredSpectrumForStatistics,
           result,
         );
         if (statisticsResults !== undefined) {
@@ -221,118 +218,78 @@ for (let i = 0; i < 20 /*dataSet.length*/; i++) {
           rankCandidatesSmiles.push(smilesMoleculeTest);
           rankCandidatesScore.push(finalScore);
         }
-
-        console.log(
-          'count:',
-          count,
-          'index:',
-          i,
-          'stat:',
-          smilesMoleculeTest,
-          'challenge:',
-          dataSet[i].id,
-          // smilesMoleculeTest,
-        );
-
-        // console.log(result);
       }
     } catch (__java$exception) {
       continue;
     }
-    if (rankCandidatesSmiles.length > 0) {
-      let rankCandidates = { smiles: [], score: [] };
-      for (let r = 0; r < rankCandidatesScore.length; r++) {
-        rankCandidates.smiles.push(rankCandidatesSmiles[r]);
-        rankCandidates.score.push(rankCandidatesScore[r]);
-      }
+  }
+  if (rankCandidatesSmiles.length > 0) {
+    let rankCandidates = { smiles: [], score: [] };
+    for (let r = 0; r < rankCandidatesScore.length; r++) {
+      rankCandidates.smiles.push(rankCandidatesSmiles[r]);
+      rankCandidates.score.push(rankCandidatesScore[r]);
+    }
 
-      let rank = rankCandidates.score.slice().sort((a, b) => b - a);
+    let rank = rankCandidates.score.slice().sort((a, b) => b - a);
 
-      let finalRanking = { smiles: [], score: [] };
-      for (let r = 0; r < rank.length; r++) {
-        for (let s = 0; s < rankCandidates.score.length; s++) {
-          if (rank[r] === rankCandidates.score[s]) {
-            finalRanking.smiles.push(rankCandidates.smiles[s]);
-            finalRanking.score.push(rank[r]);
-          }
+    let finalRanking = { smiles: [], score: [] };
+    for (let r = 0; r < rank.length; r++) {
+      for (let s = 0; s < rankCandidates.score.length; s++) {
+        if (rank[r] === rankCandidates.score[s]) {
+          finalRanking.smiles.push(rankCandidates.smiles[s]);
+          finalRanking.score.push(rank[r]);
         }
       }
+    }
 
-      let top1 = {
-        smiles: finalRanking.smiles.slice(0, 1),
-        score: finalRanking.score.slice(0, 1),
-      };
-      let top5 = {
-        smiles: finalRanking.smiles.slice(0, 5),
-        score: finalRanking.score.slice(0, 5),
-      };
-      let top10 = {
-        smiles: finalRanking.smiles.slice(0, 10),
-        score: finalRanking.score.slice(0, 10),
-      };
+    let top1 = {
+      smiles: finalRanking.smiles.slice(0, 1),
+      score: finalRanking.score.slice(0, 1),
+    };
+    let top5 = {
+      smiles: finalRanking.smiles.slice(0, 5),
+      score: finalRanking.score.slice(0, 5),
+    };
+    let top10 = {
+      smiles: finalRanking.smiles.slice(0, 10),
+      score: finalRanking.score.slice(0, 10),
+    };
 
-      let solutionSmiles = solutions[i].smiles;
-      if (solutionSmiles === top1.smiles) {
-        top1Score += 1;
+    let solutionSmiles = solutions[i].smiles;
+    if (solutionSmiles === top1.smiles) {
+      top1Score.push(1);
+    } else {
+      top1Score.push(0);
+    }
+    for (let r = 0; r < top5.smiles.length; r++) {
+      if (solutionSmiles === top5.smiles[r]) {
+        top5Score.push(1);
+      } else {
+        top5Score.push(0);
       }
-      for (let r = 0; r < top5.smiles.length; r++) {
-        if (solutionSmiles === top5.smiles[r]) {
-          top5Score += 1;
-        }
-      }
-      for (let r = 0; r < top10.smiles.length; r++) {
-        if (solutionSmiles === top10.smiles[r]) {
-          top10Score += 1;
-        }
+    }
+    for (let r = 0; r < top10.smiles.length; r++) {
+      if (solutionSmiles === top10.smiles[r]) {
+        top10Score.push(1);
+      } else {
+        top10Score.push(0);
       }
     }
   }
 }
 
-connsole.log(
-  'top 1:',
-  (top1Score / counterSpectra) * 100,
-  'top5:',
-  (top5Score / counterSpectra) * 100,
-  'top 10:',
-  (top10Score / counterSpectra) * 100,
-);
+let boxplotTopScore1 = xBoxPlot(top1Score);
+let boxplotTopScore5 = xBoxPlot(top5Score);
+let boxplotTopScore10 = xBoxPlot(top10Score);
 
-/*
-const numberOfPicks = [];
-const fivePrincipalPicks = [];
+let resultsBoxplot = {
+  TopScore1: boxplotTopScore1,
+  TopScore5: boxplotTopScore5,
+  TopScore10: boxplotTopScore10,
+};
 
-let distribution = [];
-for (let i = 0; i < statistics.length; i++) {
-  numberOfPicks.push(statistics[i].numberOfPicks);
-  fivePrincipalPicks.push(statistics[i].fivePrincipalPicks);
-  distribution.push(statistics[i].distribution);
-}
-
-let boxplotfivePrincipalPicks = xBoxPlot(fivePrincipalPicks);
-let boxplotDistribution = xBoxPlot(distribution);
-
-let boxplotSpectra = xBoxPlot(statSpectra);
-const average = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
-
-const meanFive = average(fivePrincipalPicks);
-
-boxplotResultsHplus.push({
-  boxplotfivePrincipalPicks: boxplotfivePrincipalPicks,
-  boxplotDistribution: boxplotDistribution,
-  distributionMean: average(distribution),
-  mean: meanFive,
-  boxplotSpectra: boxplotSpectra,
-  boxplotSpectraMean: average(statSpectra),
-});
 fs.writeFileSync(
-  join(__dirname, '/model/model.json'),
-  JSON.stringify(model),
+  join(__dirname, 'resultsTestModel.json'),
+  JSON.stringify(resultsBoxplot),
   'utf8',
 );
-fs.writeFileSync(
-  join(__dirname, '/model/statistics.json'),
-  JSON.stringify(boxplotResultsHplus),
-  'utf8',
-);
-*/

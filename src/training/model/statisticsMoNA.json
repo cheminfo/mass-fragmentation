@@ -1,0 +1,28 @@
+[
+  {
+    "boxplotfivePrincipalPicks": {
+      "Q1": 20,
+      "Q2": 40,
+      "Q3": 50,
+      "min": 0,
+      "max": 100
+    },
+    "boxplotDistribution": {
+      "Q1": 0,
+      "Q2": 0,
+      "Q3": 20,
+      "min": 0,
+      "max": 79.38144329896907
+    },
+    "distributionMean": 10.61997451232864,
+    "mean": 36.859988283538385,
+    "boxplotSpectra": {
+      "Q1": 50,
+      "Q2": 66.66666666666667,
+      "Q3": 76.92307692307692,
+      "min": 0,
+      "max": 98.28571428571429
+    },
+    "boxplotSpectraMean": 61.12685946980796
+  }
+]
