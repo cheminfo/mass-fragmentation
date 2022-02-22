@@ -119,7 +119,7 @@ dist
 
 lib
 
-/data/**/*.json
+
 /data/**/*.xml
 /data/**/*.sdf
 data/CASMI/testSet/spectra/Challenge-082.mgf
@@ -630,10 +630,4 @@ data/CASMI/trainingSet/Spectra/Training-309.txt
 data/CASMI/trainingSet/Spectra/Training-310.txt
 data/CASMI/trainingSet/Spectra/Training-311.txt
 data/CASMI/trainingSet/Spectra/Training-312.txt
-src/training/model/statistics.json
-src/training/model/model.json
-src/training/model/model.json
-src/training/model/model.json
-src/training/model/model.json
-src/training/model/model.json
-src/training/model/model.json
+
