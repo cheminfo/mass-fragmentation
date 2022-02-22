@@ -9,9 +9,9 @@ import { xBoxPlot } from 'ml-spectra-processing';
 import OCL from 'openchemlib';
 import { getMF } from 'openchemlib-utils';
 
-import { fragmentationStatistics } from '../Statistics/fragmentationStatistics.js';
-import { fragment } from '../fragmentation/fragment.js';
-import { neutralLoss } from '../neutralLoss/neutralLoss';
+import { fragmentationStatistics } from '../../Statistics/fragmentationStatistics.js';
+import { fragment } from '../../fragmentation/fragment.js';
+import { neutralLoss } from '../../neutralLoss/neutralLoss';
 
 const { Spectrum } = MassTools;
 

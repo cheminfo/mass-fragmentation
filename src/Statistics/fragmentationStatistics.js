@@ -1,6 +1,6 @@
 import sum from 'ml-array-sum';
 
-import { pseudoDistribution } from './pseudoDistribution';
+import { pseudoDistribution } from './pseudoDistribution.js';
 
 /**
  * This function return the percentage of five principal fragments matched,
@@ -28,6 +28,7 @@ export function fragmentationStatistics(spectrum, resultMatching) {
   // Get intensity of matched fragments
   let uniqueMasses = [...new Set(experimentalMass.sort())];
   let intensityMatched = [];
+
   for (let i = 0; i < uniqueMasses.length; i++) {
     for (let j = 0; j < spectrum.x.length; j++) {
       if (uniqueMasses[i] === spectrum.x[j]) {

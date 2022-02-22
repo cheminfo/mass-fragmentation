@@ -12,7 +12,7 @@ import { getMF } from 'openchemlib-utils';
 import { fragmentationStatistics } from '../Statistics/fragmentationStatistics.js';
 import { bondContribution } from '../contribution/bondContribution.js';
 import { fragment } from '../fragmentation/fragment.js';
-import { neutralLoss } from '../neutralLoss/neutralLoss';
+import { neutralLoss } from '../neutralLoss/neutralLoss.js';
 
 const { Spectrum } = MassTools;
 
@@ -72,40 +72,39 @@ for (let i = 0; i < dataSet.length; i++) {
     const options = {
       ionizations: ionization,
       limit: 1e7,
-      uniqueMFs: false,
+      uniqueMFs: true,
       filter: {
         targetMasses: experimentalSpectrumMasses,
         precision: precision,
       },
     };
     for (let j = 0; j < resultFragmentation.length; j++) {
-      if (resultFragmentation[j].hose !== undefined) {
-        let neutralLosses = neutralLoss(resultFragmentation[j].idCode);
-        mfsArray[j] = [resultFragmentation[j].mf, neutralLosses];
+      let neutralLosses = neutralLoss(resultFragmentation[j].idCode);
+      mfsArray[j] = [resultFragmentation[j].mf, neutralLosses];
 
-        let results = await generateMFs(mfsArray[j], options);
-        let groups = {};
-        for (const result of results) {
-          const em = Math.round(result.ms.em * 1e6);
+      let results = await generateMFs(mfsArray[j], options);
 
-          if (!groups[em]) {
-            groups[em] = {
-              em: result.em,
-              ms: result.ms.em,
-              mf: result.mf,
-              ppm: result.ms.ppm,
-              mfs: [],
-              hose: resultFragmentation[j].hose,
-            };
-          }
-          groups[em].mfs.push(result);
+      let groups = {};
+      for (const result of results) {
+        const em = Math.round(result.ms.em * 1e6);
+
+        if (!groups[em]) {
+          groups[em] = {
+            em: result.em,
+            ms: result.ms.em,
+            mf: result.mf,
+            ppm: result.ms.ppm,
+            mfs: [],
+            hose: Molecule.fromIDCode(resultFragmentation[j].idCode).toSmiles(),
+          };
         }
+        groups[em].mfs.push(result);
+      }
 
-        groups = Object.values(groups);
+      groups = Object.values(groups);
 
-        if (groups.length > 0) {
-          fragmentsResult.push(groups);
-        }
+      if (groups.length > 0) {
+        fragmentsResult.push(groups);
       }
     }
 
@@ -120,11 +119,13 @@ for (let i = 0; i < dataSet.length; i++) {
             matchedFragmentMass + 0.01 >= experimentalMass
           ) {
             fragmentsResult[j][s].experimentalMass = experimentalMass;
+            fragmentsResult[j][s].intensity = filtredSpectrumStat.y[f];
             result.push(fragmentsResult[j][s]);
           }
         }
       }
     }
+    result.push(dataSet[i][0].id);
   }
 
   //Contribution Part
@@ -134,6 +135,7 @@ for (let i = 0; i < dataSet.length; i++) {
   resultContribution.push(
     bondContribution(filtredSpectrumStat, massPrecursorIon),
   );
+  model.push(result);
 
   if (resultContribution[0].length > 0) {
     if (result.length > 0) {
@@ -186,7 +188,7 @@ boxplotResults.push({
   boxplotSpectraMean: average(statSpectra),
 });
 fs.writeFileSync(
-  join(__dirname, '/model/modelMoNA.json'),
+  join(__dirname, '/model/fivemolecules.json'),
   JSON.stringify(model),
   'utf8',
 );
