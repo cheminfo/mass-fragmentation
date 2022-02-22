@@ -1,4 +1,4 @@
-import { xBoxPlot, xyMedian } from 'ml-spectra-processing';
+import { xBoxPlot, xMedian } from 'ml-spectra-processing';
 import OCL from 'openchemlib';
 
 import { candidatesFragmentation } from '../candidatesFragmentation/candidatesFragmentation.js';
@@ -75,9 +75,7 @@ export async function testModel(dataSet, solutions, model) {
           }
         }
 
-        let medianContribution = xyMedian(
-          resultModelContribution.sort((a, b) => b - a),
-        );
+        let medianContribution = xMedian(resultModelContribution);
         let massOfMatchedFragments = [];
         let intensityOfMatchedFragments = [];
 
