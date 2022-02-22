@@ -1,7 +1,3 @@
-// Imports
-import * as fs from 'fs';
-import { join } from 'path';
-
 import { xBoxPlot, xyMedian } from 'ml-spectra-processing';
 import OCL from 'openchemlib';
 
