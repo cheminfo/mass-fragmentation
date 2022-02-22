@@ -631,3 +631,15 @@ data/CASMI/trainingSet/Spectra/Training-310.txt
 data/CASMI/trainingSet/Spectra/Training-311.txt
 data/CASMI/trainingSet/Spectra/Training-312.txt
 
+src/training/model/statistics.json
+data/monadb/testSet.json
+data/monadb/MoNA-export-LC-MS-MS_Positive_Mode.json
+data/monadb/dataCid.json
+data/hmdb/molecules/cidMedStructures.json
+data/hmdb/molecules/cidLowStructures.json
+data/hmdb/molecules/cidHighStructures.json
+data/hmdb/cidSpectra/cidMed.json
+data/hmdb/cidSpectra/cidLow.json
+data/hmdb/cidSpectra/cidHigh.json
+data/CASMI/trainingSet/structure.json
+data/CASMI/trainingSet/spectra.json
