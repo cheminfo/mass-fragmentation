@@ -1,4 +1,4 @@
-import { xBoxPlot, xMedian } from 'ml-spectra-processing';
+import { xMedian } from 'ml-spectra-processing';
 import OCL from 'openchemlib';
 
 import { candidatesFragmentation } from '../candidatesFragmentation/candidatesFragmentation.js';
@@ -6,9 +6,7 @@ import { candidatesFragmentation } from '../candidatesFragmentation/candidatesFr
 const { Molecule } = OCL;
 
 export async function testModel(dataSet, solutions, model) {
-  let top1Score = [0, 0, 0, 0, 0];
-  let top5Score = [0, 0, 0, 0, 0];
-  let top10Score = [0, 0, 0, 0, 0];
+  let rankingSolutions = [];
 
   for (let i = 0; i < dataSet.length; i++) {
     let rankCandidatesScore = [];
@@ -21,6 +19,9 @@ export async function testModel(dataSet, solutions, model) {
     for (let f = 0; f < dataSet[i].smiles.length; f++) {
       try {
         const smilesMoleculeTest = dataSet[i].smiles[f];
+        let candidateIDCode =
+          Molecule.fromSmiles(smilesMoleculeTest).getIDCode();
+        rankCandidatesIDCode.push(candidateIDCode);
         const options = { precision: 5, ionization: 'H+' };
         const fragmentsResult = await candidatesFragmentation(
           experimentalSpectrum,
@@ -30,8 +31,8 @@ export async function testModel(dataSet, solutions, model) {
 
         let resultModelContribution = [];
         for (let h = 0; h < fragmentsResult.length; h++) {
-          if (fragmentsResult[h].hose !== undefined) {
-            let hosesFromFragmentation = fragmentsResult[h].hose;
+          if (fragmentsResult[h][0].hose !== undefined) {
+            let hosesFromFragmentation = fragmentsResult[h][0].hose;
             if (!Array.isArray(hosesFromFragmentation)) {
               for (let g = 0; g < model.length; g++) {
                 for (let k = 0; k < model[g].length; k++) {
@@ -92,10 +93,7 @@ export async function testModel(dataSet, solutions, model) {
         }
 
         let finalScore = weigthFactors + medianContribution;
-        if (isNaN(finalScore) === false) {
-          let candidateIDCode =
-            Molecule.fromSmiles(smilesMoleculeTest).getIDCode();
-          rankCandidatesIDCode.push(candidateIDCode);
+        if (finalScore > 0) {
           rankCandidatesScore.push(finalScore);
         }
       } catch (__java$exception) {
@@ -120,60 +118,17 @@ export async function testModel(dataSet, solutions, model) {
           }
         }
       }
-      let top1 = {
-        idCode: finalRanking.idCode.slice(0, 1),
-        score: finalRanking.score.slice(0, 1),
-      };
 
-      let top5 = {
-        idCode: finalRanking.idCode.slice(0, 5),
-        score: finalRanking.score.slice(0, 5),
-      };
-      let top10 = {
-        idCode: finalRanking.idCode.slice(0, 10),
-        score: finalRanking.score.slice(0, 10),
-      };
       let solutionIDCode = Molecule.fromSmiles(solutions[i].smiles).getIDCode();
+      let positionSolution = finalRanking.idCode.indexOf(solutionIDCode);
 
-      if (solutionIDCode === top1.idCode) {
-        top1Score.push(1);
-      }
-      if (solutionIDCode !== top1.idCode) {
-        top1Score.push(0);
-      }
-      for (let r = 0; r < top5.smiles.length; r++) {
-        if (solutionIDCode === top5.idCode[r]) {
-          top5Score.push(1);
-        }
-        if (solutionIDCode !== top5.idCode[r]) {
-          top5Score.push(0);
-        }
-      }
-      for (let r = 0; r < top10.smiles.length; r++) {
-        if (solutionIDCode === top10.idCode[r]) {
-          top10Score.push(1);
-        }
-        if (solutionIDCode !== top10.idCode[r]) {
-          top10Score.push(0);
-        }
-      }
+      let result = {
+        position: positionSolution,
+        nbCandidates: dataSet[i].smiles.length,
+      };
+      rankingSolutions.push(result);
     }
   }
 
-  let boxplotTopScore1 = xBoxPlot(top1Score);
-  let boxplotTopScore5 = xBoxPlot(top5Score);
-  let boxplotTopScore10 = xBoxPlot(top10Score);
-
-  let resultsBoxplot = {
-    TopScore1: boxplotTopScore1,
-    TopScore5: boxplotTopScore5,
-    TopScore10: boxplotTopScore10,
-  };
-  /*
-  fs.writeFileSync(
-    join('../resultsTestModel.json'),
-    JSON.stringify(resultsBoxplot),
-    'utf8',
-  );*/
-  return resultsBoxplot;
+  return rankingSolutions;
 }
