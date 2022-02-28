@@ -13,6 +13,7 @@ import { pseudoDistribution } from './pseudoDistribution.js';
 
 export function fragmentationStatistics(spectrum, resultMatching) {
   // Calculate PseudoDistribution
+
   let distribution = pseudoDistribution(spectrum.x);
 
   // Get intensity experimental spectrum
