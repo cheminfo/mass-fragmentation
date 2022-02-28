@@ -104,7 +104,7 @@
   { "id": "Challenge-139", "smiles": "Cc1cccc(C)c1N(Cn1cccn1)C(=O)CCl" },
   {
     "id": "Challenge-140",
-    "smiles": "COC1=CC(O)=C(C=C1S(O)(=O)=O)C,(=O)C1=CC=CC=C1"
+    "smiles": "COC1=CC(O)=C(C=C1S(O)(=O)=O)C(=O)C1=CC=CC=C1"
   },
   { "id": "Challenge-141", "smiles": "CCOC(=O)C1=CC=CC=C1C(=O)OCC" },
   { "id": "Challenge-142", "smiles": "CN1c2ccc(Cl)cc2C(=NC(O)C1=O)c1ccccc1" },
