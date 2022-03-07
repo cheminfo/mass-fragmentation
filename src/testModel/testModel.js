@@ -2,6 +2,13 @@ import sum from 'ml-array-sum';
 import OCL from 'openchemlib';
 
 import { candidatesFragmentation } from '../candidatesFragmentation/candidatesFragmentation.js';
+/**
+ * This function performs the in-silico fragmentation of n structures candidate for a experimental spectrum
+ * @param {object} dataSet object containing experimental spectra and n candidate structures Smiles
+ * @param {object} solutions Smiles correct structure
+ * @param {object} model object containing HOSE-Contribution model
+ * @returns {object} object containing the ranking of correct structure and the number of candidates
+ */
 
 const { Molecule } = OCL;
 
@@ -18,14 +25,14 @@ export async function testModel(dataSet, solutions, model) {
     for (let f = 0; f < dataSet[i].smiles.length; f++) {
       const smilesMoleculeTest = dataSet[i].smiles[f];
       let candidateIDCode = Molecule.fromSmiles(smilesMoleculeTest).getIDCode();
-
+// in-silico fragmentation
       const options = { precision: 5, ionization: 'H+' };
       const fragmentsResult = await candidatesFragmentation(
         experimentalSpectrum,
         smilesMoleculeTest,
         options,
       );
-
+// Search for matching on model
       let resultModelContribution = [0];
       for (let h = 0; h < fragmentsResult.length; h++) {
         if (fragmentsResult[h][0].hose !== undefined) {
@@ -72,7 +79,8 @@ export async function testModel(dataSet, solutions, model) {
           }
         }
       }
-      let medianContribution = sum(resultModelContribution);
+      // contribution factor
+      let sumContribution = sum(resultModelContribution);
       let massOfMatchedFragments = [];
       let intensityOfMatchedFragments = [];
 
@@ -80,15 +88,15 @@ export async function testModel(dataSet, solutions, model) {
         massOfMatchedFragments.push(fragmentsResult[o][0].ms);
         intensityOfMatchedFragments.push(fragmentsResult[o][0].intensity);
       }
-
+      // Weigth factor
       let weigthFactors = 0;
       for (let w = 0; w < massOfMatchedFragments.length; w++) {
         weigthFactors +=
           intensityOfMatchedFragments[w] ** 0.6 *
           massOfMatchedFragments[w] ** 0.3;
       }
-
-      let finalScore = weigthFactors + medianContribution;
+      // final score
+      let finalScore = weigthFactors + sumContribution;
       if (!isNaN(finalScore)) {
         rankCandidatesScore.push(finalScore);
         rankCandidatesIDCode.push(candidateIDCode);
@@ -106,7 +114,7 @@ export async function testModel(dataSet, solutions, model) {
           score: [rankCandidatesScore[r]],
         });
       }
-
+      // Ranking of candidates
       let rank = rankCandidates.sort((a, b) => b.score[0] - a.score[0]);
 
       let finalRanking = { idCode: [], score: [] };
@@ -144,7 +152,6 @@ export async function testModel(dataSet, solutions, model) {
       let result = {
         position: finalPosition[0],
         nbCandidates: dataSet[i].smiles.length,
-        scores: finalRanking.score,
       };
       rankingSolutions.push(result);
     }
