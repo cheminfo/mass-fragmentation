@@ -1,4 +1,4 @@
-import { xMedian } from 'ml-spectra-processing';
+import sum from 'ml-array-sum';
 import OCL from 'openchemlib';
 
 import { candidatesFragmentation } from '../candidatesFragmentation/candidatesFragmentation.js';
@@ -6,74 +6,8 @@ import { candidatesFragmentation } from '../candidatesFragmentation/candidatesFr
 const { Molecule } = OCL;
 
 export async function testModel(dataSet, solutions, model) {
-  let rankingSolutions = [
-    { position: 20, nbCandidates: 65 },
-    { position: 12, nbCandidates: 66 },
-    { position: 6, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 4, nbCandidates: 66 },
-    { position: 13, nbCandidates: 66 },
-    { position: 10, nbCandidates: 66 },
-    { position: 22, nbCandidates: 66 },
-    { position: 2, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 2, nbCandidates: 66 },
-    { position: 5, nbCandidates: 66 },
-    { position: 1, nbCandidates: 62 },
-    { position: 1, nbCandidates: 66 },
-    { position: 1, nbCandidates: 61 },
-    { position: 1, nbCandidates: 66 },
-    { position: 6, nbCandidates: 65 },
-    { position: 10, nbCandidates: 66 },
-    { position: 2, nbCandidates: 66 },
-    { position: 8, nbCandidates: 50 },
-    { position: 1, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 4, nbCandidates: 66 },
-    { position: 2, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 6, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 1, nbCandidates: 39 },
-    { position: 6, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 14, nbCandidates: 66 },
-    { position: 3, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 25, nbCandidates: 66 },
-    { position: 49, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 1, nbCandidates: 19 },
-    { position: 1, nbCandidates: 65 },
-    { position: 37, nbCandidates: 66 },
-    { position: 1, nbCandidates: 65 },
-    { position: 1, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 4, nbCandidates: 66 },
-    { position: 11, nbCandidates: 66 },
-    { position: 14, nbCandidates: 62 },
-    { position: 2, nbCandidates: 66 },
-    { position: 2, nbCandidates: 66 },
-    { position: 2, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 6, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 2, nbCandidates: 66 },
-    { position: 1, nbCandidates: 66 },
-    { position: 2, nbCandidates: 66 },
-    { position: 3, nbCandidates: 66 },
-    { position: 2, nbCandidates: 66 },
-    { position: 48, nbCandidates: 66 },
-  ];
-  for (let i = 63; i < dataSet.length; i++) {
-    // eslint-disable-next-line no-console
-    console.log(i);
+  let rankingSolutions = [];
+  for (let i = 0; i < dataSet.length; i++) {
     let rankCandidatesScore = [];
     let rankCandidatesIDCode = [];
     const experimentalSpectrum = {
@@ -92,7 +26,7 @@ export async function testModel(dataSet, solutions, model) {
         options,
       );
 
-      let resultModelContribution = [];
+      let resultModelContribution = [0];
       for (let h = 0; h < fragmentsResult.length; h++) {
         if (fragmentsResult[h][0].hose !== undefined) {
           let hosesFromFragmentation = fragmentsResult[h][0].hose;
@@ -138,10 +72,7 @@ export async function testModel(dataSet, solutions, model) {
           }
         }
       }
-      let medianContribution = 0;
-      if (resultModelContribution.length > 0) {
-        medianContribution += xMedian(resultModelContribution);
-      }
+      let medianContribution = sum(resultModelContribution);
       let massOfMatchedFragments = [];
       let intensityOfMatchedFragments = [];
 
@@ -163,7 +94,7 @@ export async function testModel(dataSet, solutions, model) {
         rankCandidatesIDCode.push(candidateIDCode);
       }
       if (isNaN(finalScore)) {
-        rankCandidatesScore.push(weigthFactors);
+        rankCandidatesScore.push(0);
         rankCandidatesIDCode.push(candidateIDCode);
       }
     }
@@ -187,23 +118,36 @@ export async function testModel(dataSet, solutions, model) {
 
       let solutionIDCode = Molecule.fromSmiles(solutions[i].smiles).getIDCode();
       let positionSolution = finalRanking.idCode.indexOf(solutionIDCode);
-      let positionResult = [];
-      if (positionSolution !== -1) {
-        positionResult.push(positionSolution + 1);
-      }
 
-      if (positionSolution === -1) {
-        positionResult.push('Not in dataset');
+      let positionResult = 0;
+      if (positionSolution !== -1) {
+        positionResult += +1;
+      }
+      let count = (input, arr) => arr.filter((x) => x === input).length;
+
+      let truePosition = count(
+        finalRanking.score[positionSolution],
+        finalRanking.score,
+      );
+
+      let finalPosition = [];
+
+      if (count(finalRanking.score[positionSolution], finalRanking.score) > 1) {
+        finalPosition.push(positionResult + truePosition - 1);
+      }
+      if (
+        count(finalRanking.score[positionSolution], finalRanking.score) === 1
+      ) {
+        finalPosition.push(positionResult);
       }
 
       let result = {
-        position: positionResult[0],
+        position: finalPosition[0],
         nbCandidates: dataSet[i].smiles.length,
+        scores: finalRanking.score,
       };
       rankingSolutions.push(result);
     }
-
-    // console.log(rankingSolutions);
   }
 
   return rankingSolutions;

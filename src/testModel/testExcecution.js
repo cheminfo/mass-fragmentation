@@ -25,7 +25,7 @@ const solutions = fullSolutions;
 const result = await testModel(dataSet, solutions, model);
 
 fs.writeFileSync(
-  join(__dirname, '../resultsModel.json'),
+  join(__dirname, '../resultswithscores.json'),
   JSON.stringify(result),
   'utf8',
 );
