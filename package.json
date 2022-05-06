@@ -58,7 +58,7 @@
     "mgf-parser": "^0.3.0",
     "ml": "^6.0.0",
     "ml-array-sum": "^1.1.6",
-    "ml-spectra-processing": "^10.2.0",
+    "ml-spectra-processing": "^11.6.0",
     "openchemlib-utils": "^1.9.0",
     "paralleljs": "^1.1.0",
     "sass": "^1.49.8",

@@ -54,9 +54,9 @@ describe('contribution', () => {
       { mass: 333.5, contribution: 0.19047618843990932 },
     ]);
     expect(bondContribution.bondStatisticsResults).toStrictEqual({
-      Q1: 0.038095254792743526,
-      Q2: 0.11428572161632641,
-      Q3: 0.3285714175755103,
+      q1: 0.038095254792743526,
+      median: 0.11428572161632641,
+      q3: 0.3285714175755103,
       min: 0,
       max: 1,
     });
@@ -115,9 +115,9 @@ describe('contribution', () => {
       { mass: 333.5, contribution: 0.19047618843990932 },
     ]);
     expect(bondContribution.bondStatisticsResults).toStrictEqual({
-      Q1: 0.038095254792743526,
-      Q2: 0.11428572161632641,
-      Q3: 0.3285714175755103,
+      q1: 0.038095254792743526,
+      median: 0.11428572161632641,
+      q3: 0.3285714175755103,
       min: 0,
       max: 1,
     });
