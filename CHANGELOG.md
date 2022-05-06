@@ -1,5 +1,19 @@
 # Changelog
 
+### [0.1.1](https://github.com/cheminfo/mass-fragmentation/compare/v0.1.0...v0.1.1) (2022-05-06)
+
+
+### Bug Fixes
+
+* change extrension to js ([1b5d04f](https://github.com/cheminfo/mass-fragmentation/commit/1b5d04f0a3e8719baedc306e40411de4e7bb3d19))
+* fixed function to train model ([d9b9c98](https://github.com/cheminfo/mass-fragmentation/commit/d9b9c98b6e069708a292108aa325285256f4202b))
+* fixed issues ([4919a7c](https://github.com/cheminfo/mass-fragmentation/commit/4919a7c3ed7d542147c0255b899e333293fc0c41))
+* Order and folders ([dd3adc6](https://github.com/cheminfo/mass-fragmentation/commit/dd3adc6096bf09e91c3e6b5cac9193358b76da15))
+* reorder files and folders ([5db3281](https://github.com/cheminfo/mass-fragmentation/commit/5db3281625d0d8f52475ac599a55d260016afb4b))
+* reorder files and folders ([8f472a3](https://github.com/cheminfo/mass-fragmentation/commit/8f472a34dd3b52318e347f275f69792e62c30e3b))
+* updated functions ([903181d](https://github.com/cheminfo/mass-fragmentation/commit/903181dedcf7235a1a664567bb9fbfc2a0d3c8b5))
+* xMedian ([05bce96](https://github.com/cheminfo/mass-fragmentation/commit/05bce96b1e3f120954ff2ffbbcdcd98023545fa8))
+
 ## 0.1.0 (2022-02-01)
 
 
