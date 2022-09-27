@@ -13,10 +13,11 @@ describe('contribution', () => {
       2.227171, 301.5, 16.035635, 308.1, 13.585746, 333.5, 4.899777, 350.0, 100,
     ];
     const massPrecursorIon = 350;
-
+    const precision = 0.1;
     const bondContribution = contribution(
       experimentalSpectrum,
       massPrecursorIon,
+      precision,
     );
     expect(bondContribution.bondContributionResults).toStrictEqual([
       { mass: 82, contribution: 0.02857145178503368 },
@@ -73,10 +74,11 @@ describe('contribution', () => {
       2.227171, 301.5, 16.035635, 308.1, 13.585746, 333.5, 4.899777, 351.0, 100,
     ];
     const massPrecursorIon = 351;
-
+    const precision = 0.1;
     const bondContribution = contribution(
       experimentalSpectrum,
       massPrecursorIon,
+      precision,
     );
 
     expect(bondContribution.bondContributionResults).toStrictEqual([

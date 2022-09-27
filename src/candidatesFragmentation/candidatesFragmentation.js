@@ -141,6 +141,7 @@ export async function candidatesFragmentation(spectrum, smiles, options) {
   let resultContribution = bondContribution(
     filtredSpectrumForStatistics,
     massPrecursorIon,
+    options.precision,
   );
 
   if (resultContribution.length > 0) {

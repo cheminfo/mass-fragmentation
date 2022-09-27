@@ -134,9 +134,9 @@ for (let i = 0; i < dataSet.length; i++) {
     //Contribution Part
 
     let resultContribution = [];
-
+    const precision = 0.1;
     resultContribution.push(
-      bondContribution(filtredSpectrumStat, massPrecursorIon),
+      bondContribution(filtredSpectrumStat, massPrecursorIon, precision),
     );
 
     if (resultContribution[0].length > 0) {

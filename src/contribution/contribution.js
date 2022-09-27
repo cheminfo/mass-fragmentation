@@ -9,9 +9,17 @@ import { spectraPreparation } from './spectraPreparation.js';
  * @returns {object} bond Contribution results and bond Statistics results based on bond contribution
  */
 
-export function contribution(experimentalSpectrum, massPrecursorIon) {
+export function contribution(
+  experimentalSpectrum,
+  massPrecursorIon,
+  precision,
+) {
   let spectra = spectraPreparation(experimentalSpectrum);
-  let bondContributionResults = bondContribution(spectra, massPrecursorIon);
+  let bondContributionResults = bondContribution(
+    spectra,
+    massPrecursorIon,
+    precision,
+  );
   let resultContribution = [];
   for (let i = 0; i < bondContributionResults.length; i++) {
     resultContribution.push(bondContributionResults[i].contribution);

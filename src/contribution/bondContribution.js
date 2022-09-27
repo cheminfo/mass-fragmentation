@@ -1,26 +1,27 @@
 /**
  * This function calculate the contribution of each fragment on spectra based on the reaction rate of fragmentation
  * @param {object} spectra experimental spectra in form {x:[],y:[]}
- * @param {object} massPrecursorIon massPrecursorIon
+ * @param {Number} massPrecursorIon massPrecursorIon
  * @returns {Array} Contribution of each fragment on spectra
  */
 
-export function bondContribution(spectra, massPrecursorIon) {
+export function bondContribution(spectra, massPrecursorIon, precision) {
   let molecularIon = [];
   // identify molecular ion (is intensity is conc. A), still missing case when molecular ion is absent
-  let mass = [];
+  let fragmentMasses = [];
+
   for (let i = 0; i < spectra.x.length; i++) {
-    mass.push(spectra.x[i]);
+    fragmentMasses.push(spectra.x[i]);
   }
 
   let closest = [];
-  for (let i = 0; i < mass.length; i++) {
+  for (let i = 0; i < fragmentMasses.length; i++) {
     let near = [];
     if (
-      mass[i] <= massPrecursorIon + 0.01 &&
-      mass[i] >= massPrecursorIon - 0.01
+      fragmentMasses[i] <= massPrecursorIon + precision &&
+      fragmentMasses[i] >= massPrecursorIon - precision
     ) {
-      near.push(mass[i]);
+      near.push(fragmentMasses[i]);
     }
     if (near.length > 0) {
       closest.push(
