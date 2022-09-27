@@ -27,7 +27,7 @@ export function fragmentationStatistics(spectrum, resultMatching) {
   }
 
   // Get intensity of matched fragments
-  let uniqueMasses = [...new Set(experimentalMass.sort())];
+  let uniqueMasses = [...new Set(experimentalMass.sort((a, b) => a - b))];
   let intensityMatched = [];
 
   for (let i = 0; i < uniqueMasses.length; i++) {
@@ -60,7 +60,7 @@ export function fragmentationStatistics(spectrum, resultMatching) {
   }
 
   let fivePrincipalFragmentsWithUniqueMass = [
-    ...new Set(fivePrincipalFragmentsMatched.sort()),
+    ...new Set(fivePrincipalFragmentsMatched.sort((a, b) => a - b)),
   ];
 
   const fivePrincipalMatchedFragments =
