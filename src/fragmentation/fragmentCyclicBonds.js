@@ -1,7 +1,7 @@
 import MassTools from 'mass-tools';
 import { getMF, getHoseCodesForAtoms } from 'openchemlib-utils';
 
-import { getCycleAndFragmentationInfo } from './getCycleAndFragmentationInfo.js';
+import { getCycleAndFragmentationInfo } from './utils/getCycleAndFragmentationInfo.js';
 
 /**
  * The function performs the fragmentation of all single ring bonds not beloning to aromatic rings
