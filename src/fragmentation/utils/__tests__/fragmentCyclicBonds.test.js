@@ -1,6 +1,6 @@
 import OCL from 'openchemlib';
 
-import { fragmentCyclicBonds } from '../fragmentCyclicBonds.js';
+import { fragmentCyclicBonds } from '../../fragmentCyclicBonds.js';
 
 const { Molecule } = OCL;
 
