@@ -30,7 +30,7 @@ export function fragmentAcyclicBonds(molecule) {
     bond.isAromatic = molecule.isAromaticBond(i);
     bond.isRingBond = molecule.isRingBond(i);
 
-    // Mapping of bonds to be fragmented, only if they are single bond not aromatic and cicly the mapping occurs
+    // Mapping of bonds to be fragmented, only if they are single bond not aromatic and cyclic the mapping occurs
     if (
       bond.isAromatic ||
       bond.type > 1 ||

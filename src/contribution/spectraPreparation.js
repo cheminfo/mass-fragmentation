@@ -1,8 +1,7 @@
-/** organisation of experimental data*/
 /**
- * Organise data from experimental spectra ()
+ * Organize data from experimental spectra ([x,y,x,y,x,y...]) to a object with x and y arrays
  * @param {object} [experimentalSpectrum] experimental ms spectrum data
- * @returns {object} data organised {x:[],y:[]} form
+ * @returns {object} data organized {x:[],y:[]} form
  */
 
 export function spectraPreparation(experimentalSpectrum) {
