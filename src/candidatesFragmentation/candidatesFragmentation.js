@@ -84,7 +84,9 @@ export async function candidatesFragmentation(spectrum, smiles, options) {
       groups = Object.values(groups);
 
       if (groups.length > 0) {
-        fragmentsResult.push(groups);
+        for (let j = 0; j < groups.length; j++) {
+          fragmentsResult.push(groups[j]);
+        }
       }
     }
     // Account for Molecular ion to be matched
@@ -112,24 +114,26 @@ export async function candidatesFragmentation(spectrum, smiles, options) {
       group = Object.values(group);
 
       if (group.length > 0) {
-        fragmentsResult.push(group);
+        for (let j = 0; j < group.length; j++) {
+          fragmentsResult.push(group[j]);
+        }
       }
     }
   }
   // get intensity of each matched fragment
   for (let i = 0; i < fragmentsResult.length; i++) {
-    let massAccuracy = (options.precision * fragmentsResult[i][0].ms) / 1e6;
+    let massAccuracy = (options.precision * fragmentsResult[i].ms) / 1e6;
     for (let m = 0; m < filteredSpectrumForStatistics.x.length; m++) {
       if (
         filteredSpectrumForStatistics.x[m] <=
-          fragmentsResult[i][0].ms + massAccuracy &&
+          fragmentsResult[i].ms + massAccuracy &&
         filteredSpectrumForStatistics.x[m] >=
-          fragmentsResult[i][0].ms - massAccuracy
+          fragmentsResult[i].ms - massAccuracy
       ) {
-        fragmentsResult[i][0].intensity = filteredSpectrumForStatistics.y[m];
+        fragmentsResult[i].intensity = filteredSpectrumForStatistics.y[m];
       }
-      if (fragmentsResult[i][0].hose === undefined) {
-        fragmentsResult[i][0].intensity = filteredSpectrumForStatistics.y[m];
+      if (fragmentsResult[i].hose === undefined) {
+        fragmentsResult[i].intensity = filteredSpectrumForStatistics.y[m];
       }
     }
   }
@@ -140,23 +144,24 @@ export async function candidatesFragmentation(spectrum, smiles, options) {
     massPrecursorIon,
     precision,
   );
+
   if (resultContribution.length > 0) {
     for (let i = 0; i < fragmentsResult.length; i++) {
       let massAccuracyOfFragment =
-        (options.precision * fragmentsResult[i][0].ms) / 1e6;
+        (options.precision * fragmentsResult[i].ms) / 1e6;
       for (let j = 0; j < resultContribution.length; j++) {
         // check if resultContribution[j].mass is in the range of massAccuracyOfFragment+/- of fragmentsResult[i][0].ms
         if (
           resultContribution[j].mass <=
-            fragmentsResult[i][0].ms + massAccuracyOfFragment &&
+            fragmentsResult[i].ms + massAccuracyOfFragment &&
           resultContribution[j].mass >=
-            fragmentsResult[i][0].ms - massAccuracyOfFragment
+            fragmentsResult[i].ms - massAccuracyOfFragment
         ) {
-          fragmentsResult[i][0].bondContribution =
-            resultContribution[j].bondContribution;
+          fragmentsResult[i].bondContribution =
+            resultContribution.bondContribution;
         }
-        if (fragmentsResult[i][0].hose === undefined) {
-          fragmentsResult[i][0].contribution = 0;
+        if (fragmentsResult[i].hose === undefined) {
+          fragmentsResult[i].contribution = 0;
         }
       }
     }
