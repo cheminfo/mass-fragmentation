@@ -14,7 +14,7 @@ describe('fragment', () => {
       y: [50, 80, 40, 20, 60, 20, 30, 100],
     };
     const smiles = 'CC(=O)CCC(=O)O';
-    const options = { precision: 15, ionization: 'H+' };
+    const options = { precision: 15, ionization: 'H+', limit: 1e7 };
     const result = await candidatesFragmentation(spectrum, smiles, options);
     expect(result[0]).toMatchCloseTo([
       {

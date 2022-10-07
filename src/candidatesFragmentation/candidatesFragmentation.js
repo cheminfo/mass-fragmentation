@@ -19,55 +19,55 @@ const { Molecule } = OCL;
  */
 
 export async function candidatesFragmentation(spectrum, smiles, options) {
-  let fragmentsResult = [];
+  const { precision, ionization, limit } = options;
+
   // Generate molecule from smiles
   const molecule = Molecule.fromSmiles(smiles);
-  // Generate mass precursor ion, used in bondContribution() and MF molecular
+
+  // Get mass precursor ion, used in bondContribution() and MF molecular
   let mfMolecularIon = getMF(molecule).mf;
   let mfPrecursorIon = await generateMFs([mfMolecularIon], {
-    ionizations: options.ionization,
+    ionizations: ionization,
   });
   let massPrecursorIon = mfPrecursorIon[0].ms.em;
+
   // Filtration of experimental spectrum with Mf of molecular ion
-  let newspectrum = new Spectrum(spectrum);
-  let filtredSpectrum = await newspectrum.getFragmentPeaks(mfMolecularIon, {
-    ionizations: options.ionization,
-    precision: options.precision,
+  let newSpectrum = new Spectrum(spectrum);
+  let filteredSpectrum = await newSpectrum.getFragmentPeaks(mfMolecularIon, {
+    ionizations: ionization,
+    precision,
   });
-  // filtredSpectrumMasses used for matching in generateMFs() and filtredSpectrumFroStatistics in format for bondContribution() and for matching
-  let filtredSpectrumMasses = [];
-  let filtredSpectrumForStatistics = { x: [], y: [] };
-  for (let p = 0; p < filtredSpectrum.length; p++) {
-    let mass = filtredSpectrum[p].x;
-    filtredSpectrumMasses.push(mass);
-    filtredSpectrumForStatistics.x.push(filtredSpectrum[p].x);
-    filtredSpectrumForStatistics.y.push(filtredSpectrum[p].y);
-  }
+
+  // filteredSpectrumMasses used for matching in generateMFs() and filtredSpectrumFroStatistics in format for bondContribution() and for matching
+  const masses = filteredSpectrum.map((peak) => peak.x);
+  const filteredSpectrumForStatistics = {
+    x: masses,
+    y: filteredSpectrum.map((peak) => peak.y),
+  };
+
   // Perform in-silico fragmentation
   const fragmentation = fragment(molecule);
 
   let mfsArray = [];
-  const precision = options.precision;
-  const ionization = options.ionization;
   const optionsMFs = {
     ionizations: ionization,
-    limit: 1e7,
+    limit,
     uniqueMFs: false,
     filter: {
-      targetMasses: filtredSpectrumMasses,
-      precision: precision,
+      targetMasses: masses,
+      precision,
     },
   };
-  for (let j = 0; j < fragmentation.length; j++) {
-    if (fragmentation[j].hose !== undefined) {
-      let neutralLosses = neutralLoss(fragmentation[j].idCode); // generation of neutral Losses
-      mfsArray[j] = [fragmentation[j].mf, neutralLosses];
-
-      let results = await generateMFs(mfsArray[j], optionsMFs);
+  let fragmentsResult = [];
+  for (let i = 0; i < fragmentation.length; i++) {
+    if (fragmentation[i].hose !== undefined) {
+      // get neutral losses for each fragment
+      let neutralLosses = neutralLoss(fragmentation[i].idCode);
+      mfsArray[i] = [fragmentation[i].mf, neutralLosses];
+      let results = await generateMFs(mfsArray[i], optionsMFs);
       let groups = {};
       for (const result of results) {
         const em = Math.round(result.ms.em * 1e6);
-
         if (!groups[em]) {
           groups[em] = {
             em: result.em,
@@ -75,10 +75,10 @@ export async function candidatesFragmentation(spectrum, smiles, options) {
             mf: result.mf,
             ppm: result.ms.ppm,
             mfs: [],
-            hose: fragmentation[j].hose,
+            hose: fragmentation[i].hose,
           };
         }
-        groups[em].mfs.push(result);
+        groups[em].mfs.push(result.mf);
       }
 
       groups = Object.values(groups);
@@ -88,9 +88,9 @@ export async function candidatesFragmentation(spectrum, smiles, options) {
       }
     }
     // Account for Molecular ion to be matched
-    if (fragmentation[j].fragmentType === 'Molecular Ion') {
+    if (fragmentation[i].fragmentType === 'Molecular Ion') {
       let resultMolecularIon = await generateMFs(
-        [fragmentation[j].mf],
+        [fragmentation[i].mf],
         optionsMFs,
       );
       let group = {};
@@ -103,7 +103,7 @@ export async function candidatesFragmentation(spectrum, smiles, options) {
           mf: result.mf,
           ppm: result.ms.ppm,
           mfs: [],
-          hose: fragmentation[j].hose,
+          hose: fragmentation[i].hose,
         };
 
         group[em].mfs.push(result);
@@ -116,57 +116,50 @@ export async function candidatesFragmentation(spectrum, smiles, options) {
       }
     }
   }
-
-  // get intensity of matched fragments
-  for (let l = 0; l < fragmentsResult.length; l++) {
-    let massAccurancy = (options.precision * fragmentsResult[l][0].ms) / 1e6;
-
-    for (let m = 0; m < filtredSpectrumForStatistics.x.length; m++) {
+  // get intensity of each matched fragment
+  for (let i = 0; i < fragmentsResult.length; i++) {
+    let massAccuracy = (options.precision * fragmentsResult[i][0].ms) / 1e6;
+    for (let m = 0; m < filteredSpectrumForStatistics.x.length; m++) {
       if (
-        filtredSpectrumForStatistics.x[m] <=
-          fragmentsResult[l][0].ms + massAccurancy &&
-        filtredSpectrumForStatistics.x[m] >=
-          fragmentsResult[l][0].ms - massAccurancy
+        filteredSpectrumForStatistics.x[m] <=
+          fragmentsResult[i][0].ms + massAccuracy &&
+        filteredSpectrumForStatistics.x[m] >=
+          fragmentsResult[i][0].ms - massAccuracy
       ) {
-        fragmentsResult[l][0].intensity = filtredSpectrumForStatistics.y[m];
+        fragmentsResult[i][0].intensity = filteredSpectrumForStatistics.y[m];
       }
-      if (fragmentsResult[l][0].hose === undefined) {
-        fragmentsResult[l][0].intensity = filtredSpectrumForStatistics.y[m];
+      if (fragmentsResult[i][0].hose === undefined) {
+        fragmentsResult[i][0].intensity = filteredSpectrumForStatistics.y[m];
       }
     }
   }
-
   // Bond Contribution of each matched fragment
 
   let resultContribution = bondContribution(
-    filtredSpectrumForStatistics,
+    filteredSpectrumForStatistics,
     massPrecursorIon,
-    options.precision,
+    precision,
   );
-
   if (resultContribution.length > 0) {
-    if (fragmentsResult.length > 0) {
-      for (let l = 0; l < fragmentsResult.length; l++) {
-        let massAccurancy =
-          (options.precision * fragmentsResult[l][0].ms) / 1e6;
-
-        for (let m = 0; m < resultContribution.length; m++) {
-          if (
-            resultContribution[m].mass <=
-              fragmentsResult[l][0].ms + massAccurancy &&
-            resultContribution[m].mass >=
-              fragmentsResult[l][0].ms - massAccurancy
-          ) {
-            fragmentsResult[l][0].contribution =
-              resultContribution[m].contribution;
-          }
-          if (fragmentsResult[l][0].hose === undefined) {
-            fragmentsResult[l][0].contribution = 0;
-          }
+    for (let i = 0; i < fragmentsResult.length; i++) {
+      let massAccuracyOfFragment =
+        (options.precision * fragmentsResult[i][0].ms) / 1e6;
+      for (let j = 0; j < resultContribution.length; j++) {
+        // check if resultContribution[j].mass is in the range of massAccuracyOfFragment+/- of fragmentsResult[i][0].ms
+        if (
+          resultContribution[j].mass <=
+            fragmentsResult[i][0].ms + massAccuracyOfFragment &&
+          resultContribution[j].mass >=
+            fragmentsResult[i][0].ms - massAccuracyOfFragment
+        ) {
+          fragmentsResult[i][0].bondContribution =
+            resultContribution[j].bondContribution;
+        }
+        if (fragmentsResult[i][0].hose === undefined) {
+          fragmentsResult[i][0].contribution = 0;
         }
       }
     }
   }
-
   return fragmentsResult;
 }
