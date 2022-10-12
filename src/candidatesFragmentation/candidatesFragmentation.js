@@ -13,16 +13,16 @@ const { Molecule } = OCL;
 /**
  * This function performs the in-silico fragmentation of a given structure and returns the matched fragments and the bond contribution
  * @param {object} spectrum experimental spectra in form {x:[],y:[]}
- * @param {object} smiles Smiles of candidate structure
+ * @param {any} idCode The OCL idCode of candidate structure
  * @param {object} options Object containing the ionization (like H+, +,..) and the precision in ppm (like 5ppm) in a format {ionization:[H+],precision:[5ppm]}
  * @returns returns matched fragments with their bond contribution on experimental spectra
  */
 
-export async function candidatesFragmentation(spectrum, smiles, options) {
+export async function candidatesFragmentation(spectrum, idCode, options) {
   const { precision, ionization, limit } = options;
 
   // Generate molecule from smiles
-  const molecule = Molecule.fromSmiles(smiles);
+  const molecule = Molecule.fromIDCode(idCode);
 
   // Get mass precursor ion, used in bondContribution() and MF molecular
   let mfMolecularIon = getMF(molecule).mf;
@@ -37,13 +37,8 @@ export async function candidatesFragmentation(spectrum, smiles, options) {
     ionizations: ionization,
     precision,
   });
-
   // filteredSpectrumMasses used for matching in generateMFs() and filtredSpectrumFroStatistics in format for bondContribution() and for matching
   const masses = filteredSpectrum.map((peak) => peak.x);
-  const filteredSpectrumForStatistics = {
-    x: masses,
-    y: filteredSpectrum.map((peak) => peak.y),
-  };
 
   // Perform in-silico fragmentation
   const fragmentation = fragment(molecule);
@@ -120,27 +115,32 @@ export async function candidatesFragmentation(spectrum, smiles, options) {
       }
     }
   }
+
+  let x = [];
+  let y = [];
+  for (let i = 0; i < filteredSpectrum.length; i++) {
+    x.push(filteredSpectrum[i].x);
+    y.push(filteredSpectrum[i].y);
+  }
+  let spectrumForContribution = { x, y };
   // get intensity of each matched fragment
   for (let i = 0; i < fragmentsResult.length; i++) {
-    let massAccuracy = (options.precision * fragmentsResult[i].ms) / 1e6;
-    for (let m = 0; m < filteredSpectrumForStatistics.x.length; m++) {
+    let massAccuracy = (precision * fragmentsResult[i].ms) / 1e6;
+    for (let m = 0; m < filteredSpectrum.length; m++) {
       if (
-        filteredSpectrumForStatistics.x[m] <=
-          fragmentsResult[i].ms + massAccuracy &&
-        filteredSpectrumForStatistics.x[m] >=
-          fragmentsResult[i].ms - massAccuracy
+        Math.abs(filteredSpectrum[m].x - fragmentsResult[i].ms) <= massAccuracy
       ) {
-        fragmentsResult[i].intensity = filteredSpectrumForStatistics.y[m];
+        fragmentsResult[i].intensity = filteredSpectrum[m].y;
       }
       if (fragmentsResult[i].hose === undefined) {
-        fragmentsResult[i].intensity = filteredSpectrumForStatistics.y[m];
+        fragmentsResult[i].intensity = filteredSpectrum[m].y;
       }
     }
   }
   // Bond Contribution of each matched fragment
 
   let resultContribution = bondContribution(
-    filteredSpectrumForStatistics,
+    spectrumForContribution,
     massPrecursorIon,
     precision,
   );

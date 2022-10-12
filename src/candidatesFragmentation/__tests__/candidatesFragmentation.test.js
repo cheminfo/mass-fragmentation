@@ -13,9 +13,9 @@ describe('fragment', () => {
       ],
       y: [50, 80, 40, 20, 60, 20, 30, 100],
     };
-    const smiles = 'CC(=O)CCC(=O)O';
+    const idCode = 'daxL@@QdfufjX@@';
     const options = { precision: 15, ionization: 'H+', limit: 1e7 };
-    const result = await candidatesFragmentation(spectrum, smiles, options);
+    const result = await candidatesFragmentation(spectrum, idCode, options);
     expect(result).toMatchSnapshot();
   });
   it('CC(N)C1CCC(CC#N)C(CC=O)C1', async () => {
@@ -26,9 +26,9 @@ describe('fragment', () => {
       ],
       y: [50, 80, 40, 20, 60, 20, 100],
     };
-    const smiles = 'CC(N)C1CCC(CC#N)C(CC=O)C1';
+    const idCode = 'do}H@ClDeYeWXYZjjkj@@';
     const options = { precision: 15, ionization: 'H+', limit: 1e7 };
-    const result = await candidatesFragmentation(spectrum, smiles, options);
+    const result = await candidatesFragmentation(spectrum, idCode, options);
     expect(result).toMatchSnapshot();
   });
 });
