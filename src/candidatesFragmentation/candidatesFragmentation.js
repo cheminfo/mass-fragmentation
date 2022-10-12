@@ -3,7 +3,7 @@ import generateMFs from 'mf-generator';
 import OCL from 'openchemlib';
 import { getMF } from 'openchemlib-utils';
 
-import { bondContribution } from '../contribution/bondContribution.js';
+import { bondContribution } from '../bondContribution/bondContribution.js';
 import { fragment } from '../fragmentation/fragment.js';
 import { neutralLoss } from '../neutralLoss/neutralLoss.js';
 
