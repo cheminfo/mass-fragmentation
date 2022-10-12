@@ -1,4 +1,5 @@
-import { contribution } from '../contribution';
+import { bondContribution } from '../bondContribution.js';
+import { spectraPreparation } from '../spectraPreparation.js';
 
 describe('contribution', () => {
   it('real', () => {
@@ -14,12 +15,13 @@ describe('contribution', () => {
     ];
     const massPrecursorIon = 350;
     const precision = 0.1;
-    const bondContribution = contribution(
-      experimentalSpectrum,
+    const formatedSpectrum = spectraPreparation(experimentalSpectrum);
+    const contribution = bondContribution(
+      formatedSpectrum,
       massPrecursorIon,
       precision,
     );
-    expect(bondContribution.bondContributionResults).toStrictEqual([
+    expect(contribution).toStrictEqual([
       { mass: 82, contribution: 0.02857145178503368 },
       { mass: 90.1, contribution: 1 },
       { mass: 110.5, contribution: 0.02857145178503368 },
@@ -54,13 +56,6 @@ describe('contribution', () => {
       { mass: 308.1, contribution: 0.561904762312018 },
       { mass: 333.5, contribution: 0.19047618843990932 },
     ]);
-    expect(bondContribution.bondStatisticsResults).toStrictEqual({
-      q1: 0.038095254792743526,
-      median: 0.11428572161632641,
-      q3: 0.3285714175755103,
-      min: 0,
-      max: 1,
-    });
   });
   it('notReal', () => {
     const experimentalSpectrum = [
@@ -75,13 +70,14 @@ describe('contribution', () => {
     ];
     const massPrecursorIon = 351;
     const precision = 0.1;
-    const bondContribution = contribution(
-      experimentalSpectrum,
+    const formatedSpectrum = spectraPreparation(experimentalSpectrum);
+    const contribution = bondContribution(
+      formatedSpectrum,
       massPrecursorIon,
       precision,
     );
 
-    expect(bondContribution.bondContributionResults).toStrictEqual([
+    expect(contribution).toStrictEqual([
       { mass: 82, contribution: 0.02857145178503368 },
       { mass: 90.1, contribution: 1 },
       { mass: 110.5, contribution: 0.02857145178503368 },
@@ -116,12 +112,5 @@ describe('contribution', () => {
       { mass: 308.1, contribution: 0.561904762312018 },
       { mass: 333.5, contribution: 0.19047618843990932 },
     ]);
-    expect(bondContribution.bondStatisticsResults).toStrictEqual({
-      q1: 0.038095254792743526,
-      median: 0.11428572161632641,
-      q3: 0.3285714175755103,
-      min: 0,
-      max: 1,
-    });
   });
 });
