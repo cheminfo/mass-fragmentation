@@ -6,3 +6,4 @@ export * from './contribution/bondContribution.js';
 export * from './fragmentation/utils/getCycleAndFragmentationInfo.js';
 export * from './fragmentation/utils/getCyclesAndBondsInfo.js';
 export * from './fragmentation/utils/getFragmentableCycleBonds.js';
+export * from './contribution/spectraPreparation.js';
