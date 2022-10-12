@@ -2,6 +2,7 @@
  * This function calculate the contribution of each fragment on spectra based on the reaction rate of fragmentation
  * @param {object} spectra experimental spectra in form {x:[],y:[]}
  * @param {Number} massPrecursorIon massPrecursorIon
+ * @param {Number} precision massPrecursorIon
  * @returns {Array} Contribution of each fragment on spectra
  */
 
@@ -65,22 +66,21 @@ export function bondContribution(spectra, massPrecursorIon, precision) {
           mass: spectra.x[i],
           intensity: spectra.y[i],
           rate: rateFragment,
-          contribution: [],
+          contribution: 0,
         });
         rateArray.push(rateFragment);
       }
     }
+
     // normalization
     let maxRateArray = Math.max(...rateArray);
     let minRateArray = Math.min(...rateArray);
-
+    let deltaMinMax = maxRateArray - minRateArray;
     for (let i = 0; i < rateArray.length; i++) {
-      let deltaMinMax = maxRateArray - minRateArray;
       let contribution = (rateArray[i] - minRateArray) / deltaMinMax;
-
-      rateReactionFragments[i].contribution = contribution;
+      // add property contribution to each fragment
+      rateReactionFragments[i].contribution += contribution;
     }
-
     for (let i = 0; i < rateReactionFragments.length; i++) {
       bondContribution[i] = {
         mass: rateReactionFragments[i].mass,
