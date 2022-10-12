@@ -66,16 +66,8 @@ export function fragmentCyclicBonds(molecule) {
     for (let i = 0; i < nbFragments; i++) {
       const result = {};
       let hose = {};
-      hose.bond1 = getHoseCodesForAtoms(
-        molecule,
-        [bonds.atom1, bonds.atom2],
-        1,
-      );
-      hose.bond2 = getHoseCodesForAtoms(
-        molecule,
-        [bonds.atom3, bonds.atom4],
-        1,
-      );
+      hose.bond1 = getHoseCodesForAtoms(molecule, [bonds.atom1, bonds.atom2]);
+      hose.bond2 = getHoseCodesForAtoms(molecule, [bonds.atom3, bonds.atom4]);
       result.hose = hose;
       result.atomMap = [];
       let includeAtom = fragmentMap.map((id) => {
@@ -113,6 +105,5 @@ export function fragmentCyclicBonds(molecule) {
   results = results.sort((a, b) => {
     return a.mfInfo.mw - b.mfInfo.mw;
   });
-
   return results;
 }
