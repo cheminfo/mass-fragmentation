@@ -12,10 +12,10 @@ const { Molecule } = OCL;
 
 /**
  * This function performs the in-silico fragmentation of a given structure and returns the matched fragments and the bond contribution
- * @param {object} spectra experimental spectra in form {x:[],y:[]}
+ * @param {object} spectrum experimental spectra in form {x:[],y:[]}
  * @param {object} smiles Smiles of candidate structure
  * @param {object} options Object containing the ionization (like H+, +,..) and the precision in ppm (like 5ppm) in a format {ionization:[H+],precision:[5ppm]}
- * @returns {object} returns matched fragments with their bond contribution on experimental spectra
+ * @returns returns matched fragments with their bond contribution on experimental spectra
  */
 
 export async function candidatesFragmentation(spectrum, smiles, options) {
@@ -144,21 +144,18 @@ export async function candidatesFragmentation(spectrum, smiles, options) {
     massPrecursorIon,
     precision,
   );
+  //console.log(resultContribution);
 
   if (resultContribution.length > 0) {
     for (let i = 0; i < fragmentsResult.length; i++) {
       let massAccuracyOfFragment =
         (options.precision * fragmentsResult[i].ms) / 1e6;
       for (let j = 0; j < resultContribution.length; j++) {
-        // check if resultContribution[j].mass is in the range of massAccuracyOfFragment+/- of fragmentsResult[i][0].ms
         if (
-          resultContribution[j].mass <=
-            fragmentsResult[i].ms + massAccuracyOfFragment &&
-          resultContribution[j].mass >=
-            fragmentsResult[i].ms - massAccuracyOfFragment
+          Math.abs(resultContribution[j].mass - fragmentsResult[i].ms) <=
+          massAccuracyOfFragment
         ) {
-          fragmentsResult[i].bondContribution =
-            resultContribution.bondContribution;
+          fragmentsResult[i].contribution = resultContribution[j].contribution;
         }
         if (fragmentsResult[i].hose === undefined) {
           fragmentsResult[i].contribution = 0;
