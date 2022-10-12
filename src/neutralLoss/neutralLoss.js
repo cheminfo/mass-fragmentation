@@ -1,6 +1,12 @@
 import OCL from 'openchemlib';
 import { nbOH, nbCOOH, nbCHO, nbCN, nbNH2 } from 'openchemlib-utils';
 
+/**
+ * @description Perform substructure search to determine how many neutral losses are allowed
+ * @param {string} fragmentIDCode - IDCode of the fragment
+ * @returns {string} - a concataned string of all neutral losses (ex: `(H2O)0--0(H2CO)0--1`
+ */
+
 export function neutralLoss(fragmentIDCode) {
   const neutralLossWater = [
     { idCode: 'gCa@@dmPGrDZ@' },
