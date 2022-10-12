@@ -24,13 +24,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'Molecular Ion',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'eM@HzCaJBhOIewzJCaUSaU@',
-          'gC`@Dkj@xPhIP^pr\\l\x7FQHGBjcaU@',
-          'gC`@Dkj@XPhIP_hdCaUQpj`',
-          'gC`@Dkj@XPhIP_hdCaUQpj`',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'eM@HzCaJBhOIewzJCaUSaU@',
+            'gC`@Dkj@xPhIP^pr\\l\x7FQHGBjcaU@',
+            'gC`@Dkj@XPhIP_hdCaUQpj`',
+            'gC`@Dkj@XPhIP_hdCaUQpj`',
+          ],
+        },
         atomMap: [0],
         smiles: 'C',
         mf: 'CH3',
@@ -46,13 +48,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'eM@HzCaJBhOIewzJCaUSaU@',
-          'gC`@Dkj@xPhIP^pr\\l\x7FQHGBjcaU@',
-          'gC`@Dkj@XPhIP_hdCaUQpj`',
-          'gC`@Dkj@XPhIP_hdCaUQpj`',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'eM@HzCaJBhOIewzJCaUSaU@',
+            'gC`@Dkj@xPhIP^pr\\l\x7FQHGBjcaU@',
+            'gC`@Dkj@XPhIP_hdCaUQpj`',
+            'gC`@Dkj@XPhIP_hdCaUQpj`',
+          ],
+        },
         atomMap: [1],
         smiles: 'CCC',
         mf: 'C3H7',
@@ -68,13 +72,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
-          'gC`@Dij@XPhIP_hdCaUQpj`',
-          'gC`@Dij@XPhIP_hdCaUQpj`',
-          'gC`@Dij@XPhIP_hdCaUQpj`',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gC`@Dij@XPhIP_hdCaUQpj`',
+            'gC`@Dij@XPhIP_hdCaUQpj`',
+            'gC`@Dij@XPhIP_hdCaUQpj`',
+          ],
+        },
         atomMap: [0],
         smiles: 'CC',
         mf: 'C2H5',
@@ -90,13 +96,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
-          'gC`@Dij@XPhIP_hdCaUQpj`',
-          'gC`@Dij@XPhIP_hdCaUQpj`',
-          'gC`@Dij@XPhIP_hdCaUQpj`',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gC`@Dij@XPhIP_hdCaUQpj`',
+            'gC`@Dij@XPhIP_hdCaUQpj`',
+            'gC`@Dij@XPhIP_hdCaUQpj`',
+          ],
+        },
         atomMap: [2],
         smiles: 'CC',
         mf: 'C2H5',
@@ -112,13 +120,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'eM@HzCaJBhOIewzJCaUSaU@',
-          'gC`@Dkj@xPhIP^pr\\l\x7FQHGBjcaU@',
-          'gC`@Dkj@XPhIP_hdCaUQpj`',
-          'gC`@Dkj@XPhIP_hdCaUQpj`',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'eM@HzCaJBhOIewzJCaUSaU@',
+            'gC`@Dkj@xPhIP^pr\\l\x7FQHGBjcaU@',
+            'gC`@Dkj@XPhIP_hdCaUQpj`',
+            'gC`@Dkj@XPhIP_hdCaUQpj`',
+          ],
+        },
         atomMap: [0],
         smiles: 'CCC',
         mf: 'C3H7',
@@ -134,13 +144,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'eM@HzCaJBhOIewzJCaUSaU@',
-          'gC`@Dkj@xPhIP^pr\\l\x7FQHGBjcaU@',
-          'gC`@Dkj@XPhIP_hdCaUQpj`',
-          'gC`@Dkj@XPhIP_hdCaUQpj`',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'eM@HzCaJBhOIewzJCaUSaU@',
+            'gC`@Dkj@xPhIP^pr\\l\x7FQHGBjcaU@',
+            'gC`@Dkj@XPhIP_hdCaUQpj`',
+            'gC`@Dkj@XPhIP_hdCaUQpj`',
+          ],
+        },
         atomMap: [3],
         smiles: 'C',
         mf: 'CH3',
@@ -176,13 +188,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'Molecular Ion',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'gJP@DjXHCaB`eAzSOtRApjhxUP',
-          'dax@@DjUXHH@xPJBJCqQbQdEgzH`NEUCaU@',
-          'deT@@DjUWXXHH`@xPJBJCwQbQdEePt]gzH`NEUCaU@',
-          'dcL@@DjUWya``bh@NDB`b`}LXdYAYTMGXLSGzH`NEUCaU@',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjXHCaB`eAzSOtRApjhxUP',
+            'dax@@DjUXHH@xPJBJCqQbQdEgzH`NEUCaU@',
+            'deT@@DjUWXXHH`@xPJBJCwQbQdEePt]gzH`NEUCaU@',
+            'dcL@@DjUWya``bh@NDB`b`}LXdYAYTMGXLSGzH`NEUCaU@',
+          ],
+        },
         atomMap: [0],
         smiles: 'C1(=CC=CC=C1)',
         mf: 'C6H6',
@@ -198,13 +212,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'gJP@DjXHCaB`eAzSOtRApjhxUP',
-          'dax@@DjUXHH@xPJBJCqQbQdEgzH`NEUCaU@',
-          'deT@@DjUWXXHH`@xPJBJCwQbQdEePt]gzH`NEUCaU@',
-          'dcL@@DjUWya``bh@NDB`b`}LXdYAYTMGXLSGzH`NEUCaU@',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjXHCaB`eAzSOtRApjhxUP',
+            'dax@@DjUXHH@xPJBJCqQbQdEgzH`NEUCaU@',
+            'deT@@DjUWXXHH`@xPJBJCwQbQdEePt]gzH`NEUCaU@',
+            'dcL@@DjUWya``bh@NDB`b`}LXdYAYTMGXLSGzH`NEUCaU@',
+          ],
+        },
         atomMap: [4],
         smiles: 'CCCC2(CCC1(CCCCC1C2))',
         mf: 'C13H23',
@@ -220,13 +236,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
-          'gNp@DiYjB@xPhIP^prYl\x7FQHGBjcaU@',
-          'dmT@@DiYUj``h@xPJBJCsAdYfEEPt_hb@xUTNET',
-          'dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjB@xPhIP^prYl\x7FQHGBjcaU@',
+            'dmT@@DiYUj``h@xPJBJCsAdYfEEPt_hb@xUTNET',
+            'dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET',
+          ],
+        },
         atomMap: [0],
         smiles: 'C1(=CC=C(C)C=C1)',
         mf: 'C7H8',
@@ -242,13 +260,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
-          'gNp@DiYjB@xPhIP^prYl\x7FQHGBjcaU@',
-          'dmT@@DiYUj``h@xPJBJCsAdYfEEPt_hb@xUTNET',
-          'dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjB@xPhIP^prYl\x7FQHGBjcaU@',
+            'dmT@@DiYUj``h@xPJBJCsAdYfEEPt_hb@xUTNET',
+            'dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET',
+          ],
+        },
         atomMap: [5],
         smiles: 'CCC2(CCC1(CCCCC1C2))',
         mf: 'C12H21',
@@ -264,13 +284,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
-          'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
-          'dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET',
-          'do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET',
+            'do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET',
+          ],
+        },
         atomMap: [0],
         smiles: 'C1(=CC=C(CC)C=C1)',
         mf: 'C8H10',
@@ -286,13 +308,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
-          'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
-          'dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET',
-          'do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gC`@Dij@xPhIP^PrY~bPNEUGBj@',
+            'gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj`',
+            'dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET',
+            'do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET',
+          ],
+        },
         atomMap: [6],
         smiles: 'CC2(CCC1(CCCCC1C2))',
         mf: 'C11H19',
@@ -308,13 +332,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
-          'dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP',
-          'dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP',
-          'do|@@DjUVuYajjjjBpJJHD`NDB`b`|hQFIfXVUCYvCDy~bHCaUPxUP',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP',
+            'dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP',
+            'do|@@DjUVuYajjjjBpJJHD`NDB`b`|hQFIfXVUCYvCDy~bHCaUPxUP',
+          ],
+        },
         atomMap: [0],
         smiles: 'C1(=CC=C(CCC)C=C1)',
         mf: 'C9H12',
@@ -330,13 +356,15 @@ describe('fragmentAcyclicBonds', () => {
         fragmentType: 'acyclic',
       },
       {
-        hose: [
-          'eF@Hp\\IPUA~b`xUTxUP',
-          'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
-          'dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP',
-          'dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP',
-          'do|@@DjUVuYajjjjBpJJHD`NDB`b`|hQFIfXVUCYvCDy~bHCaUPxUP',
-        ],
+        hose: {
+          bond1: [
+            'eF@Hp\\IPUA~b`xUTxUP',
+            'gJP@DjZhCaB`eAyBIgzI@xUT\\Jh',
+            'dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP',
+            'dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP',
+            'do|@@DjUVuYajjjjBpJJHD`NDB`b`|hQFIfXVUCYvCDy~bHCaUPxUP',
+          ],
+        },
         atomMap: [7],
         smiles: 'C2(CCC1(CCCCC1C2))',
         mf: 'C10H17',
