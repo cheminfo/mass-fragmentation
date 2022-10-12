@@ -1,6 +1,6 @@
 /**
  * Organize data from experimental spectra ([x,y,x,y,x,y...]) to a object with x and y arrays
- * @param {object} [experimentalSpectrum] experimental ms spectrum data
+ * @param {Array} experimentalSpectrum experimental ms spectrum data
  * @returns {object} data organized {x:[],y:[]} form
  */
 
