@@ -1,24 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`fragment CC(=O)CCC(=O)O 1`] = `
-Array [
-  Object {
+[
+  {
     "contribution": 0,
     "em": 116.04734411655001,
     "hose": undefined,
     "intensity": 100,
     "mf": "C5H8O3",
-    "mfs": Array [
-      Object {
-        "atoms": Object {
+    "mfs": [
+      {
+        "atoms": {
           "C": 5,
           "H": 8,
           "O": 3,
         },
         "charge": 0,
         "em": 116.04734411655001,
-        "ionization": Object {
-          "atoms": Object {
+        "ionization": {
+          "atoms": {
             "H": 1,
           },
           "charge": 1,
@@ -26,18 +26,18 @@ Array [
           "mf": "H+",
         },
         "mf": "C5H8O3",
-        "ms": Object {
+        "ms": {
           "charge": 1,
           "delta": -5.688709450168972e-7,
           "em": 117.05462056887094,
           "ionization": "H+",
           "ppm": -0.004859876032678206,
-          "target": Object {
+          "target": {
             "mass": 117.05462,
           },
         },
         "mw": 116.11542028907729,
-        "parts": Array [
+        "parts": [
           "C5H8O3",
         ],
         "unsaturation": 2,
@@ -46,52 +46,52 @@ Array [
     "ms": 117.05462056887094,
     "ppm": -0.004859876032678206,
   },
-  Object {
+  {
     "contribution": 0.16666666666666666,
     "em": 100.01604398763,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gCa@@dsPGBe@jCtW_hdcaUIpj\`",
-        "gJQ@@dvu@\\\\JTBhOI]lQIGBjSaU@",
+        "gJQ@@dvu@\\JTBhOI]lQIGBjSaU@",
         "gGQ@@dvmTApiPJ\`}evpy~bRNETgBj@",
         "daxL@@[dfufjX@xRJAJCvIvXV_hbPxURNET",
       ],
     },
     "intensity": 30,
     "mf": "C4H4O3",
-    "mfs": Array [
+    "mfs": [
       "C4H4O3",
     ],
     "ms": 101.02332043995094,
     "ppm": 5.340945503604677,
   },
-  Object {
+  {
     "contribution": 1,
     "em": 41.002739651800006,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
-        "gJQ@@dru@\\\\JTBhOQY~bRNETgBj@",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
+        "gJQ@@dru@\\JTBhOQY~bRNETgBj@",
         "gGQ@@dsmTApiPJ\`}efxy~bRNETgBj@",
-        "daxL@@[df]fjX@xRJAJCvIf\\\\V_hbPxURNET",
+        "daxL@@[df]fjX@xRJAJCvIf\\V_hbPxURNET",
         "daxL@@[df]fjX@XRJAJC}DRGBjQpj\`",
       ],
     },
     "intensity": 80,
     "mf": "C2HO",
-    "mfs": Array [
+    "mfs": [
       "C2HO",
     ],
     "ms": 42.010016104120936,
     "ppm": 12.946814343369255,
   },
-  Object {
+  {
     "contribution": 0.6666666666666666,
     "em": 56.02621474848999,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
         "daxL@@QdfufjX@xSJ@jCrYaY~bIcaUDxUP",
         "daxL@@QdfufjX@XSJ@jC}DSGBjIpj\`",
@@ -100,18 +100,18 @@ Array [
     },
     "intensity": 60,
     "mf": "C3H4O",
-    "mfs": Array [
+    "mfs": [
       "C3H4O",
     ],
     "ms": 57.03349120081092,
     "ppm": 9.622402162682588,
   },
-  Object {
+  {
     "contribution": 0,
     "em": 58.0054793036,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
         "daxL@@QdfufjX@xSJ@jCrYaY~bIcaUDxUP",
         "daxL@@QdfufjX@XSJ@jC}DSGBjIpj\`",
@@ -120,18 +120,18 @@ Array [
     },
     "intensity": 20,
     "mf": "C2H2O2",
-    "mfs": Array [
+    "mfs": [
       "C2H2O2",
     ],
     "ms": 59.01275575592093,
     "ppm": 9.222482022769242,
   },
-  Object {
+  {
     "contribution": 0,
     "em": 70.04186481295,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gJP\`@dfvhCaR\`uAz[OtRQpjlxUP",
         "gGP\`@dfuj\`NEJCTGlhvGOtRQpjlxUP",
         "daxL@@QdfufjX@xRJCJCvIFXV_hbPxUVNET",
@@ -140,18 +140,18 @@ Array [
     },
     "intensity": 20,
     "mf": "C4H6O",
-    "mfs": Array [
+    "mfs": [
       "C4H6O",
     ],
     "ms": 71.04914126527093,
     "ppm": 7.5825649609296555,
   },
-  Object {
+  {
     "contribution": 0.33333333333333337,
     "em": 44.99765427137,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gJP\`@dfvhCaR\`uAz[OtRQpjlxUP",
         "gGP\`@dfuj\`NEJCTGlhvGOtRQpjlxUP",
         "daxL@@QdfufjX@xRJCJCvIFXV_hbPxUVNET",
@@ -160,7 +160,7 @@ Array [
     },
     "intensity": 40,
     "mf": "CHO2",
-    "mfs": Array [
+    "mfs": [
       "CHO2",
     ],
     "ms": 46.00493072369093,
@@ -170,16 +170,16 @@ Array [
 `;
 
 exports[`fragment CC(N)C1CCC(CC#N)C(CC=O)C1 1`] = `
-Array [
-  Object {
+[
+  {
     "contribution": 0,
     "em": 208.15756327303,
     "hose": undefined,
     "intensity": 100,
     "mf": "C12H20N2O",
-    "mfs": Array [
-      Object {
-        "atoms": Object {
+    "mfs": [
+      {
+        "atoms": {
           "C": 12,
           "H": 20,
           "N": 2,
@@ -187,8 +187,8 @@ Array [
         },
         "charge": 0,
         "em": 208.15756327303,
-        "ionization": Object {
-          "atoms": Object {
+        "ionization": {
+          "atoms": {
             "H": 1,
           },
           "charge": 1,
@@ -196,18 +196,18 @@ Array [
           "mf": "H+",
         },
         "mf": "C12H20N2O",
-        "ms": Object {
+        "ms": {
           "charge": 1,
           "delta": 0.0005502746490719801,
           "em": 209.16483972535093,
           "ionization": "H+",
           "ppm": 2.6308181135726816,
-          "target": Object {
+          "target": {
             "mass": 209.16539,
           },
         },
         "mw": 208.30045718914837,
-        "parts": Array [
+        "parts": [
           "C12H20N2O",
         ],
         "unsaturation": 4,
@@ -216,120 +216,120 @@ Array [
     "ms": 209.16483972535093,
     "ppm": 2.6308181135726816,
   },
-  Object {
+  {
     "contribution": 0,
     "em": 164.10753907522002,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gCh@@duTe@xThEP^Ta]~bRNETgBj@",
-        "gGX@@dwUUIPNEJATGbLdKmGzIHxUR\\\\Jh",
+        "gGX@@dwUUIPNEJATGbLdKmGzIHxUR\\Jh",
         "daz@@@R[ejjhb\`NDb\`R\`|pYDIvPVUgzHdNETcaU@",
         "deV@@@R[e[ajjjlbcJFHCaHhDhOBFQB]dEeXt]gzHdNETcaU@",
       ],
     },
     "intensity": 20,
     "mf": "C10H14NO",
-    "mfs": Array [
+    "mfs": [
       "C10H14NO",
     ],
     "ms": 165.11481552754094,
     "ppm": 3.2975384875625484,
   },
-  Object {
+  {
     "contribution": 0,
     "em": 193.13408817634001,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gCh@@duTe@xThEP^Ta]~bRNETgBj@",
-        "gGX@@dwUUIPNEJATGbLdKmGzIHxUR\\\\Jh",
+        "gGX@@dwUUIPNEJATGbLdKmGzIHxUR\\Jh",
         "daz@@@R[ejjhb\`NDb\`R\`|pYDIvPVUgzHdNETcaU@",
         "deV@@@R[e[ajjjlbcJFHCaHhDhOBFQB]dEeXt]gzHdNETcaU@",
       ],
     },
     "intensity": 20,
     "mf": "C11H17N2O",
-    "mfs": Array [
+    "mfs": [
       "C11H17N2O",
     ],
     "ms": 194.14136462866094,
     "ppm": 2.8091454909730884,
   },
-  Object {
+  {
     "contribution": 0.6666666666666666,
     "em": 192.13883920414003,
-    "hose": Object {
-      "bond1": Array [
+    "hose": {
+      "bond1": [
         "eF\`BLGBTEP_hhKeUNET",
-        "gCh@@duPGBEAJCrFROtRA\\\\jhxUP",
-        "gGX@@dsUUIPNDJBTGbLdJMwzI@nUT\\\\Jh",
-        "daz@@@RYmjjhb\`NDB\`b\`|pYDIF\\\\VUgzH\`KeUCaU@",
+        "gCh@@duPGBEAJCrFROtRA\\jhxUP",
+        "gGX@@dsUUIPNDJBTGbLdJMwzI@nUT\\Jh",
+        "daz@@@RYmjjhb\`NDB\`b\`|pYDIF\\VUgzH\`KeUCaU@",
         "deV@@@RYm[ajjjlbaBFhCa@hHhOBFQBQgEeXt]gzH\`KeUCaU@",
       ],
     },
     "intensity": 60,
     "mf": "C12H18NO",
-    "mfs": Array [
+    "mfs": [
       "C12H18NO",
     ],
     "ms": 193.14611565646095,
     "ppm": 2.818299178305648,
   },
-  Object {
+  {
     "contribution": 0.5000000000000001,
     "em": 44.05002419781,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gGX@@dsUUIPNEJATGeHT_hdcaUIpj\`",
-        "daz@@@RYmjjhb\`NDb\`R\`|pYDIF\\\\VUgzHdNETcaU@",
+        "daz@@@RYmjjhb\`NDb\`R\`|pYDIF\\VUgzHdNETcaU@",
         "deV@@@RYm[ajjjl\`aJFHCaHhDhOBFQBQgEeXt]gzHdNETcaU@",
         "dcN@@@RYm[^FjjjhhHRabAHCaHhDhOJFQBQgEeXt]\`qN_hbPxURNET",
       ],
     },
     "intensity": 50,
     "mf": "C2H6N",
-    "mfs": Array [
+    "mfs": [
       "C2H6N",
     ],
     "ms": 45.05730065013093,
     "ppm": 12.192249893998104,
   },
-  Object {
+  {
     "contribution": 0,
     "em": 164.10753907522002,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gGX@@dsUUIPNEJATGeHT_hdcaUIpj\`",
-        "daz@@@RYmjjhb\`NDb\`R\`|pYDIF\\\\VUgzHdNETcaU@",
+        "daz@@@RYmjjhb\`NDb\`R\`|pYDIF\\VUgzHdNETcaU@",
         "deV@@@RYm[ajjjl\`aJFHCaHhDhOBFQBQgEeXt]gzHdNETcaU@",
         "dcN@@@RYm[^FjjjhhHRabAHCaHhDhOJFQBQgEeXt]\`qN_hbPxURNET",
       ],
     },
     "intensity": 20,
     "mf": "C10H14NO",
-    "mfs": Array [
+    "mfs": [
       "C10H14NO",
     ],
     "ms": 165.11481552754094,
     "ppm": 3.2975384875625484,
   },
-  Object {
+  {
     "contribution": 0,
     "em": 164.10753907522002,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
-        "gJP@DjZhCaB\`eAyBIgzI@xUT\\\\Jh",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
+        "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
         "dif@@@RYm^FjjiHHP\`NDR\`J\`}TPdEeXv_hbHxUQNET",
         "dmv@@@RYmUxZjjjJBDHx\`Z@xQJ@jCtadPdYqYVMgPL_hbHxUQNET",
-        "dkn@@@RYmUWajjjjb\`aBNHF\`NDR\`J\`}hYDIF\\\\VUcYtCDxn_hbHxUQNET",
+        "dkn@@@RYmUWajjjjb\`aBNHF\`NDR\`J\`}hYDIF\\VUcYtCDxn_hbHxUQNET",
       ],
-      "bond2": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
-        "gJP@DjZhCaB\`eAyBIgzI@xUT\\\\Jh",
+      "bond2": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
+        "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
         "did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH\`NEUCaU@",
         "dcN@@@RUeg^gjjjkLhjbR@xSJ@jCpifPVUCYvCdq~bIcaUDxUP",
         "do}H@ClDeYeWXYZjjkjKJBHFcZ@xPjAjCrqBYdEEXv]\`qN[GzHaNETsaU@",
@@ -337,25 +337,25 @@ Array [
     },
     "intensity": 20,
     "mf": "C10H14NO",
-    "mfs": Array [
+    "mfs": [
       "C10H14NO",
     ],
     "ms": 165.11481552754094,
     "ppm": 3.2975384875625484,
   },
-  Object {
+  {
     "contribution": 0.33333333333333337,
     "em": 142.12318913968002,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
         "daD@@DiYbZjjdQY@xPJBJCqAdXdYGzH\`NEUCaU@",
         "dcN@@@RYmU~FjjjhhHPcbAhCaBhFhOCDIAYVMgPLKgzHaNETsaU@",
         "dg]@@@MIVV]{izjjjhlhjbRMhCaBhFhOZfYAYTMgXNSFp^WwzHaNETsaU@",
       ],
-      "bond2": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+      "bond2": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gGP@DjZj\`NDJBTGdHd_hdCaUQpj\`",
         "deT@@DjYUXZjji@TPNDB\`b\`|pQDIfXVUgzH\`NEUCaU@",
         "dknH@CAIVYUqejjjnsBBhD\`NDr\`J\`}LPfYAQVMgXLSgzHfNETSaU@",
@@ -364,26 +364,26 @@ Array [
     },
     "intensity": 40,
     "mf": "C8H16NO",
-    "mfs": Array [
+    "mfs": [
       "C8H16NO",
     ],
     "ms": 143.13046559200095,
     "ppm": 3.803578761561851,
   },
-  Object {
+  {
     "contribution": 1,
     "em": 70.04186481295,
-    "hose": Object {
-      "bond1": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
+    "hose": {
+      "bond1": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
         "gGP@DjZj\`NDJBTGdHd_hdCaUQpj\`",
         "deT@@DjYUXZjji@TPNDB\`b\`|pQDIfXVUgzH\`NEUCaU@",
         "dknH@CAIVYUqejjjnsBBhD\`NDr\`J\`}LPfYAQVMgXLSgzHfNETSaU@",
         "do}H@ClDeYeWXYZjjkjKBBhDcR@xSJ@jCrqBYdEEXv]\`qN[GzHfNETSaU@",
       ],
-      "bond2": Array [
-        "eF@Hp\\\\IPUA~b\`xUTxUP",
-        "gJP@DjZhCaB\`eAyBIgzI@xUT\\\\Jh",
+      "bond2": [
+        "eF@Hp\\IPUA~b\`xUTxUP",
+        "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
         "deV@@@RYm[ajjjlbaBFhCaDhBhOUDIAYVMGzHbNETSaU@",
         "dcN@@@RYm[^FjjjhhhPajAhCaDhBhOJFQBQgEeXt]\`qN_hbHxUQNET",
         "dg^H@CAIVV[[eZjjjhlhjajIHCaBhFhOGDIfPVUCQvCdpnGe}~bHSaULxUP",
@@ -391,7 +391,7 @@ Array [
     },
     "intensity": 80,
     "mf": "C4H6O",
-    "mfs": Array [
+    "mfs": [
       "C4H6O",
     ],
     "ms": 71.04914126527093,
