@@ -3,8 +3,8 @@ import { getFragmentableCycleBonds } from './getFragmentableCycleBonds.js';
 
 /**
  * This function returns an array containing bonds information and all combinations of bonds who can be fragmented
- * @param {OCL.Molecule} molecule - Molecule to fragment
- * @returns {Array} Ring Bonds information and bonds who can be fragmented
+ * @param {any} molecule - The OCL molecule to be fragmented
+ * @returns Ring Bonds information and bonds who can be fragmented
  */
 
 export function getCycleAndFragmentationInfo(molecule) {

@@ -1,7 +1,7 @@
 /**
  * This function returns ringBond, and object who contains information about the bonds of each cycle
- * @param {OCL.Molecule} molecule - Molecule to fragment
- * @returns {Array} Information of ring bonds for each cycle in the molecule
+ * @param {any} molecule - The OCL molecule to be fragmented
+ * @returns Information of ring bonds for each cycle in the molecule
  */
 
 export function getCyclesAndBondsInfo(molecule) {

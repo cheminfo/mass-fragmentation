@@ -5,8 +5,8 @@ import { getCycleAndFragmentationInfo } from './utils/getCycleAndFragmentationIn
 
 /**
  * The function performs the fragmentation of all single ring bonds not beloning to aromatic rings
- * @param {OCL.molecule} molecule
- * @returns {object} Results fragmentation of ring bonds
+ * @param {any} molecule - The OCL molecule to be fragmented
+ * @returns  Array with results for the fragmentation of ring bonds
  */
 
 const { MF } = MassTools;
@@ -53,7 +53,7 @@ export function fragmentCyclicBonds(molecule) {
   let brokenMolecule = {};
   let fragmentMap = [];
   let nbFragments = [];
-  let results = [];
+  let fragmentationResults = [];
 
   for (let bonds of ringsToBeFragmented) {
     brokenMolecule[bonds.i] = molecule.getCompactCopy();
@@ -98,12 +98,12 @@ export function fragmentCyclicBonds(molecule) {
 
       result.mfInfo = new MF(result.mf).getInfo();
       result.fragmentType = 'cyclic';
-      results.push(result);
+      fragmentationResults.push(result);
     }
   }
 
-  results = results.sort((a, b) => {
+  fragmentationResults = fragmentationResults.sort((a, b) => {
     return a.mfInfo.mw - b.mfInfo.mw;
   });
-  return results;
+  return fragmentationResults;
 }

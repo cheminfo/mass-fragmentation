@@ -5,8 +5,8 @@ const { MF } = MassTools;
 
 /**
  * The function performs the fragmentation of all single linear bonds
- * @param {OCL.molecule} molecule Molecule to be fragmented
- * @returns {object} Results fragmentation of acyclic bonds
+ * @param {any} molecule - The OCL molecule to be fragmented
+ * @returns Results fragmentation of acyclic bonds
  */
 
 export function fragmentAcyclicBonds(molecule) {

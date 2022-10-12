@@ -1,8 +1,8 @@
 import { getCyclesAndBondsInfo } from './getCyclesAndBondsInfo.js';
 /**
  * This function returns an array of objects with all combination of 2 bonds who can be fragmented in the same cycle
- * @param {OCL.Molecule} molecule
- * @returns {Array} All combination of 2 bonds who can be fragmented in the same cycle
+ * @param {any} molecule - The OCL molecule to be fragmented
+ * @returns All combination of 2 bonds who can be fragmented in the same cycle
  */
 export function getFragmentableCycleBonds(molecule) {
   let cycleBondsInfo = getCyclesAndBondsInfo(molecule);
