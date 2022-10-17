@@ -2,7 +2,7 @@
  * This function calculate the contribution of each fragment on spectra based on the reaction rate of fragmentation
  * @param {object} spectra experimental spectra in form {x:[],y:[]}
  * @param {Number} massPrecursorIon massPrecursorIon
- * @param {Number} precision massPrecursorIon
+ * @param {Number} precision ppm error
  * @returns {Array} Contribution of each fragment on spectra
  */
 
@@ -19,9 +19,9 @@ export function bondContribution(spectra, massPrecursorIon, precision) {
   let near = [];
 
   for (let i = 0; i < fragmentMasses.length; i++) {
+    let massAccuracyOfFragment = (precision * fragmentMasses[i]) / 1e6;
     if (
-      fragmentMasses[i] <= massPrecursorIon + precision &&
-      fragmentMasses[i] >= massPrecursorIon - precision
+      Math.abs(fragmentMasses[i] - massPrecursorIon) <= massAccuracyOfFragment
     ) {
       near.push(fragmentMasses[i]);
     }
