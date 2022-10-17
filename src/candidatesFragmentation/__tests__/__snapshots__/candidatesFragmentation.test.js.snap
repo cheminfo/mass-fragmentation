@@ -49,15 +49,7 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
   {
     "contribution": 0,
     "em": 70.04186481295001,
-    "hose": {
-      "bond1": [
-        "eFHBLGBTEP_hhOeUNET",
-        "gC\`\`@dff@xPhIP^\`c}D\`_JjNET",
-        "gJP\`@dfyhCaB\`eAyBMgzI@~UT\\Jh",
-        "gGP\`@dfvZ\`NDJBTGlHvGOtRA|jhxUP",
-        "daxL@@QdfuijX@xPJBJCvAFXV_hb@~UTNET",
-      ],
-    },
+    "hose": "daxL@@QdfuijX@xPJBJCvAFXV_hb@~UTNET eFHBLGBTEP_hhOeUNET gC\`\`@dff@xPhIP^\`c}D\`_JjNET gGP\`@dfvZ\`NDJBTGlHvGOtRA|jhxUP gJP\`@dfyhCaB\`eAyBMgzI@~UT\\Jh",
     "intensity": 20,
     "mf": "C4H6O",
     "mfs": [
@@ -69,15 +61,7 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
   {
     "contribution": 0.33333333333333337,
     "em": 44.997654271369996,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gJP\`@dfvhCaR\`uAz[OtRQpjlxUP",
-        "gGP\`@dfuj\`NEJCTGlhvGOtRQpjlxUP",
-        "daxL@@QdfufjX@xRJCJCvIFXV_hbPxUVNET",
-        "daxL@@QdfufjX@XRJCJC}DRGBjqpj\`",
-      ],
-    },
+    "hose": "daxL@@QdfufjX@XRJCJC}DRGBjqpj\` daxL@@QdfufjX@xRJCJCvIFXV_hbPxUVNET eF@Hp\\IPUA~b\`xUTxUP gGP\`@dfuj\`NEJCTGlhvGOtRQpjlxUP gJP\`@dfvhCaR\`uAz[OtRQpjlxUP",
     "intensity": 40,
     "mf": "CHO2",
     "mfs": [
@@ -89,15 +73,7 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
   {
     "contribution": 0,
     "em": 70.04186481295,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gJP\`@dfvhCaR\`uAz[OtRQpjlxUP",
-        "gGP\`@dfuj\`NEJCTGlhvGOtRQpjlxUP",
-        "daxL@@QdfufjX@xRJCJCvIFXV_hbPxUVNET",
-        "daxL@@QdfufjX@XRJCJC}DRGBjqpj\`",
-      ],
-    },
+    "hose": "daxL@@QdfufjX@XRJCJC}DRGBjqpj\` daxL@@QdfufjX@xRJCJCvIFXV_hbPxUVNET eF@Hp\\IPUA~b\`xUTxUP gGP\`@dfuj\`NEJCTGlhvGOtRQpjlxUP gJP\`@dfvhCaR\`uAz[OtRQpjlxUP",
     "intensity": 20,
     "mf": "C4H6O",
     "mfs": [
@@ -109,15 +85,7 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
   {
     "contribution": 0,
     "em": 58.005479303600005,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
-        "daxL@@QdfufjX@xSJ@jCrYaY~bIcaUDxUP",
-        "daxL@@QdfufjX@XSJ@jC}DSGBjIpj\`",
-        "daxL@@QdfufjX@XSJ@jC}DSGBjIpj\`",
-      ],
-    },
+    "hose": "daxL@@QdfufjX@XSJ@jC}DSGBjIpj\` daxL@@QdfufjX@XSJ@jC}DSGBjIpj\` daxL@@QdfufjX@xSJ@jCrYaY~bIcaUDxUP eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
     "intensity": 20,
     "mf": "C2H2O2",
     "mfs": [
@@ -129,15 +97,7 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
   {
     "contribution": 0.6666666666666666,
     "em": 56.02621474848999,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
-        "daxL@@QdfufjX@xSJ@jCrYaY~bIcaUDxUP",
-        "daxL@@QdfufjX@XSJ@jC}DSGBjIpj\`",
-        "daxL@@QdfufjX@XSJ@jC}DSGBjIpj\`",
-      ],
-    },
+    "hose": "daxL@@QdfufjX@XSJ@jC}DSGBjIpj\` daxL@@QdfufjX@XSJ@jC}DSGBjIpj\` daxL@@QdfufjX@xSJ@jCrYaY~bIcaUDxUP eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
     "intensity": 60,
     "mf": "C3H4O",
     "mfs": [
@@ -149,15 +109,7 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
   {
     "contribution": 1,
     "em": 41.002739651800006,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gJQ@@dru@\\JTBhOQY~bRNETgBj@",
-        "gGQ@@dsmTApiPJ\`}efxy~bRNETgBj@",
-        "daxL@@[df]fjX@xRJAJCvIf\\V_hbPxURNET",
-        "daxL@@[df]fjX@XRJAJC}DRGBjQpj\`",
-      ],
-    },
+    "hose": "daxL@@[df]fjX@XRJAJC}DRGBjQpj\` daxL@@[df]fjX@xRJAJCvIf\\V_hbPxURNET eF@Hp\\IPUA~b\`xUTxUP gGQ@@dsmTApiPJ\`}efxy~bRNETgBj@ gJQ@@dru@\\JTBhOQY~bRNETgBj@",
     "intensity": 80,
     "mf": "C2HO",
     "mfs": [
@@ -169,15 +121,7 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
   {
     "contribution": 0.6666666666666666,
     "em": 56.026214748490005,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gCa@@dsPGBe@jCtW_hdcaUIpj\`",
-        "gJQ@@dvu@\\JTBhOI]lQIGBjSaU@",
-        "gGQ@@dvmTApiPJ\`}evpy~bRNETgBj@",
-        "daxL@@[dfufjX@xRJAJCvIvXV_hbPxURNET",
-      ],
-    },
+    "hose": "daxL@@[dfufjX@xRJAJCvIvXV_hbPxURNET eF@Hp\\IPUA~b\`xUTxUP gCa@@dsPGBe@jCtW_hdcaUIpj\` gGQ@@dvmTApiPJ\`}evpy~bRNETgBj@ gJQ@@dvu@\\JTBhOI]lQIGBjSaU@",
     "intensity": 60,
     "mf": "C3H4O",
     "mfs": [
@@ -189,15 +133,7 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
   {
     "contribution": 0.16666666666666666,
     "em": 100.01604398763,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gCa@@dsPGBe@jCtW_hdcaUIpj\`",
-        "gJQ@@dvu@\\JTBhOI]lQIGBjSaU@",
-        "gGQ@@dvmTApiPJ\`}evpy~bRNETgBj@",
-        "daxL@@[dfufjX@xRJAJCvIvXV_hbPxURNET",
-      ],
-    },
+    "hose": "daxL@@[dfufjX@xRJAJCvIvXV_hbPxURNET eF@Hp\\IPUA~b\`xUTxUP gCa@@dsPGBe@jCtW_hdcaUIpj\` gGQ@@dvmTApiPJ\`}evpy~bRNETgBj@ gJQ@@dvu@\\JTBhOI]lQIGBjSaU@",
     "intensity": 30,
     "mf": "C4H4O3",
     "mfs": [
@@ -259,15 +195,7 @@ exports[`fragment CC(N)C1CCC(CC#N)C(CC=O)C1 1`] = `
   {
     "contribution": 0,
     "em": 164.10753907522002,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gGX@@dsUUIPNEJATGeHT_hdcaUIpj\`",
-        "daz@@@RYmjjhb\`NDb\`R\`|pYDIF\\VUgzHdNETcaU@",
-        "deV@@@RYm[ajjjl\`aJFHCaHhDhOBFQBQgEeXt]gzHdNETcaU@",
-        "dcN@@@RYm[^FjjjhhHRabAHCaHhDhOJFQBQgEeXt]\`qN_hbPxURNET",
-      ],
-    },
+    "hose": "daz@@@RYmjjhb\`NDb\`R\`|pYDIF\\VUgzHdNETcaU@ dcN@@@RYm[^FjjjhhHRabAHCaHhDhOJFQBQgEeXt]\`qN_hbPxURNET deV@@@RYm[ajjjl\`aJFHCaHhDhOBFQBQgEeXt]gzHdNETcaU@ eF@Hp\\IPUA~b\`xUTxUP gGX@@dsUUIPNEJATGeHT_hdcaUIpj\`",
     "intensity": 20,
     "mf": "C10H14NO",
     "mfs": [
@@ -279,15 +207,7 @@ exports[`fragment CC(N)C1CCC(CC#N)C(CC=O)C1 1`] = `
   {
     "contribution": 0.5000000000000001,
     "em": 44.05002419781,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gGX@@dsUUIPNEJATGeHT_hdcaUIpj\`",
-        "daz@@@RYmjjhb\`NDb\`R\`|pYDIF\\VUgzHdNETcaU@",
-        "deV@@@RYm[ajjjl\`aJFHCaHhDhOBFQBQgEeXt]gzHdNETcaU@",
-        "dcN@@@RYm[^FjjjhhHRabAHCaHhDhOJFQBQgEeXt]\`qN_hbPxURNET",
-      ],
-    },
+    "hose": "daz@@@RYmjjhb\`NDb\`R\`|pYDIF\\VUgzHdNETcaU@ dcN@@@RYm[^FjjjhhHRabAHCaHhDhOJFQBQgEeXt]\`qN_hbPxURNET deV@@@RYm[ajjjl\`aJFHCaHhDhOBFQBQgEeXt]gzHdNETcaU@ eF@Hp\\IPUA~b\`xUTxUP gGX@@dsUUIPNEJATGeHT_hdcaUIpj\`",
     "intensity": 50,
     "mf": "C2H6N",
     "mfs": [
@@ -299,15 +219,7 @@ exports[`fragment CC(N)C1CCC(CC#N)C(CC=O)C1 1`] = `
   {
     "contribution": 0.6666666666666666,
     "em": 192.13883920414003,
-    "hose": {
-      "bond1": [
-        "eF\`BLGBTEP_hhKeUNET",
-        "gCh@@duPGBEAJCrFROtRA\\jhxUP",
-        "gGX@@dsUUIPNDJBTGbLdJMwzI@nUT\\Jh",
-        "daz@@@RYmjjhb\`NDB\`b\`|pYDIF\\VUgzH\`KeUCaU@",
-        "deV@@@RYm[ajjjlbaBFhCa@hHhOBFQBQgEeXt]gzH\`KeUCaU@",
-      ],
-    },
+    "hose": "daz@@@RYmjjhb\`NDB\`b\`|pYDIF\\VUgzH\`KeUCaU@ deV@@@RYm[ajjjlbaBFhCa@hHhOBFQBQgEeXt]gzH\`KeUCaU@ eF\`BLGBTEP_hhKeUNET gCh@@duPGBEAJCrFROtRA\\jhxUP gGX@@dsUUIPNDJBTGbLdJMwzI@nUT\\Jh",
     "intensity": 60,
     "mf": "C12H18NO",
     "mfs": [
@@ -319,15 +231,7 @@ exports[`fragment CC(N)C1CCC(CC#N)C(CC=O)C1 1`] = `
   {
     "contribution": 0,
     "em": 193.13408817634004,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gCh@@duTe@xThEP^Ta]~bRNETgBj@",
-        "gGX@@dwUUIPNEJATGbLdKmGzIHxUR\\Jh",
-        "daz@@@R[ejjhb\`NDb\`R\`|pYDIvPVUgzHdNETcaU@",
-        "deV@@@R[e[ajjjlbcJFHCaHhDhOBFQB]dEeXt]gzHdNETcaU@",
-      ],
-    },
+    "hose": "daz@@@R[ejjhb\`NDb\`R\`|pYDIvPVUgzHdNETcaU@ deV@@@R[e[ajjjlbcJFHCaHhDhOBFQB]dEeXt]gzHdNETcaU@ eF@Hp\\IPUA~b\`xUTxUP gCh@@duTe@xThEP^Ta]~bRNETgBj@ gGX@@dwUUIPNEJATGbLdKmGzIHxUR\\Jh",
     "intensity": 20,
     "mf": "C11H17N2O",
     "mfs": [
@@ -339,22 +243,7 @@ exports[`fragment CC(N)C1CCC(CC#N)C(CC=O)C1 1`] = `
   {
     "contribution": 0.33333333333333337,
     "em": 142.12318913968002,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gGP@DjZj\`NDJBTGdHd_hdCaUQpj\`",
-        "deT@@DjYUXZjji@TPNDB\`b\`|pQDIfXVUgzH\`NEUCaU@",
-        "dknH@CAIVYUqejjjnsBBhD\`NDr\`J\`}LPfYAQVMgXLSgzHfNETSaU@",
-        "do}H@ClDeYeWXYZjjkjKBBhDcR@xSJ@jCrqBYdEEXv]\`qN[GzHfNETSaU@",
-      ],
-      "bond2": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
-        "daD@@DiYbZjjdQY@xPJBJCqAdXdYGzH\`NEUCaU@",
-        "dcN@@@RYmU~FjjjhhHPcbAhCaBhFhOCDIAYVMgPLKgzHaNETsaU@",
-        "dg]@@@MIVV]{izjjjhlhjbRMhCaBhFhOZfYAYTMgXNSFp^WwzHaNETsaU@",
-      ],
-    },
+    "hose": "daD@@DiYbZjjdQY@xPJBJCqAdXdYGzH\`NEUCaU@ dcN@@@RYmU~FjjjhhHPcbAhCaBhFhOCDIAYVMgPLKgzHaNETsaU@ deT@@DjYUXZjji@TPNDB\`b\`|pQDIfXVUgzH\`NEUCaU@ dg]@@@MIVV]{izjjjhlhjbRMhCaBhFhOZfYAYTMgXNSFp^WwzHaNETsaU@ dknH@CAIVYUqejjjnsBBhD\`NDr\`J\`}LPfYAQVMgXLSgzHfNETSaU@ do}H@ClDeYeWXYZjjkjKBBhDcR@xSJ@jCrqBYdEEXv]\`qN[GzHfNETSaU@ eF@Hp\\IPUA~b\`xUTxUP eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@xPhIP^PrY~bPNEUGBj@ gGP@DjZj\`NDJBTGdHd_hdCaUQpj\`",
     "intensity": 40,
     "mf": "C8H16NO",
     "mfs": [
@@ -366,22 +255,7 @@ exports[`fragment CC(N)C1CCC(CC#N)C(CC=O)C1 1`] = `
   {
     "contribution": 1,
     "em": 70.04186481295,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gGP@DjZj\`NDJBTGdHd_hdCaUQpj\`",
-        "deT@@DjYUXZjji@TPNDB\`b\`|pQDIfXVUgzH\`NEUCaU@",
-        "dknH@CAIVYUqejjjnsBBhD\`NDr\`J\`}LPfYAQVMgXLSgzHfNETSaU@",
-        "do}H@ClDeYeWXYZjjkjKBBhDcR@xSJ@jCrqBYdEEXv]\`qN[GzHfNETSaU@",
-      ],
-      "bond2": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
-        "deV@@@RYm[ajjjlbaBFhCaDhBhOUDIAYVMGzHbNETSaU@",
-        "dcN@@@RYm[^FjjjhhhPajAhCaDhBhOJFQBQgEeXt]\`qN_hbHxUQNET",
-        "dg^H@CAIVV[[eZjjjhlhjajIHCaBhFhOGDIfPVUCQvCdpnGe}~bHSaULxUP",
-      ],
-    },
+    "hose": "dcN@@@RYm[^FjjjhhhPajAhCaDhBhOJFQBQgEeXt]\`qN_hbHxUQNET deT@@DjYUXZjji@TPNDB\`b\`|pQDIfXVUgzH\`NEUCaU@ deV@@@RYm[ajjjlbaBFhCaDhBhOUDIAYVMGzHbNETSaU@ dg^H@CAIVV[[eZjjjhlhjajIHCaBhFhOGDIfPVUCQvCdpnGe}~bHSaULxUP dknH@CAIVYUqejjjnsBBhD\`NDr\`J\`}LPfYAQVMgXLSgzHfNETSaU@ do}H@ClDeYeWXYZjjkjKBBhDcR@xSJ@jCrqBYdEEXv]\`qN[GzHfNETSaU@ eF@Hp\\IPUA~b\`xUTxUP eF@Hp\\IPUA~b\`xUTxUP gGP@DjZj\`NDJBTGdHd_hdCaUQpj\` gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
     "intensity": 80,
     "mf": "C4H6O",
     "mfs": [
@@ -393,22 +267,7 @@ exports[`fragment CC(N)C1CCC(CC#N)C(CC=O)C1 1`] = `
   {
     "contribution": 0,
     "em": 164.10753907522002,
-    "hose": {
-      "bond1": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
-        "did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH\`NEUCaU@",
-        "dcN@@@RUeg^gjjjkLhjbR@xSJ@jCpifPVUCYvCdq~bIcaUDxUP",
-        "do}H@ClDeYeWXYZjjkjKJBHFcZ@xPjAjCrqBYdEEXv]\`qN[GzHaNETsaU@",
-      ],
-      "bond2": [
-        "eF@Hp\\IPUA~b\`xUTxUP",
-        "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
-        "dif@@@RYm^FjjiHHP\`NDR\`J\`}TPdEeXv_hbHxUQNET",
-        "dmv@@@RYmUxZjjjJBDHx\`Z@xQJ@jCtadPdYqYVMgPL_hbHxUQNET",
-        "dkn@@@RYmUWajjjjb\`aBNHF\`NDR\`J\`}hYDIF\\VUcYtCDxn_hbHxUQNET",
-      ],
-    },
+    "hose": "dcN@@@RUeg^gjjjkLhjbR@xSJ@jCpifPVUCYvCdq~bIcaUDxUP did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH\`NEUCaU@ dif@@@RYm^FjjiHHP\`NDR\`J\`}TPdEeXv_hbHxUQNET dkn@@@RYmUWajjjjb\`aBNHF\`NDR\`J\`}hYDIF\\VUcYtCDxn_hbHxUQNET dmv@@@RYmUxZjjjJBDHx\`Z@xQJ@jCtadPdYqYVMgPL_hbHxUQNET do}H@ClDeYeWXYZjjkjKJBHFcZ@xPjAjCrqBYdEEXv]\`qN[GzHaNETsaU@ eF@Hp\\IPUA~b\`xUTxUP eF@Hp\\IPUA~b\`xUTxUP gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
     "intensity": 20,
     "mf": "C10H14NO",
     "mfs": [
