@@ -16,24 +16,24 @@ export function bondContribution(spectra, massPrecursorIon, precision) {
   }
 
   let closest = [];
+  let near = [];
+
   for (let i = 0; i < fragmentMasses.length; i++) {
-    let near = [];
     if (
       fragmentMasses[i] <= massPrecursorIon + precision &&
       fragmentMasses[i] >= massPrecursorIon - precision
     ) {
       near.push(fragmentMasses[i]);
     }
-    if (near.length > 0) {
-      closest.push(
-        near.sort(
-          (a, b) =>
-            Math.abs(massPrecursorIon - a) - Math.abs(massPrecursorIon - b),
-        )[0],
-      );
-    }
   }
-
+  if (near.length > 0) {
+    closest.push(
+      near.sort(
+        (a, b) =>
+          Math.abs(massPrecursorIon - a) - Math.abs(massPrecursorIon - b),
+      )[0],
+    );
+  }
   let bondContribution = [];
   if (closest[0] > 0) {
     for (let i = 0; i < spectra.x.length; i++) {
