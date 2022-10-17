@@ -71,7 +71,10 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
             ppm: result.ms.ppm,
             mfs: [],
             hose: fragmentation[i].hose,
+            ignored: 0,
           };
+        } else {
+          groups[em].ignored++;
         }
         groups[em].mfs.push(result.mf);
       }
@@ -101,6 +104,7 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
           ppm: result.ms.ppm,
           mfs: [],
           hose: fragmentation[i].hose,
+          ignored: 0,
         };
 
         group[em].mfs.push(result);
