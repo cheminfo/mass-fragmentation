@@ -63,20 +63,19 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
       let groups = {};
       for (const result of results) {
         const em = Math.round(result.ms.em * 1e6);
+        // check if em is a key of groups
+
         if (!groups[em]) {
           groups[em] = {
             em: result.em,
             ms: result.ms.em,
             mf: result.mf,
             ppm: result.ms.ppm,
-            mfs: [],
+            mfs: [result.mf],
             hose: fragmentation[i].hose,
             ignored: 0,
           };
-        } else {
-          groups[em].ignored++;
         }
-        groups[em].mfs.push(result.mf);
       }
 
       groups = Object.values(groups);
@@ -107,7 +106,10 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
           ignored: 0,
         };
 
-        group[em].mfs.push(result);
+        // add mf to mfs if not already present
+        if (!group[em].mfs.includes(result.mf)) {
+          group[em].mfs.push(result.mf);
+        }
       }
 
       group = Object.values(group);
@@ -119,6 +121,24 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
       }
     }
   }
+  // if em duplicate, keep one and add mf to mfs
+  let uniqueFragmentsResult = [];
+  let emArray = [];
+  for (let i = 0; i < fragmentsResult.length; i++) {
+    const em = Math.round(fragmentsResult[i].em * 1e6);
+
+    if (!emArray.includes(em)) {
+      uniqueFragmentsResult.push(fragmentsResult[i]);
+      emArray.push(em);
+    } else {
+      let index = emArray.indexOf(em);
+      if (!uniqueFragmentsResult[index].mfs.includes(fragmentsResult[i].mf)) {
+        uniqueFragmentsResult[index].mfs.push(fragmentsResult[i].mfs[0]);
+      }
+      uniqueFragmentsResult[index].ignored++;
+    }
+  }
+  fragmentsResult = uniqueFragmentsResult;
 
   let x = [];
   let y = [];
@@ -136,9 +156,6 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
       ) {
         fragmentsResult[i].intensity = filteredSpectrum[m].y;
       }
-      if (fragmentsResult[i].hose === undefined) {
-        fragmentsResult[i].intensity = filteredSpectrum[m].y;
-      }
     }
   }
   // Bond Contribution of each matched fragment
@@ -148,21 +165,16 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
     massPrecursorIon,
     precision,
   );
-  //console.log(resultContribution);
 
   if (resultContribution.length > 0) {
     for (let i = 0; i < fragmentsResult.length; i++) {
-      let massAccuracyOfFragment =
-        (options.precision * fragmentsResult[i].ms) / 1e6;
+      let massAccuracyOfFragment = (precision * fragmentsResult[i].ms) / 1e6;
       for (let j = 0; j < resultContribution.length; j++) {
         if (
           Math.abs(resultContribution[j].mass - fragmentsResult[i].ms) <=
           massAccuracyOfFragment
         ) {
           fragmentsResult[i].contribution = resultContribution[j].contribution;
-        }
-        if (fragmentsResult[i].hose === undefined) {
-          fragmentsResult[i].contribution = 0;
         }
       }
     }

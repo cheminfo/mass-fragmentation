@@ -3,46 +3,13 @@
 exports[`fragment CC(=O)CCC(=O)O 1`] = `
 [
   {
-    "contribution": 0,
     "em": 116.04734411655001,
     "hose": undefined,
     "ignored": 0,
     "intensity": 100,
     "mf": "C5H8O3",
     "mfs": [
-      {
-        "atoms": {
-          "C": 5,
-          "H": 8,
-          "O": 3,
-        },
-        "charge": 0,
-        "em": 116.04734411655001,
-        "ionization": {
-          "atoms": {
-            "H": 1,
-          },
-          "charge": 1,
-          "em": 1.00782503223,
-          "mf": "H+",
-        },
-        "mf": "C5H8O3",
-        "ms": {
-          "charge": 1,
-          "delta": -5.688709450168972e-7,
-          "em": 117.05462056887094,
-          "ionization": "H+",
-          "ppm": -0.004859876032678206,
-          "target": {
-            "mass": 117.05462,
-          },
-        },
-        "mw": 116.11542028907729,
-        "parts": [
-          "C5H8O3",
-        ],
-        "unsaturation": 2,
-      },
+      "C5H8O3",
     ],
     "ms": 117.05462056887094,
     "ppm": -0.004859876032678206,
@@ -51,7 +18,7 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
     "contribution": 0,
     "em": 70.04186481295001,
     "hose": "daxL@@QdfuijX@xPJBJCvAFXV_hb@~UTNET eFHBLGBTEP_hhOeUNET gC\`\`@dff@xPhIP^\`c}D\`_JjNET gGP\`@dfvZ\`NDJBTGlHvGOtRA|jhxUP gJP\`@dfyhCaB\`eAyBMgzI@~UT\\Jh",
-    "ignored": 0,
+    "ignored": 1,
     "intensity": 20,
     "mf": "C4H6O",
     "mfs": [
@@ -75,19 +42,6 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
   },
   {
     "contribution": 0,
-    "em": 70.04186481295,
-    "hose": "daxL@@QdfufjX@XRJCJC}DRGBjqpj\` daxL@@QdfufjX@xRJCJCvIFXV_hbPxUVNET eF@Hp\\IPUA~b\`xUTxUP gGP\`@dfuj\`NEJCTGlhvGOtRQpjlxUP gJP\`@dfvhCaR\`uAz[OtRQpjlxUP",
-    "ignored": 0,
-    "intensity": 20,
-    "mf": "C4H6O",
-    "mfs": [
-      "C4H6O",
-    ],
-    "ms": 71.04914126527093,
-    "ppm": 7.5825649609296555,
-  },
-  {
-    "contribution": 0,
     "em": 58.005479303600005,
     "hose": "daxL@@QdfufjX@XSJ@jC}DSGBjIpj\` daxL@@QdfufjX@XSJ@jC}DSGBjIpj\` daxL@@QdfufjX@xSJ@jCrYaY~bIcaUDxUP eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
     "ignored": 0,
@@ -103,7 +57,7 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
     "contribution": 0.6666666666666666,
     "em": 56.02621474848999,
     "hose": "daxL@@QdfufjX@XSJ@jC}DSGBjIpj\` daxL@@QdfufjX@XSJ@jC}DSGBjIpj\` daxL@@QdfufjX@xSJ@jCrYaY~bIcaUDxUP eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
-    "ignored": 0,
+    "ignored": 1,
     "intensity": 60,
     "mf": "C3H4O",
     "mfs": [
@@ -126,19 +80,6 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
     "ppm": 12.946814343369255,
   },
   {
-    "contribution": 0.6666666666666666,
-    "em": 56.026214748490005,
-    "hose": "daxL@@[dfufjX@xRJAJCvIvXV_hbPxURNET eF@Hp\\IPUA~b\`xUTxUP gCa@@dsPGBe@jCtW_hdcaUIpj\` gGQ@@dvmTApiPJ\`}evpy~bRNETgBj@ gJQ@@dvu@\\JTBhOI]lQIGBjSaU@",
-    "ignored": 0,
-    "intensity": 60,
-    "mf": "C3H4O",
-    "mfs": [
-      "C3H4O",
-    ],
-    "ms": 57.033491200810936,
-    "ppm": 9.622402162433417,
-  },
-  {
     "contribution": 0.16666666666666666,
     "em": 100.01604398763,
     "hose": "daxL@@[dfufjX@xRJAJCvIvXV_hbPxURNET eF@Hp\\IPUA~b\`xUTxUP gCa@@dsPGBe@jCtW_hdcaUIpj\` gGQ@@dvmTApiPJ\`}evpy~bRNETgBj@ gJQ@@dvu@\\JTBhOI]lQIGBjSaU@",
@@ -157,47 +98,13 @@ exports[`fragment CC(=O)CCC(=O)O 1`] = `
 exports[`fragment CC(N)C1CCC(CC#N)C(CC=O)C1 1`] = `
 [
   {
-    "contribution": 0,
     "em": 208.15756327303,
     "hose": undefined,
     "ignored": 0,
     "intensity": 100,
     "mf": "C12H20N2O",
     "mfs": [
-      {
-        "atoms": {
-          "C": 12,
-          "H": 20,
-          "N": 2,
-          "O": 1,
-        },
-        "charge": 0,
-        "em": 208.15756327303,
-        "ionization": {
-          "atoms": {
-            "H": 1,
-          },
-          "charge": 1,
-          "em": 1.00782503223,
-          "mf": "H+",
-        },
-        "mf": "C12H20N2O",
-        "ms": {
-          "charge": 1,
-          "delta": 0.0005502746490719801,
-          "em": 209.16483972535093,
-          "ionization": "H+",
-          "ppm": 2.6308181135726816,
-          "target": {
-            "mass": 209.16539,
-          },
-        },
-        "mw": 208.30045718914837,
-        "parts": [
-          "C12H20N2O",
-        ],
-        "unsaturation": 4,
-      },
+      "C12H20N2O",
     ],
     "ms": 209.16483972535093,
     "ppm": 2.6308181135726816,
@@ -206,7 +113,7 @@ exports[`fragment CC(N)C1CCC(CC#N)C(CC=O)C1 1`] = `
     "contribution": 0,
     "em": 164.10753907522002,
     "hose": "daz@@@RYmjjhb\`NDb\`R\`|pYDIF\\VUgzHdNETcaU@ dcN@@@RYm[^FjjjhhHRabAHCaHhDhOJFQBQgEeXt]\`qN_hbPxURNET deV@@@RYm[ajjjl\`aJFHCaHhDhOBFQBQgEeXt]gzHdNETcaU@ eF@Hp\\IPUA~b\`xUTxUP gGX@@dsUUIPNEJATGeHT_hdcaUIpj\`",
-    "ignored": 0,
+    "ignored": 1,
     "intensity": 20,
     "mf": "C10H14NO",
     "mfs": [
@@ -279,19 +186,6 @@ exports[`fragment CC(N)C1CCC(CC#N)C(CC=O)C1 1`] = `
     ],
     "ms": 71.04914126527093,
     "ppm": 7.723312615652714,
-  },
-  {
-    "contribution": 0,
-    "em": 164.10753907522002,
-    "hose": "dcN@@@RUeg^gjjjkLhjbR@xSJ@jCpifPVUCYvCdq~bIcaUDxUP did@@DjVVajjjPJDhCa@hHhOTDQbQfEgzH\`NEUCaU@ dif@@@RYm^FjjiHHP\`NDR\`J\`}TPdEeXv_hbHxUQNET dkn@@@RYmUWajjjjb\`aBNHF\`NDR\`J\`}hYDIF\\VUcYtCDxn_hbHxUQNET dmv@@@RYmUxZjjjJBDHx\`Z@xQJ@jCtadPdYqYVMgPL_hbHxUQNET do}H@ClDeYeWXYZjjkjKJBHFcZ@xPjAjCrqBYdEEXv]\`qN[GzHaNETsaU@ eF@Hp\\IPUA~b\`xUTxUP eF@Hp\\IPUA~b\`xUTxUP gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
-    "ignored": 0,
-    "intensity": 20,
-    "mf": "C10H14NO",
-    "mfs": [
-      "C10H14NO",
-    ],
-    "ms": 165.11481552754094,
-    "ppm": 3.2975384875625484,
   },
 ]
 `;
