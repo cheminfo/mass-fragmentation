@@ -1,4 +1,4 @@
-import OCL from 'openchemlib/dist/openchemlib-full.pretty.js';
+import OCL from 'openchemlib';
 
 import { getCycleAndFragmentationInfo } from '../getCycleAndFragmentationInfo';
 
