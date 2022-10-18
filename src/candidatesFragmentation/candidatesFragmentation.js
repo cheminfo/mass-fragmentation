@@ -53,6 +53,8 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
       precision,
     },
   };
+  // console.log(fragmentation);
+
   let fragmentsResult = [];
   for (let i = 0; i < fragmentation.length; i++) {
     if (fragmentation[i].hose !== undefined) {
@@ -60,32 +62,54 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
       let neutralLosses = neutralLoss(fragmentation[i].idCode);
       mfsArray[i] = [fragmentation[i].mf, neutralLosses];
       let results = await generateMFs(mfsArray[i], optionsMFs);
+      if (results) {
+        // console.log(results[0]);
+      }
       let groups = {};
       for (const result of results) {
         const em = Math.round(result.ms.em * 1e6);
         // check if em is a key of groups
 
         if (!groups[em]) {
-          groups[em] = {
+          groups[em] = [
+            {
+              em: result.em,
+              ms: result.ms.em,
+              mf: result.mf,
+              ppm: result.ms.ppm,
+              neutralLoss: result.parts[1],
+              hose: fragmentation[i].hoseCodes,
+              idCode: fragmentation[i].idCode,
+            },
+          ];
+        } else {
+          groups[em].push({
             em: result.em,
             ms: result.ms.em,
             mf: result.mf,
             ppm: result.ms.ppm,
-            mfs: [result.mf],
-            hose: fragmentation[i].hose,
-            ignored: 0,
-          };
+            neutralLoss: result.parts[1],
+            hose: fragmentation[i].hoseCodes,
+            idCode: fragmentation[i].idCode,
+          });
         }
       }
 
       groups = Object.values(groups);
-
       if (groups.length > 0) {
-        for (let j = 0; j < groups.length; j++) {
-          fragmentsResult.push(groups[j]);
-        }
+        let fragmentIdCode = fragmentation[i].idCode;
+        let fragmentHoseId = fragmentation[i].hose;
+        fragmentsResult.push({
+          idCode: fragmentIdCode,
+          idHose: fragmentHoseId,
+          unique: true,
+          matches: groups,
+          intensity: NaN,
+          contribution: NaN,
+        });
       }
     }
+
     // Account for Molecular ion to be matched
     if (fragmentation[i].fragmentType === 'Molecular Ion') {
       let resultMolecularIon = await generateMFs(
@@ -96,28 +120,32 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
       for (const result of resultMolecularIon) {
         const em = Math.round(result.ms.em * 1e6);
 
-        group[em] = {
-          em: result.em,
-          ms: result.ms.em,
-          mf: result.mf,
-          ppm: result.ms.ppm,
-          mfs: [],
-          hose: fragmentation[i].hose,
-          ignored: 0,
-        };
-
-        // add mf to mfs if not already present
-        if (!group[em].mfs.includes(result.mf)) {
-          group[em].mfs.push(result.mf);
-        }
+        group[em] = [
+          {
+            em: result.em,
+            ms: result.ms.em,
+            mf: result.mf,
+            ppm: result.ms.ppm,
+            neutralLoss: 'none',
+            hose: 'none',
+            idCode: fragmentation[i].idCode,
+          },
+        ];
       }
-
       group = Object.values(group);
 
       if (group.length > 0) {
-        for (let j = 0; j < group.length; j++) {
-          fragmentsResult.push(group[j]);
-        }
+        let fragmentIdCode = fragmentation[i].idCode;
+        let fragmentHoseId = 'none';
+
+        fragmentsResult.push({
+          idCode: fragmentIdCode,
+          idHose: fragmentHoseId,
+          unique: true,
+          matches: group,
+          intensity: NaN,
+          contribution: NaN,
+        });
       }
     }
   }
@@ -125,21 +153,21 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
   let uniqueFragmentsResult = [];
   let emArray = [];
   for (let i = 0; i < fragmentsResult.length; i++) {
-    const em = Math.round(fragmentsResult[i].em * 1e6);
-
+    const em = Math.round(fragmentsResult[i].matches[0][0].em * 1e6);
     if (!emArray.includes(em)) {
       uniqueFragmentsResult.push(fragmentsResult[i]);
+
       emArray.push(em);
     } else {
       let index = emArray.indexOf(em);
-      if (!uniqueFragmentsResult[index].mfs.includes(fragmentsResult[i].mf)) {
-        uniqueFragmentsResult[index].mfs.push(fragmentsResult[i].mfs[0]);
-      }
-      uniqueFragmentsResult[index].ignored++;
+      // add unique false to the fragment
+      uniqueFragmentsResult[index].unique = false;
+      // push multiple matches to the fragment
+      fragmentsResult[i].matches[0].forEach((match) => {
+        uniqueFragmentsResult[index].matches[0].push(match);
+      });
     }
   }
-  fragmentsResult = uniqueFragmentsResult;
-
   let x = [];
   let y = [];
   for (let i = 0; i < filteredSpectrum.length; i++) {
@@ -148,13 +176,17 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
   }
   let spectrumForContribution = { x, y };
   // get intensity of each matched fragment
-  for (let i = 0; i < fragmentsResult.length; i++) {
-    let massAccuracy = (precision * fragmentsResult[i].ms) / 1e6;
+  for (let i = 0; i < uniqueFragmentsResult.length; i++) {
+    let massAccuracy =
+      (precision * uniqueFragmentsResult[i].matches[0][0].ms) / 1e6;
     for (let m = 0; m < filteredSpectrum.length; m++) {
       if (
-        Math.abs(filteredSpectrum[m].x - fragmentsResult[i].ms) <= massAccuracy
+        Math.abs(
+          filteredSpectrum[m].x - uniqueFragmentsResult[i].matches[0][0].ms,
+        ) <= massAccuracy
       ) {
-        fragmentsResult[i].intensity = filteredSpectrum[m].y;
+        // add property intensity to each matched fragment
+        uniqueFragmentsResult[i].intensity = filteredSpectrum[m].y;
       }
     }
   }
@@ -167,17 +199,22 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
   );
 
   if (resultContribution.length > 0) {
-    for (let i = 0; i < fragmentsResult.length; i++) {
-      let massAccuracyOfFragment = (precision * fragmentsResult[i].ms) / 1e6;
+    for (let i = 0; i < uniqueFragmentsResult.length; i++) {
+      let massAccuracyOfFragment =
+        (precision * uniqueFragmentsResult[i].matches[0][0].ms) / 1e6;
       for (let j = 0; j < resultContribution.length; j++) {
         if (
-          Math.abs(resultContribution[j].mass - fragmentsResult[i].ms) <=
-          massAccuracyOfFragment
+          Math.abs(
+            resultContribution[j].mass -
+              uniqueFragmentsResult[i].matches[0][0].ms,
+          ) <= massAccuracyOfFragment
         ) {
-          fragmentsResult[i].contribution = resultContribution[j].contribution;
+          uniqueFragmentsResult[i].contribution =
+            resultContribution[j].contribution;
         }
       }
     }
   }
-  return fragmentsResult;
+
+  return uniqueFragmentsResult;
 }

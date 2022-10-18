@@ -70,6 +70,8 @@ export function fragmentCyclicBonds(molecule) {
       hose.bond2 = getHoseCodesForAtoms(molecule, [bonds.atom3, bonds.atom4]);
       let hoseBonds = [];
       hoseBonds.push(...hose.bond1, ...hose.bond2);
+      let hoseCodes = hoseBonds.slice();
+      result.hoseCodes = hoseCodes;
       result.hose = hoseBonds.sort().join(' ');
       result.atomMap = [];
       let includeAtom = fragmentMap.map((id) => {

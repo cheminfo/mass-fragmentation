@@ -24,6 +24,13 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "eF@Hp\\IPUA~b\`xUTxUP eM@HzCaJBhOIewzJCaUSaU@ gC\`@Dkj@XPhIP_hdCaUQpj\` gC\`@Dkj@XPhIP_hdCaUQpj\` gC\`@Dkj@xPhIP^pr\\lQHGBjcaU@",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eM@HzCaJBhOIewzJCaUSaU@",
+      "gC\`@Dkj@xPhIP^pr\\lQHGBjcaU@",
+      "gC\`@Dkj@XPhIP_hdCaUQpj\`",
+      "gC\`@Dkj@XPhIP_hdCaUQpj\`",
+    ],
     "idCode": "eFBAYc@@",
     "mf": "CH3",
     "mfInfo": {
@@ -45,6 +52,13 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "eF@Hp\\IPUA~b\`xUTxUP eM@HzCaJBhOIewzJCaUSaU@ gC\`@Dkj@XPhIP_hdCaUQpj\` gC\`@Dkj@XPhIP_hdCaUQpj\` gC\`@Dkj@xPhIP^pr\\lQHGBjcaU@",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eM@HzCaJBhOIewzJCaUSaU@",
+      "gC\`@Dkj@xPhIP^pr\\lQHGBjcaU@",
+      "gC\`@Dkj@XPhIP_hdCaUQpj\`",
+      "gC\`@Dkj@XPhIP_hdCaUQpj\`",
+    ],
     "idCode": "gC\`H@liKT@@",
     "mf": "C3H7",
     "mfInfo": {
@@ -66,6 +80,13 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@XPhIP_hdCaUQpj\` gC\`@Dij@XPhIP_hdCaUQpj\` gC\`@Dij@XPhIP_hdCaUQpj\` gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+      "gC\`@Dij@XPhIP_hdCaUQpj\`",
+      "gC\`@Dij@XPhIP_hdCaUQpj\`",
+      "gC\`@Dij@XPhIP_hdCaUQpj\`",
+    ],
     "idCode": "eMBAYRZ@",
     "mf": "C2H5",
     "mfInfo": {
@@ -87,6 +108,13 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@XPhIP_hdCaUQpj\` gC\`@Dij@XPhIP_hdCaUQpj\` gC\`@Dij@XPhIP_hdCaUQpj\` gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+      "gC\`@Dij@XPhIP_hdCaUQpj\`",
+      "gC\`@Dij@XPhIP_hdCaUQpj\`",
+      "gC\`@Dij@XPhIP_hdCaUQpj\`",
+    ],
     "idCode": "eMBAYRZ@",
     "mf": "C2H5",
     "mfInfo": {
@@ -108,6 +136,13 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "eF@Hp\\IPUA~b\`xUTxUP eM@HzCaJBhOIewzJCaUSaU@ gC\`@Dkj@XPhIP_hdCaUQpj\` gC\`@Dkj@XPhIP_hdCaUQpj\` gC\`@Dkj@xPhIP^pr\\lQHGBjcaU@",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eM@HzCaJBhOIewzJCaUSaU@",
+      "gC\`@Dkj@xPhIP^pr\\lQHGBjcaU@",
+      "gC\`@Dkj@XPhIP_hdCaUQpj\`",
+      "gC\`@Dkj@XPhIP_hdCaUQpj\`",
+    ],
     "idCode": "gC\`H@liKT@@",
     "mf": "C3H7",
     "mfInfo": {
@@ -129,6 +164,13 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "eF@Hp\\IPUA~b\`xUTxUP eM@HzCaJBhOIewzJCaUSaU@ gC\`@Dkj@XPhIP_hdCaUQpj\` gC\`@Dkj@XPhIP_hdCaUQpj\` gC\`@Dkj@xPhIP^pr\\lQHGBjcaU@",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "eM@HzCaJBhOIewzJCaUSaU@",
+      "gC\`@Dkj@xPhIP^pr\\lQHGBjcaU@",
+      "gC\`@Dkj@XPhIP_hdCaUQpj\`",
+      "gC\`@Dkj@XPhIP_hdCaUQpj\`",
+    ],
     "idCode": "eFBAYc@@",
     "mf": "CH3",
     "mfInfo": {
@@ -171,6 +213,13 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "dax@@DjUXHH@xPJBJCqQbQdEgzH\`NEUCaU@ dcL@@DjUWya\`\`bh@NDB\`b\`}LXdYAYTMGXLSGzH\`NEUCaU@ deT@@DjUWXXHH\`@xPJBJCwQbQdEePt]gzH\`NEUCaU@ eF@Hp\\IPUA~b\`xUTxUP gJP@DjXHCaB\`eAzSOtRApjhxUP",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "gJP@DjXHCaB\`eAzSOtRApjhxUP",
+      "dax@@DjUXHH@xPJBJCqQbQdEgzH\`NEUCaU@",
+      "deT@@DjUWXXHH\`@xPJBJCwQbQdEePt]gzH\`NEUCaU@",
+      "dcL@@DjUWya\`\`bh@NDB\`b\`}LXdYAYTMGXLSGzH\`NEUCaU@",
+    ],
     "idCode": "gFp@DiTt@@@",
     "mf": "C6H6",
     "mfInfo": {
@@ -192,6 +241,13 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "dax@@DjUXHH@xPJBJCqQbQdEgzH\`NEUCaU@ dcL@@DjUWya\`\`bh@NDB\`b\`}LXdYAYTMGXLSGzH\`NEUCaU@ deT@@DjUWXXHH\`@xPJBJCwQbQdEePt]gzH\`NEUCaU@ eF@Hp\\IPUA~b\`xUTxUP gJP@DjXHCaB\`eAzSOtRApjhxUP",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "gJP@DjXHCaB\`eAzSOtRApjhxUP",
+      "dax@@DjUXHH@xPJBJCqQbQdEgzH\`NEUCaU@",
+      "deT@@DjUWXXHH\`@xPJBJCwQbQdEePt]gzH\`NEUCaU@",
+      "dcL@@DjUWya\`\`bh@NDB\`b\`}LXdYAYTMGXLSGzH\`NEUCaU@",
+    ],
     "idCode": "dg|@\`@VTeVUmQd{jjjjj@@",
     "mf": "C13H23",
     "mfInfo": {
@@ -213,6 +269,13 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET dmT@@DiYUj\`\`h@xPJBJCsAdYfEEPt_hb@xUTNET eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@xPhIP^PrY~bPNEUGBj@ gNp@DiYjB@xPhIP^prYlQHGBjcaU@",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+      "gNp@DiYjB@xPhIP^prYlQHGBjcaU@",
+      "dmT@@DiYUj\`\`h@xPJBJCsAdYfEEPt_hb@xUTNET",
+      "dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET",
+    ],
     "idCode": "gOp@DjWkB@@@",
     "mf": "C7H8",
     "mfInfo": {
@@ -234,6 +297,13 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET dmT@@DiYUj\`\`h@xPJBJCsAdYfEEPt_hb@xUTNET eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@xPhIP^PrY~bPNEUGBj@ gNp@DiYjB@xPhIP^prYlQHGBjcaU@",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+      "gNp@DiYjB@xPhIP^prYlQHGBjcaU@",
+      "dmT@@DiYUj\`\`h@xPJBJCsAdYfEEPt_hb@xUTNET",
+      "dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET",
+    ],
     "idCode": "dk\\@\`@VTeYVux]Njjjj\`@",
     "mf": "C12H21",
     "mfInfo": {
@@ -255,6 +325,13 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@xPhIP^PrY~bPNEUGBj@ gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj\`",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+      "gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj\`",
+      "dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET",
+      "do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET",
+    ],
     "idCode": "daD@@DjUZxHH@@",
     "mf": "C8H10",
     "mfInfo": {
@@ -276,6 +353,13 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@xPhIP^PrY~bPNEUGBj@ gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj\`",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
+      "gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj\`",
+      "dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET",
+      "do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET",
+    ],
     "idCode": "dcl@\`@VTee[UnWZjjjh@@",
     "mf": "C11H19",
     "mfInfo": {
@@ -297,6 +381,13 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP do|@@DjUVuYajjjjBpJJHD\`NDB\`b\`|hQFIfXVUCYvCDy~bHCaUPxUP eF@Hp\\IPUA~b\`xUTxUP gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
+      "dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP",
+      "dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP",
+      "do|@@DjUVuYajjjjBpJJHD\`NDB\`b\`|hQFIfXVUCYvCDy~bHCaUPxUP",
+    ],
     "idCode": "did@@DjU^nBBH@@",
     "mf": "C9H12",
     "mfInfo": {
@@ -318,6 +409,13 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
     ],
     "fragmentType": "acyclic",
     "hose": "dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP do|@@DjUVuYajjjjBpJJHD\`NDB\`b\`|hQFIfXVUCYvCDy~bHCaUPxUP eF@Hp\\IPUA~b\`xUTxUP gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
+    "hoseCodes": [
+      "eF@Hp\\IPUA~b\`xUTxUP",
+      "gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
+      "dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP",
+      "dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP",
+      "do|@@DjUVuYajjjjBpJJHD\`NDB\`b\`|hQFIfXVUCYvCDy~bHCaUPxUP",
+    ],
     "idCode": "dmL@\`@VTfUmZZUjjjj@@",
     "mf": "C10H17",
     "mfInfo": {

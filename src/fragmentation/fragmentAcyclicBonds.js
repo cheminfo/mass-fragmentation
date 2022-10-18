@@ -72,6 +72,8 @@ export function fragmentAcyclicBonds(molecule) {
       for (let i = 0; i < nbFragments; i++) {
         const result = {};
         let hose = getHoseCodesForAtoms(molecule, [bond.atom1, bond.atom2]);
+        let hoseCodes = hose.slice();
+        result.hoseCodes = hoseCodes;
         result.hose = hose.sort().join(' ');
 
         result.atomMap = [];
