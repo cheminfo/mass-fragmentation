@@ -1,13 +1,9 @@
 {
   "name": "mass-fragmentation",
   "version": "0.1.0",
-  "description": "",
-  "main": "lib/index.js",
   "module": "src/index.js",
-  "files": [
-    "lib",
-    "src"
-  ],
+  "description": "",
+  "type": "module",
   "scripts": {
     "build": "cheminfo-build --entry src/index.js --root MassFragmentation",
     "eslint": "eslint src",
@@ -16,8 +12,8 @@
     "prettier": "prettier --check src",
     "prettier-write": "prettier --write src",
     "test": "npm run test-only && npm run eslint && npm run prettier",
-    "test-only": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
-    "watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch -- "
+    "test-only": "jest --coverage",
+    "watch": "jest --watch -- "
   },
   "repository": {
     "type": "git",
@@ -35,6 +31,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.6",
+    "babel-plugin-transform-import-meta": "^2.1.1",
     "@types/jest": "^29.1.2",
     "cheminfo-build": "^1.1.11",
     "eslint": "^8.25.0",
