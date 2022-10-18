@@ -8,14 +8,13 @@ import { xSum } from 'ml-spectra-processing';
 import { candidatesFragmentation } from '../candidatesFragmentation/candidatesFragmentation.js';
 
 const __dirname = new URL('.', import.meta.url).pathname;
-export async function trainModel() {
+export async function trainModel(options) {
   let testSet = JSON.parse(
     readFileSync(
       join(__dirname, '/dataSpectra/casmi_2016_training/trainingSet.json'),
       'utf8',
     ),
   );
-  const options = { precision: 3.5, ionization: 'H+', limit: 1e7 };
   let model = [];
 
   for (let entry of testSet) {
@@ -65,5 +64,6 @@ export function median(array) {
     ? array[mid]
     : (array[mid - 1] + array[mid]) / 2;
 }
+const options = { precision: 3.5, ionization: 'H+', limit: 1e7 };
 
-await trainModel();
+await trainModel(options);
