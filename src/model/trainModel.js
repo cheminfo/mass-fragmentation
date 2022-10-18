@@ -17,7 +17,6 @@ export async function trainModel() {
   );
   const options = { precision: 3.5, ionization: 'H+', limit: 1e7 };
   let model = [];
-  let counter = 0;
 
   for (let entry of testSet) {
     let spectra = { x: entry.x, y: entry.y };
@@ -53,9 +52,6 @@ export async function trainModel() {
         }
       }
     }
-
-    counter++;
-    console.log(`processed:${counter}`);
   }
   writeFileSync(
     join(__dirname, '/dataSpectra/model.json'),
