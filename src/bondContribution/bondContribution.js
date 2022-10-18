@@ -59,9 +59,7 @@ export function bondContribution(spectra, massPrecursorIon, precision) {
   let rateReactionFragments = [];
   let rateArray = [];
   const delta = intensityPrecursorIon - molecularIon[0].intensity;
-  if (delta <= 0) {
-    return [];
-  }
+
   for (let i = 0; i < spectra.x.length; i++) {
     if (spectra.x[i] !== molecularIon[0].mass) {
       let rateFragment = (-1 * rateReactionMolecularIon * spectra.y[i]) / delta;
