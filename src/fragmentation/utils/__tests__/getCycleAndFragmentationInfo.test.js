@@ -9,8 +9,6 @@ describe('getCycleAndFragmentationInfo', () => {
     const molecule = Molecule.fromSmiles('CCCC'); // butane
     const result = getCycleAndFragmentationInfo(molecule);
 
-    //console.log(result);
-
     expect(result).toStrictEqual([]);
   });
   it('C1CC1', () => {

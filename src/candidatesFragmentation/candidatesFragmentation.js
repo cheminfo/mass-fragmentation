@@ -53,7 +53,6 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
       precision,
     },
   };
-  // console.log(fragmentation);
 
   let fragmentsResult = [];
   for (let i = 0; i < fragmentation.length; i++) {
@@ -62,9 +61,7 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
       let neutralLosses = neutralLoss(fragmentation[i].idCode);
       mfsArray[i] = [fragmentation[i].mf, neutralLosses];
       let results = await generateMFs(mfsArray[i], optionsMFs);
-      if (results) {
-        // console.log(results[0]);
-      }
+
       let groups = {};
       for (const result of results) {
         const em = Math.round(result.ms.em * 1e6);

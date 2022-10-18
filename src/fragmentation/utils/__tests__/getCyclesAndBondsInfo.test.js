@@ -8,7 +8,6 @@ describe('getCyclesAndBondsInfo', () => {
   it('CCCC', () => {
     const molecule = Molecule.fromSmiles('CCCC'); // butane
     const result = getCyclesAndBondsInfo(molecule);
-    //console.log(result);
 
     expect(result).toStrictEqual([]);
   });
@@ -46,7 +45,6 @@ describe('getCyclesAndBondsInfo', () => {
   it('CCC13CCCC2CCCC(CCC1)C23', () => {
     const molecule = Molecule.fromSmiles('C1CC2CCCC3CCCC(C1)C23'); //3 cyclohexane connected
     const result = getCyclesAndBondsInfo(molecule);
-    //console.log(result);
 
     expect(result).toStrictEqual([
       {
