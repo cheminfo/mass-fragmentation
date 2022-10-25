@@ -88,7 +88,7 @@ export function fragmentCyclicBonds(molecule) {
       );
       result.smiles = fragment.toSmiles();
       for (let j = 0; j < atomMap.length; j++) {
-        if (atomMap[j] === 0) {
+        if (atomMap[j] > -1) {
           result.atomMap.push(j);
 
           if (atoms[j].links.length > 0) {
