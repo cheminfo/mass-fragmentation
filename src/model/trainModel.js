@@ -16,19 +16,10 @@ export async function trainModel(options) {
     ),
   );
   let model = [];
-  let debugResults = [];
   for (let entry of testSet) {
     let spectra = { x: entry.x, y: entry.y };
     let idCode = entry.idCode;
     let result = await candidatesFragmentation(spectra, idCode, options);
-    let debugResult = {
-      spectrum: spectra,
-      ionization: options.ionization,
-      precision: options.precision,
-      idCode,
-      bonds: result,
-    };
-    debugResults.push(debugResult);
 
     for (let fragment of result) {
       if (fragment.idHose !== 'none') {
@@ -64,10 +55,6 @@ export async function trainModel(options) {
   writeFileSync(
     join(__dirname, '/dataSpectra/model.json'),
     JSON.stringify(model),
-  );
-  writeFileSync(
-    join(__dirname, '/dataSpectra/debugResults.json'),
-    JSON.stringify(debugResults),
   );
 }
 export function median(array) {

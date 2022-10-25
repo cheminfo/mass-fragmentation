@@ -1,0 +1,22 @@
+[
+  {
+    "spectrum": {
+      "x": [],
+      "y": []
+    },
+    "ionization": "",
+    "precision": "",
+    "idCode": "",
+    "bonds": [
+      {
+        "fragment1": {
+          "idCode": "",
+          "em": 0,
+          "matches": [{ "em": 0, "neutralLoss": "", "unique": true }]
+        },
+        "fragment2": { "idCode": "", "em": 0, "matches": [] },
+        "hoses": ["level 1", "level 2", "level 3"]
+      }
+    ]
+  }
+]
