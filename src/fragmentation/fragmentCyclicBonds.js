@@ -59,6 +59,10 @@ export function fragmentCyclicBonds(molecule) {
     brokenMolecule[bonds.i] = molecule.getCompactCopy();
     brokenMolecule[bonds.i].markBondForDeletion(bonds.bond1);
     brokenMolecule[bonds.i].markBondForDeletion(bonds.bond2);
+    brokenMolecule[bonds.i].setAtomCustomLabel(bonds.atom1, '*');
+    brokenMolecule[bonds.i].setAtomCustomLabel(bonds.atom2, '*');
+    brokenMolecule[bonds.i].setAtomCustomLabel(bonds.atom3, '*');
+    brokenMolecule[bonds.i].setAtomCustomLabel(bonds.atom4, '*');
     brokenMolecule[bonds.i].deleteMarkedAtomsAndBonds();
 
     nbFragments = brokenMolecule[bonds.i].getFragmentNumbers(fragmentMap);
@@ -77,7 +81,7 @@ export function fragmentCyclicBonds(molecule) {
       let includeAtom = fragmentMap.map((id) => {
         return id === i;
       });
-      let fragment = new Molecule(100, 100);
+      let fragment = new Molecule(0, 0);
       let atomMap = [];
 
       brokenMolecule[bonds.i].copyMoleculeByAtoms(
@@ -86,13 +90,13 @@ export function fragmentCyclicBonds(molecule) {
         false,
         atomMap,
       );
-      result.smiles = fragment.toSmiles();
-      for (let j = 0; j < atomMap.length; j++) {
-        if (atomMap[j] > -1) {
-          result.atomMap.push(j);
+      // if includeAtom has more then 3 true all true should become false and all false should become true
 
+      for (let j = 0; j < atomMap.length; j++) {
+        if (fragment.getAtomCustomLabel(atomMap[j]) === '*') {
+          result.atomMap.push(j);
           if (atoms[j].links.length > 0) {
-            fragment.addBond(atomMap[j], fragment.addAtom(154), 1);
+            fragment.addBond(atomMap[j], fragment.addAtom(154));
           }
         }
       }

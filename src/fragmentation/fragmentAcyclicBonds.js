@@ -10,6 +10,7 @@ const { MF } = MassTools;
  */
 
 export function fragmentAcyclicBonds(molecule) {
+  const { Molecule } = molecule.getOCL();
   let atoms = [];
   // Prepare object with lenght equal to number of atoms
   for (let i = 0; i < molecule.getAllAtoms(); i++) {
@@ -26,6 +27,7 @@ export function fragmentAcyclicBonds(molecule) {
     bond.order = molecule.getBondOrder(i); // dative, single , double, triple
     bond.atom1 = molecule.getBondAtom(0, i); // atom 1 index
     bond.atom2 = molecule.getBondAtom(1, i); // atom 2 index
+
     bond.type = molecule.getBondType(i); // cBondTypeSingle,cBondTypeDouble,cBondTypeTriple,cBondTypeDelocalized
     bond.isAromatic = molecule.isAromaticBond(i);
     bond.isRingBond = molecule.isRingBond(i);
@@ -62,10 +64,13 @@ export function fragmentAcyclicBonds(molecule) {
     if (bond.selected) {
       // if bond.selected is true (line 46) the molecule will be fragmented
       brokenMolecule[bond.i] = molecule.getCompactCopy(); // get a copy of the molecule
+      brokenMolecule[bond.i].setAtomCustomLabel(bond.atom1, '*');
+      brokenMolecule[bond.i].setAtomCustomLabel(bond.atom2, '*');
       brokenMolecule[bond.i].markBondForDeletion(bond.i); //mark bond to be deleted
-      brokenMolecule[bond.i].deleteMarkedAtomsAndBonds(bond.i); // delete marked bonds
-    }
+      // the function returns an array of map
 
+      brokenMolecule[bond.i].deleteMarkedAtomsAndBonds(); // delete marked bonds
+    }
     nbFragments = brokenMolecule[bond.i].getFragmentNumbers(fragmentMap);
     // only if there are 2 fragments code can continue
     if (nbFragments === 2) {
@@ -77,14 +82,13 @@ export function fragmentAcyclicBonds(molecule) {
         result.hose = hose.sort().join(' ');
 
         result.atomMap = [];
+
         // assign fragment id to index of for loop
         let includeAtom = fragmentMap.map((id) => {
           return id === i;
         });
-        let fragment = new (molecule.getOCL().Molecule)(
-          molecule.getAllAtoms(),
-          molecule.getAllBonds(),
-        );
+
+        let fragment = new Molecule(100, 100);
 
         let atomMap = [];
 
@@ -94,15 +98,12 @@ export function fragmentAcyclicBonds(molecule) {
           false,
           atomMap,
         );
-        result.smiles = fragment.toSmiles();
 
-        // where atomMap[j] is equal to 0 there is a bond who was fragmented
         for (let j = 0; j < atomMap.length; j++) {
-          if (atomMap[j] === 0) {
+          if (fragment.getAtomCustomLabel(atomMap[j]) === '*') {
             result.atomMap.push(j);
-            // add a R group to fragment
             if (atoms[j].links.length > 0) {
-              fragment.addBond(atomMap[j], fragment.addAtom(154), 1);
+              fragment.addBond(atomMap[j], fragment.addAtom(154));
             }
           }
         }
