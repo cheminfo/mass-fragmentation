@@ -107,7 +107,7 @@ export function fragmentAcyclicBonds(molecule) {
             }
           }
         }
-
+        fragment.removeAtomCustomLabels();
         fragment.setFragment(false);
         result.mf = getMF(fragment).mf.replace(/R[1-9]?/, ''); // get mf without R group
         result.idCode = fragment.getIDCode();

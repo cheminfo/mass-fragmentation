@@ -44,7 +44,6 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 15.02347509669,
       "unsaturation": 0.5,
     },
-    "smiles": "C",
   },
   {
     "atomMap": [
@@ -72,11 +71,10 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 43.05477522561,
       "unsaturation": 0.5,
     },
-    "smiles": "CCC",
   },
   {
     "atomMap": [
-      0,
+      1,
     ],
     "fragmentType": "acyclic",
     "hose": "eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@XPhIP_hdCaUQpj\` gC\`@Dij@XPhIP_hdCaUQpj\` gC\`@Dij@XPhIP_hdCaUQpj\` gC\`@Dij@xPhIP^PrY~bPNEUGBj@",
@@ -100,7 +98,6 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 29.03912516115,
       "unsaturation": 0.5,
     },
-    "smiles": "CC",
   },
   {
     "atomMap": [
@@ -128,11 +125,10 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 29.03912516115,
       "unsaturation": 0.5,
     },
-    "smiles": "CC",
   },
   {
     "atomMap": [
-      0,
+      2,
     ],
     "fragmentType": "acyclic",
     "hose": "eF@Hp\\IPUA~b\`xUTxUP eM@HzCaJBhOIewzJCaUSaU@ gC\`@Dkj@XPhIP_hdCaUQpj\` gC\`@Dkj@XPhIP_hdCaUQpj\` gC\`@Dkj@xPhIP^pr\\lQHGBjcaU@",
@@ -156,7 +152,6 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 43.05477522561,
       "unsaturation": 0.5,
     },
-    "smiles": "CCC",
   },
   {
     "atomMap": [
@@ -184,7 +179,6 @@ exports[`fragmentAcyclicBonds CCCC 1`] = `
       "monoisotopicMass": 15.02347509669,
       "unsaturation": 0.5,
     },
-    "smiles": "C",
   },
 ]
 `;
@@ -209,7 +203,7 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
   },
   {
     "atomMap": [
-      0,
+      3,
     ],
     "fragmentType": "acyclic",
     "hose": "dax@@DjUXHH@xPJBJCqQbQdEgzH\`NEUCaU@ dcL@@DjUWya\`\`bh@NDB\`b\`}LXdYAYTMGXLSGzH\`NEUCaU@ deT@@DjUWXXHH\`@xPJBJCwQbQdEePt]gzH\`NEUCaU@ eF@Hp\\IPUA~b\`xUTxUP gJP@DjXHCaB\`eAzSOtRApjhxUP",
@@ -220,20 +214,19 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
       "deT@@DjUWXXHH\`@xPJBJCwQbQdEePt]gzH\`NEUCaU@",
       "dcL@@DjUWya\`\`bh@NDB\`b\`}LXdYAYTMGXLSGzH\`NEUCaU@",
     ],
-    "idCode": "gFp@DiTt@@@",
-    "mf": "C6H6",
+    "idCode": "gOpH@liLkW@@@@",
+    "mf": "C6H5",
     "mfInfo": {
       "atoms": {
         "C": 6,
-        "H": 6,
+        "H": 5,
       },
       "charge": 0,
-      "mass": 78.11205990474615,
-      "mf": "C6H6",
-      "monoisotopicMass": 78.04695019338,
-      "unsaturation": 4,
+      "mass": 77.10411915069038,
+      "mf": "C6H5",
+      "monoisotopicMass": 77.03912516115,
+      "unsaturation": 4.5,
     },
-    "smiles": "C1(=CC=CC=C1)",
   },
   {
     "atomMap": [
@@ -261,11 +254,10 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
       "monoisotopicMass": 179.17997574129,
       "unsaturation": 2.5,
     },
-    "smiles": "CCCC2(CCC1(CCCCC1C2))",
   },
   {
     "atomMap": [
-      0,
+      4,
     ],
     "fragmentType": "acyclic",
     "hose": "dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET dmT@@DiYUj\`\`h@xPJBJCsAdYfEEPt_hb@xUTNET eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@xPhIP^PrY~bPNEUGBj@ gNp@DiYjB@xPhIP^prYlQHGBjcaU@",
@@ -276,20 +268,19 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
       "dmT@@DiYUj\`\`h@xPJBJCsAdYfEEPt_hb@xUTNET",
       "dg\\@@DiYUgQvhHJJ@Ca@hHhOJFQfXTUCQtCDxn_hb@xUTNET",
     ],
-    "idCode": "gOp@DjWkB@@@",
-    "mf": "C7H8",
+    "idCode": "daD@\`@VTeeVz\`@@@",
+    "mf": "C7H7",
     "mfInfo": {
       "atoms": {
         "C": 7,
-        "H": 8,
+        "H": 7,
       },
       "charge": 0,
-      "mass": 92.13867730959296,
-      "mf": "C7H8",
-      "monoisotopicMass": 92.06260025784,
-      "unsaturation": 4,
+      "mass": 91.13073655553718,
+      "mf": "C7H7",
+      "monoisotopicMass": 91.05477522561,
+      "unsaturation": 4.5,
     },
-    "smiles": "C1(=CC=C(C)C=C1)",
   },
   {
     "atomMap": [
@@ -317,11 +308,10 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
       "monoisotopicMass": 165.16432567683,
       "unsaturation": 2.5,
     },
-    "smiles": "CCC2(CCC1(CCCCC1C2))",
   },
   {
     "atomMap": [
-      0,
+      5,
     ],
     "fragmentType": "acyclic",
     "hose": "dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET eF@Hp\\IPUA~b\`xUTxUP gC\`@Dij@xPhIP^PrY~bPNEUGBj@ gNp@DiYjj@xPhIP^HrXhv_hdCaUQpj\`",
@@ -332,20 +322,19 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
       "dmT@@DiYUjjj@@xPJBJCsAdXdYaYV_hb@xUTNET",
       "do|@@DiYUft]jjhJBQJNHCa@hHhOJFQbQfEeYtCdpl_hb@xUTNET",
     ],
-    "idCode": "daD@@DjUZxHH@@",
-    "mf": "C8H10",
+    "idCode": "did@\`@VTeYWaj@@@@",
+    "mf": "C8H9",
     "mfInfo": {
       "atoms": {
         "C": 8,
-        "H": 10,
+        "H": 9,
       },
       "charge": 0,
-      "mass": 106.16529471443975,
-      "mf": "C8H10",
-      "monoisotopicMass": 106.0782503223,
-      "unsaturation": 4,
+      "mass": 105.15735396038399,
+      "mf": "C8H9",
+      "monoisotopicMass": 105.07042529007,
+      "unsaturation": 4.5,
     },
-    "smiles": "C1(=CC=C(CC)C=C1)",
   },
   {
     "atomMap": [
@@ -373,11 +362,10 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
       "monoisotopicMass": 151.14867561237,
       "unsaturation": 2.5,
     },
-    "smiles": "CC2(CCC1(CCCCC1C2))",
   },
   {
     "atomMap": [
-      0,
+      6,
     ],
     "fragmentType": "acyclic",
     "hose": "dax@@DjUZjh@xPJBJCuADXfYaY~bHCaUPxUP dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP do|@@DjUVuYajjjjBpJJHD\`NDB\`b\`|hQFIfXVUCYvCDy~bHCaUPxUP eF@Hp\\IPUA~b\`xUTxUP gJP@DjZhCaB\`eAyBIgzI@xUT\\Jh",
@@ -388,20 +376,19 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
       "dmt@@DjUVvFjjjdBbb@xPJBJCpaDXfYaYTMgY~bHCaUPxUP",
       "do|@@DjUVuYajjjjBpJJHD\`NDB\`b\`|hQFIfXVUCYvCDy~bHCaUPxUP",
     ],
-    "idCode": "did@@DjU^nBBH@@",
-    "mf": "C9H12",
+    "idCode": "deT@\`@VTeVUFZh@@@@",
+    "mf": "C9H11",
     "mfInfo": {
       "atoms": {
         "C": 9,
-        "H": 12,
+        "H": 11,
       },
       "charge": 0,
-      "mass": 120.19191211928656,
-      "mf": "C9H12",
-      "monoisotopicMass": 120.09390038676,
-      "unsaturation": 4,
+      "mass": 119.18397136523078,
+      "mf": "C9H11",
+      "monoisotopicMass": 119.08607535453,
+      "unsaturation": 4.5,
     },
-    "smiles": "C1(=CC=C(CCC)C=C1)",
   },
   {
     "atomMap": [
@@ -429,7 +416,6 @@ exports[`fragmentAcyclicBonds c3ccc(CCCC2CCC1CCCCC1C2)cc3 1`] = `
       "monoisotopicMass": 137.13302554791,
       "unsaturation": 2.5,
     },
-    "smiles": "C2(CCC1(CCCCC1C2))",
   },
 ]
 `;

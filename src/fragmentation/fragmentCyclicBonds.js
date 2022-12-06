@@ -100,6 +100,8 @@ export function fragmentCyclicBonds(molecule) {
           }
         }
       }
+      fragment.removeAtomCustomLabels();
+
       fragment.setFragment(false);
       result.mf = getMF(fragment).mf.replace(/R[1-9]?/, '');
       result.idCode = fragment.getIDCode();
