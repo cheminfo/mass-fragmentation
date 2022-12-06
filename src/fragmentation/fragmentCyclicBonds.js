@@ -1,15 +1,13 @@
-import MassTools from 'mass-tools';
+import { MF } from 'mf-parser';
 import { getMF, getHoseCodesForAtoms } from 'openchemlib-utils';
 
-import { getCycleAndFragmentationInfo } from './getCycleAndFragmentationInfo.js';
+import { getCycleAndFragmentationInfo } from './utils/getCycleAndFragmentationInfo.js';
 
 /**
  * The function performs the fragmentation of all single ring bonds not beloning to aromatic rings
- * @param {OCL.molecule} molecule
- * @returns {object} Results fragmentation of ring bonds
+ * @param {any} molecule - The OCL molecule to be fragmented
+ * @returns  Array with results for the fragmentation of ring bonds
  */
-
-const { MF } = MassTools;
 
 export function fragmentCyclicBonds(molecule) {
   const { Molecule } = molecule.getOCL();
@@ -53,12 +51,16 @@ export function fragmentCyclicBonds(molecule) {
   let brokenMolecule = {};
   let fragmentMap = [];
   let nbFragments = [];
-  let results = [];
+  let fragmentationResults = [];
 
   for (let bonds of ringsToBeFragmented) {
     brokenMolecule[bonds.i] = molecule.getCompactCopy();
     brokenMolecule[bonds.i].markBondForDeletion(bonds.bond1);
     brokenMolecule[bonds.i].markBondForDeletion(bonds.bond2);
+    brokenMolecule[bonds.i].setAtomCustomLabel(bonds.atom1, '*');
+    brokenMolecule[bonds.i].setAtomCustomLabel(bonds.atom2, '*');
+    brokenMolecule[bonds.i].setAtomCustomLabel(bonds.atom3, '*');
+    brokenMolecule[bonds.i].setAtomCustomLabel(bonds.atom4, '*');
     brokenMolecule[bonds.i].deleteMarkedAtomsAndBonds();
 
     nbFragments = brokenMolecule[bonds.i].getFragmentNumbers(fragmentMap);
@@ -66,22 +68,18 @@ export function fragmentCyclicBonds(molecule) {
     for (let i = 0; i < nbFragments; i++) {
       const result = {};
       let hose = {};
-      hose.bond1 = getHoseCodesForAtoms(
-        molecule,
-        [bonds.atom1, bonds.atom2],
-        1,
-      );
-      hose.bond2 = getHoseCodesForAtoms(
-        molecule,
-        [bonds.atom3, bonds.atom4],
-        1,
-      );
-      result.hose = hose;
+      hose.bond1 = getHoseCodesForAtoms(molecule, [bonds.atom1, bonds.atom2]);
+      hose.bond2 = getHoseCodesForAtoms(molecule, [bonds.atom3, bonds.atom4]);
+      let hoseBonds = [];
+      hoseBonds.push(...hose.bond1, ...hose.bond2);
+      let hoseCodes = hoseBonds.slice();
+      result.hoseCodes = hoseCodes;
+      result.hose = hoseBonds.sort().join(' ');
       result.atomMap = [];
       let includeAtom = fragmentMap.map((id) => {
         return id === i;
       });
-      let fragment = new Molecule(100, 100);
+      let fragment = new Molecule(0, 0);
       let atomMap = [];
 
       brokenMolecule[bonds.i].copyMoleculeByAtoms(
@@ -90,29 +88,30 @@ export function fragmentCyclicBonds(molecule) {
         false,
         atomMap,
       );
-      result.smiles = fragment.toSmiles();
-      for (let j = 0; j < atomMap.length; j++) {
-        if (atomMap[j] === 0) {
-          result.atomMap.push(j);
+      // if includeAtom has more then 3 true all true should become false and all false should become true
 
+      for (let j = 0; j < atomMap.length; j++) {
+        if (fragment.getAtomCustomLabel(atomMap[j]) === '*') {
+          result.atomMap.push(j);
           if (atoms[j].links.length > 0) {
-            fragment.addBond(atomMap[j], fragment.addAtom(154), 1);
+            fragment.addBond(atomMap[j], fragment.addAtom(154));
           }
         }
       }
+      fragment.removeAtomCustomLabels();
+
       fragment.setFragment(false);
       result.mf = getMF(fragment).mf.replace(/R[1-9]?/, '');
       result.idCode = fragment.getIDCode();
 
       result.mfInfo = new MF(result.mf).getInfo();
       result.fragmentType = 'cyclic';
-      results.push(result);
+      fragmentationResults.push(result);
     }
   }
 
-  results = results.sort((a, b) => {
+  fragmentationResults = fragmentationResults.sort((a, b) => {
     return a.mfInfo.mw - b.mfInfo.mw;
   });
-
-  return results;
+  return fragmentationResults;
 }
