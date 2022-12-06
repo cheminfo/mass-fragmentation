@@ -1,1 +1,1911 @@
-[{"spectrum":{"x":[57.07,67.0543,69.0699,71.0856,79.0542,81.0699,83.0856,95.0855,109.1012,137.1324,154.159,171.1855],"y":[0.6911,0.9323,1.0796,1.4441,0.1727,11.18,0.1394,11.1968,0.5283,23.9291,100,56.9533]},"ionization":"H+","precision":3.5,"idCode":"dcM@@@uIeZ[ijjjj`@","fragmentation":[{"idCodeFragment":["dcM@@@uIeZ[ijjjj`@"],"mf":["C10H22N2"],"em":[170.17829871792],"mass":[171.18557517024092],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["eFbHVXp@","dcN@`MAYRYVfzZjjjh@@"],"mf":["H2N","C10H20N"],"em":[16.01872406889,154.15957464903],"mass":[17.02600052121093,155.16685110135091],"charge":0,"atomMap":[0],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@duPGBEAJCrFROtRA\\jhxUP","gGX@@druTApaPR`|QdaYlQHErjcaU@","dmv@@@RYVfijjjj@NDB`b`|PYDIfY~bHByUPxUP","dcM@@@uIeZ[ijjjjdb`b@xPJBJCtadPfYcYvCt|o_hb@nUTNET"],"type":"acyclic"},{"idCodeFragment":["dmv@`EAYRZWi[jjjj@@","eMbDVTf`@"],"mf":["C9H18N","CH4N"],"em":[140.14392458457,30.03437413335],"mass":[141.1512010368909,31.04165058567093],"charge":0,"atomMap":[4],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gGX@@dmUTApiPJ`}IgzIHxUR\\Jh","daz@@@RVejj`CaHhDhOTFQfXVUwzHdNETcaU@","dcM@@@uIZWixZjjjdRcj@xRJAJCsAdYfEe]t_hbPxURNET","dcM@@@uIZWixZjjjdRcj@XRJAJC}DRGBjQpj`"],"type":"acyclic"},{"idCodeFragment":["dcM@`NtEeIiUiXZjjj`@","eFBAYc@@"],"mf":["C9H19N2","CH3"],"em":[155.15482362123,15.02347509669],"mass":[156.16210007355093,16.03075154901093],"charge":0,"atomMap":[4],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gJP@H~j@xPhIP^d{}D`\\JjNET","daz@@@RVmjj`CaDhLhOEFYqYV_hbHxUVNET","dcM@@@uIZuixZjjjdPcb@xQJCJCsAdYgEeYt_hbHxUVNET","dcM@@@wHhdiECWUUUUIAAT@paTCTGzHaNETsaU@"],"type":"acyclic"},{"idCodeFragment":["dcM@`EtEeIi^g[jjjj`@","eFBAYc@@"],"mf":["C9H19N2","CH3"],"em":[155.15482362123,15.02347509669],"mass":[156.16210007355093,16.03075154901093],"charge":0,"atomMap":[5],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gJP@H~j@xPhIP^d{}D`\\JjNET","gNp@Djmjj@xPhIP^LyYlO_hdCaUQpj`","dmv@@@RYVfkjjjjRBBhCaBhFhOUDIc]vCwzHaNETsaU@","dcM@@@wHhdiEKWUUUUYAATTPGBEPMP^dLbDsL[np^gE{}DPgBjYpj`"],"type":"acyclic"},{"idCodeFragment":["dcM@`EtEeIi^g[jjjj`@","eFBAYc@@"],"mf":["C9H19N2","CH3"],"em":[155.15482362123,15.02347509669],"mass":[156.16210007355093,16.03075154901093],"charge":0,"atomMap":[5],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gJP@H~j@xPhIP^d{}D`\\JjNET","gNp@Djmjj@xPhIP^LyYlO_hdCaUQpj`","dmv@@@RYVfkjjjjRJBhCaBhFhOUDIc]vCwzHaNETsaU@","dcM@@@wHhdiEKWUUUUYEATUPGBEPMP^dLbDsL[np^gE{}DPgBjYpj`"],"type":"acyclic"},{"idCodeFragment":["dcN@`MAYRVez^Fjjjh@@","eFbHVXp@"],"mf":["C10H20N","H2N"],"em":[154.15957464903,16.01872406889],"mass":[155.16685110135091,17.02600052121093],"charge":0,"atomMap":[7],"hoseCodes":["eF`BLGBTEP_hhKeUNET","eM`AIhNDhJ`|fV_hhKeUNET","gGX@@dmUTApaPR`|ads}D`WJjNET","daz@@@RVejj`Ca@hHhOTFQfXVUwzH`KeUCaU@","dcM@@@uIZWixZjjjdRcj@xPJBJCsAdYfEe]t_hb@nUTNET"],"type":"acyclic"},{"idCodeFragment":["diF@PDAYEYR[ZZjj@@","gNxDFEfkJSRuU@@"],"mf":["C6H13N","C4H9N"],"em":[99.10479942342,71.0734992945],"mass":[100.11207587574094,72.08077574682093],"charge":0,"atomMap":[1,6],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gJX@@dsURTCaR`UAyREgzIHxUR\\Jh","dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET","dcM@@@uIeZ[ijjjjdb`b@xRJAJCwAdPfYcYvCwzHdNETcaU@","dcM@@@uIeZ[ijjjjdb`b@XRJAJC}DRGBjQpj`","eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","dmv@@@RVezxZjjjaJ@xQJCJCqQfXVUwzHbNEUcaU@","dcM@@@uIZWixZjjjdRcj@xQJCJCtadYfEe]tCd|o_hbHxUVNET","dcM@@@uIeZ[ijjjjdb`b@XPjAjC}DPgBjYpj`"],"type":"cyclic"},{"idCodeFragment":["daz@PNAYYYrJQFUUP@@","daz@PNAYYYRVejj`@"],"mf":["C5H11N","C5H11N"],"em":[85.08914935896,85.08914935896],"mass":[86.09642581128094,86.09642581128094],"charge":0,"atomMap":[1,5],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gJX@@dsURTCaR`UAyREgzIHxUR\\Jh","dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET","dcM@@@uIeZ[ijjjjdb`b@xRJAJCwAdPfYcYvCwzHdNETcaU@","dcM@@@uIeZ[ijjjjdb`b@XRJAJC}DRGBjQpj`","eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","deT@@LddRLc]UUU@GBAPQP^JLSLxnQDApjh\\Jh","dcM@@@wHhdiEKSUUUUIAEDApaTCTGabDsL[Nx^gE{}DPgBjYpj`","dcM@@@wHhdiEKSUUUUIAED@paTCTGzHaNETsaU@"],"type":"cyclic"},{"idCodeFragment":["gJXDDEdkJS]T@@","dmV@PEAYeYrJQFQJjjj@@"],"mf":["C2H5N","C8H17N"],"em":[43.04219916558,127.13609955234],"mass":[44.04947561790093,128.14337600466092],"charge":0,"atomMap":[1,3],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gJX@@dsURTCaR`UAyREgzIHxUR\\Jh","dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET","dcM@@@uIeZ[ijjjjdb`b@xRJAJCwAdPfYcYvCwzHdNETcaU@","dcM@@@uIeZ[ijjjjdb`b@XRJAJC}DRGBjQpj`","eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","dif@@@RYVjZjjjHhCaDhBhOUDIcYwCwzHbNETSaU@","dmv@@@RYVfijjjjbJ@xQJ@jCwAdPfYcYwCwzHbNETSaU@","dcM@@@wHhdiEKSUUUUIAEDApbTATGiCHaLsFsnGiq^QDQpjb\\Jh"],"type":"cyclic"},{"idCodeFragment":["diF@PFAYEYrJQFZjj`@","gNxDFEfkJSRuU@@"],"mf":["C6H13N","C4H9N"],"em":[99.10479942342,71.0734992945],"mass":[100.11207587574094,72.08077574682093],"charge":0,"atomMap":[2,5],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","deU@@@gHhdiCSUUURPPU@\\He@UAzhaL[Np^QDQpjb\\Jh","dcM@@@uIeZ[ijjjjd``j@xQJ@jCpadPfYcYvCvy~bHcaUDxUP","dcM@@@uIeZ[ijjjjd``j@XQJ@jC}DQGBjIpj`","eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","deT@@LddRLc]UUU@GBAPQP^JLSLxnQDApjh\\Jh","dcM@@@wHhdiEKSUUUUIAEDApaTCTGabDsL[Nx^gE{}DPgBjYpj`","dcM@@@wHhdiEKSUUUUIAED@paTCTGzHaNETsaU@"],"type":"cyclic"},{"idCodeFragment":["gGXDLEfkJRwUP@","def@PJAYyYrJQHrUUU@@"],"mf":["C3H7N","C7H15N"],"em":[57.05784923004,113.12044948788001],"mass":[58.06512568236093,114.12772594020095],"charge":0,"atomMap":[2,3],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","deU@@@gHhdiCSUUURPPU@\\He@UAzhaL[Np^QDQpjb\\Jh","dcM@@@uIeZ[ijjjjd``j@xQJ@jCpadPfYcYvCvy~bHcaUDxUP","dcM@@@uIeZ[ijjjjd``j@XQJ@jC}DQGBjIpj`","eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","dif@@@RYVjZjjjHhCaDhBhOUDIcYwCwzHbNETSaU@","dmv@@@RYVfijjjjbJ@xQJ@jCwAdPfYcYwCwzHbNETSaU@","dcM@@@wHhdiEKSUUUUIAEDApbTATGiCHaLsFsnGiq^QDQpjb\\Jh"],"type":"cyclic"},{"idCodeFragment":["gJXDDEdkJS]T@@","dmV@PJAYUYrJQHrJjjj@@"],"mf":["C2H5N","C8H17N"],"em":[43.04219916558,127.13609955234],"mass":[44.04947561790093,128.14337600466092],"charge":0,"atomMap":[1,2],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","deU@@@gHhdiCSUUURPPU@\\He@UAzhaL[Np^QDQpjb\\Jh","dcM@@@uIeZ[ijjjjd``j@xQJ@jCpadPfYcYvCvy~bHcaUDxUP","dcM@@@uIeZ[ijjjjd``j@XQJ@jC}DQGBjIpj`","eF@Hp\\IPUA~b`xUTxUP","gJX@@dsURTCaR`UAyREgzIHxUR\\Jh","dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET","dmv@@@RYVfijjjjbJ@xRJAJCwAdPfYcYwCwzHdNETcaU@","dcM@@@wHhdiEKSUUUUIEETApdTBTGiCHaLsFsnGiq^QDapjd\\Jh"],"type":"cyclic"},{"idCodeFragment":["dee@PJxEfUgHiDcMUUT@@","gGPD@luYRZZj@@"],"mf":["C6H14N2","C4H8"],"em":[114.11569846008,56.06260025784],"mass":[115.12297491240093,57.06987671016093],"charge":0,"atomMap":[3,4],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","dmv@@@RVezxZjjjaJ@xQJCJCqQfXVUwzHbNEUcaU@","dcM@@@uIZWixZjjjdRcj@xQJCJCtadYfEe]tCd|o_hbHxUVNET","dcM@@@uIeZ[ijjjjdb`b@XPjAjC}DPgBjYpj`","eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","dif@@@RYVjZjjjHhCaDhBhOUDIcYwCwzHbNETSaU@","dmv@@@RYVfijjjjbJ@xQJ@jCwAdPfYcYwCwzHbNETSaU@","dcM@@@wHhdiEKSUUUUIAEDApbTATGiCHaLsFsnGiq^QDQpjb\\Jh"],"type":"cyclic"},{"idCodeFragment":["diE@PJDEgegHiDcJjj@@","gNpD@lmYRVfjh@"],"mf":["C5H12N2","C5H10"],"em":[100.10004839562,70.0782503223],"mass":[101.10732484794093,71.08552677462093],"charge":0,"atomMap":[1,4],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","dmv@@@RVezxZjjjaJ@xQJCJCqQfXVUwzHbNEUcaU@","dcM@@@uIZWixZjjjdRcj@xQJCJCtadYfEe]tCd|o_hbHxUVNET","dcM@@@uIeZ[ijjjjdb`b@XPjAjC}DPgBjYpj`","eF@Hp\\IPUA~b`xUTxUP","gJX@@dsURTCaR`UAyREgzIHxUR\\Jh","dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET","dmv@@@RYVfijjjjbJ@xRJAJCwAdPfYcYwCwzHdNETcaU@","dcM@@@wHhdiEKSUUUUIEETApdTBTGiCHaLsFsnGiq^QDapjd\\Jh"],"type":"cyclic"},{"idCodeFragment":["dee@PDdEdUeImiZjj`@","gGPD@luYRZZj@@"],"mf":["C6H14N2","C4H8"],"em":[114.11569846008,56.06260025784],"mass":[115.12297491240093,57.06987671016093],"charge":0,"atomMap":[1,6],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gGP@Djfj`NDJBTGiLQHGBjcaU@","deT@@LddRLc]UUU@GBAPQP^JLSLxnQDApjh\\Jh","dcM@@@wHhdiEKSUUUUIAEDApaTCTGabDsL[Nx^gE{}DPgBjYpj`","dcM@@@wHhdiEKSUUUUIAED@paTCTGzHaNETsaU@","eF@Hp\\IPUA~b`xUTxUP","gJX@@dsURTCaR`UAyREgzIHxUR\\Jh","dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET","dmv@@@RYVfijjjjbJ@xRJAJCwAdPfYcYwCwzHdNETcaU@","dcM@@@wHhdiEKSUUUUIEETApdTBTGiCHaLsFsnGiq^QDapjd\\Jh"],"type":"cyclic"}]},{"spectrum":{"x":[67.0542,69.0698,86.0962],"y":[0.102,3.1609,100]},"ionization":"H+","precision":3.5,"idCode":"gFx@@eJfuU@@","fragmentation":[{"idCodeFragment":["gFx@@eJfuU@@"],"mf":["C5H11N"],"em":[85.08914935896],"mass":[86.09642581128094],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["gGXDHEfkJRkUP@","gC`D@lyYRVh@"],"mf":["C3H7N","C2H4"],"em":[57.05784923004,28.03130012892],"mass":[58.06512568236093,29.03857658124093],"charge":0,"atomMap":[0,5],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP","eF@Hp\\IPUA~b`xUTxUP","gC`@Dij@xPhIP^PrY~bPNEUGBj@","gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP"],"type":"cyclic"},{"idCodeFragment":["gJXDHEdkJRmT@@","gJPD@leYRUj`@"],"mf":["C2H5N","C3H6"],"em":[43.04219916558,42.04695019338],"mass":[44.04947561790093,43.05422664570093],"charge":0,"atomMap":[0,4],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP","eF@Hp\\IPUA~b`xUTxUP","gC`@Dij@xPhIP^PrY~bPNEUGBj@","gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP"],"type":"cyclic"},{"idCodeFragment":["gChDHEgKJRu@@","gGPD@luYRUZj@@"],"mf":["CH3N","C4H8"],"em":[29.026549101119997,56.06260025784],"mass":[30.033825553440927,57.06987671016093],"charge":0,"atomMap":[0,2],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP","eF@Hp\\IPUA~b`xUTxUP","gCh@@dmPGBe@jCrfKOtRQpjdxUP","gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP"],"type":"cyclic"},{"idCodeFragment":["gGXDDEfkJRkUP@","gC`D@lyYRVh@"],"mf":["C3H7N","C2H4"],"em":[57.05784923004,28.03130012892],"mass":[58.06512568236093,29.03857658124093],"charge":0,"atomMap":[1,4],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gCh@@dmPGBe@jCrfKOtRQpjdxUP","gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP","eF@Hp\\IPUA~b`xUTxUP","gC`@Dij@xPhIP^PrY~bPNEUGBj@","gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP"],"type":"cyclic"},{"idCodeFragment":["gJXDDEdkJRmT@@","gJPD@leYRUj`@"],"mf":["C2H5N","C3H6"],"em":[43.04219916558,42.04695019338],"mass":[44.04947561790093,43.05422664570093],"charge":0,"atomMap":[1,2],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gCh@@dmPGBe@jCrfKOtRQpjdxUP","gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP","eF@Hp\\IPUA~b`xUTxUP","gCh@@dmPGBe@jCrfKOtRQpjdxUP","gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP"],"type":"cyclic"},{"idCodeFragment":["gChDHEgKJRu@@","gGPD@luYRUZj@@"],"mf":["CH3N","C4H8"],"em":[29.026549101119997,56.06260025784],"mass":[30.033825553440927,57.06987671016093],"charge":0,"atomMap":[0,1],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gCh@@dmPGBe@jCrfKOtRQpjdxUP","gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP","eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP"],"type":"cyclic"},{"idCodeFragment":["gGXDDEfkJRkUP@","gC`D@lyYRVh@"],"mf":["C3H7N","C2H4"],"em":[57.05784923004,28.03130012892],"mass":[58.06512568236093,29.03857658124093],"charge":0,"atomMap":[2,3],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gC`@Dij@xPhIP^PrY~bPNEUGBj@","gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP","eF@Hp\\IPUA~b`xUTxUP","gCh@@dmPGBe@jCrfKOtRQpjdxUP","gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP","gFx@@eJfuU@LJTFhOtRQpjlxUP"],"type":"cyclic"},{"idCodeFragment":["gJXDHEdkJRmT@@","gJPD@leYRUj`@"],"mf":["C2H5N","C3H6"],"em":[43.04219916558,42.04695019338],"mass":[44.04947561790093,43.05422664570093],"charge":0,"atomMap":[0,3],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gC`@Dij@xPhIP^PrY~bPNEUGBj@","gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP","eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP"],"type":"cyclic"},{"idCodeFragment":["gGXDHEfkJRkUP@","gC`D@lyYRVh@"],"mf":["C3H7N","C2H4"],"em":[57.05784923004,28.03130012892],"mass":[58.06512568236093,29.03857658124093],"charge":0,"atomMap":[0,5],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gC`@Dij@xPhIP^PrY~bPNEUGBj@","gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP","gFx@@eJfuU@LKTEhOtRYpjjxUP","eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP","gFx@@eJfuU@LHTDhOtRA\\jhxUP"],"type":"cyclic"}]},{"spectrum":{"x":[60.0558,68.0244,71.0604,85.0509,88.0869,113.0822,130.1087],"y":[100,0.6808,37.1603,21.9837,21.2221,10.6361,77.1249]},"ionization":"H+","precision":3.5,"idCode":"diF`@@pjYJYnejh@@","fragmentation":[{"idCodeFragment":["diF`@@pjYJYnejh@@"],"mf":["C4H11N5"],"em":[129.10144537667998],"mass":[130.1087218290009],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["gJ\\HIbEeIZZ@@","gGTHE`liMtu@@"],"mf":["CH4N3","C3H7N2"],"em":[58.04052214221,71.06092323447],"mass":[59.04779859453093,72.06819968679093],"charge":0,"atomMap":[0],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gJ\\@AbeMK@\\HTDhOtRA\\jhxUP","diF`@@pjYJYnejh@xPJBJCtYGzH`KeUCaU@","diF`@@pjYJYnejh@XPJBJC}DPErjapj`","diF`@@pjYJYnejh@XPJBJC}DPErjapj`"],"type":"acyclic"},{"idCodeFragment":["gNrHEjpliL}Rt@@","gChHHEeIj`@"],"mf":["C2H5N4","C2H6N"],"em":[85.05142117887,44.05002419781],"mass":[86.05869763119094,45.05730065013093],"charge":0,"atomMap":[1],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gG\\@@ZeSULApaPR`QHErjcaU@","gN|@@[ddTMThGBEAJCvW[kGzI@nUT\\Jh","diF`@@JnGIHh]JiZ@NDB`b`}b]gUGzH`KeUCaU@","diF`@@JnGIHh]JiZ@FDB`b`QDA\\jh\\Jh"],"type":"acyclic"},{"idCodeFragment":["diD``DrfAYRY{iijBHP","eFbHVXp@"],"mf":["C4H9N4","H2N"],"em":[113.08272130779,16.01872406889],"mass":[114.08999776011093,17.02600052121093],"charge":0,"atomMap":[2],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCl@@ldtpGBEAJCtF_hdByUQpj`","gJ\\@@ldsMBRxPhIP^PsY~bPKeUGBj@","gNz@@mVdsttpdnDJBTGdLv_hdByUQpj`","diF`@@SJYIgnffhHbxPJBJCvAfYT_hb@nUTNET"],"type":"acyclic"},{"idCodeFragment":["diD``DrfAYRY{iijBHP","eFbHVXp@"],"mf":["C4H9N4","H2N"],"em":[113.08272130779,16.01872406889],"mass":[114.08999776011093,17.02600052121093],"charge":0,"atomMap":[2],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCl@@ldtpGBEAJCtF_hdByUQpj`","gJ\\@@ldsMBQxPhIP^PsY~bPKeUGBj@","gNz@@mVdsttpd^DJBTGdLv_hdByUQpj`","diF`@@SJYIgnffhHaxPJBJCvAfYT_hb@nUTNET"],"type":"acyclic"},{"idCodeFragment":["diF``HJnDEeIf~jeh@@","eFBAYc@@"],"mf":["C3H8N5","CH3"],"em":[114.07797027999,15.02347509669],"mass":[115.08524673231094,16.03075154901093],"charge":0,"atomMap":[4],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@AGj@xPhIP^d{}D`WJjNET","gG\\@@ZeWULApaPR`|iv{}D`WJjNET","gN|@@ZeW]ThGBEAJCvg[kGzI@nUT\\Jh","diF`@@JnEJn~jeh@xPJBJCvQv]T_hb@nUTNET"],"type":"acyclic"},{"idCodeFragment":["diF``HJnDEeIf~jeh@@","eFBAYc@@"],"mf":["C3H8N5","CH3"],"em":[114.07797027999,15.02347509669],"mass":[115.08524673231094,16.03075154901093],"charge":0,"atomMap":[4],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@AGj@xPhIP^d{}D`WJjNET","gG\\@@ZeWULApaPR`|iv{}D`WJjNET","gN|@@ZeW]ThGBEAJCvg[kGzI@nUT\\Jh","diF`@@JnEJn~jeh@xPJBJCvQv]T_hb@nUTNET"],"type":"acyclic"}]},{"spectrum":{"x":[53.0024,53.9977,55.0544,56.0496,57.07,74.0965],"y":[1.4212,0.3845,0.2953,0.2524,100,43.4622]},"ionization":"H+","precision":3.5,"idCode":"gJX@@dkU@@","fragmentation":[{"idCodeFragment":["gJX@@dkU@@"],"mf":["C4H11N"],"em":[73.08914935896],"mass":[74.09642581128094],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["eFbHVXp@","gJPH@liJuP@"],"mf":["H2N","C4H9"],"em":[16.01872406889,57.07042529007],"mass":[17.02600052121093,58.07770174239093],"charge":0,"atomMap":[0],"hoseCodes":["eF`BLGBTEP_hhKeUNET","eM`AIhNDhJ`|fV_hhKeUNET","gCh@@dmPGBEAJCvFSEgzI@nUT\\Jh","gJX@@dkU@\\HTDhODYLV[OtRA\\jhxUP","gJX@@dkU@LHTDhOtRA\\jhxUP"],"type":"acyclic"},{"idCodeFragment":["eMbDVTf`@","gC`H@liKT@@"],"mf":["CH4N","C3H7"],"em":[30.03437413335,43.05477522561],"mass":[31.04165058567093,44.06205167793093],"charge":0,"atomMap":[1],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gCh@@dmPGBe@jCrfKOtRQpjdxUP","gJX@@dkU@\\JTBhODYLV[OtRQpjdxUP","gJX@@dkU@LJTBhOtRQpjdxUP","gJX@@dkU@LJTBhOtRQpjdxUP"],"type":"acyclic"},{"idCodeFragment":["gChHLEeIZ`@","eMBAYRZ@"],"mf":["C2H6N","C2H5"],"em":[44.05002419781,29.03912516115],"mass":[45.05730065013093,30.04640161347093],"charge":0,"atomMap":[2],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gC`@Dij@xPhIP^PrY~bPNEUGBj@","gJX@@dkU@\\ITFhOFXlvGotRIpjlxUP","gJX@@dkU@LITFhOtRIpjlxUP","gJX@@dkU@LITFhOtRIpjlxUP"],"type":"acyclic"},{"idCodeFragment":["gJXHBEeIVj@@","eFBAYc@@"],"mf":["C3H8N","CH3"],"em":[58.06567426227,15.02347509669],"mass":[59.07295071459093,16.03075154901093],"charge":0,"atomMap":[3],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","eM@HzCaJBhOIewzJCaUSaU@","gC`@Dkj@xPhIP^pr\\lQHGBjcaU@","gJX@@dkU@\\KTAhOFXlvGotRYpjbxUP","gJX@@dkU@LKTAhOtRYpjbxUP"],"type":"acyclic"}]},{"spectrum":{"x":[57.0449,58.0401,85.0508],"y":[3.2226,1.1032,100]},"ionization":"H+","precision":3.5,"idCode":"gFr@ACTi[FZd@","fragmentation":[{"idCodeFragment":["gFr@ACTi[FZd@"],"mf":["C2H4N4"],"em":[84.04359614664],"mass":[85.05087259896094],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["gF|HEbEeIeMff@@","eFbHVXp@"],"mf":["C2H2N3","H2N"],"em":[68.02487207775,16.01872406889],"mass":[69.03214853007094,17.02600052121093],"charge":0,"atomMap":[2],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCl@@ldtpGBEAJCtF_hdByUQpj`","gFr@@lTfTvZXCaB`eAzCOtRA\\jhxUP","gFr@@lTfTvZXAaB`eA~bPKeUGBj@","gFr@@lTfTvZXAaB`eA~bPKeUGBj@"],"type":"acyclic"}]},{"spectrum":{"x":[60.0445,68.0495,70.0651,71.0128,88.0756],"y":[0.2329,0.4336,20.1009,0.1236,100]},"ionization":"H+","precision":3.5,"idCode":"gFy@JDiTvjh@","fragmentation":[{"idCodeFragment":["gFy@JDiTvjh@"],"mf":["C4H9NO"],"em":[87.06841391406999],"mass":[88.07569036639093],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["gGYDC@luYRUZj@@","gC`D@lyYRVh@"],"mf":["C2H5NO","C2H4"],"em":[59.03711378515,28.03130012892],"mass":[60.04439023747093,29.03857658124093],"charge":0,"atomMap":[0,5],"hoseCodes":["eFHBLGBTEP_hhOeUNET","gCa@@eMPGBEAJCtf_hdCyUQpj`","gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET","gFy@JDiTvjhAaB`eA~bPOeUGBj@","gFy@JDiTvjhAaB`eA~bPOeUGBj@","eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@"],"type":"cyclic"},{"idCodeFragment":["gJQDHEdkJRmT@@","gJXDHEdkJRmT@@"],"mf":["C2H4O","C2H5N"],"em":[44.026214748490005,43.04219916558],"mass":[45.033491200810936,44.04947561790093],"charge":0,"atomMap":[0,4],"hoseCodes":["eFHBLGBTEP_hhOeUNET","gCa@@eMPGBEAJCtf_hdCyUQpj`","gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET","gFy@JDiTvjhAaB`eA~bPOeUGBj@","gFy@JDiTvjhAaB`eA~bPOeUGBj@","eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@"],"type":"cyclic"},{"idCodeFragment":["gCaDHEgKJRu@@","gGXDDEfkJRkUP@"],"mf":["CH2O","C3H7N"],"em":[30.01056468403,57.05784923004],"mass":[31.01784113635093,58.06512568236093],"charge":0,"atomMap":[0,2],"hoseCodes":["eFHBLGBTEP_hhOeUNET","gCa@@eMPGBEAJCtf_hdCyUQpj`","gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET","gFy@JDiTvjhAaB`eA~bPOeUGBj@","gFy@JDiTvjhAaB`eA~bPOeUGBj@","eF@Hp\\IPUA~b`xUTxUP","gCi@LDej@xThEP^TqY~bRNETgBj@","gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET","gFy@JDiTvjhAaR`uA~bRNEUgBj@","gFy@JDiTvjhAaR`uA~bRNEUgBj@"],"type":"cyclic"},{"idCodeFragment":["gGQDDEfkJRkUP@","gChDHEgKJRu@@"],"mf":["C3H6O","CH3N"],"em":[58.041864812949996,29.026549101119997],"mass":[59.049141265270926,30.033825553440927],"charge":0,"atomMap":[1,4],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gCi@LDej@xThEP^TqY~bRNETgBj@","gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET","gFy@JDiTvjhAaR`uA~bRNEUgBj@","gFy@JDiTvjhAaR`uA~bRNEUgBj@","eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@"],"type":"cyclic"},{"idCodeFragment":["gJQDDEdkJRmT@@","gJXDDEdkJRmT@@"],"mf":["C2H4O","C2H5N"],"em":[44.026214748490005,43.04219916558],"mass":[45.033491200810936,44.04947561790093],"charge":0,"atomMap":[1,2],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gCi@LDej@xThEP^TqY~bRNETgBj@","gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET","gFy@JDiTvjhAaR`uA~bRNEUgBj@","gFy@JDiTvjhAaR`uA~bRNEUgBj@","eF@Hp\\IPUA~b`xUTxUP","gCi@LDej@xThEP^TqY~bRNETgBj@","gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET","gFy@JDiTvjhAaR`uA~bRNEUgBj@","gFy@JDiTvjhAaR`uA~bRNEUgBj@"],"type":"cyclic"},{"idCodeFragment":["gCaDHEgKJRu@@","gGXDDEfkJRkUP@"],"mf":["CH2O","C3H7N"],"em":[30.01056468403,57.05784923004],"mass":[31.01784113635093,58.06512568236093],"charge":0,"atomMap":[0,1],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gCi@LDej@xThEP^TqY~bRNETgBj@","gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET","gFy@JDiTvjhAaR`uA~bRNEUgBj@","gFy@JDiTvjhAaR`uA~bRNEUgBj@","eFHBLGBTEP_hhOeUNET","gCa@@eMPGBEAJCtf_hdCyUQpj`","gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET","gFy@JDiTvjhAaB`eA~bPOeUGBj@","gFy@JDiTvjhAaB`eA~bPOeUGBj@"],"type":"cyclic"},{"idCodeFragment":["gGQDDEfkJRkUP@","gChDHEgKJRu@@"],"mf":["C3H6O","CH3N"],"em":[58.041864812949996,29.026549101119997],"mass":[59.049141265270926,30.033825553440927],"charge":0,"atomMap":[2,3],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@","eF@Hp\\IPUA~b`xUTxUP","gCi@LDej@xThEP^TqY~bRNETgBj@","gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET","gFy@JDiTvjhAaR`uA~bRNEUgBj@","gFy@JDiTvjhAaR`uA~bRNEUgBj@"],"type":"cyclic"},{"idCodeFragment":["gJQDHEdkJRmT@@","gJXDHEdkJRmT@@"],"mf":["C2H4O","C2H5N"],"em":[44.026214748490005,43.04219916558],"mass":[45.033491200810936,44.04947561790093],"charge":0,"atomMap":[0,3],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@","eFHBLGBTEP_hhOeUNET","gCa@@eMPGBEAJCtf_hdCyUQpj`","gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET","gFy@JDiTvjhAaB`eA~bPOeUGBj@","gFy@JDiTvjhAaB`eA~bPOeUGBj@"],"type":"cyclic"},{"idCodeFragment":["gGYDC@luYRUZj@@","gC`D@lyYRVh@"],"mf":["C2H5NO","C2H4"],"em":[59.03711378515,28.03130012892],"mass":[60.04439023747093,29.03857658124093],"charge":0,"atomMap":[0,5],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@","gFy@JDiTvjhAaZ`mA~bSNEUUrj@","eFHBLGBTEP_hhOeUNET","gCa@@eMPGBEAJCtf_hdCyUQpj`","gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET","gFy@JDiTvjhAaB`eA~bPOeUGBj@","gFy@JDiTvjhAaB`eA~bPOeUGBj@"],"type":"cyclic"}]},{"spectrum":{"x":[60.0558,68.0244,85.0509,110.0461,127.0726],"y":[0.8894,0.6401,15.4586,0.6415,100]},"ionization":"H+","precision":3.5,"idCode":"die`@@pjX\\dTTUk`Hb@@","fragmentation":[{"idCodeFragment":["die`@@pjX\\dTTUk`Hb@@"],"mf":["C3H6N6"],"em":[126.06539421996],"mass":[127.07267067228094],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["dif``DqnDEeIeYih@J@@","eFbHVXp@"],"mf":["C3H4N5","H2N"],"em":[110.04667015107,16.01872406889],"mass":[111.05394660339094,17.02600052121093],"charge":0,"atomMap":[1],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCl@@ldt@GBEAJCtF_hdByUQpj`","gG\\@@ldrp@ApaPR`}AgzI@nUT\\Jh","die`@@SFxTfUff`@h@NDB`b`}@Y~bHByUPxUP","die`@@SFxTfUff`@h@FDB`b`QDA\\jh\\Jh"],"type":"acyclic"},{"idCodeFragment":["dif``DqnDEeIeYih@J@@","eFbHVXp@"],"mf":["C3H4N5","H2N"],"em":[110.04667015107,16.01872406889],"mass":[111.05394660339094,17.02600052121093],"charge":0,"atomMap":[2],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCl@@ldt@GBEAJCtF_hdByUQpj`","gG\\@@ldrp@ApaPR`}AgzI@nUT\\Jh","die`@@SFxTfUff`@h@NDB`b`}@Y~bHByUPxUP","die`@@SFxTfUff`@h@FDB`b`QDA\\jh\\Jh"],"type":"acyclic"},{"idCodeFragment":["dif``DqnDEeIeYih@J@@","eFbHVXp@"],"mf":["C3H4N5","H2N"],"em":[110.04667015107,16.01872406889],"mass":[111.05394660339094,17.02600052121093],"charge":0,"atomMap":[7],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCl@@ldt@GBEAJCtF_hdByUQpj`","gG\\@@ldrp@ApaPR`}AgzI@nUT\\Jh","die`@@SFxTfUff`@h@NDB`b`}@Y~bHByUPxUP","die`@@SFxTfUff`@h@FDB`b`QDA\\jh\\Jh"],"type":"acyclic"}]},{"spectrum":{"x":[60.0558,61.0398,69.0084,86.0349,103.0614],"y":[100,0.6135,0.3242,19.3858,15.5841]},"ionization":"H+","precision":3.5,"idCode":"gNs@EjpdssTp@","fragmentation":[{"idCodeFragment":["gNs@EjpdssTp@"],"mf":["C2H6N4O"],"em":[102.05416083067],"mass":[103.06143728299094],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["gCiHL`liML@@","gJ\\HIbEeIZf@@"],"mf":["CH2NO","CH4N3"],"em":[44.013638688460006,58.04052214221],"mass":[45.020915140780936,59.04779859453093],"charge":0,"atomMap":[1],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gJU@E`dru@\\JTBhOQQ~bRNETerj@","gNs@EjpdssTpGBe@jCrT[OtRQpjdnUP","gNs@EjpdssTpCBe@jC}Dd\\JiKeT","gNs@EjpdssTpCBe@jC}Dd\\JiKeT"],"type":"acyclic"},{"idCodeFragment":["gN}HMV`liMmML@@","eFbHVXp@"],"mf":["C2H4N3O","H2N"],"em":[86.03543676177999,16.01872406889],"mass":[87.04271321410093,17.02600052121093],"charge":0,"atomMap":[1],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCe@E`dsPGBe@jCtV_hdcaUI\\j`","gJU@E`dvu@\\JTBhOIYhQIGBjRyU@","gNs@EjpdvsTpGBe@jCrVZOtRQpjdnUP","gNs@EjpdvsTpCBe@jC}Dd\\JiKeT"],"type":"acyclic"},{"idCodeFragment":["gJUHH\\EeIZf@@","gCdHE`liML@@"],"mf":["CH3N2O","CH3N2"],"em":[59.02453772512,43.02962310555],"mass":[60.03181417744093,44.03689955787093],"charge":0,"atomMap":[2],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gJ\\@AbeMS@\\HTDhOPQ~bPKeUGBj@","gNs@EjpdssTpGBU@ZCvTVGgzIDnUQ\\Jh","gNs@EjpdssTpCBU@ZC}DbWJhnET","gNs@EjpdssTpCBU@ZC}DbWJhnET"],"type":"acyclic"},{"idCodeFragment":["gN}HEgPliMmML@@","eFbHVXp@"],"mf":["C2H4N3O","H2N"],"em":[86.03543676177999,16.01872406889],"mass":[87.04271321410093,17.02600052121093],"charge":0,"atomMap":[4],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCl@@ldtpGBEAJCtF_hdByUQpj`","gJ\\@@ldwM@\\HTDhOXXht_hdByUQpj`","gNs@EjpdssUHGBMAZCvTWGGzIBxUUWJh","gNs@EjpdssUHCBMAZC}Da\\JjkeT"],"type":"acyclic"}]},{"spectrum":{"x":[65.0386,82.0651,92.0494,93.0572,106.065,108.0681,109.0759,110.0599,133.0759,134.06,151.0865],"y":[0.3261,0.3448,7.9422,0.3974,0.6523,2.0612,74.4285,3.2856,5.1182,0.1924,100]},"ionization":"H+","precision":3.5,"idCode":"dmuH@DTDf^Uqej@B@@","fragmentation":[{"idCodeFragment":["dmuH@DTDf^Uqej@B@@"],"mf":["C8H10N2O"],"em":[150.07931295073],"mass":[151.08658940305094],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["gCaHDEeIi`@","die@`HDEeIYW[j@B@@"],"mf":["C2H3O","C6H7N2"],"em":[43.01838971626,107.06092323447],"mass":[44.02566616858093,108.06819968679093],"charge":0,"atomMap":[1],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gJY@DDfVhCaR`UAzJOtRQpjdnUP","gNy@DDf^Z`@xThEP^Rc]~bRNETerj@","diFH@DAIgeZ`@@xRJAJCqIF]TMGzHdNETbyU@","deVH@DAIgeQej@@@NDb`R`|rQgUCQtCGzHdNETbyU@"],"type":"acyclic"},{"idCodeFragment":["dmuH`LU@VTfvUqfZ@B@@","eFBAYc@@"],"mf":["C7H7N2O","CH3"],"em":[135.05583785404,15.02347509669],"mass":[136.06311430636092,16.03075154901093],"charge":0,"atomMap":[1],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gCi@DDfZ@xThMP^f{}Dd\\JkNET","gJY@DDfVhCaR`uAyJMwzIHxUV\\Jh","gNy@DDf^Z`@xThMP^Rc]~bRNEUgBj@","diFH@DAIgeZ`@@xRJCJCqIF]TMGzHdNEUcaU@"],"type":"acyclic"},{"idCodeFragment":["gJYHI`liKTp@","daF@`NAYRYWih@H@@"],"mf":["C2H4NO","C6H6N"],"em":[58.029288752919996,92.05002419781],"mass":[59.036565205240926,93.05730065013094],"charge":0,"atomMap":[2],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gJX@@eMP@\\HTDhOPQ~bPKeUGBj@","diFH@DAIgeZ`@@xQJ@jCvIEPt_hbHnUQNET","deVH@DAIgeQej@@@NDR`J`|rQgUCQtCGzHbKeTSaU@","dmuH@DTDf^Uqej@B@CaDhBhOLdYuPt]@q~bHbyUDxUP"],"type":"acyclic"},{"idCodeFragment":["dmvH`NdEeIe]Zf`@i`@@","eFbHVXp@"],"mf":["C8H8NO","H2N"],"em":[134.06058888184,16.01872406889],"mass":[135.06786533416093,17.02600052121093],"charge":0,"atomMap":[9],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@dt@GBEAJCtF_hdByUQpj`","gGX@@drp@ApaPR`}abcQ~bPKeUGBj@","gOx@@drm\\@@ApaPR`}QbcPXl_hdByUQpj`","daE@@@yIe^f`@`@xPJBJCuAbQdEEQ~bHByUPxUP"],"type":"acyclic"}]},{"spectrum":{"x":[77.0383,79.0542,91.0541,93.0572,93.0698,94.065,103.0541,118.065,119.0729,120.0806],"y":[0.1013,0.1693,0.2194,0.1824,0.6885,0.3802,1.7358,0.8166,0.205,100]},"ionization":"H+","precision":3.5,"idCode":"diV@@@RfU|kahHB@@","fragmentation":[{"idCodeFragment":["diV@@@RfU|kahHB@@"],"mf":["C8H9N"],"em":[119.07349929450001],"mass":[120.08077574682095],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["gJXDHEdkJRmT@@","daD@P@VRVTfYvzB@@@"],"mf":["C2H5N","C6H4"],"em":[43.04219916558,76.03130012892],"mass":[44.04947561790093,77.03857658124093],"charge":0,"atomMap":[0,5],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gJX@@eMP@\\HTDhOPQ~bPKeUGBj@","daF@@@RfUrjBB@NDB`b`}`PfEGzH`KeUCaU@","diV@@@RfU|kahHB@Ca@hHhOLDIaQVMGQ~bHByUPxUP","diV@@@RfU|kahHB@Aa@hHhOtQ@WJjGBj@","eF@Hp\\IPUA~b`xUTxUP","gJP@DjXHCaB`eAzSOtRApjhxUP","daF@@@rQQHyUAA@GBYPUP^qLkFc}DSGBjipj`","diV@@@RfU|kahHB@CaLhJhOLDIaQVM@q~bIcaUTxUP","diV@@@RfU|kahHB@AaLhJhOtQL\\JjgBj@"],"type":"cyclic"},{"idCodeFragment":["gChDHEgKJRu@@","did@P@VQVTfYUn`HH@@"],"mf":["CH3N","C7H6"],"em":[29.026549101119997,90.04695019338],"mass":[30.033825553440927,91.05422664570094],"charge":0,"atomMap":[0,2],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gJX@@eMP@\\HTDhOPQ~bPKeUGBj@","daF@@@RfUrjBB@NDB`b`}`PfEGzH`KeUCaU@","diV@@@RfU|kahHB@Ca@hHhOLDIaQVMGQ~bHByUPxUP","diV@@@RfU|kahHB@Aa@hHhOtQ@WJjGBj@","eF@Hp\\IPUA~b`xUTxUP","gCh@@dmPGBe@jCrfKOtRQpjdxUP","gFx@@eKxuA@\\JTFhOXQLv_hdcaUYpj`","daF@@@Reopj`B@NDb`r`|PQFYcQ~bICaUXxUP","diV@@@Rem\\Kaj@B@CaHhLhOLDQfYTM@q~bICaUXxUP"],"type":"cyclic"},{"idCodeFragment":["dif@PHAYiYRVY~F``@@@","gC`D@lyYRVh@"],"mf":["C6H5N","C2H4"],"em":[91.04219916558,28.03130012892],"mass":[92.04947561790094,29.03857658124093],"charge":0,"atomMap":[0,3],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gJP@DjXHCaB`eAzSOtRApjhxUP","daF@@@rQQHyUAA@GBYPUP^qLkFc}DSGBjipj`","diV@@@RfU|kahHB@CaLhJhOLDIaQVM@q~bIcaUTxUP","diV@@@RfU|kahHB@AaLhJhOtQL\\JjgBj@","eF`BLGBTEP_hhKeUNET","gCh@@eMPGBEAJCrDSOtRA\\jhxUP","gFx@@eKXuA@\\HTDhOXQLv_hdByUQpj`","daF@@@Rempj`B@NDB`b`|PQFYeQ~bHByUPxUP","diV@@@Rem\\Kaj@B@Ca@hHhOLDQfYTMGQ~bHByUPxUP"],"type":"cyclic"}]},{"spectrum":{"x":[55.018,63.0232,67.0543,72.0444,80.0494,81.0334,91.0542,92.0494,108.0443,136.0392,154.0498],"y":[0.5506,0.1322,1.3239,0.1332,3.0722,0.1141,1.0454,0.8165,21.5245,100,73.662]},"ionization":"H+","precision":3.5,"idCode":"dmvL@EAFR[f]FV``H@@","fragmentation":[{"idCodeFragment":["dmvL@EAFR[f]FV``H@@"],"mf":["C7H7NO3"],"em":[153.04259308875],"mass":[154.04986954107093],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["dmvD`EQ`VTfygQfXHB@@","eFJHVXp@"],"mf":["C7H6NO2","HO"],"em":[136.03985343695,17.0027396518],"mass":[137.04712988927093,18.01001610412093],"charge":0,"atomMap":[1],"hoseCodes":["eFHBLGBTEP_hhOeUNET","gC``@dff@xPhIP^`c}D`_JjNET","gGP`@dfzX@NDJBTGhHQHGrjcaU@","diDL@@QdfyfXH@Ca@hHhOHDUGzH`OeUCaU@","dmvL@EAFR[f]FY``H@NDB`b`|PQTMGQ~bHCyUPxUP"],"type":"acyclic"},{"idCodeFragment":["gC`hE`liML@@","difH`AHEeIf][hHB@@"],"mf":["CHO2","C6H6NO"],"em":[44.99765427137,108.04493881738],"mass":[46.00493072369093,109.05221526970094],"charge":0,"atomMap":[1],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gGP`@dfyh@NEJCTGzIHxUV\\Jh","diDL@@QdfyehH@CaHhLhOHdUGzHdNEUcaU@","dmvL@EAFR[f]FV``H@NDb`r`|RQTMGQ~bICaUXxUP","dmvL@EAFR[f]FV``H@FDb`r`QDapjl\\Jh"],"type":"acyclic"},{"idCodeFragment":["dmvD`ExPV\\bbbTUZXHFH@@","eFJHVXp@"],"mf":["C7H6NO2","HO"],"em":[136.03985343695,17.0027396518],"mass":[137.04712988927093,18.01001610412093],"charge":0,"atomMap":[4],"hoseCodes":["eFHBLGBTEP_hhOeUNET","gCa@@dt@GBEAJCtD_hdCyUQpj`","gNq@@dsLA@GBEAJCrDZOtRA|jhxUP","deTL@@xTfYYZXHF@@xPJBJCqAFQTMGzH`OeUCaU@","dmvL@ECarJJIQUi``X`@xPJBJCuAFQTM@q~bHCyUPxUP"],"type":"acyclic"},{"idCodeFragment":["dmtL`AePVTfUmjZ@Bf@@","eFbHVXp@"],"mf":["C7H5O3","H2N"],"em":[137.02386901986,16.01872406889],"mass":[138.03114547218092,17.02600052121093],"charge":0,"atomMap":[8],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@dt@GBEAJCtF_hdByUQpj`","gGX@@drp@ApaPR`}abcQ~bPKeUGBj@","daF@@@RYVih@H@NDB`b`|PXdYEQ~bHByUPxUP","dmvL@EAFR[f]FV``H@NDF`V`|UQtSBy~bHKaUJnUP"],"type":"acyclic"}]},{"spectrum":{"x":[80.0494,96.0443],"y":[100,0.1412]},"ionization":"H+","precision":3.5,"idCode":"gFx@@eJf`@@@","fragmentation":[{"idCodeFragment":["gFx@@eJf`@@@"],"mf":["C5H5N"],"em":[79.04219916558],"mass":[80.04947561790094],"charge":0,"type":"Molecular Ion"}]},{"spectrum":{"x":[70.0652,80.0495,98.0601,106.0653,118.0652,120.0808,146.0601,149.071,159.0919,177.1023],"y":[0.4474,26.7749,10.5451,0.106,0.9542,0.5556,3.0568,0.5613,0.198,100]},"ionization":"H+","precision":3.5,"idCode":"dk]H@DTLbbbQbRImMjj@B@@","fragmentation":[{"idCodeFragment":["dk]H@DTLbbbQbRImMjj@B@@"],"mf":["C10H12N2O"],"em":[176.09496301519002],"mass":[177.10223946751094],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["dk]H`HT`V\\bbbafRkmNij@B@@","eFBAYc@@"],"mf":["C9H9N2O","CH3"],"em":[161.07148791850003,15.02347509669],"mass":[162.07876437082095,16.03075154901093],"charge":0,"atomMap":[2],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@AGj@xPhIP^d{}D`WJjNET","daFH@DAIf^fZjjJhCaDhBhOHWUGzHbKeTSaU@","deVH@DAIf_jYjjBbb@xQJ@jCqYa]TMgzHbKeTSaU@","dcMH@DTDfY~VfZj`Bbb@xQJ@jCsYa]TM`qL_hbHnUQNET"],"type":"acyclic"},{"idCodeFragment":["daFH`DxEeIfTfjjX@@","gOxHBEeIeZx@@@"],"mf":["C5H8NO","C5H4N"],"em":[98.06058888184,78.03437413335],"mass":[99.06786533416094,79.04165058567094],"charge":0,"atomMap":[4],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gGX@@dsUAIPNEJATGiHQIGBjSaU@","dmu@@@iIYedUBJJjLHCaDhLhOEDYAPv_hbHxUVNET","dk]H@DTLbbbQbRImMjj@BHH`NDJ`z`}vXTUsXLSFq~bHSaU\\xUP","dk]H@DTLbbbQbRImMjj@BHH`FDJ`z`QDIpjn\\Jh"],"type":"acyclic"},{"idCodeFragment":["gGQDDEfkJS[MP@","dmu@PHDEdegHhhXdiVj`@@@"],"mf":["C3H4O","C7H8N2"],"em":[56.026214748490005,120.0687482667],"mass":[57.033491200810936,121.07602471902094],"charge":0,"atomMap":[1,6],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gGY@DDfYj`NEJATGzIHxURWJh","daFH@DAIfTfZjjBhCaHhDhOYfEE]~bICaUHnUP","deVH@DCHhhdXSMUPTDPGBQPIP^KLJJylQDapjdWJh","dcMH@DTLbbbQbQLuU@EADApdTBTGfsBbn[AbXQDapjdWJh","eF@Hp\\IPUA~b`xUTxUP","gJX@@dsURTCaR`UAyREgzIHxUR\\Jh","dif@@@rRJHpfjjBbJ@xRJ@jCvQAXv_hbPxUQNET","dcMH@DTLbbbQbQLuU@EATApaTCTGfsBbn[AbXQDIpjf\\Jh","dk]H@DTLbbbQbRImMjj@BHJ`NDJ`Z`}vXTUsXLSFq~bHSaULxUP"],"type":"cyclic"},{"idCodeFragment":["gJQDDEdkJS\\t@@","dcM@PHdEdUeIfyWWZjB@@@"],"mf":["C2H2O","C8H10N2"],"em":[42.01056468403,134.08439833116],"mass":[43.01784113635093,135.09167478348093],"charge":0,"atomMap":[1,3],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gGY@DDfYj`NEJATGzIHxURWJh","daFH@DAIfTfZjjBhCaHhDhOYfEE]~bICaUHnUP","deVH@DCHhhdXSMUPTDPGBQPIP^KLJJylQDapjdWJh","dcMH@DTLbbbQbQLuU@EADApdTBTGfsBbn[AbXQDapjdWJh","eF@Hp\\IPUA~b`xUTxUP","gC`@Dij@xPhIP^PrY~bPNEUGBj@","gOy@DDfUMZjhZApmPV`}maby~bSNEUWBj@","deVH@DCHhhdXSMUPTEPGBYPMP^sLJFs}DSGBjYpj`","dcMH@DTLbbbQbQLuU@EATApfTCTGfsBbn[AbXQDqpjf\\Jh"],"type":"cyclic"},{"idCodeFragment":["gNyDHPlmYrJJFih@","deV@PNAYYYRYe\\YjB@@@"],"mf":["C3H5NO","C7H7N"],"em":[71.03711378515,105.05784923004],"mass":[72.04439023747094,106.06512568236094],"charge":0,"atomMap":[2,3],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gGX@@eSUTApaPR`}IGzI@nUT\\Jh","deVH@DCHhhdXSMUPTDPGBIPEP^phkfs}DQErjIpj`","dcMH@DTLbbbQbQLuU@EADApbTATGfsBbn[AbXQDQ\\jb\\Jh","dk]H@DTLbbbQbRImMjj@BHH`NDR`J`}vXTUsXLSFq~bHbyUDxUP","eF@Hp\\IPUA~b`xUTxUP","gC`@Dij@xPhIP^PrY~bPNEUGBj@","gOy@DDfUMZjhZApmPV`}maby~bSNEUWBj@","deVH@DCHhhdXSMUPTEPGBYPMP^sLJFs}DSGBjYpj`","dcMH@DTLbbbQbQLuU@EATApfTCTGfsBbn[AbXQDqpjf\\Jh"],"type":"cyclic"},{"idCodeFragment":["gGYDIPleYRYji@@","dmv@PNAYeYRYeUEZ```@@"],"mf":["C2H3NO","C8H9N"],"em":[57.021463720689994,119.07349929450001],"mass":[58.028740173010924,120.08077574682095],"charge":0,"atomMap":[1,2],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gGX@@eSUTApaPR`}IGzI@nUT\\Jh","deVH@DCHhhdXSMUPTDPGBIPEP^phkfs}DQErjIpj`","dcMH@DTLbbbQbQLuU@EADApbTATGfsBbn[AbXQDQ\\jb\\Jh","dk]H@DTLbbbQbRImMjj@BHH`NDR`J`}vXTUsXLSFq~bHbyUDxUP","eF@Hp\\IPUA~b`xUTxUP","gJY@DDfvhCaR`uAz[OtRQpjlxUP","gOy@DDfYKZj`NEJCTGel^_hdcaUYpj`","daFH@DAIfTfZjjBhCaHhLhOEfEE\\v_hbPxUVNET","deVH@DCHhhdXSMUPTDPGBQPYP^KLJJylQDapjl\\Jh"],"type":"cyclic"},{"idCodeFragment":["dkmHPLU@VVV\\bfbabRtyjh@@@@","gC`D@lyYRVh@"],"mf":["C8H8N2O","C2H4"],"em":[148.06366288627,28.03130012892],"mass":[149.07093933859093,29.03857658124093],"charge":0,"atomMap":[1,4],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gJX@@dsURTCaR`UAyREgzIHxUR\\Jh","dif@@@rRJHpfjjBbJ@xRJ@jCvQAXv_hbPxUQNET","dcMH@DTLbbbQbQLuU@EATApaTCTGfsBbn[AbXQDIpjf\\Jh","dk]H@DTLbbbQbRImMjj@BHJ`NDJ`Z`}vXTUsXLSFq~bHSaULxUP","eF@Hp\\IPUA~b`xUTxUP","gJY@DDfvhCaR`uAz[OtRQpjlxUP","gOy@DDfYKZj`NEJCTGel^_hdcaUYpj`","daFH@DAIfTfZjjBhCaHhLhOEfEE\\v_hbPxUVNET","deVH@DCHhhdXSMUPTDPGBQPYP^KLJJylQDapjl\\Jh"],"type":"cyclic"}]},{"spectrum":{"x":[65.0387,67.0543,82.0651,92.0494,93.0335,110.06],"y":[4.3174,0.1572,0.6674,28.8844,3.4654,100]},"ionization":"H+","precision":3.5,"idCode":"daFH@BAIf]n``@@@","fragmentation":[{"idCodeFragment":["daFH@BAIf]n``@@@"],"mf":["C6H7NO"],"em":[109.05276384961],"mass":[110.06004030193094],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["eFJHVXp@","daF@`BAYRYg[hH@@@"],"mf":["HO","C6H6N"],"em":[17.0027396518,92.05002419781],"mass":[18.01001610412093,93.05730065013094],"charge":0,"atomMap":[0],"hoseCodes":["eFHBLGBTEP_hhOeUNET","gCa@@dt@GBEAJCtD_hdCyUQpj`","gNy@BDfY``@xPhIP^PcQ~bPOeUGBj@","daFH@BAIf]n``@@xPJBJCuAFPVUCQ~bHCyUPxUP","daFH@BAIf]n``@@XPJBJC}DPGrjapj`"],"type":"acyclic"},{"idCodeFragment":["daDH`BAYRYg[hH@@@","eFbHVXp@"],"mf":["C6H5O","H2N"],"em":[93.03403978072,16.01872406889],"mass":[94.04131623304093,17.02600052121093],"charge":0,"atomMap":[2],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@dt@GBEAJCtF_hdByUQpj`","gNy@BLbba``@xRhCP^Qrq~bQNETUrj@","daFH@BAIf]n``@@xQJ@jCuAFPVUGQ~bHcaUDnUP","daFH@BAIf]n``@@XQJ@jC}DQGBjI\\j`"],"type":"acyclic"}]},{"spectrum":{"x":[50.0153,51.0231,65.0386,71.0292,75.0228,79.0178,85.0448,92.0494,95.029,111.0478,112.0556,123.0353],"y":[0.1363,0.1472,1.2948,0.3683,0.2011,0.1155,0.4751,14.4947,0.266,0.9682,100,1.8864]},"ionization":"H+","precision":3.5,"idCode":"daF@`NBPRYWih@H@@","fragmentation":[{"idCodeFragment":["daF@`NBPRYWih@H@@"],"mf":["C6H6FN"],"em":[111.04842736054],"mass":[112.05570381286094],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["eFAAYiBL@","daF@`NAYRYWih@H@@"],"mf":["F","C6H6N"],"em":[18.99840316273,92.05002419781],"mass":[20.00567961505093,93.05730065013094],"charge":0,"atomMap":[0],"hoseCodes":["eFBBPcApeATGzJBqUSaU@","gC`HAHIM@ApaPR`QHEbjcaU@","gGPHAHILl@@\\HTDhOIQhQHEbjcaU@","gOpHAHILkW@@@\\HTDhOEQhLVOtRAXjhxUP","daF@`NBPRYWih@H@NDB`b`|RQdEEQ~bHBqUPxUP"],"type":"acyclic"},{"idCodeFragment":["daD@P@V^dDfUzZ@B@@","eFbHVXp@"],"mf":["C6H4F","H2N"],"em":[95.02970329165,16.01872406889],"mass":[96.03697974397093,17.02600052121093],"charge":0,"atomMap":[6],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@dt@GBEAJCtF_hdByUQpj`","gGX@@drp@ApaPR`}abcQ~bPKeUGBj@","gOx@@drm\\@@ApaPR`}QbcPXl_hdByUQpj`","daF@`NBPRYWih@H@FDZ`z`QDYpjnWJh"],"type":"acyclic"}]},{"spectrum":{"x":[51.0231,53.0388,55.018,67.0543,77.0386,81.0335,93.0573,94.0651,105.0447],"y":[0.3757,3.4458,0.1692,0.2032,2.108,0.5046,0.578,100,2.4559]},"ionization":"H+","precision":3.5,"idCode":"gOx@@drm\\@@@@","fragmentation":[{"idCodeFragment":["gOx@@drm\\@@@@"],"mf":["C6H7N"],"em":[93.05784923004],"mass":[94.06512568236094],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["eFbHVXp@","gOpH@liLkW@@@@"],"mf":["H2N","C6H5"],"em":[16.01872406889,77.03912516115],"mass":[17.02600052121093,78.04640161347093],"charge":0,"atomMap":[0],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@dt@GBEAJCtF_hdByUQpj`","gGX@@drp@ApaPR`}abcQ~bPKeUGBj@","gOx@@drm\\@@ApaPR`}QbcPXl_hdByUQpj`","gOx@@drm\\@@@paPR`QHErjcaU@"],"type":"acyclic"}]},{"spectrum":{"x":[65.0386,68.0495,77.0386,81.07,92.0495,93.0572,94.0651,95.0492,110.0601,119.0604,120.0444,137.0709],"y":[0.4053,0.2087,0.1684,0.119,2.4044,0.1385,19.2541,0.1999,0.4039,0.1134,100,31.3601]},"ionization":"H+","precision":3.5,"idCode":"deUH@DdDfyWxV`@`@@","fragmentation":[{"idCodeFragment":["deUH@DdDfyWxV`@`@@"],"mf":["C7H8N2O"],"em":[136.06366288627],"mass":[137.07093933859093],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["deVH`IPEeInU~FX@H@@","eFbHVXp@"],"mf":["C7H6NO","H2N"],"em":[120.04493881738,16.01872406889],"mass":[121.05221526970094,17.02600052121093],"charge":0,"atomMap":[1],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCi@DDfZ@xThEP^bs}Dd\\JiKeT","gGY@DDfyh@NEJATGhlQIGBjRyU@","dazH@DAInUh@@NDb`R`}bXTUGzHdNETbyU@","difH@DAInUxV`@@CaHhDhOTfEEPt]GzHdNETbyU@"],"type":"acyclic"},{"idCodeFragment":["gCiHL`liML@@","daF@`NAYRYWih@H@@"],"mf":["CH2NO","C6H6N"],"em":[44.013638688460006,92.05002419781],"mass":[45.020915140780936,93.05730065013094],"charge":0,"atomMap":[1],"hoseCodes":["eF@Hp\\IPUA~b`xUTxUP","gGY@DDfyh@NEJCTGzIHxUV\\Jh","dazH@DAInUh@@NDb`r`}bXTUGzHdNEUcaU@","difH@DAInUxV`@@CaHhLhOTfEEPt]GzHdNEUcaU@","deUH@DdDfyWxV`@`@xRJCJCuIaQTMGQ~bICaUXxUP"],"type":"acyclic"},{"idCodeFragment":["deVH`IDEeIe]jZ@BX@@","eFbHVXp@"],"mf":["C7H6NO","H2N"],"em":[120.04493881738,16.01872406889],"mass":[121.05221526970094,17.02600052121093],"charge":0,"atomMap":[8],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@dt@GBEAJCtF_hdByUQpj`","gGX@@drp@ApaPR`}abcQ~bPKeUGBj@","gOx@@drm\\@@ApaPR`}QbcPXl_hdByUQpj`","daF@@@RYWih@H@NDB`b`}PXdYAQT_hb@nUTNET"],"type":"acyclic"}]},{"spectrum":{"x":[66.0465,80.0495,91.0542,92.0494,93.0573,108.0807],"y":[0.1804,0.1349,0.6447,0.1713,100,97.5915]},"ionization":"H+","precision":3.5,"idCode":"daF@@@Rfu[j@@@@","fragmentation":[{"idCodeFragment":["daF@@@Rfu[j@@@@"],"mf":["C7H9N"],"em":[107.07349929450001],"mass":[108.08077574682095],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["eMbHVTf`@","gOpH@liLkW@@@@"],"mf":["CH4N","C6H5"],"em":[30.03437413335,77.03912516115],"mass":[31.04165058567093,78.04640161347093],"charge":0,"atomMap":[0],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gJX@@eMP@\\HTDhOPQ~bPKeUGBj@","gNx@@eMm@@GBEAJCqDKmAc}D`WJjNET","daF@@@Rfu[j@@@NDB`b`|pPgYAQTMGzH`KeUCaU@","daF@@@Rfu[j@@@FDB`b`QDA\\jh\\Jh"],"type":"acyclic"},{"idCodeFragment":["daF@`HAYRVU[j@@@@","eFBAYc@@"],"mf":["C6H6N","CH3"],"em":[92.05002419781,15.02347509669],"mass":[93.05730065013094,16.03075154901093],"charge":0,"atomMap":[0],"hoseCodes":["eF`BLGBTEP_hhKeUNET","eM`BN`xR`jCrQ]~b`nUTxUP","gJX@@e]P@\\HTDhOHQNQHErjcaU@","gNx@@e\\m@@GBEAJCqDSmAc}D`WJjNET","daF@@@RnU[j@@@NDB`b`|pQGYAQTMGzH`KeUCaU@"],"type":"acyclic"}]},{"spectrum":{"x":[55.0181,65.0386,67.0416,67.0543,80.0495,82.0651,92.0494,93.0334,93.0572,109.0522,110.06,121.0396],"y":[0.1092,7.7614,0.2027,0.6095,0.3092,3.5985,8.3299,7.6851,0.4638,0.8734,100,1.141]},"ionization":"H+","precision":3.5,"idCode":"daFH@NAIe^f`@`@@","fragmentation":[{"idCodeFragment":["daFH@NAIe^f`@`@@"],"mf":["C6H7NO"],"em":[109.05276384961],"mass":[110.06004030193094],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["eFJHVXp@","daF@`NAYRYWih@H@@"],"mf":["HO","C6H6N"],"em":[17.0027396518,92.05002419781],"mass":[18.01001610412093,93.05730065013094],"charge":0,"atomMap":[0],"hoseCodes":["eFHBLGBTEP_hhOeUNET","gCa@@dt@GBEAJCtD_hdCyUQpj`","gGQ@@drp@ApaPR`}aBcQ~bPOeUGBj@","gOq@@drm\\@@ApaPR`}QBcPXl_hdCyUQpj`","daFH@NAIe^f`@`@xPJBJCuABQdEEQ~bHCyUPxUP"],"type":"acyclic"},{"idCodeFragment":["daDH`NAYRYWih@H@@","eFbHVXp@"],"mf":["C6H5O","H2N"],"em":[93.03403978072,16.01872406889],"mass":[94.04131623304093,17.02600052121093],"charge":0,"atomMap":[6],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCh@@dt@GBEAJCtF_hdByUQpj`","gGX@@drp@ApaPR`}abcQ~bPKeUGBj@","gOx@@drm\\@@ApaPR`}QbcPXl_hdByUQpj`","daFH@NAIe^f`@`@xQjCjCuIFPTUGY~bHsaU\\nUP"],"type":"acyclic"}]},{"spectrum":{"x":[67.0543,78.0338,95.0603],"y":[0.283,1.8312,100]},"ionization":"H+","precision":3.5,"idCode":"gOt@AdigkB@@@","fragmentation":[{"idCodeFragment":["gOt@AdigkB@@@"],"mf":["C5H6N2"],"em":[94.05309820224],"mass":[95.06037465456093],"charge":0,"type":"Molecular Ion"},{"idCodeFragment":["gOxHDEeIeZx@@@","eFbHVXp@"],"mf":["C5H4N","H2N"],"em":[78.03437413335,16.01872406889],"mass":[79.04165058567094,17.02600052121093],"charge":0,"atomMap":[1],"hoseCodes":["eF`BLGBTEP_hhKeUNET","gCd@@df`@xPhIP^`s}D`WJjNET","gGT@@dfV@@NDJBTGdLt_hdByUQpj`","gOt@@dfUk`@@NDJBTGbLtFKGzI@nUT\\Jh","gOt@@dfUk`@@FDJBTGzI@nUT\\Jh"],"type":"acyclic"}]}]
+[
+  {
+    "spectrum": {
+      "x": [
+        57.07, 67.0543, 69.0699, 71.0856, 79.0542, 81.0699, 83.0856, 95.0855,
+        109.1012, 137.1324, 154.159, 171.1855
+      ],
+      "y": [
+        0.6911, 0.9323, 1.0796, 1.4441, 0.1727, 11.18, 0.1394, 11.1968, 0.5283,
+        23.9291, 100, 56.9533
+      ]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "dcM@@@uIeZ[ijjjj`@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["dcM@@@uIeZ[ijjjj`@"],
+        "mf": ["C10H22N2"],
+        "em": [170.17829871792],
+        "mass": [171.18557517024092],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["eFbHVXp@", "dcN@`MAYRYVfzZjjjh@@"],
+        "mf": ["H2N", "C10H20N"],
+        "em": [16.01872406889, 154.15957464903],
+        "mass": [17.02600052121093, 155.16685110135091],
+        "charge": 0,
+        "atomMap": [0],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@duPGBEAJCrFROtRA\\jhxUP",
+          "gGX@@druTApaPR`|QdaYlQHErjcaU@",
+          "dmv@@@RYVfijjjj@NDB`b`|PYDIfY~bHByUPxUP",
+          "dcM@@@uIeZ[ijjjjdb`b@xPJBJCtadPfYcYvCt|o_hb@nUTNET"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["dmv@`EAYRZWi[jjjj@@", "eMbDVTf`@"],
+        "mf": ["C9H18N", "CH4N"],
+        "em": [140.14392458457, 30.03437413335],
+        "mass": [141.1512010368909, 31.04165058567093],
+        "charge": 0,
+        "atomMap": [4],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGX@@dmUTApiPJ`}IgzIHxUR\\Jh",
+          "daz@@@RVejj`CaHhDhOTFQfXVUwzHdNETcaU@",
+          "dcM@@@uIZWixZjjjdRcj@xRJAJCsAdYfEe]t_hbPxURNET",
+          "dcM@@@uIZWixZjjjdRcj@XRJAJC}DRGBjQpj`"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["dcM@`NtEeIiUiXZjjj`@", "eFBAYc@@"],
+        "mf": ["C9H19N2", "CH3"],
+        "em": [155.15482362123, 15.02347509669],
+        "mass": [156.16210007355093, 16.03075154901093],
+        "charge": 0,
+        "atomMap": [4],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJP@H~j@xPhIP^d{}D`\\JjNET",
+          "daz@@@RVmjj`CaDhLhOEFYqYV_hbHxUVNET",
+          "dcM@@@uIZuixZjjjdPcb@xQJCJCsAdYgEeYt_hbHxUVNET",
+          "dcM@@@wHhdiECWUUUUIAAT@paTCTGzHaNETsaU@"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["dcM@`EtEeIi^g[jjjj`@", "eFBAYc@@"],
+        "mf": ["C9H19N2", "CH3"],
+        "em": [155.15482362123, 15.02347509669],
+        "mass": [156.16210007355093, 16.03075154901093],
+        "charge": 0,
+        "atomMap": [5],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJP@H~j@xPhIP^d{}D`\\JjNET",
+          "gNp@Djmjj@xPhIP^LyYlO_hdCaUQpj`",
+          "dmv@@@RYVfkjjjjRBBhCaBhFhOUDIc]vCwzHaNETsaU@",
+          "dcM@@@wHhdiEKWUUUUYAATTPGBEPMP^dLbDsL[np^gE{}DPgBjYpj`"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["dcM@`EtEeIi^g[jjjj`@", "eFBAYc@@"],
+        "mf": ["C9H19N2", "CH3"],
+        "em": [155.15482362123, 15.02347509669],
+        "mass": [156.16210007355093, 16.03075154901093],
+        "charge": 0,
+        "atomMap": [5],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJP@H~j@xPhIP^d{}D`\\JjNET",
+          "gNp@Djmjj@xPhIP^LyYlO_hdCaUQpj`",
+          "dmv@@@RYVfkjjjjRJBhCaBhFhOUDIc]vCwzHaNETsaU@",
+          "dcM@@@wHhdiEKWUUUUYEATUPGBEPMP^dLbDsL[np^gE{}DPgBjYpj`"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["dcN@`MAYRVez^Fjjjh@@", "eFbHVXp@"],
+        "mf": ["C10H20N", "H2N"],
+        "em": [154.15957464903, 16.01872406889],
+        "mass": [155.16685110135091, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [7],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "eM`AIhNDhJ`|fV_hhKeUNET",
+          "gGX@@dmUTApaPR`|ads}D`WJjNET",
+          "daz@@@RVejj`Ca@hHhOTFQfXVUwzH`KeUCaU@",
+          "dcM@@@uIZWixZjjjdRcj@xPJBJCsAdYfEe]t_hb@nUTNET"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["diF@PDAYEYR[ZZjj@@", "gNxDFEfkJSRuU@@"],
+        "mf": ["C6H13N", "C4H9N"],
+        "em": [99.10479942342, 71.0734992945],
+        "mass": [100.11207587574094, 72.08077574682093],
+        "charge": 0,
+        "atomMap": [1, 6],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJX@@dsURTCaR`UAyREgzIHxUR\\Jh",
+          "dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET",
+          "dcM@@@uIeZ[ijjjjdb`b@xRJAJCwAdPfYcYvCwzHdNETcaU@",
+          "dcM@@@uIeZ[ijjjjdb`b@XRJAJC}DRGBjQpj`",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "dmv@@@RVezxZjjjaJ@xQJCJCqQfXVUwzHbNEUcaU@",
+          "dcM@@@uIZWixZjjjdRcj@xQJCJCtadYfEe]tCd|o_hbHxUVNET",
+          "dcM@@@uIeZ[ijjjjdb`b@XPjAjC}DPgBjYpj`"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["daz@PNAYYYrJQFUUP@@", "daz@PNAYYYRVejj`@"],
+        "mf": ["C5H11N", "C5H11N"],
+        "em": [85.08914935896, 85.08914935896],
+        "mass": [86.09642581128094, 86.09642581128094],
+        "charge": 0,
+        "atomMap": [1, 5],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJX@@dsURTCaR`UAyREgzIHxUR\\Jh",
+          "dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET",
+          "dcM@@@uIeZ[ijjjjdb`b@xRJAJCwAdPfYcYvCwzHdNETcaU@",
+          "dcM@@@uIeZ[ijjjjdb`b@XRJAJC}DRGBjQpj`",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "deT@@LddRLc]UUU@GBAPQP^JLSLxnQDApjh\\Jh",
+          "dcM@@@wHhdiEKSUUUUIAEDApaTCTGabDsL[Nx^gE{}DPgBjYpj`",
+          "dcM@@@wHhdiEKSUUUUIAED@paTCTGzHaNETsaU@"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gJXDDEdkJS]T@@", "dmV@PEAYeYrJQFQJjjj@@"],
+        "mf": ["C2H5N", "C8H17N"],
+        "em": [43.04219916558, 127.13609955234],
+        "mass": [44.04947561790093, 128.14337600466092],
+        "charge": 0,
+        "atomMap": [1, 3],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJX@@dsURTCaR`UAyREgzIHxUR\\Jh",
+          "dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET",
+          "dcM@@@uIeZ[ijjjjdb`b@xRJAJCwAdPfYcYvCwzHdNETcaU@",
+          "dcM@@@uIeZ[ijjjjdb`b@XRJAJC}DRGBjQpj`",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "dif@@@RYVjZjjjHhCaDhBhOUDIcYwCwzHbNETSaU@",
+          "dmv@@@RYVfijjjjbJ@xQJ@jCwAdPfYcYwCwzHbNETSaU@",
+          "dcM@@@wHhdiEKSUUUUIAEDApbTATGiCHaLsFsnGiq^QDQpjb\\Jh"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["diF@PFAYEYrJQFZjj`@", "gNxDFEfkJSRuU@@"],
+        "mf": ["C6H13N", "C4H9N"],
+        "em": [99.10479942342, 71.0734992945],
+        "mass": [100.11207587574094, 72.08077574682093],
+        "charge": 0,
+        "atomMap": [2, 5],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "deU@@@gHhdiCSUUURPPU@\\He@UAzhaL[Np^QDQpjb\\Jh",
+          "dcM@@@uIeZ[ijjjjd``j@xQJ@jCpadPfYcYvCvy~bHcaUDxUP",
+          "dcM@@@uIeZ[ijjjjd``j@XQJ@jC}DQGBjIpj`",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "deT@@LddRLc]UUU@GBAPQP^JLSLxnQDApjh\\Jh",
+          "dcM@@@wHhdiEKSUUUUIAEDApaTCTGabDsL[Nx^gE{}DPgBjYpj`",
+          "dcM@@@wHhdiEKSUUUUIAED@paTCTGzHaNETsaU@"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gGXDLEfkJRwUP@", "def@PJAYyYrJQHrUUU@@"],
+        "mf": ["C3H7N", "C7H15N"],
+        "em": [57.05784923004, 113.12044948788001],
+        "mass": [58.06512568236093, 114.12772594020095],
+        "charge": 0,
+        "atomMap": [2, 3],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "deU@@@gHhdiCSUUURPPU@\\He@UAzhaL[Np^QDQpjb\\Jh",
+          "dcM@@@uIeZ[ijjjjd``j@xQJ@jCpadPfYcYvCvy~bHcaUDxUP",
+          "dcM@@@uIeZ[ijjjjd``j@XQJ@jC}DQGBjIpj`",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "dif@@@RYVjZjjjHhCaDhBhOUDIcYwCwzHbNETSaU@",
+          "dmv@@@RYVfijjjjbJ@xQJ@jCwAdPfYcYwCwzHbNETSaU@",
+          "dcM@@@wHhdiEKSUUUUIAEDApbTATGiCHaLsFsnGiq^QDQpjb\\Jh"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gJXDDEdkJS]T@@", "dmV@PJAYUYrJQHrJjjj@@"],
+        "mf": ["C2H5N", "C8H17N"],
+        "em": [43.04219916558, 127.13609955234],
+        "mass": [44.04947561790093, 128.14337600466092],
+        "charge": 0,
+        "atomMap": [1, 2],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "deU@@@gHhdiCSUUURPPU@\\He@UAzhaL[Np^QDQpjb\\Jh",
+          "dcM@@@uIeZ[ijjjjd``j@xQJ@jCpadPfYcYvCvy~bHcaUDxUP",
+          "dcM@@@uIeZ[ijjjjd``j@XQJ@jC}DQGBjIpj`",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJX@@dsURTCaR`UAyREgzIHxUR\\Jh",
+          "dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET",
+          "dmv@@@RYVfijjjjbJ@xRJAJCwAdPfYcYwCwzHdNETcaU@",
+          "dcM@@@wHhdiEKSUUUUIEETApdTBTGiCHaLsFsnGiq^QDapjd\\Jh"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["dee@PJxEfUgHiDcMUUT@@", "gGPD@luYRZZj@@"],
+        "mf": ["C6H14N2", "C4H8"],
+        "em": [114.11569846008, 56.06260025784],
+        "mass": [115.12297491240093, 57.06987671016093],
+        "charge": 0,
+        "atomMap": [3, 4],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "dmv@@@RVezxZjjjaJ@xQJCJCqQfXVUwzHbNEUcaU@",
+          "dcM@@@uIZWixZjjjdRcj@xQJCJCtadYfEe]tCd|o_hbHxUVNET",
+          "dcM@@@uIeZ[ijjjjdb`b@XPjAjC}DPgBjYpj`",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "dif@@@RYVjZjjjHhCaDhBhOUDIcYwCwzHbNETSaU@",
+          "dmv@@@RYVfijjjjbJ@xQJ@jCwAdPfYcYwCwzHbNETSaU@",
+          "dcM@@@wHhdiEKSUUUUIAEDApbTATGiCHaLsFsnGiq^QDQpjb\\Jh"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["diE@PJDEgegHiDcJjj@@", "gNpD@lmYRVfjh@"],
+        "mf": ["C5H12N2", "C5H10"],
+        "em": [100.10004839562, 70.0782503223],
+        "mass": [101.10732484794093, 71.08552677462093],
+        "charge": 0,
+        "atomMap": [1, 4],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "dmv@@@RVezxZjjjaJ@xQJCJCqQfXVUwzHbNEUcaU@",
+          "dcM@@@uIZWixZjjjdRcj@xQJCJCtadYfEe]tCd|o_hbHxUVNET",
+          "dcM@@@uIeZ[ijjjjdb`b@XPjAjC}DPgBjYpj`",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJX@@dsURTCaR`UAyREgzIHxUR\\Jh",
+          "dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET",
+          "dmv@@@RYVfijjjjbJ@xRJAJCwAdPfYcYwCwzHdNETcaU@",
+          "dcM@@@wHhdiEKSUUUUIEETApdTBTGiCHaLsFsnGiq^QDapjd\\Jh"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["dee@PDdEdUeImiZjj`@", "gGPD@luYRZZj@@"],
+        "mf": ["C6H14N2", "C4H8"],
+        "em": [114.11569846008, 56.06260025784],
+        "mass": [115.12297491240093, 57.06987671016093],
+        "charge": 0,
+        "atomMap": [1, 6],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP@Djfj`NDJBTGiLQHGBjcaU@",
+          "deT@@LddRLc]UUU@GBAPQP^JLSLxnQDApjh\\Jh",
+          "dcM@@@wHhdiEKSUUUUIAEDApaTCTGabDsL[Nx^gE{}DPgBjYpj`",
+          "dcM@@@wHhdiEKSUUUUIAED@paTCTGzHaNETsaU@",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJX@@dsURTCaR`UAyREgzIHxUR\\Jh",
+          "dif@@@RYVjZjjjHhCaHhDhODFQBYf_hbPxURNET",
+          "dmv@@@RYVfijjjjbJ@xRJAJCwAdPfYcYwCwzHdNETcaU@",
+          "dcM@@@wHhdiEKSUUUUIEETApdTBTGiCHaLsFsnGiq^QDapjd\\Jh"
+        ],
+        "type": "cyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": { "x": [67.0542, 69.0698, 86.0962], "y": [0.102, 3.1609, 100] },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "gFx@@eJfuU@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["gFx@@eJfuU@@"],
+        "mf": ["C5H11N"],
+        "em": [85.08914935896],
+        "mass": [86.09642581128094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["gGXDHEfkJRkUP@", "gC`D@lyYRVh@"],
+        "mf": ["C3H7N", "C2H4"],
+        "em": [57.05784923004, 28.03130012892],
+        "mass": [58.06512568236093, 29.03857658124093],
+        "charge": 0,
+        "atomMap": [0, 5],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gC`@Dij@xPhIP^PrY~bPNEUGBj@",
+          "gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gJXDHEdkJRmT@@", "gJPD@leYRUj`@"],
+        "mf": ["C2H5N", "C3H6"],
+        "em": [43.04219916558, 42.04695019338],
+        "mass": [44.04947561790093, 43.05422664570093],
+        "charge": 0,
+        "atomMap": [0, 4],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gC`@Dij@xPhIP^PrY~bPNEUGBj@",
+          "gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gChDHEgKJRu@@", "gGPD@luYRUZj@@"],
+        "mf": ["CH3N", "C4H8"],
+        "em": [29.026549101119997, 56.06260025784],
+        "mass": [30.033825553440927, 57.06987671016093],
+        "charge": 0,
+        "atomMap": [0, 2],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCh@@dmPGBe@jCrfKOtRQpjdxUP",
+          "gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gGXDDEfkJRkUP@", "gC`D@lyYRVh@"],
+        "mf": ["C3H7N", "C2H4"],
+        "em": [57.05784923004, 28.03130012892],
+        "mass": [58.06512568236093, 29.03857658124093],
+        "charge": 0,
+        "atomMap": [1, 4],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCh@@dmPGBe@jCrfKOtRQpjdxUP",
+          "gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gC`@Dij@xPhIP^PrY~bPNEUGBj@",
+          "gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gJXDDEdkJRmT@@", "gJPD@leYRUj`@"],
+        "mf": ["C2H5N", "C3H6"],
+        "em": [43.04219916558, 42.04695019338],
+        "mass": [44.04947561790093, 43.05422664570093],
+        "charge": 0,
+        "atomMap": [1, 2],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCh@@dmPGBe@jCrfKOtRQpjdxUP",
+          "gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCh@@dmPGBe@jCrfKOtRQpjdxUP",
+          "gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gChDHEgKJRu@@", "gGPD@luYRUZj@@"],
+        "mf": ["CH3N", "C4H8"],
+        "em": [29.026549101119997, 56.06260025784],
+        "mass": [30.033825553440927, 57.06987671016093],
+        "charge": 0,
+        "atomMap": [0, 1],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCh@@dmPGBe@jCrfKOtRQpjdxUP",
+          "gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP",
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gGXDDEfkJRkUP@", "gC`D@lyYRVh@"],
+        "mf": ["C3H7N", "C2H4"],
+        "em": [57.05784923004, 28.03130012892],
+        "mass": [58.06512568236093, 29.03857658124093],
+        "charge": 0,
+        "atomMap": [2, 3],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gC`@Dij@xPhIP^PrY~bPNEUGBj@",
+          "gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCh@@dmPGBe@jCrfKOtRQpjdxUP",
+          "gFx@@eJfuU@\\JTFhODQLvWOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP",
+          "gFx@@eJfuU@LJTFhOtRQpjlxUP"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gJXDHEdkJRmT@@", "gJPD@leYRUj`@"],
+        "mf": ["C2H5N", "C3H6"],
+        "em": [43.04219916558, 42.04695019338],
+        "mass": [44.04947561790093, 43.05422664570093],
+        "charge": 0,
+        "atomMap": [0, 3],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gC`@Dij@xPhIP^PrY~bPNEUGBj@",
+          "gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP",
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gGXDHEfkJRkUP@", "gC`D@lyYRVh@"],
+        "mf": ["C3H7N", "C2H4"],
+        "em": [57.05784923004, 28.03130012892],
+        "mass": [58.06512568236093, 29.03857658124093],
+        "charge": 0,
+        "atomMap": [0, 5],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gC`@Dij@xPhIP^PrY~bPNEUGBj@",
+          "gFx@@eJfuU@\\KTEhOFYlNWOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP",
+          "gFx@@eJfuU@LKTEhOtRYpjjxUP",
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFx@@eJfuU@\\HTDhODQLV[OtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP",
+          "gFx@@eJfuU@LHTDhOtRA\\jhxUP"
+        ],
+        "type": "cyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [60.0558, 68.0244, 71.0604, 85.0509, 88.0869, 113.0822, 130.1087],
+      "y": [100, 0.6808, 37.1603, 21.9837, 21.2221, 10.6361, 77.1249]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "diF`@@pjYJYnejh@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["diF`@@pjYJYnejh@@"],
+        "mf": ["C4H11N5"],
+        "em": [129.10144537667998],
+        "mass": [130.1087218290009],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["gJ\\HIbEeIZZ@@", "gGTHE`liMtu@@"],
+        "mf": ["CH4N3", "C3H7N2"],
+        "em": [58.04052214221, 71.06092323447],
+        "mass": [59.04779859453093, 72.06819968679093],
+        "charge": 0,
+        "atomMap": [0],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gJ\\@AbeMK@\\HTDhOtRA\\jhxUP",
+          "diF`@@pjYJYnejh@xPJBJCtYGzH`KeUCaU@",
+          "diF`@@pjYJYnejh@XPJBJC}DPErjapj`",
+          "diF`@@pjYJYnejh@XPJBJC}DPErjapj`"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["gNrHEjpliL}Rt@@", "gChHHEeIj`@"],
+        "mf": ["C2H5N4", "C2H6N"],
+        "em": [85.05142117887, 44.05002419781],
+        "mass": [86.05869763119094, 45.05730065013093],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gG\\@@ZeSULApaPR`QHErjcaU@",
+          "gN|@@[ddTMThGBEAJCvW[kGzI@nUT\\Jh",
+          "diF`@@JnGIHh]JiZ@NDB`b`}b]gUGzH`KeUCaU@",
+          "diF`@@JnGIHh]JiZ@FDB`b`QDA\\jh\\Jh"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["diD``DrfAYRY{iijBHP", "eFbHVXp@"],
+        "mf": ["C4H9N4", "H2N"],
+        "em": [113.08272130779, 16.01872406889],
+        "mass": [114.08999776011093, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [2],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCl@@ldtpGBEAJCtF_hdByUQpj`",
+          "gJ\\@@ldsMBRxPhIP^PsY~bPKeUGBj@",
+          "gNz@@mVdsttpdnDJBTGdLv_hdByUQpj`",
+          "diF`@@SJYIgnffhHbxPJBJCvAfYT_hb@nUTNET"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["diD``DrfAYRY{iijBHP", "eFbHVXp@"],
+        "mf": ["C4H9N4", "H2N"],
+        "em": [113.08272130779, 16.01872406889],
+        "mass": [114.08999776011093, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [2],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCl@@ldtpGBEAJCtF_hdByUQpj`",
+          "gJ\\@@ldsMBQxPhIP^PsY~bPKeUGBj@",
+          "gNz@@mVdsttpd^DJBTGdLv_hdByUQpj`",
+          "diF`@@SJYIgnffhHaxPJBJCvAfYT_hb@nUTNET"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["diF``HJnDEeIf~jeh@@", "eFBAYc@@"],
+        "mf": ["C3H8N5", "CH3"],
+        "em": [114.07797027999, 15.02347509669],
+        "mass": [115.08524673231094, 16.03075154901093],
+        "charge": 0,
+        "atomMap": [4],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@AGj@xPhIP^d{}D`WJjNET",
+          "gG\\@@ZeWULApaPR`|iv{}D`WJjNET",
+          "gN|@@ZeW]ThGBEAJCvg[kGzI@nUT\\Jh",
+          "diF`@@JnEJn~jeh@xPJBJCvQv]T_hb@nUTNET"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["diF``HJnDEeIf~jeh@@", "eFBAYc@@"],
+        "mf": ["C3H8N5", "CH3"],
+        "em": [114.07797027999, 15.02347509669],
+        "mass": [115.08524673231094, 16.03075154901093],
+        "charge": 0,
+        "atomMap": [4],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@AGj@xPhIP^d{}D`WJjNET",
+          "gG\\@@ZeWULApaPR`|iv{}D`WJjNET",
+          "gN|@@ZeW]ThGBEAJCvg[kGzI@nUT\\Jh",
+          "diF`@@JnEJn~jeh@xPJBJCvQv]T_hb@nUTNET"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [53.0024, 53.9977, 55.0544, 56.0496, 57.07, 74.0965],
+      "y": [1.4212, 0.3845, 0.2953, 0.2524, 100, 43.4622]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "gJX@@dkU@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["gJX@@dkU@@"],
+        "mf": ["C4H11N"],
+        "em": [73.08914935896],
+        "mass": [74.09642581128094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["eFbHVXp@", "gJPH@liJuP@"],
+        "mf": ["H2N", "C4H9"],
+        "em": [16.01872406889, 57.07042529007],
+        "mass": [17.02600052121093, 58.07770174239093],
+        "charge": 0,
+        "atomMap": [0],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "eM`AIhNDhJ`|fV_hhKeUNET",
+          "gCh@@dmPGBEAJCvFSEgzI@nUT\\Jh",
+          "gJX@@dkU@\\HTDhODYLV[OtRA\\jhxUP",
+          "gJX@@dkU@LHTDhOtRA\\jhxUP"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["eMbDVTf`@", "gC`H@liKT@@"],
+        "mf": ["CH4N", "C3H7"],
+        "em": [30.03437413335, 43.05477522561],
+        "mass": [31.04165058567093, 44.06205167793093],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCh@@dmPGBe@jCrfKOtRQpjdxUP",
+          "gJX@@dkU@\\JTBhODYLV[OtRQpjdxUP",
+          "gJX@@dkU@LJTBhOtRQpjdxUP",
+          "gJX@@dkU@LJTBhOtRQpjdxUP"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["gChHLEeIZ`@", "eMBAYRZ@"],
+        "mf": ["C2H6N", "C2H5"],
+        "em": [44.05002419781, 29.03912516115],
+        "mass": [45.05730065013093, 30.04640161347093],
+        "charge": 0,
+        "atomMap": [2],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gC`@Dij@xPhIP^PrY~bPNEUGBj@",
+          "gJX@@dkU@\\ITFhOFXlvGotRIpjlxUP",
+          "gJX@@dkU@LITFhOtRIpjlxUP",
+          "gJX@@dkU@LITFhOtRIpjlxUP"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["gJXHBEeIVj@@", "eFBAYc@@"],
+        "mf": ["C3H8N", "CH3"],
+        "em": [58.06567426227, 15.02347509669],
+        "mass": [59.07295071459093, 16.03075154901093],
+        "charge": 0,
+        "atomMap": [3],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "eM@HzCaJBhOIewzJCaUSaU@",
+          "gC`@Dkj@xPhIP^pr\\lQHGBjcaU@",
+          "gJX@@dkU@\\KTAhOFXlvGotRYpjbxUP",
+          "gJX@@dkU@LKTAhOtRYpjbxUP"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [57.0449, 58.0401, 85.0508],
+      "y": [3.2226, 1.1032, 100]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "gFr@ACTi[FZd@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["gFr@ACTi[FZd@"],
+        "mf": ["C2H4N4"],
+        "em": [84.04359614664],
+        "mass": [85.05087259896094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["gF|HEbEeIeMff@@", "eFbHVXp@"],
+        "mf": ["C2H2N3", "H2N"],
+        "em": [68.02487207775, 16.01872406889],
+        "mass": [69.03214853007094, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [2],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCl@@ldtpGBEAJCtF_hdByUQpj`",
+          "gFr@@lTfTvZXCaB`eAzCOtRA\\jhxUP",
+          "gFr@@lTfTvZXAaB`eA~bPKeUGBj@",
+          "gFr@@lTfTvZXAaB`eA~bPKeUGBj@"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [60.0445, 68.0495, 70.0651, 71.0128, 88.0756],
+      "y": [0.2329, 0.4336, 20.1009, 0.1236, 100]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "gFy@JDiTvjh@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["gFy@JDiTvjh@"],
+        "mf": ["C4H9NO"],
+        "em": [87.06841391406999],
+        "mass": [88.07569036639093],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["gGYDC@luYRUZj@@", "gC`D@lyYRVh@"],
+        "mf": ["C2H5NO", "C2H4"],
+        "em": [59.03711378515, 28.03130012892],
+        "mass": [60.04439023747093, 29.03857658124093],
+        "charge": 0,
+        "atomMap": [0, 5],
+        "hoseCodes": [
+          "eFHBLGBTEP_hhOeUNET",
+          "gCa@@eMPGBEAJCtf_hdCyUQpj`",
+          "gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@",
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gJQDHEdkJRmT@@", "gJXDHEdkJRmT@@"],
+        "mf": ["C2H4O", "C2H5N"],
+        "em": [44.026214748490005, 43.04219916558],
+        "mass": [45.033491200810936, 44.04947561790093],
+        "charge": 0,
+        "atomMap": [0, 4],
+        "hoseCodes": [
+          "eFHBLGBTEP_hhOeUNET",
+          "gCa@@eMPGBEAJCtf_hdCyUQpj`",
+          "gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@",
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gCaDHEgKJRu@@", "gGXDDEfkJRkUP@"],
+        "mf": ["CH2O", "C3H7N"],
+        "em": [30.01056468403, 57.05784923004],
+        "mass": [31.01784113635093, 58.06512568236093],
+        "charge": 0,
+        "atomMap": [0, 2],
+        "hoseCodes": [
+          "eFHBLGBTEP_hhOeUNET",
+          "gCa@@eMPGBEAJCtf_hdCyUQpj`",
+          "gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCi@LDej@xThEP^TqY~bRNETgBj@",
+          "gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gGQDDEfkJRkUP@", "gChDHEgKJRu@@"],
+        "mf": ["C3H6O", "CH3N"],
+        "em": [58.041864812949996, 29.026549101119997],
+        "mass": [59.049141265270926, 30.033825553440927],
+        "charge": 0,
+        "atomMap": [1, 4],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCi@LDej@xThEP^TqY~bRNETgBj@",
+          "gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@",
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gJQDDEdkJRmT@@", "gJXDDEdkJRmT@@"],
+        "mf": ["C2H4O", "C2H5N"],
+        "em": [44.026214748490005, 43.04219916558],
+        "mass": [45.033491200810936, 44.04947561790093],
+        "charge": 0,
+        "atomMap": [1, 2],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCi@LDej@xThEP^TqY~bRNETgBj@",
+          "gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCi@LDej@xThEP^TqY~bRNETgBj@",
+          "gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gCaDHEgKJRu@@", "gGXDDEfkJRkUP@"],
+        "mf": ["CH2O", "C3H7N"],
+        "em": [30.01056468403, 57.05784923004],
+        "mass": [31.01784113635093, 58.06512568236093],
+        "charge": 0,
+        "atomMap": [0, 1],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCi@LDej@xThEP^TqY~bRNETgBj@",
+          "gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@",
+          "eFHBLGBTEP_hhOeUNET",
+          "gCa@@eMPGBEAJCtf_hdCyUQpj`",
+          "gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gGQDDEfkJRkUP@", "gChDHEgKJRu@@"],
+        "mf": ["C3H6O", "CH3N"],
+        "em": [58.041864812949996, 29.026549101119997],
+        "mass": [59.049141265270926, 30.033825553440927],
+        "charge": 0,
+        "atomMap": [2, 3],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCi@LDej@xThEP^TqY~bRNETgBj@",
+          "gFy@JDiTvjhCaR`uA{SMec}Dd\\JkNET",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@",
+          "gFy@JDiTvjhAaR`uA~bRNEUgBj@"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gJQDHEdkJRmT@@", "gJXDHEdkJRmT@@"],
+        "mf": ["C2H4O", "C2H5N"],
+        "em": [44.026214748490005, 43.04219916558],
+        "mass": [45.033491200810936, 44.04947561790093],
+        "charge": 0,
+        "atomMap": [0, 3],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@",
+          "eFHBLGBTEP_hhOeUNET",
+          "gCa@@eMPGBEAJCtf_hdCyUQpj`",
+          "gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gGYDC@luYRUZj@@", "gC`D@lyYRVh@"],
+        "mf": ["C2H5NO", "C2H4"],
+        "em": [59.03711378515, 28.03130012892],
+        "mass": [60.04439023747093, 29.03857658124093],
+        "charge": 0,
+        "atomMap": [0, 5],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFy@JDiTvjhCaZ`mAxsMarq~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@",
+          "gFy@JDiTvjhAaZ`mA~bSNEUUrj@",
+          "eFHBLGBTEP_hhOeUNET",
+          "gCa@@eMPGBEAJCtf_hdCyUQpj`",
+          "gFy@JDiTvjhCaB`eA{SEfs}D`_JjNET",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@",
+          "gFy@JDiTvjhAaB`eA~bPOeUGBj@"
+        ],
+        "type": "cyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [60.0558, 68.0244, 85.0509, 110.0461, 127.0726],
+      "y": [0.8894, 0.6401, 15.4586, 0.6415, 100]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "die`@@pjX\\dTTUk`Hb@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["die`@@pjX\\dTTUk`Hb@@"],
+        "mf": ["C3H6N6"],
+        "em": [126.06539421996],
+        "mass": [127.07267067228094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["dif``DqnDEeIeYih@J@@", "eFbHVXp@"],
+        "mf": ["C3H4N5", "H2N"],
+        "em": [110.04667015107, 16.01872406889],
+        "mass": [111.05394660339094, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCl@@ldt@GBEAJCtF_hdByUQpj`",
+          "gG\\@@ldrp@ApaPR`}AgzI@nUT\\Jh",
+          "die`@@SFxTfUff`@h@NDB`b`}@Y~bHByUPxUP",
+          "die`@@SFxTfUff`@h@FDB`b`QDA\\jh\\Jh"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["dif``DqnDEeIeYih@J@@", "eFbHVXp@"],
+        "mf": ["C3H4N5", "H2N"],
+        "em": [110.04667015107, 16.01872406889],
+        "mass": [111.05394660339094, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [2],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCl@@ldt@GBEAJCtF_hdByUQpj`",
+          "gG\\@@ldrp@ApaPR`}AgzI@nUT\\Jh",
+          "die`@@SFxTfUff`@h@NDB`b`}@Y~bHByUPxUP",
+          "die`@@SFxTfUff`@h@FDB`b`QDA\\jh\\Jh"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["dif``DqnDEeIeYih@J@@", "eFbHVXp@"],
+        "mf": ["C3H4N5", "H2N"],
+        "em": [110.04667015107, 16.01872406889],
+        "mass": [111.05394660339094, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [7],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCl@@ldt@GBEAJCtF_hdByUQpj`",
+          "gG\\@@ldrp@ApaPR`}AgzI@nUT\\Jh",
+          "die`@@SFxTfUff`@h@NDB`b`}@Y~bHByUPxUP",
+          "die`@@SFxTfUff`@h@FDB`b`QDA\\jh\\Jh"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [60.0558, 61.0398, 69.0084, 86.0349, 103.0614],
+      "y": [100, 0.6135, 0.3242, 19.3858, 15.5841]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "gNs@EjpdssTp@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["gNs@EjpdssTp@"],
+        "mf": ["C2H6N4O"],
+        "em": [102.05416083067],
+        "mass": [103.06143728299094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["gCiHL`liML@@", "gJ\\HIbEeIZf@@"],
+        "mf": ["CH2NO", "CH4N3"],
+        "em": [44.013638688460006, 58.04052214221],
+        "mass": [45.020915140780936, 59.04779859453093],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gJU@E`dru@\\JTBhOQQ~bRNETerj@",
+          "gNs@EjpdssTpGBe@jCrT[OtRQpjdnUP",
+          "gNs@EjpdssTpCBe@jC}Dd\\JiKeT",
+          "gNs@EjpdssTpCBe@jC}Dd\\JiKeT"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["gN}HMV`liMmML@@", "eFbHVXp@"],
+        "mf": ["C2H4N3O", "H2N"],
+        "em": [86.03543676177999, 16.01872406889],
+        "mass": [87.04271321410093, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCe@E`dsPGBe@jCtV_hdcaUI\\j`",
+          "gJU@E`dvu@\\JTBhOIYhQIGBjRyU@",
+          "gNs@EjpdvsTpGBe@jCrVZOtRQpjdnUP",
+          "gNs@EjpdvsTpCBe@jC}Dd\\JiKeT"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["gJUHH\\EeIZf@@", "gCdHE`liML@@"],
+        "mf": ["CH3N2O", "CH3N2"],
+        "em": [59.02453772512, 43.02962310555],
+        "mass": [60.03181417744093, 44.03689955787093],
+        "charge": 0,
+        "atomMap": [2],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gJ\\@AbeMS@\\HTDhOPQ~bPKeUGBj@",
+          "gNs@EjpdssTpGBU@ZCvTVGgzIDnUQ\\Jh",
+          "gNs@EjpdssTpCBU@ZC}DbWJhnET",
+          "gNs@EjpdssTpCBU@ZC}DbWJhnET"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["gN}HEgPliMmML@@", "eFbHVXp@"],
+        "mf": ["C2H4N3O", "H2N"],
+        "em": [86.03543676177999, 16.01872406889],
+        "mass": [87.04271321410093, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [4],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCl@@ldtpGBEAJCtF_hdByUQpj`",
+          "gJ\\@@ldwM@\\HTDhOXXht_hdByUQpj`",
+          "gNs@EjpdssUHGBMAZCvTWGGzIBxUUWJh",
+          "gNs@EjpdssUHCBMAZC}Da\\JjkeT"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [
+        65.0386, 82.0651, 92.0494, 93.0572, 106.065, 108.0681, 109.0759,
+        110.0599, 133.0759, 134.06, 151.0865
+      ],
+      "y": [
+        0.3261, 0.3448, 7.9422, 0.3974, 0.6523, 2.0612, 74.4285, 3.2856, 5.1182,
+        0.1924, 100
+      ]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "dmuH@DTDf^Uqej@B@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["dmuH@DTDf^Uqej@B@@"],
+        "mf": ["C8H10N2O"],
+        "em": [150.07931295073],
+        "mass": [151.08658940305094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["gCaHDEeIi`@", "die@`HDEeIYW[j@B@@"],
+        "mf": ["C2H3O", "C6H7N2"],
+        "em": [43.01838971626, 107.06092323447],
+        "mass": [44.02566616858093, 108.06819968679093],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gJY@DDfVhCaR`UAzJOtRQpjdnUP",
+          "gNy@DDf^Z`@xThEP^Rc]~bRNETerj@",
+          "diFH@DAIgeZ`@@xRJAJCqIF]TMGzHdNETbyU@",
+          "deVH@DAIgeQej@@@NDb`R`|rQgUCQtCGzHdNETbyU@"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["dmuH`LU@VTfvUqfZ@B@@", "eFBAYc@@"],
+        "mf": ["C7H7N2O", "CH3"],
+        "em": [135.05583785404, 15.02347509669],
+        "mass": [136.06311430636092, 16.03075154901093],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCi@DDfZ@xThMP^f{}Dd\\JkNET",
+          "gJY@DDfVhCaR`uAyJMwzIHxUV\\Jh",
+          "gNy@DDf^Z`@xThMP^Rc]~bRNEUgBj@",
+          "diFH@DAIgeZ`@@xRJCJCqIF]TMGzHdNEUcaU@"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["gJYHI`liKTp@", "daF@`NAYRYWih@H@@"],
+        "mf": ["C2H4NO", "C6H6N"],
+        "em": [58.029288752919996, 92.05002419781],
+        "mass": [59.036565205240926, 93.05730065013094],
+        "charge": 0,
+        "atomMap": [2],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gJX@@eMP@\\HTDhOPQ~bPKeUGBj@",
+          "diFH@DAIgeZ`@@xQJ@jCvIEPt_hbHnUQNET",
+          "deVH@DAIgeQej@@@NDR`J`|rQgUCQtCGzHbKeTSaU@",
+          "dmuH@DTDf^Uqej@B@CaDhBhOLdYuPt]@q~bHbyUDxUP"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["dmvH`NdEeIe]Zf`@i`@@", "eFbHVXp@"],
+        "mf": ["C8H8NO", "H2N"],
+        "em": [134.06058888184, 16.01872406889],
+        "mass": [135.06786533416093, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [9],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@dt@GBEAJCtF_hdByUQpj`",
+          "gGX@@drp@ApaPR`}abcQ~bPKeUGBj@",
+          "gOx@@drm\\@@ApaPR`}QbcPXl_hdByUQpj`",
+          "daE@@@yIe^f`@`@xPJBJCuAbQdEEQ~bHByUPxUP"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [
+        77.0383, 79.0542, 91.0541, 93.0572, 93.0698, 94.065, 103.0541, 118.065,
+        119.0729, 120.0806
+      ],
+      "y": [
+        0.1013, 0.1693, 0.2194, 0.1824, 0.6885, 0.3802, 1.7358, 0.8166, 0.205,
+        100
+      ]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "diV@@@RfU|kahHB@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["diV@@@RfU|kahHB@@"],
+        "mf": ["C8H9N"],
+        "em": [119.07349929450001],
+        "mass": [120.08077574682095],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["gJXDHEdkJRmT@@", "daD@P@VRVTfYvzB@@@"],
+        "mf": ["C2H5N", "C6H4"],
+        "em": [43.04219916558, 76.03130012892],
+        "mass": [44.04947561790093, 77.03857658124093],
+        "charge": 0,
+        "atomMap": [0, 5],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gJX@@eMP@\\HTDhOPQ~bPKeUGBj@",
+          "daF@@@RfUrjBB@NDB`b`}`PfEGzH`KeUCaU@",
+          "diV@@@RfU|kahHB@Ca@hHhOLDIaQVMGQ~bHByUPxUP",
+          "diV@@@RfU|kahHB@Aa@hHhOtQ@WJjGBj@",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJP@DjXHCaB`eAzSOtRApjhxUP",
+          "daF@@@rQQHyUAA@GBYPUP^qLkFc}DSGBjipj`",
+          "diV@@@RfU|kahHB@CaLhJhOLDIaQVM@q~bIcaUTxUP",
+          "diV@@@RfU|kahHB@AaLhJhOtQL\\JjgBj@"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gChDHEgKJRu@@", "did@P@VQVTfYUn`HH@@"],
+        "mf": ["CH3N", "C7H6"],
+        "em": [29.026549101119997, 90.04695019338],
+        "mass": [30.033825553440927, 91.05422664570094],
+        "charge": 0,
+        "atomMap": [0, 2],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gJX@@eMP@\\HTDhOPQ~bPKeUGBj@",
+          "daF@@@RfUrjBB@NDB`b`}`PfEGzH`KeUCaU@",
+          "diV@@@RfU|kahHB@Ca@hHhOLDIaQVMGQ~bHByUPxUP",
+          "diV@@@RfU|kahHB@Aa@hHhOtQ@WJjGBj@",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gCh@@dmPGBe@jCrfKOtRQpjdxUP",
+          "gFx@@eKxuA@\\JTFhOXQLv_hdcaUYpj`",
+          "daF@@@Reopj`B@NDb`r`|PQFYcQ~bICaUXxUP",
+          "diV@@@Rem\\Kaj@B@CaHhLhOLDQfYTM@q~bICaUXxUP"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["dif@PHAYiYRVY~F``@@@", "gC`D@lyYRVh@"],
+        "mf": ["C6H5N", "C2H4"],
+        "em": [91.04219916558, 28.03130012892],
+        "mass": [92.04947561790094, 29.03857658124093],
+        "charge": 0,
+        "atomMap": [0, 3],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJP@DjXHCaB`eAzSOtRApjhxUP",
+          "daF@@@rQQHyUAA@GBYPUP^qLkFc}DSGBjipj`",
+          "diV@@@RfU|kahHB@CaLhJhOLDIaQVM@q~bIcaUTxUP",
+          "diV@@@RfU|kahHB@AaLhJhOtQL\\JjgBj@",
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@eMPGBEAJCrDSOtRA\\jhxUP",
+          "gFx@@eKXuA@\\HTDhOXQLv_hdByUQpj`",
+          "daF@@@Rempj`B@NDB`b`|PQFYeQ~bHByUPxUP",
+          "diV@@@Rem\\Kaj@B@Ca@hHhOLDQfYTMGQ~bHByUPxUP"
+        ],
+        "type": "cyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [
+        55.018, 63.0232, 67.0543, 72.0444, 80.0494, 81.0334, 91.0542, 92.0494,
+        108.0443, 136.0392, 154.0498
+      ],
+      "y": [
+        0.5506, 0.1322, 1.3239, 0.1332, 3.0722, 0.1141, 1.0454, 0.8165, 21.5245,
+        100, 73.662
+      ]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "dmvL@EAFR[f]FV``H@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["dmvL@EAFR[f]FV``H@@"],
+        "mf": ["C7H7NO3"],
+        "em": [153.04259308875],
+        "mass": [154.04986954107093],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["dmvD`EQ`VTfygQfXHB@@", "eFJHVXp@"],
+        "mf": ["C7H6NO2", "HO"],
+        "em": [136.03985343695, 17.0027396518],
+        "mass": [137.04712988927093, 18.01001610412093],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eFHBLGBTEP_hhOeUNET",
+          "gC``@dff@xPhIP^`c}D`_JjNET",
+          "gGP`@dfzX@NDJBTGhHQHGrjcaU@",
+          "diDL@@QdfyfXH@Ca@hHhOHDUGzH`OeUCaU@",
+          "dmvL@EAFR[f]FY``H@NDB`b`|PQTMGQ~bHCyUPxUP"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["gC`hE`liML@@", "difH`AHEeIf][hHB@@"],
+        "mf": ["CHO2", "C6H6NO"],
+        "em": [44.99765427137, 108.04493881738],
+        "mass": [46.00493072369093, 109.05221526970094],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGP`@dfyh@NEJCTGzIHxUV\\Jh",
+          "diDL@@QdfyehH@CaHhLhOHdUGzHdNEUcaU@",
+          "dmvL@EAFR[f]FV``H@NDb`r`|RQTMGQ~bICaUXxUP",
+          "dmvL@EAFR[f]FV``H@FDb`r`QDapjl\\Jh"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["dmvD`ExPV\\bbbTUZXHFH@@", "eFJHVXp@"],
+        "mf": ["C7H6NO2", "HO"],
+        "em": [136.03985343695, 17.0027396518],
+        "mass": [137.04712988927093, 18.01001610412093],
+        "charge": 0,
+        "atomMap": [4],
+        "hoseCodes": [
+          "eFHBLGBTEP_hhOeUNET",
+          "gCa@@dt@GBEAJCtD_hdCyUQpj`",
+          "gNq@@dsLA@GBEAJCrDZOtRA|jhxUP",
+          "deTL@@xTfYYZXHF@@xPJBJCqAFQTMGzH`OeUCaU@",
+          "dmvL@ECarJJIQUi``X`@xPJBJCuAFQTM@q~bHCyUPxUP"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["dmtL`AePVTfUmjZ@Bf@@", "eFbHVXp@"],
+        "mf": ["C7H5O3", "H2N"],
+        "em": [137.02386901986, 16.01872406889],
+        "mass": [138.03114547218092, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [8],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@dt@GBEAJCtF_hdByUQpj`",
+          "gGX@@drp@ApaPR`}abcQ~bPKeUGBj@",
+          "daF@@@RYVih@H@NDB`b`|PXdYEQ~bHByUPxUP",
+          "dmvL@EAFR[f]FV``H@NDF`V`|UQtSBy~bHKaUJnUP"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": { "x": [80.0494, 96.0443], "y": [100, 0.1412] },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "gFx@@eJf`@@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["gFx@@eJf`@@@"],
+        "mf": ["C5H5N"],
+        "em": [79.04219916558],
+        "mass": [80.04947561790094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [
+        70.0652, 80.0495, 98.0601, 106.0653, 118.0652, 120.0808, 146.0601,
+        149.071, 159.0919, 177.1023
+      ],
+      "y": [
+        0.4474, 26.7749, 10.5451, 0.106, 0.9542, 0.5556, 3.0568, 0.5613, 0.198,
+        100
+      ]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "dk]H@DTLbbbQbRImMjj@B@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["dk]H@DTLbbbQbRImMjj@B@@"],
+        "mf": ["C10H12N2O"],
+        "em": [176.09496301519002],
+        "mass": [177.10223946751094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["dk]H`HT`V\\bbbafRkmNij@B@@", "eFBAYc@@"],
+        "mf": ["C9H9N2O", "CH3"],
+        "em": [161.07148791850003, 15.02347509669],
+        "mass": [162.07876437082095, 16.03075154901093],
+        "charge": 0,
+        "atomMap": [2],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@AGj@xPhIP^d{}D`WJjNET",
+          "daFH@DAIf^fZjjJhCaDhBhOHWUGzHbKeTSaU@",
+          "deVH@DAIf_jYjjBbb@xQJ@jCqYa]TMgzHbKeTSaU@",
+          "dcMH@DTDfY~VfZj`Bbb@xQJ@jCsYa]TM`qL_hbHnUQNET"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["daFH`DxEeIfTfjjX@@", "gOxHBEeIeZx@@@"],
+        "mf": ["C5H8NO", "C5H4N"],
+        "em": [98.06058888184, 78.03437413335],
+        "mass": [99.06786533416094, 79.04165058567094],
+        "charge": 0,
+        "atomMap": [4],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGX@@dsUAIPNEJATGiHQIGBjSaU@",
+          "dmu@@@iIYedUBJJjLHCaDhLhOEDYAPv_hbHxUVNET",
+          "dk]H@DTLbbbQbRImMjj@BHH`NDJ`z`}vXTUsXLSFq~bHSaU\\xUP",
+          "dk]H@DTLbbbQbRImMjj@BHH`FDJ`z`QDIpjn\\Jh"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["gGQDDEfkJS[MP@", "dmu@PHDEdegHhhXdiVj`@@@"],
+        "mf": ["C3H4O", "C7H8N2"],
+        "em": [56.026214748490005, 120.0687482667],
+        "mass": [57.033491200810936, 121.07602471902094],
+        "charge": 0,
+        "atomMap": [1, 6],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gGY@DDfYj`NEJATGzIHxURWJh",
+          "daFH@DAIfTfZjjBhCaHhDhOYfEE]~bICaUHnUP",
+          "deVH@DCHhhdXSMUPTDPGBQPIP^KLJJylQDapjdWJh",
+          "dcMH@DTLbbbQbQLuU@EADApdTBTGfsBbn[AbXQDapjdWJh",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJX@@dsURTCaR`UAyREgzIHxUR\\Jh",
+          "dif@@@rRJHpfjjBbJ@xRJ@jCvQAXv_hbPxUQNET",
+          "dcMH@DTLbbbQbQLuU@EATApaTCTGfsBbn[AbXQDIpjf\\Jh",
+          "dk]H@DTLbbbQbRImMjj@BHJ`NDJ`Z`}vXTUsXLSFq~bHSaULxUP"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gJQDDEdkJS\\t@@", "dcM@PHdEdUeIfyWWZjB@@@"],
+        "mf": ["C2H2O", "C8H10N2"],
+        "em": [42.01056468403, 134.08439833116],
+        "mass": [43.01784113635093, 135.09167478348093],
+        "charge": 0,
+        "atomMap": [1, 3],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gGY@DDfYj`NEJATGzIHxURWJh",
+          "daFH@DAIfTfZjjBhCaHhDhOYfEE]~bICaUHnUP",
+          "deVH@DCHhhdXSMUPTDPGBQPIP^KLJJylQDapjdWJh",
+          "dcMH@DTLbbbQbQLuU@EADApdTBTGfsBbn[AbXQDapjdWJh",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gC`@Dij@xPhIP^PrY~bPNEUGBj@",
+          "gOy@DDfUMZjhZApmPV`}maby~bSNEUWBj@",
+          "deVH@DCHhhdXSMUPTEPGBYPMP^sLJFs}DSGBjYpj`",
+          "dcMH@DTLbbbQbQLuU@EATApfTCTGfsBbn[AbXQDqpjf\\Jh"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gNyDHPlmYrJJFih@", "deV@PNAYYYRYe\\YjB@@@"],
+        "mf": ["C3H5NO", "C7H7N"],
+        "em": [71.03711378515, 105.05784923004],
+        "mass": [72.04439023747094, 106.06512568236094],
+        "charge": 0,
+        "atomMap": [2, 3],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gGX@@eSUTApaPR`}IGzI@nUT\\Jh",
+          "deVH@DCHhhdXSMUPTDPGBIPEP^phkfs}DQErjIpj`",
+          "dcMH@DTLbbbQbQLuU@EADApbTATGfsBbn[AbXQDQ\\jb\\Jh",
+          "dk]H@DTLbbbQbRImMjj@BHH`NDR`J`}vXTUsXLSFq~bHbyUDxUP",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gC`@Dij@xPhIP^PrY~bPNEUGBj@",
+          "gOy@DDfUMZjhZApmPV`}maby~bSNEUWBj@",
+          "deVH@DCHhhdXSMUPTEPGBYPMP^sLJFs}DSGBjYpj`",
+          "dcMH@DTLbbbQbQLuU@EATApfTCTGfsBbn[AbXQDqpjf\\Jh"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["gGYDIPleYRYji@@", "dmv@PNAYeYRYeUEZ```@@"],
+        "mf": ["C2H3NO", "C8H9N"],
+        "em": [57.021463720689994, 119.07349929450001],
+        "mass": [58.028740173010924, 120.08077574682095],
+        "charge": 0,
+        "atomMap": [1, 2],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gGX@@eSUTApaPR`}IGzI@nUT\\Jh",
+          "deVH@DCHhhdXSMUPTDPGBIPEP^phkfs}DQErjIpj`",
+          "dcMH@DTLbbbQbQLuU@EADApbTATGfsBbn[AbXQDQ\\jb\\Jh",
+          "dk]H@DTLbbbQbRImMjj@BHH`NDR`J`}vXTUsXLSFq~bHbyUDxUP",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJY@DDfvhCaR`uAz[OtRQpjlxUP",
+          "gOy@DDfYKZj`NEJCTGel^_hdcaUYpj`",
+          "daFH@DAIfTfZjjBhCaHhLhOEfEE\\v_hbPxUVNET",
+          "deVH@DCHhhdXSMUPTDPGBQPYP^KLJJylQDapjl\\Jh"
+        ],
+        "type": "cyclic"
+      },
+      {
+        "idCodeFragment": ["dkmHPLU@VVV\\bfbabRtyjh@@@@", "gC`D@lyYRVh@"],
+        "mf": ["C8H8N2O", "C2H4"],
+        "em": [148.06366288627, 28.03130012892],
+        "mass": [149.07093933859093, 29.03857658124093],
+        "charge": 0,
+        "atomMap": [1, 4],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJX@@dsURTCaR`UAyREgzIHxUR\\Jh",
+          "dif@@@rRJHpfjjBbJ@xRJ@jCvQAXv_hbPxUQNET",
+          "dcMH@DTLbbbQbQLuU@EATApaTCTGfsBbn[AbXQDIpjf\\Jh",
+          "dk]H@DTLbbbQbRImMjj@BHJ`NDJ`Z`}vXTUsXLSFq~bHSaULxUP",
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gJY@DDfvhCaR`uAz[OtRQpjlxUP",
+          "gOy@DDfYKZj`NEJCTGel^_hdcaUYpj`",
+          "daFH@DAIfTfZjjBhCaHhLhOEfEE\\v_hbPxUVNET",
+          "deVH@DCHhhdXSMUPTDPGBQPYP^KLJJylQDapjl\\Jh"
+        ],
+        "type": "cyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [65.0387, 67.0543, 82.0651, 92.0494, 93.0335, 110.06],
+      "y": [4.3174, 0.1572, 0.6674, 28.8844, 3.4654, 100]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "daFH@BAIf]n``@@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["daFH@BAIf]n``@@@"],
+        "mf": ["C6H7NO"],
+        "em": [109.05276384961],
+        "mass": [110.06004030193094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["eFJHVXp@", "daF@`BAYRYg[hH@@@"],
+        "mf": ["HO", "C6H6N"],
+        "em": [17.0027396518, 92.05002419781],
+        "mass": [18.01001610412093, 93.05730065013094],
+        "charge": 0,
+        "atomMap": [0],
+        "hoseCodes": [
+          "eFHBLGBTEP_hhOeUNET",
+          "gCa@@dt@GBEAJCtD_hdCyUQpj`",
+          "gNy@BDfY``@xPhIP^PcQ~bPOeUGBj@",
+          "daFH@BAIf]n``@@xPJBJCuAFPVUCQ~bHCyUPxUP",
+          "daFH@BAIf]n``@@XPJBJC}DPGrjapj`"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["daDH`BAYRYg[hH@@@", "eFbHVXp@"],
+        "mf": ["C6H5O", "H2N"],
+        "em": [93.03403978072, 16.01872406889],
+        "mass": [94.04131623304093, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [2],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@dt@GBEAJCtF_hdByUQpj`",
+          "gNy@BLbba``@xRhCP^Qrq~bQNETUrj@",
+          "daFH@BAIf]n``@@xQJ@jCuAFPVUGQ~bHcaUDnUP",
+          "daFH@BAIf]n``@@XQJ@jC}DQGBjI\\j`"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [
+        50.0153, 51.0231, 65.0386, 71.0292, 75.0228, 79.0178, 85.0448, 92.0494,
+        95.029, 111.0478, 112.0556, 123.0353
+      ],
+      "y": [
+        0.1363, 0.1472, 1.2948, 0.3683, 0.2011, 0.1155, 0.4751, 14.4947, 0.266,
+        0.9682, 100, 1.8864
+      ]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "daF@`NBPRYWih@H@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["daF@`NBPRYWih@H@@"],
+        "mf": ["C6H6FN"],
+        "em": [111.04842736054],
+        "mass": [112.05570381286094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["eFAAYiBL@", "daF@`NAYRYWih@H@@"],
+        "mf": ["F", "C6H6N"],
+        "em": [18.99840316273, 92.05002419781],
+        "mass": [20.00567961505093, 93.05730065013094],
+        "charge": 0,
+        "atomMap": [0],
+        "hoseCodes": [
+          "eFBBPcApeATGzJBqUSaU@",
+          "gC`HAHIM@ApaPR`QHEbjcaU@",
+          "gGPHAHILl@@\\HTDhOIQhQHEbjcaU@",
+          "gOpHAHILkW@@@\\HTDhOEQhLVOtRAXjhxUP",
+          "daF@`NBPRYWih@H@NDB`b`|RQdEEQ~bHBqUPxUP"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["daD@P@V^dDfUzZ@B@@", "eFbHVXp@"],
+        "mf": ["C6H4F", "H2N"],
+        "em": [95.02970329165, 16.01872406889],
+        "mass": [96.03697974397093, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [6],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@dt@GBEAJCtF_hdByUQpj`",
+          "gGX@@drp@ApaPR`}abcQ~bPKeUGBj@",
+          "gOx@@drm\\@@ApaPR`}QbcPXl_hdByUQpj`",
+          "daF@`NBPRYWih@H@FDZ`z`QDYpjnWJh"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [
+        51.0231, 53.0388, 55.018, 67.0543, 77.0386, 81.0335, 93.0573, 94.0651,
+        105.0447
+      ],
+      "y": [0.3757, 3.4458, 0.1692, 0.2032, 2.108, 0.5046, 0.578, 100, 2.4559]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "gOx@@drm\\@@@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["gOx@@drm\\@@@@"],
+        "mf": ["C6H7N"],
+        "em": [93.05784923004],
+        "mass": [94.06512568236094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["eFbHVXp@", "gOpH@liLkW@@@@"],
+        "mf": ["H2N", "C6H5"],
+        "em": [16.01872406889, 77.03912516115],
+        "mass": [17.02600052121093, 78.04640161347093],
+        "charge": 0,
+        "atomMap": [0],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@dt@GBEAJCtF_hdByUQpj`",
+          "gGX@@drp@ApaPR`}abcQ~bPKeUGBj@",
+          "gOx@@drm\\@@ApaPR`}QbcPXl_hdByUQpj`",
+          "gOx@@drm\\@@@paPR`QHErjcaU@"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [
+        65.0386, 68.0495, 77.0386, 81.07, 92.0495, 93.0572, 94.0651, 95.0492,
+        110.0601, 119.0604, 120.0444, 137.0709
+      ],
+      "y": [
+        0.4053, 0.2087, 0.1684, 0.119, 2.4044, 0.1385, 19.2541, 0.1999, 0.4039,
+        0.1134, 100, 31.3601
+      ]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "deUH@DdDfyWxV`@`@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["deUH@DdDfyWxV`@`@@"],
+        "mf": ["C7H8N2O"],
+        "em": [136.06366288627],
+        "mass": [137.07093933859093],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["deVH`IPEeInU~FX@H@@", "eFbHVXp@"],
+        "mf": ["C7H6NO", "H2N"],
+        "em": [120.04493881738, 16.01872406889],
+        "mass": [121.05221526970094, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCi@DDfZ@xThEP^bs}Dd\\JiKeT",
+          "gGY@DDfyh@NEJATGhlQIGBjRyU@",
+          "dazH@DAInUh@@NDb`R`}bXTUGzHdNETbyU@",
+          "difH@DAInUxV`@@CaHhDhOTfEEPt]GzHdNETbyU@"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["gCiHL`liML@@", "daF@`NAYRYWih@H@@"],
+        "mf": ["CH2NO", "C6H6N"],
+        "em": [44.013638688460006, 92.05002419781],
+        "mass": [45.020915140780936, 93.05730065013094],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eF@Hp\\IPUA~b`xUTxUP",
+          "gGY@DDfyh@NEJCTGzIHxUV\\Jh",
+          "dazH@DAInUh@@NDb`r`}bXTUGzHdNEUcaU@",
+          "difH@DAInUxV`@@CaHhLhOTfEEPt]GzHdNEUcaU@",
+          "deUH@DdDfyWxV`@`@xRJCJCuIaQTMGQ~bICaUXxUP"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["deVH`IDEeIe]jZ@BX@@", "eFbHVXp@"],
+        "mf": ["C7H6NO", "H2N"],
+        "em": [120.04493881738, 16.01872406889],
+        "mass": [121.05221526970094, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [8],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@dt@GBEAJCtF_hdByUQpj`",
+          "gGX@@drp@ApaPR`}abcQ~bPKeUGBj@",
+          "gOx@@drm\\@@ApaPR`}QbcPXl_hdByUQpj`",
+          "daF@@@RYWih@H@NDB`b`}PXdYAQT_hb@nUTNET"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [66.0465, 80.0495, 91.0542, 92.0494, 93.0573, 108.0807],
+      "y": [0.1804, 0.1349, 0.6447, 0.1713, 100, 97.5915]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "daF@@@Rfu[j@@@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["daF@@@Rfu[j@@@@"],
+        "mf": ["C7H9N"],
+        "em": [107.07349929450001],
+        "mass": [108.08077574682095],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["eMbHVTf`@", "gOpH@liLkW@@@@"],
+        "mf": ["CH4N", "C6H5"],
+        "em": [30.03437413335, 77.03912516115],
+        "mass": [31.04165058567093, 78.04640161347093],
+        "charge": 0,
+        "atomMap": [0],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gJX@@eMP@\\HTDhOPQ~bPKeUGBj@",
+          "gNx@@eMm@@GBEAJCqDKmAc}D`WJjNET",
+          "daF@@@Rfu[j@@@NDB`b`|pPgYAQTMGzH`KeUCaU@",
+          "daF@@@Rfu[j@@@FDB`b`QDA\\jh\\Jh"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["daF@`HAYRVU[j@@@@", "eFBAYc@@"],
+        "mf": ["C6H6N", "CH3"],
+        "em": [92.05002419781, 15.02347509669],
+        "mass": [93.05730065013094, 16.03075154901093],
+        "charge": 0,
+        "atomMap": [0],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "eM`BN`xR`jCrQ]~b`nUTxUP",
+          "gJX@@e]P@\\HTDhOHQNQHErjcaU@",
+          "gNx@@e\\m@@GBEAJCqDSmAc}D`WJjNET",
+          "daF@@@RnU[j@@@NDB`b`|pQGYAQTMGzH`KeUCaU@"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": {
+      "x": [
+        55.0181, 65.0386, 67.0416, 67.0543, 80.0495, 82.0651, 92.0494, 93.0334,
+        93.0572, 109.0522, 110.06, 121.0396
+      ],
+      "y": [
+        0.1092, 7.7614, 0.2027, 0.6095, 0.3092, 3.5985, 8.3299, 7.6851, 0.4638,
+        0.8734, 100, 1.141
+      ]
+    },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "daFH@NAIe^f`@`@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["daFH@NAIe^f`@`@@"],
+        "mf": ["C6H7NO"],
+        "em": [109.05276384961],
+        "mass": [110.06004030193094],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["eFJHVXp@", "daF@`NAYRYWih@H@@"],
+        "mf": ["HO", "C6H6N"],
+        "em": [17.0027396518, 92.05002419781],
+        "mass": [18.01001610412093, 93.05730065013094],
+        "charge": 0,
+        "atomMap": [0],
+        "hoseCodes": [
+          "eFHBLGBTEP_hhOeUNET",
+          "gCa@@dt@GBEAJCtD_hdCyUQpj`",
+          "gGQ@@drp@ApaPR`}aBcQ~bPOeUGBj@",
+          "gOq@@drm\\@@ApaPR`}QBcPXl_hdCyUQpj`",
+          "daFH@NAIe^f`@`@xPJBJCuABQdEEQ~bHCyUPxUP"
+        ],
+        "type": "acyclic"
+      },
+      {
+        "idCodeFragment": ["daDH`NAYRYWih@H@@", "eFbHVXp@"],
+        "mf": ["C6H5O", "H2N"],
+        "em": [93.03403978072, 16.01872406889],
+        "mass": [94.04131623304093, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [6],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCh@@dt@GBEAJCtF_hdByUQpj`",
+          "gGX@@drp@ApaPR`}abcQ~bPKeUGBj@",
+          "gOx@@drm\\@@ApaPR`}QbcPXl_hdByUQpj`",
+          "daFH@NAIe^f`@`@xQjCjCuIFPTUGY~bHsaU\\nUP"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  },
+  {
+    "spectrum": { "x": [67.0543, 78.0338, 95.0603], "y": [0.283, 1.8312, 100] },
+    "ionization": "H+",
+    "precision": 3.5,
+    "idCode": "gOt@AdigkB@@@",
+    "fragmentation": [
+      {
+        "idCodeFragment": ["gOt@AdigkB@@@"],
+        "mf": ["C5H6N2"],
+        "em": [94.05309820224],
+        "mass": [95.06037465456093],
+        "charge": 0,
+        "type": "Molecular Ion"
+      },
+      {
+        "idCodeFragment": ["gOxHDEeIeZx@@@", "eFbHVXp@"],
+        "mf": ["C5H4N", "H2N"],
+        "em": [78.03437413335, 16.01872406889],
+        "mass": [79.04165058567094, 17.02600052121093],
+        "charge": 0,
+        "atomMap": [1],
+        "hoseCodes": [
+          "eF`BLGBTEP_hhKeUNET",
+          "gCd@@df`@xPhIP^`s}D`WJjNET",
+          "gGT@@dfV@@NDJBTGdLt_hdByUQpj`",
+          "gOt@@dfUk`@@NDJBTGbLtFKGzI@nUT\\Jh",
+          "gOt@@dfUk`@@FDJBTGzI@nUT\\Jh"
+        ],
+        "type": "acyclic"
+      }
+    ]
+  }
+]

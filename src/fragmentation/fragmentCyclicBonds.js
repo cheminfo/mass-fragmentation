@@ -1,4 +1,4 @@
-import MassTools from 'mass-tools';
+import { MF } from 'mf-parser';
 import { getMF, getHoseCodesForAtoms } from 'openchemlib-utils';
 
 import { getCycleAndFragmentationInfo } from './utils/getCycleAndFragmentationInfo.js';
@@ -8,8 +8,6 @@ import { getCycleAndFragmentationInfo } from './utils/getCycleAndFragmentationIn
  * @param {any} molecule - The OCL molecule to be fragmented
  * @returns  Array with results for the fragmentation of ring bonds
  */
-
-const { MF } = MassTools;
 
 export function fragmentCyclicBonds(molecule) {
   const { Molecule } = molecule.getOCL();

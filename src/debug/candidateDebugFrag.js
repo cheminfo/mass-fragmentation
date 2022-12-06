@@ -1,5 +1,5 @@
-import MassTools from 'mass-tools';
-import generateMFs from 'mf-generator';
+import { generateMFs } from 'mf-generator';
+import { Spectrum } from 'ms-spectrum';
 import OCL from 'openchemlib';
 import { getMF } from 'openchemlib-utils';
 
@@ -8,7 +8,6 @@ import { fragment } from '../fragmentation/fragment.js';
 
 import { getPossibleMFs } from './getPossibleMFs.js';
 
-const { Spectrum } = MassTools;
 const { Molecule } = OCL;
 
 /**

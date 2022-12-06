@@ -1,7 +1,5 @@
-import MassTools from 'mass-tools';
+import { MF } from 'mf-parser';
 import { getMF, getHoseCodesForAtoms } from 'openchemlib-utils';
-
-const { MF } = MassTools;
 
 /**
  * The function performs the fragmentation of all single linear bonds
