@@ -107,7 +107,7 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
     }
 
     // Account for Molecular ion to be matched
-    if (fragmentation[i].fragmentType === 'Molecular Ion') {
+    if (fragmentation[i].fragmentType === 'molecular ion') {
       let resultMolecularIon = await generateMFs(
         [fragmentation[i].mf],
         optionsMFs,
