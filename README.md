@@ -13,7 +13,7 @@
 
 ### <ins>candidatesFragmentation</ins>
 
-This function performs the in-silico fragmentation (and accounts for neutral losses) of a given structure and returns the fragments which match the experimental spectrum and the bond contribution. The worflow of this function in shown in [Worflow](#workflow) section.
+This function performs the in-silico fragmentation (and accounts for neutral losses) of a given structure and returns the fragments which match the experimental spectrum along with the bond contributions and the bond hose codes. The worflow of this function in shown in [Worflow](#workflow) section.
 
 ```js
 import { candidatesFragmentation } from 'mass-fragmentation';
