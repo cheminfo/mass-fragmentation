@@ -1,5 +1,39 @@
 # Changelog
 
+## [0.2.0](https://github.com/cheminfo/mass-fragmentation/compare/v0.1.1...v0.2.0) (2022-12-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* fixed and updated
+
+### Features
+
+* parallel fragmentation ([eca0679](https://github.com/cheminfo/mass-fragmentation/commit/eca06793a3cf60226902c9c253e60cdd4b31a75b))
+
+
+### Bug Fixes
+
+* counter ([2076843](https://github.com/cheminfo/mass-fragmentation/commit/2076843a21c129192dbbddb62cec34caf18e2b99))
+* eslint does not accept the kind of importation ([e23191a](https://github.com/cheminfo/mass-fragmentation/commit/e23191ab0a6a1f351bcdb537d6a52b8cc49dff7b))
+* fixed import to work with js scripts ([eb00133](https://github.com/cheminfo/mass-fragmentation/commit/eb001334bc96dca8c90209055dc10af8f6935e9e))
+* fixed readme ([7b7f74b](https://github.com/cheminfo/mass-fragmentation/commit/7b7f74b476cd84885a3f70ceb282af772de517aa))
+* format ([affa9f6](https://github.com/cheminfo/mass-fragmentation/commit/affa9f698c4b5d9db6a6799f6b319cb1dc2da6b3))
+* import of generateMFs ([3da0328](https://github.com/cheminfo/mass-fragmentation/commit/3da0328e518445c56f87dd7d41db10acf8d24882))
+* no console logs ([48d8e10](https://github.com/cheminfo/mass-fragmentation/commit/48d8e1031a14cf3c66b63920b0667cdfa48e2f4a))
+* removed useless files ([f4bfca3](https://github.com/cheminfo/mass-fragmentation/commit/f4bfca3c6d1d6af54cc647a538eccc95f785c8ab))
+* use hoses as definition for both cyclic and acyclic fragmentation ([e846660](https://github.com/cheminfo/mass-fragmentation/commit/e8466605b3483efa7fa6163be080879e05777cad))
+
+
+### Miscellaneous Chores
+
+* fixed and updated ([6e7a864](https://github.com/cheminfo/mass-fragmentation/commit/6e7a8640e87c6eea2b988567f09a09821512bedd))
+
+
+### Documentation
+
+* updated readme ([e3577ff](https://github.com/cheminfo/mass-fragmentation/commit/e3577ff1d3e8cd29d9a92e2dfe5a67a856ab5c76))
+
 ## [0.1.1](https://github.com/cheminfo/mass-fragmentation/compare/v0.1.0...v0.1.1) (2022-12-06)
 
 
