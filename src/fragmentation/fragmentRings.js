@@ -1,9 +1,7 @@
-import pkg from 'mf-parser';
+import { MF } from 'mf-parser';
 import { getMF, getHoseCodesForAtoms } from 'openchemlib-utils';
 
 import { getFragmentableRings } from './utils/getFragmentableRings.js';
-
-const { MF } = pkg;
 
 /**
  * The function performs the fragmentation of all single ring bonds not belonging to aromatic rings
