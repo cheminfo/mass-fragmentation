@@ -13,16 +13,23 @@ const { Molecule } = OCL;
  * This function performs the in-silico fragmentation of a given structure and returns the matched fragments and the bond contribution
  * @param {object} spectrum experimental spectra in form {x:[],y:[]}
  * @param {any} idCode The OCL idCode of candidate structure
- * @param {object} options Object containing the ionization (like H+, +,..) and the precision in ppm (like 5ppm) in a format {ionization:[H+],precision:[5ppm]}
+ * @param {object} [options={}]
+ * @param {boolean} [options.calculateHoseCodes=false] If true, the function will calculate the HOSE codes of the fragments
+ * @param {number} [options.precision=0.5] The precision used to filter the experimental spectrum
+ * @param {string} [options.ionization='H+'] The ionization mode used to filter the experimental spectrum
+ * @param {number} [options.limit=1e7] The limit used to filter the experimental spectrum
  * @returns returns matched fragments with their bond contribution on experimental spectra
  */
 
 export async function candidatesFragmentation(spectrum, idCode, options) {
-  const { precision, ionization, limit } = options;
-
+  const {
+    precision = 1,
+    ionization = 'H+',
+    limit = 1e7,
+    calculateHoseCodes = true,
+  } = options || {};
   // Generate molecule from smiles
   const molecule = Molecule.fromIDCode(idCode);
-
   // Get mass precursor ion, used in bondContribution() and MF molecular
   let mfMolecularIon = getMF(molecule).mf;
   let mfPrecursorIon = await generateMFs([mfMolecularIon], {
@@ -32,7 +39,7 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
 
   // Filtration of experimental spectrum with Mf of molecular ion
   let newSpectrum = new Spectrum(spectrum);
-  let filteredSpectrum = await newSpectrum.getFragmentPeaks(mfMolecularIon, {
+  let filteredSpectrum = await newSpectrum.getFragmentPeaksFct(mfMolecularIon, {
     ionizations: ionization,
     precision,
   });
@@ -40,8 +47,7 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
   const masses = filteredSpectrum.map((peak) => peak.x);
 
   // Perform in-silico fragmentation
-  const fragmentation = fragment(molecule);
-
+  const fragmentation = fragment(molecule, { calculateHoseCodes });
   let mfsArray = [];
   const optionsMFs = {
     ionizations: ionization,
@@ -52,20 +58,17 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
       precision,
     },
   };
-
   let fragmentsResult = [];
   for (let i = 0; i < fragmentation.length; i++) {
-    if (fragmentation[i].hose !== undefined) {
+    if (fragmentation[i].hoses !== undefined) {
       // get neutral losses for each fragment
       let neutralLosses = neutralLoss(fragmentation[i].idCode);
-      mfsArray[i] = [fragmentation[i].mf, neutralLosses];
+      mfsArray[i] = [fragmentation[i].mfInfo.mf, neutralLosses];
       let results = await generateMFs(mfsArray[i], optionsMFs);
-
       let groups = {};
       for (const result of results) {
         const em = Math.round(result.ms.em * 1e6);
         // check if em is a key of groups
-
         if (!groups[em]) {
           groups[em] = [
             {
@@ -73,31 +76,36 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
               ms: result.ms.em,
               mf: result.mf,
               ppm: result.ms.ppm,
-              neutralLoss: result.parts[1],
-              hose: fragmentation[i].hoseCodes,
+              hoses: fragmentation[i].hoses,
               idCode: fragmentation[i].idCode,
             },
           ];
+          if (result?.parts[1]) {
+            groups[em][0].neutralLoss = result?.parts[1];
+          }
         } else {
           groups[em].push({
             em: result.em,
             ms: result.ms.em,
             mf: result.mf,
             ppm: result.ms.ppm,
-            neutralLoss: result.parts[1],
-            hose: fragmentation[i].hoseCodes,
+            neutralLoss: result?.parts[1],
+            hoses: fragmentation[i].hoses,
             idCode: fragmentation[i].idCode,
           });
+          if (result?.parts[1]) {
+            groups[em][0].neutralLoss = result?.parts[1];
+          }
         }
       }
 
       groups = Object.values(groups);
       if (groups.length > 0) {
         let fragmentIdCode = fragmentation[i].idCode;
-        let fragmentHoseId = fragmentation[i].hose;
+        let fragmentHoseId = fragmentation[i].hoses;
         fragmentsResult.push({
           idCode: fragmentIdCode,
-          idHose: fragmentHoseId,
+          hoses: fragmentHoseId,
           unique: true,
           matches: groups,
           intensity: NaN,
@@ -109,13 +117,12 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
     // Account for Molecular ion to be matched
     if (fragmentation[i].fragmentType === 'molecular ion') {
       let resultMolecularIon = await generateMFs(
-        [fragmentation[i].mf],
+        [fragmentation[i].mfInfo.mf],
         optionsMFs,
       );
       let group = {};
       for (const result of resultMolecularIon) {
         const em = Math.round(result.ms.em * 1e6);
-
         group[em] = [
           {
             em: result.em,
@@ -136,7 +143,7 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
 
         fragmentsResult.push({
           idCode: fragmentIdCode,
-          idHose: fragmentHoseId,
+          hoses: fragmentHoseId,
           unique: true,
           matches: group,
           intensity: NaN,
@@ -211,6 +218,5 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
       }
     }
   }
-
   return uniqueFragmentsResult;
 }
