@@ -22,7 +22,7 @@ export async function createModel(options) {
     let result = await candidatesFragmentation(spectra, idCode, options);
     counter++;
     if (Date.now() - start > 10000) {
-      console.log(counter);
+      //console.log(counter);
       start = Date.now();
     }
     result.forEach((fragment) => {
