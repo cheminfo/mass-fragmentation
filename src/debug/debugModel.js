@@ -3,9 +3,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
-import generateMFs from 'mf-generator';
-
-import { neutralLoss } from '../neutralLoss/neutralLoss.js';
+import { generateMFs } from 'mf-generator';
 
 import { candidatesFragmentation } from './candidateDebugFrag.js';
 

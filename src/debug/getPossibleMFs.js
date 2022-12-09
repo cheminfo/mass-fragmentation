@@ -1,4 +1,4 @@
-import generateMFs from 'mf-generator';
+import { generateMFs } from 'mf-generator';
 
 import { neutralLoss } from '../neutralLoss/neutralLoss.js';
 
