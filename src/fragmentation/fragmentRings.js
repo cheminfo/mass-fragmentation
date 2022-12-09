@@ -47,7 +47,7 @@ export function fragmentRings(molecule, options = {}) {
     for (let i = 0; i < nbFragments; i++) {
       const result = {};
       if (calculateHoseCodes) {
-        result.hoseCodes = getHoseCodesForAtoms(molecule, atoms);
+        result.hoses = getHoseCodesForAtoms(molecule, atoms);
       }
 
       result.atomMap = [];

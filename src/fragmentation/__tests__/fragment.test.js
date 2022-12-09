@@ -26,9 +26,9 @@ describe('fragment', () => {
     expect(mfs).toStrictEqual(['C2H4', 'C2H4', 'C2H4', 'C2H4', 'C4H8']);
     expect(results).toMatchSnapshot();
   });
-  it('CCCCC2CCC1C(CC)CC(=O)CC1C2', () => {
+  it('CCCCC2CCC1C(CC)CC(=O)CC1C2 - with Hose Codes', () => {
     const molecule = Molecule.fromSmiles('CCCCC2CCC1C(CC)CC(=O)CC1C2'); //3 cyclohexane connected
-    const results = fragment(molecule);
+    const results = fragment(molecule, { calculateHoseCodes: true });
     const mfs = results.map((result) => result.mfInfo.mf);
     expect(mfs).toStrictEqual([
       'CH3',

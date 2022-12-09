@@ -18,7 +18,7 @@ describe('fragmentRings', () => {
   });
   it('C1CCC1', () => {
     const molecule = Molecule.fromSmiles('C1CCC1'); // butane
-    const results = fragmentRings(molecule);
+    const results = fragmentRings(molecule, { calculateHoseCodes: true });
     expect(results).toHaveLength(4);
     const mfs = results.map((result) => result.mfInfo.mf);
     expect(mfs).toStrictEqual(['C2H4', 'C2H4', 'C2H4', 'C2H4']);
