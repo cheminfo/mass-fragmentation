@@ -15,12 +15,12 @@ export async function createModel(options) {
   );
   let model = [];
   let start = Date.now();
-  let counter = 0;
+  //let counter = 0;
   for (let entry of testSet) {
     let spectra = { x: entry.x, y: entry.y };
     let idCode = entry.idCode;
     let result = await candidatesFragmentation(spectra, idCode, options);
-    counter++;
+    //  counter++;
     if (Date.now() - start > 10000) {
       //console.log(counter);
       start = Date.now();
