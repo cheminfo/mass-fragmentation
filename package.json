@@ -46,6 +46,7 @@
   "dependencies": {
     "@sgratzl/chartjs-chart-boxplot": "^4.0.0",
     "arraybuffer-xml-parser": "^0.6.0",
+    "benchmark": "^2.1.4",
     "csv-to-js-parser": "^2.3.5",
     "express": "^4.18.2",
     "isotopic-distribution": "^2.0.0",

@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fragment CC 1`] = `
+exports[`fragment benchMark 1`] = `"Fastest is parallelFragment"`;
+
+exports[`fragment parallel 1`] = `
 [
   [
     {
