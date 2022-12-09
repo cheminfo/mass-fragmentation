@@ -33,7 +33,7 @@ export async function candidatesFragmentation(spectrum, idCode, options) {
 
   // Filtration of experimental spectrum with Mf of molecular ion
   let newSpectrum = new Spectrum(spectrum);
-  let filteredSpectrum = await newSpectrum.getFragmentPeaks(mfMolecularIon, {
+  let filteredSpectrum = await newSpectrum.getFragmentPeaksFct(mfMolecularIon, {
     ionizations: ionization,
     precision,
   });
