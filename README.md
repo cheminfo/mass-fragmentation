@@ -54,6 +54,29 @@ const results = fragment(molecule, { calculateHoseCodes: true });
 
 An example of the output of the function can be found on the following [snapshot](./src/fragmentation/__tests__/__snapshots__/fragment.test.js.snap)
 
+### <ins>parallelFragment</ins>
+
+This function fragment both acyclic and cyclic bonds of a given molecule and returns it's fragments in parallel up to n-1 cores.
+
+```js
+import { parallelFragment } from 'mass-fragmentation';
+import OCL from 'openchemlib';
+
+const molecule = [
+  Molecule.fromSmiles('CC'),
+  Molecule.fromSmiles('CCC'),
+  Molecule.fromSmiles('C1CCC1'),
+  Molecule.fromSmiles('CCCCC2CCC1C(CC)CC(=O)CC1C2'),
+  Molecule.fromSmiles('CCCCCC(CC)CCC'),
+];
+
+const results = await parallelFragment(molecule, {
+  calculateHoseCodes: true,
+});
+```
+
+An example of the output of the function can be found on the following [snapshot](./src/parallelFragmention/__tests__/__snapshots__/parallelFragment.test.js.snap)
+
 ## Workflow
 
 ![workflow](workflow.png)
