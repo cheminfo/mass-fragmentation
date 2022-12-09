@@ -1,5 +1,7 @@
-import { MF } from 'mf-parser';
+import pkg from 'mf-parser';
 import { getMF, getHoseCodesForAtoms } from 'openchemlib-utils';
+
+const { MF } = pkg;
 
 /**
  * The function performs the fragmentation of all single linear bonds
