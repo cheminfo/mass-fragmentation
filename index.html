@@ -68,9 +68,9 @@
               
                 
                 <li><a
-                  href='#fragmentcyclicbonds'
+                  href='#fragmentrings'
                   class="">
-                  fragmentCyclicBonds
+                  fragmentRings
                   
                 </a>
                 
@@ -78,9 +78,9 @@
               
                 
                 <li><a
-                  href='#getcycleandfragmentationinfo'
+                  href='#getfragmentablerings'
                   class="">
-                  getCycleAndFragmentationInfo
+                  getFragmentableRings
                   
                 </a>
                 
@@ -88,19 +88,9 @@
               
                 
                 <li><a
-                  href='#getcyclesandbondsinfo'
+                  href='#getringsinfo'
                   class="">
-                  getCyclesAndBondsInfo
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#getfragmentablecyclebonds'
-                  class="">
-                  getFragmentableCycleBonds
+                  getRingsInfo
                   
                 </a>
                 
@@ -146,7 +136,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/a560d0d525aedecf34878af15eca59d111c05262/src/bondContribution/bondContribution.js#L9-L99'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/e3577ff1d3e8cd29d9a92e2dfe5a67a856ab5c76/src/bondContribution/bondContribution.js#L9-L99'>
       <span>src/bondContribution/bondContribution.js</span>
       </a>
     
@@ -240,7 +230,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/a560d0d525aedecf34878af15eca59d111c05262/src/candidatesFragmentation/candidatesFragmentation.js#L20-L216'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/e3577ff1d3e8cd29d9a92e2dfe5a67a856ab5c76/src/candidatesFragmentation/candidatesFragmentation.js#L24-L222'>
       <span>src/candidatesFragmentation/candidatesFragmentation.js</span>
       </a>
     
@@ -284,10 +274,70 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
-	    Object containing the ionization (like H+, +,..) and the precision in ppm (like 5ppm) in a format {ionization:[H+],precision:[5ppm]}
-
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
           </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.calculateHoseCodes</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>If true, the function will calculate the HOSE codes of the fragments
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.precision</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>0.5</code>)
+  </td>
+  <td class='break-word'><span>The precision used to filter the experimental spectrum
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.ionization</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  
+    (default <code>&#39;H+&#39;</code>)
+  </td>
+  <td class='break-word'><span>The ionization mode used to filter the experimental spectrum
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.limit</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+  
+    (default <code>1e7</code>)
+  </td>
+  <td class='break-word'><span>The limit used to filter the experimental spectrum
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
           
         </div>
       
@@ -334,7 +384,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/a560d0d525aedecf34878af15eca59d111c05262/src/fragmentation/fragment.js#L9-L15'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/e3577ff1d3e8cd29d9a92e2dfe5a67a856ab5c76/src/fragmentation/fragment.js#L11-L19'>
       <span>src/fragmentation/fragment.js</span>
       </a>
     
@@ -343,7 +393,7 @@
 
   <p>This function fragment both acyclic and cyclic bonds of the molecule</p>
 
-    <div class='pre p1 fill-light mt0'>fragment(molecule: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+    <div class='pre p1 fill-light mt0'>fragment(molecule: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
   
   
 
@@ -361,9 +411,44 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>molecule</span> <code class='quiet'>(any)</code>
-	    The OCL molecule to be fragmented
-
+	    
           </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.calculateHoseCodes</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>calculating hose code for bonds is quite time consuming
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
           
         </div>
       
@@ -410,7 +495,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/a560d0d525aedecf34878af15eca59d111c05262/src/fragmentation/fragmentAcyclicBonds.js#L10-L126'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/e3577ff1d3e8cd29d9a92e2dfe5a67a856ab5c76/src/fragmentation/fragmentAcyclicBonds.js#L12-L138'>
       <span>src/fragmentation/fragmentAcyclicBonds.js</span>
       </a>
     
@@ -419,7 +504,7 @@
 
   <p>The function performs the fragmentation of all single linear bonds</p>
 
-    <div class='pre p1 fill-light mt0'>fragmentAcyclicBonds(molecule: any): any</div>
+    <div class='pre p1 fill-light mt0'>fragmentAcyclicBonds(molecule: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): any</div>
   
   
 
@@ -437,9 +522,44 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>molecule</span> <code class='quiet'>(any)</code>
-	    The OCL molecule to be fragmented
-
+	    
           </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.calculateHoseCodes</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>calculating hose code for bonds is quite time consuming
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
           
         </div>
       
@@ -481,21 +601,21 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='fragmentcyclicbonds'>
-      fragmentCyclicBonds
+    <h3 class='fl m0' id='fragmentrings'>
+      fragmentRings
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/a560d0d525aedecf34878af15eca59d111c05262/src/fragmentation/fragmentCyclicBonds.js#L12-L117'>
-      <span>src/fragmentation/fragmentCyclicBonds.js</span>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/e3577ff1d3e8cd29d9a92e2dfe5a67a856ab5c76/src/fragmentation/fragmentRings.js#L14-L89'>
+      <span>src/fragmentation/fragmentRings.js</span>
       </a>
     
   </div>
   
 
-  <p>The function performs the fragmentation of all single ring bonds not beloning to aromatic rings</p>
+  <p>The function performs the fragmentation of all single ring bonds not belonging to aromatic rings</p>
 
-    <div class='pre p1 fill-light mt0'>fragmentCyclicBonds(molecule: any): any</div>
+    <div class='pre p1 fill-light mt0'>fragmentRings(molecule: any, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): any</div>
   
   
 
@@ -513,9 +633,44 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>molecule</span> <code class='quiet'>(any)</code>
-	    The OCL molecule to be fragmented
-
+	    
           </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>options.calculateHoseCodes</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+  
+    (default <code>false</code>)
+  </td>
+  <td class='break-word'><span>calculating hose code for bonds is quite time consuming
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
           
         </div>
       
@@ -557,21 +712,21 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='getcycleandfragmentationinfo'>
-      getCycleAndFragmentationInfo
+    <h3 class='fl m0' id='getfragmentablerings'>
+      getFragmentableRings
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/a560d0d525aedecf34878af15eca59d111c05262/src/fragmentation/utils/getCycleAndFragmentationInfo.js#L10-L22'>
-      <span>src/fragmentation/utils/getCycleAndFragmentationInfo.js</span>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/e3577ff1d3e8cd29d9a92e2dfe5a67a856ab5c76/src/fragmentation/utils/getFragmentableRings.js#L7-L31'>
+      <span>src/fragmentation/utils/getFragmentableRings.js</span>
       </a>
     
   </div>
   
 
-  <p>This function returns an array containing bonds information and all combinations of bonds who can be fragmented</p>
+  <p>This function returns an array of objects with all combination of 2 bonds who can be fragmented in the same ring</p>
 
-    <div class='pre p1 fill-light mt0'>getCycleAndFragmentationInfo(molecule: any): any</div>
+    <div class='pre p1 fill-light mt0'>getFragmentableRings(molecule: any): any</div>
   
   
 
@@ -589,8 +744,7 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>molecule</span> <code class='quiet'>(any)</code>
-	    The OCL molecule to be fragmented
-
+	    
           </div>
           
         </div>
@@ -604,7 +758,7 @@
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code>any</code>:
-        Ring Bonds information and bonds who can be fragmented
+        All combination of 2 bonds who can be fragmented in the same ring
 
       
     
@@ -633,21 +787,21 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='getcyclesandbondsinfo'>
-      getCyclesAndBondsInfo
+    <h3 class='fl m0' id='getringsinfo'>
+      getRingsInfo
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/a560d0d525aedecf34878af15eca59d111c05262/src/fragmentation/utils/getCyclesAndBondsInfo.js#L7-L31'>
-      <span>src/fragmentation/utils/getCyclesAndBondsInfo.js</span>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/e3577ff1d3e8cd29d9a92e2dfe5a67a856ab5c76/src/fragmentation/utils/getRingsInfo.js#L7-L34'>
+      <span>src/fragmentation/utils/getRingsInfo.js</span>
       </a>
     
   </div>
   
 
-  <p>This function returns ringBond, and object who contains information about the bonds of each cycle</p>
+  <p>This function returns ringBond, and object that contains information about the bonds of each ring</p>
 
-    <div class='pre p1 fill-light mt0'>getCyclesAndBondsInfo(molecule: any): any</div>
+    <div class='pre p1 fill-light mt0'>getRingsInfo(molecule: any): any</div>
   
   
 
@@ -665,8 +819,7 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>molecule</span> <code class='quiet'>(any)</code>
-	    The OCL molecule to be fragmented
-
+	    
           </div>
           
         </div>
@@ -680,83 +833,7 @@
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code>any</code>:
-        Information of ring bonds for each cycle in the molecule
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='getfragmentablecyclebonds'>
-      getFragmentableCycleBonds
-    </h3>
-    
-    
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/a560d0d525aedecf34878af15eca59d111c05262/src/fragmentation/utils/getFragmentableCycleBonds.js#L7-L33'>
-      <span>src/fragmentation/utils/getFragmentableCycleBonds.js</span>
-      </a>
-    
-  </div>
-  
-
-  <p>This function returns an array of objects with all combination of 2 bonds who can be fragmented in the same cycle</p>
-
-    <div class='pre p1 fill-light mt0'>getFragmentableCycleBonds(molecule: any): any</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>molecule</span> <code class='quiet'>(any)</code>
-	    The OCL molecule to be fragmented
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>:
-        All combination of 2 bonds who can be fragmented in the same cycle
+        Information of ring bonds for each ring in the molecule
 
       
     
@@ -790,7 +867,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/a560d0d525aedecf34878af15eca59d111c05262/src/neutralLoss/neutralLoss.js#L10-L163'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/e3577ff1d3e8cd29d9a92e2dfe5a67a856ab5c76/src/neutralLoss/neutralLoss.js#L10-L163'>
       <span>src/neutralLoss/neutralLoss.js</span>
       </a>
     
@@ -867,7 +944,7 @@
     </h3>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/a560d0d525aedecf34878af15eca59d111c05262/src/bondContribution/spectraPreparation.js#L7-L18'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/cheminfo/mass-fragmentation/blob/e3577ff1d3e8cd29d9a92e2dfe5a67a856ab5c76/src/bondContribution/spectraPreparation.js#L7-L18'>
       <span>src/bondContribution/spectraPreparation.js</span>
       </a>
     
